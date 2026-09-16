@@ -96,6 +96,9 @@ CONTINUATION_TICKERS: tuple[str, ...] = (
     "YI",
 )
 CURVE_COVERAGE_FLOOR = 0.80
+# Futures settlements are pulled with a margin around the common window; only
+# common-window trade dates enter the curve state.
+FUTURES_SETTLEMENT_SPAN: tuple[str, str] = ("2008-06-01", "2025-09-30")
 SLOPE_WINSOR_QUANTILES: tuple[float, float] = (0.01, 0.99)
 # Spec section 6.5: dates dropped from the slope because the front settlement is
 # negative.

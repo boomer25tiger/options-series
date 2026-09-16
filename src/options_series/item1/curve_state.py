@@ -14,7 +14,6 @@ import wrds
 from options_series.db import query
 from options_series.item1.config import (
     COMMODITY_LABELS,
-    COMMON_END,
     COMMON_START,
     CONTINUATION_COMMODITIES,
     CONTINUATION_MATCH_FLOOR,
@@ -23,6 +22,7 @@ from options_series.item1.config import (
     CONTINUATION_TOLERANCE,
     CURVE_COVERAGE_FLOOR,
     FUTURES_CLASSES,
+    FUTURES_SETTLEMENT_SPAN,
     NEGATIVE_FRONT_EXCLUSIONS,
     RAW_DIR,
     SLOPE_WINSOR_QUANTILES,
@@ -51,7 +51,7 @@ def futures_paths(class_code: int) -> tuple[Path, Path]:
 
 def pull_futures_class(connection: wrds.Connection, class_code: int) -> None:
     """Write the contracts of one futures class, with last trading dates, and their
-    daily settlements over the common window."""
+    daily settlements over the settlement pull span."""
     FUTURES_DIR.mkdir(parents=True, exist_ok=True)
     contracts = query(
         connection,
@@ -66,8 +66,8 @@ def pull_futures_class(connection: wrds.Connection, class_code: int) -> None:
         "where futcode = any(%(futcodes)s) and date_ between %(start)s and %(end)s",
         {
             "futcodes": [float(code) for code in contracts.futcode],
-            "start": COMMON_START,
-            "end": COMMON_END,
+            "start": FUTURES_SETTLEMENT_SPAN[0],
+            "end": FUTURES_SETTLEMENT_SPAN[1],
         },
     )
     settlements["date"] = pd.to_datetime(settlements["date"])
