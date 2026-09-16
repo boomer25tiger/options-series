@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-series"
+version = "1.0.0"
+description = "Pre-registered studies of option-implied variance on WRDS OptionMetrics"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "scipy",
+    "statsmodels",
+    "wrds",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
