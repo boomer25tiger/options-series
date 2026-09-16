@@ -146,8 +146,14 @@ def expiry_variance(sub, T, r):
     return float(sigma2), float(F), float(K0), int(len(kp)), int(len(kc)), None
 
 
-def mfiv_one_date(date, quotes, zdays, zrates, nodes=(30, 91)):
-    """Spec 6.1 for one secid and one date. Returns {node: record}."""
+def mfiv_one_date(date, quotes, zdays, zrates, nodes=(30, 91),
+                  min_strikes=MIN_STRIKES_SIDE):
+    """Spec 6.1 for one secid and one date. Returns {node: record}.
+
+    `min_strikes` is the section 6.1 step-6 floor. It defaults to the spec value of
+    3 and is exposed only so amendment A3(b) can run the floor-of-2 robustness
+    series. No other behaviour changes with it.
+    """
     blank = {"mfiv": np.nan, "expiry_low": pd.NaT, "expiry_high": pd.NaT,
              "n_strikes_low_put": 0, "n_strikes_low_call": 0,
              "n_strikes_high_put": 0, "n_strikes_high_call": 0}
@@ -212,9 +218,9 @@ def mfiv_one_date(date, quotes, zdays, zrates, nodes=(30, 91)):
         if dhi == "NO_K0":
             out[d] = dict(rec, drop_code=DROP_NO_K0_HIGH); continue
         # ---- step 6 ----
-        if nplo < MIN_STRIKES_SIDE or nclo < MIN_STRIKES_SIDE:
+        if nplo < min_strikes or nclo < min_strikes:
             out[d] = dict(rec, drop_code=DROP_FEW_STRIKES_LOW); continue
-        if nphi < MIN_STRIKES_SIDE or nchi < MIN_STRIKES_SIDE:
+        if nphi < min_strikes or nchi < min_strikes:
             out[d] = dict(rec, drop_code=DROP_FEW_STRIKES_HIGH); continue
         # ---- step 5 ----
         Td = d / DAYS_YEAR
