@@ -65,3 +65,74 @@ Jiang, G. and Tian, Y. (2005). The model-free implied volatility and its informa
 Prokopczuk, M., Symeonidis, L. and Wese Simen, C. (2017). Variance risk in commodity markets. Journal of Banking and Finance 81, 136–149.
 Ng, V. and Pirrong, S. (1994). Fundamentals and volatility: storage, spreads, and the dynamics of metals prices. Journal of Business 67(2), 203–230.
 Politis, D. and Romano, J. (1994). The stationary bootstrap. Journal of the American Statistical Association 89(428), 1303–1313.
+
+# Correlation risk premium: the index against its constituents
+
+Is the variance premium on the S&P 500 index larger than the average variance premium on its constituents, and did the gap change between the post-crisis decade and the post-COVID years?
+
+We studied the S&P 500 and its point-in-time constituents from January 1996 to August 2025, about 500 names a day, linked from CRSP to OptionMetrics by date range. Implied variance at 30 and 91 days is built model-free from the OptionMetrics volatility surface: the 34 delta nodes are interpolated linearly in strike, held flat beyond the 10-delta strikes and integrated on a 1,000-strike grid, following Jiang and Tian (2005). On SPX the construction tracks the strike-ladder measure of the commodity study at 0.994 correlation at 30 days and 0.991 at 91 days, with a median level 3 and 9 percent below it. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The gap is the index log(IV²/RV) minus its equal-weighted average across constituents, on days with at least 300 names carrying a valid surface; implied correlation follows Driessen, Maenhout and Vilkov (2009) with previous-day market-cap weights, on days with at least 450.
+
+Six tests were registered, one per maturity for each of three hypotheses: the index premium exceeds the constituent average, the gap differs between 2021–2025 and 2010–2019, and implied correlation exceeds realized correlation, with Holm correction inside each pair. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
+
+![Annual mean log variance ratio, 30-day maturity, S&P 500 index against its constituents](items/item2_correlation_premium/figures/post_fig1.png)
+
+## Results
+
+On the registered measure the index premium exceeds the average constituent premium at 91 days and not at 30 days. The mean gap is 0.22 at 91 days with a 95 percent interval of 0.17 to 0.28 on 7,383 trading days, and −0.004 at 30 days with an interval of −0.043 to 0.034 on 7,425 days. The 30-day result depends on how implied variance is measured: the at-the-money measure gives a gap of 0.07 and value weights give 0.09, both with intervals clear of zero. Single-name surfaces at 30 days carry steep and steepening wings. The median ratio of surface to at-the-money variance for constituents rose from 1.14 in 1996–2007 to 1.57 in 2021–2025, while for SPX it stayed between 1.18 and 1.33, so the surface measure raises the single-name premium by more than the index premium. In 2021–2025 an average of 76 percent of constituents had a higher annual 30-day premium than the index, against 28 percent in 1996–2007.
+
+The gap fell after COVID. At 30 days it fell by 0.25 from 2010–2019 to 2021–2025, from −0.08 to −0.33, and clears both methods; at 91 days the fall of 0.15 does not. Outside the family, value weights give a 30-day fall of 0.17 on the surface measure and 0.10 at the money, both with p below 0.05, while the equal-weighted at-the-money fall of 0.10 has a Newey-West p of 0.07. Implied correlation exceeds realized correlation at both maturities, 0.36 against 0.31 at 30 days and 0.41 against 0.31 at 91 days. In the decomposition the correlation premium adds 0.10 log units to 30-day index variance in 2010–2019 and −0.04 in 2021–2025, and the residual, which holds correlation at its realized level, is negative in every period on the surface measure. The least-squares break in the annual gap falls in 2011 at 30 days and 2001 at 91 days. The share of SPX option volume expiring the same day rose from 1 percent in 2011 to 58 percent in 2025; neither the break nor that overlay carries a test.
+
+| test | node | estimate | Newey-West 95 percent interval | p Newey-West | p bootstrap | verdict |
+|---|---|---|---|---|---|---|
+| H1 index minus average premium | 30 | -0.0043 | [-0.0429, +0.0343] | 0.5865 | 0.5785 | not supported |
+| H1 index minus average premium | 91 | +0.2225 | [+0.1660, +0.2790] | 5.73e-15 | <0.0005 | supported |
+| H2 2021–2025 minus 2010–2019 | 30 | -0.2526 | [-0.3624, -0.1429] | 6.39e-06 | <0.0005 | supported |
+| H2 2021–2025 minus 2010–2019 | 91 | -0.1457 | [-0.3271, +0.0357] | 0.1155 | 0.1450 | not supported |
+| H3 implied minus realized correlation | 30 | +0.0428 | [+0.0311, +0.0545] | 3.57e-13 | <0.0005 | supported |
+| H3 implied minus realized correlation | 91 | +0.0976 | [+0.0786, +0.1165] | 3.05e-24 | <0.0005 | supported |
+
+| node | measure | weights | H1 gap | p Newey-West | H2 change | p Newey-West |
+|---|---|---|---|---|---|---|
+| 30 | surface | equal, registered | -0.0043 | 0.5865 | -0.2526 | 6.39e-06 |
+| 30 | surface | value | +0.0914 | 1.15e-07 | -0.1667 | 0.0006 |
+| 30 | ATM | equal | +0.0681 | 3.30e-05 | -0.0960 | 0.0725 |
+| 30 | ATM | value | +0.1040 | 5.59e-11 | -0.0969 | 0.0427 |
+| 91 | surface | equal, registered | +0.2225 | 5.73e-15 | -0.1457 | 0.1155 |
+| 91 | surface | value | +0.2467 | 2.58e-20 | -0.0849 | 0.2832 |
+| 91 | ATM | equal | +0.1952 | 1.10e-13 | -0.1165 | 0.1675 |
+| 91 | ATM | value | +0.2037 | 3.14e-16 | -0.1104 | 0.1355 |
+
+| node | period | mean gap | correlation component | residual |
+|---|---|---|---|---|
+| 30 | 1996–2007 | 0.1744 | 0.3185 | -0.1441 |
+| 30 | 2008–2009 | 0.0378 | 0.1075 | -0.0697 |
+| 30 | 2010–2019 | -0.0784 | 0.0963 | -0.1747 |
+| 30 | 2020 | -0.0051 | 0.1296 | -0.1347 |
+| 30 | 2021–2025 | -0.3310 | -0.0376 | -0.2934 |
+| 91 | 1996–2007 | 0.3301 | 0.4031 | -0.0731 |
+| 91 | 2008–2009 | 0.0911 | 0.1296 | -0.0385 |
+| 91 | 2010–2019 | 0.1953 | 0.2597 | -0.0644 |
+| 91 | 2020 | 0.2279 | 0.2680 | -0.0400 |
+| 91 | 2021–2025 | 0.0496 | 0.1904 | -0.1408 |
+
+Every H1 and H2 number is also reported at the money and with value weights, and every table in the full results carries the SPX gap between the surface and strike-ladder measures, a median of −0.030 log units at 30 days and −0.095 at 91 days. Full construction rules, the test family and every judgment call are in items/item2_correlation_premium/SPEC.md.
+
+**What's not included:** There is no trading strategy attached to the study, no dispersion trade, cost model or hedging. The gap measures how index and single-name options are priced against what each then realizes.
+
+## Reproduce
+
+Requires a WRDS account with OptionMetrics, CRSP and the CRSP-OptionMetrics link, and a ~/.pgpass entry.
+
+    pip install -r requirements.txt
+    python -m options_series.item2.run
+
+The run pulls the S&P 500 membership list, the link table, 30- and 91-day surfaces for every constituent from 1996 to 2025 (about 261 million rows; the run needs about 4 GB of disk), returns, CRSP prices and SPX option volume, builds both implied variance measures, runs the tests and writes every figure and table under items/item2_correlation_premium/output/. The SPX validation reads the strike-ladder series written by python -m options_series.item1.run, which runs first.
+
+## References
+
+Driessen, J., Maenhout, P. and Vilkov, G. (2009). The price of correlation risk: evidence from equity options. Journal of Finance 64(3), 1377–1406.
+Carr, P. and Wu, L. (2009). Variance risk premiums. Review of Financial Studies 22(3), 1311–1341.
+Jiang, G. and Tian, Y. (2005). The model-free implied volatility and its information content. Review of Financial Studies 18(4), 1305–1342.
+Conrad, J., Dittmar, R. and Ghysels, E. (2013). Ex ante skewness and expected stock returns. Journal of Finance 68(1), 85–124.
+Bai, J. and Perron, P. (1998). Estimating and testing linear models with multiple structural changes. Econometrica 66(1), 47–78.
+Politis, D. and Romano, J. (1994). The stationary bootstrap. Journal of the American Statistical Association 89(428), 1303–1313.
