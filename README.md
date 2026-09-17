@@ -1,18 +1,18 @@
 # Commodity variance risk premium and the futures curve
 
-Do options on commodity ETFs price variance the way index options do, and does the premium depend on whether the futures curve is in contango or backwardation.
+Do options on commodity ETFs price variance the way index options do, and does the premium depend on whether the futures curve is in contango or backwardation?
 
-Options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. Implied variance is built model-free from the full strike ladder on the CBOE VIX method; on SPX the construction tracks VIX at 0.999 correlation with a median gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
+We studied options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. Built implied variance model-free from the full strike ladder on the CBOE VIX method; on SPX, the construction tracks VIX at 0.999 correlation with a median gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
 
-The design was written and committed before any result was computed. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec. Eighteen tests were registered, eight on the level of the premium and ten on its relation to the curve slope, with Holm correction inside each block. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
+Eighteen tests were registered, eight on the level of the premium and ten on its relation to the curve slope, with Holm correction inside each block. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
 
 ![Annual mean log variance ratio, 30-day maturity](items/item1_commodity_vrp/figures/post_fig1.png)
 
 ## Results
 
-Across the four commodity ETFs, 30-day implied variance ran 23 percent above the variance that followed, on average. The mean log ratio of implied to realized variance is 0.20 with a 95 percent interval of 0.16 to 0.24 on 4,165 trading days, using the at-the-money measure that covers every date. On the dates where all four chains support the model-free construction the gap is 43 percent. Every commodity carries the premium on its own at both maturities. SPX over the same window runs at 77 percent model-free against 43 percent for the commodities, so the commodity premium is a little over half the index premium in percentage terms and about 0.6 of it in log units.
+Across the four commodity ETFs, 30-day implied variance ran 23 percent above the variance that followed, on average. The mean log ratio of implied to realized variance is 0.20 with a 95 percent interval of 0.16 to 0.24 on 4,165 trading days, using the at-the-money measure that covers every date. The gap rises to 43 percent on days where all four chains support the model-free construction. and every commodity carries the premium on its own at both maturities. SPX over the same window runs at 77 percent model-free against 43 percent for the commodities, so the commodity premium is a little over half the index premium in percentage terms and about 0.6 of it in log units.
 
-The premium does not depend on the curve. None of the ten slope tests cleared the pre-set bar. The largest effect of a one-standard-deviation move in the curve slope is 0.08 log units. One cell, silver at 30 days, has intervals that exclude zero under both methods and still fails the Holm-corrected level on the bootstrap, which is the case the two-method rule exists to catch. The common factor across the four premia explains about 47 percent of their variance and moves by less than a point after conditioning on slope.
+Important to note that the premium does not depend on the curve. None of the ten slope tests cleared the pre-set bar. The largest effect of a one-standard-deviation move in the curve slope is 0.08 log units. One cell, silver at 30 days, has intervals that exclude zero under both methods and still fails the Holm-corrected level on the bootstrap, which is the case the two-method rule exists to catch. The common factor across the four premia explains about 47 percent of their variance and moves by less than a point after conditioning on slope.
 
 | node | ETF | series | n | mean log ratio | p Newey-West | p bootstrap | verdict |
 |---|---|---|---|---|---|---|---|
@@ -47,9 +47,7 @@ The premium does not depend on the curve. None of the ten slope tests cleared th
 
 Three of the four ETFs report the at-the-money measure as headline because a registered check found their model-free drop dates differ from retained dates in premium level; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
 
-## What is not claimed
-
-No strategy return. There is no cost model, no hedging and no trade in this study. The premium is a measurement of how options are priced against what the underlying then does.
+**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represebts a measurement of how options are priced against what the underlying then does.
 
 ## Reproduce
 
