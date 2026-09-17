@@ -173,3 +173,13 @@ a variance-pricing difference and not a correlation premium.
 Null D. Link coverage fails rule 9.1 and the item ships as a coverage report.
 Null E. The surface-based construction fails validation against the ladder series and
 the item ships on the ATM measure with the skew term unmeasured.
+
+## 13. Amendments
+
+Logged 2026-09-16 after the synthetic-surface check and before any real surface was processed. No hypothesis, sample window, floor, period boundary or test changes.
+
+A1. Tail extrapolation and interior interpolation in 6.1. The 34-node measure evaluated only between the 10-delta put and the 10-delta call, which on a flat 20 percent surface recovers 0.9246 of σ² at 30 days and 0.9237 at 91 days; the exact integral over that span is 0.9209, so the code is correct and the shortfall is truncation. Section 6.1 is amended to the Jiang and Tian (2005) construction: implied volatility is interpolated linearly in strike between the 34 nodes on a dense strike grid of at least 1,000 points, held flat at the outermost node's volatility beyond the 10-delta strikes on each side, and the grid extends to F·exp(±10·σ_edge·√T) or until the option price falls below 1e-10 times the forward, whichever comes first. The model-free sum is evaluated on that grid. The synthetic check tolerance is 0.5 percent as before. [lit]
+
+A2. Section 6.1's sentence that a validation correlation below 0.98 ships the item as ATM-only is superseded by stop rule 9.2, which continues with ATM as primary and records null E.
+
+A3. The membership table is crsp_q_indexes.dsp500list_v2; section 4 named the wrong library.
