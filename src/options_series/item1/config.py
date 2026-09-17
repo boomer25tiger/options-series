@@ -2,9 +2,13 @@
 
 from pathlib import Path
 
-DATA_DIR = Path("data/item1")
+# Paths resolve from this file's location, so the working directory does not matter.
+REPO_ROOT = Path(__file__).resolve().parents[3]
+ITEM_DIR = REPO_ROOT / "items" / "item1_commodity_vrp"
+DATA_DIR = ITEM_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
-OUTPUT_DIR = Path("output/item1")
+OUTPUT_DIR = ITEM_DIR / "output"
+FIGURES_DIR = ITEM_DIR / "figures"
 
 # Spec section 4: security identifiers, fixed and never re-resolved at query time.
 SECIDS: dict[str, int] = {

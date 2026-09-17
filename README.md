@@ -6,7 +6,7 @@ Options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as 
 
 The design was written and committed before any result was computed. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec. Eighteen tests were registered, eight on the level of the premium and ten on its relation to the curve slope, with Holm correction inside each block. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
 
-![Annual mean log variance ratio, 30-day maturity](figures/item1/post_fig1.png)
+![Annual mean log variance ratio, 30-day maturity](items/item1_commodity_vrp/figures/post_fig1.png)
 
 ## Results
 
@@ -45,7 +45,7 @@ The premium does not depend on the curve. None of the ten slope tests cleared th
 | 91 | model-free | 0.5241 | 0.5186 | -0.0055 |
 | 91 | ATM | 0.5635 | 0.5556 | -0.0079 |
 
-Three of the four ETFs report the at-the-money measure as headline because a registered check found their model-free drop dates differ from retained dates in premium level; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in the spec.
+Three of the four ETFs report the at-the-money measure as headline because a registered check found their model-free drop dates differ from retained dates in premium level; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
 
 ## What is not claimed
 
@@ -58,7 +58,7 @@ Requires a WRDS account with OptionMetrics, Datastream futures and CBOE index ac
     pip install -r requirements.txt
     python -m options_series.item1.run
 
-The run pulls quotes for five underlyings and thirteen futures classes (four primary, nine screened for the gold and silver continuation), builds both implied variance measures, runs the tests and writes every figure and table under output/item1/.
+The run pulls quotes for five underlyings and thirteen futures classes (four primary, nine screened for the gold and silver continuation), builds both implied variance measures, runs the tests and writes every figure and table under items/item1_commodity_vrp/output/.
 
 ## References
 

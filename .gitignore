@@ -1,10 +1,11 @@
-probe_output/
-data/
+items/*/data/
+items/*/output/
+probe/
+scratchpad/
 *.parquet
 *.csv
 *.pkl
 .DS_Store
 __pycache__/
 *.pyc
-output/
 *.egg-info/
