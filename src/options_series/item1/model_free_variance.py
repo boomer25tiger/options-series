@@ -12,11 +12,12 @@ zero rate falls back to the nearest earlier curve date.
 from __future__ import annotations
 
 import logging
-from math import erf, exp, log, sqrt
+from math import sqrt
 from typing import NamedTuple
 
 import numpy as np
 import pandas as pd
+from scipy.special import ndtr
 
 from options_series.item1.config import (
     BENCHMARK,
@@ -101,6 +102,28 @@ def _out_of_the_money_ladder(
             if zero_bid_run >= 2:
                 break
     return np.array(kept_strikes, float), np.array(kept_mids, float)
+
+
+def model_free_sum(
+    strikes: np.ndarray,
+    prices: np.ndarray,
+    forward: float,
+    atm_strike: float,
+    years_to_expiry: float,
+    rate: float,
+) -> float:
+    """Annualised model-free variance from out-of-the-money prices on an ascending strike
+    grid (spec section 6.1 step 4), each strike weighted by the half-distance between its
+    neighbours and the end strikes by the distance to their one neighbour."""
+    strike_spacing = np.empty_like(strikes)
+    strike_spacing[1:-1] = (strikes[2:] - strikes[:-2]) / 2.0
+    strike_spacing[0] = strikes[1] - strikes[0]
+    strike_spacing[-1] = strikes[-1] - strikes[-2]
+
+    variance = (2.0 / years_to_expiry) * np.sum(
+        strike_spacing / strikes**2 * np.exp(rate * years_to_expiry) * prices
+    ) - (1.0 / years_to_expiry) * (forward / atm_strike - 1.0) ** 2
+    return float(variance)
 
 
 def expiry_variance(
@@ -196,19 +219,11 @@ def expiry_variance(
             "no_atm_strike",
             years_to_expiry,
         )
-    strike_spacing = np.empty_like(ladder_strikes)
-    strike_spacing[1:-1] = (ladder_strikes[2:] - ladder_strikes[:-2]) / 2.0
-    strike_spacing[0] = ladder_strikes[1] - ladder_strikes[0]
-    strike_spacing[-1] = ladder_strikes[-1] - ladder_strikes[-2]
-
-    variance = (2.0 / years_to_expiry) * np.sum(
-        strike_spacing
-        / ladder_strikes**2
-        * np.exp(rate * years_to_expiry)
-        * ladder_mids
-    ) - (1.0 / years_to_expiry) * (forward / atm_strike - 1.0) ** 2
+    variance = model_free_sum(
+        ladder_strikes, ladder_mids, forward, atm_strike, years_to_expiry, rate
+    )
     return ExpiryVariance(
-        float(variance),
+        variance,
         float(forward),
         atm_strike,
         int(put_count),
@@ -441,20 +456,23 @@ def validate_against_vix(
     return summary, merged
 
 
-def _normal_cdf(value: float) -> float:
-    """Standard normal cumulative distribution at value."""
-    return 0.5 * (1.0 + erf(value / sqrt(2.0)))
-
-
-def _black_scholes_price(
-    spot: float, strike: float, years: float, rate: float, vol: float, cp_flag: str
-) -> float:
-    """Black-Scholes price of a European call or put on a non-dividend underlying."""
-    d1 = (log(spot / strike) + (rate + 0.5 * vol * vol) * years) / (vol * sqrt(years))
-    d2 = d1 - vol * sqrt(years)
+def black_scholes_price(
+    spot: float,
+    strike: float | np.ndarray,
+    years: float,
+    rate: float,
+    vol: float | np.ndarray,
+    cp_flag: str,
+) -> float | np.ndarray:
+    """Black-Scholes price of a European call or put on a non-dividend underlying,
+    elementwise over arrays of strikes and volatilities."""
+    d1 = (np.log(spot / strike) + (rate + 0.5 * vol * vol) * years) / (
+        vol * np.sqrt(years)
+    )
+    d2 = d1 - vol * np.sqrt(years)
     if cp_flag == "C":
-        return spot * _normal_cdf(d1) - strike * exp(-rate * years) * _normal_cdf(d2)
-    return strike * exp(-rate * years) * _normal_cdf(-d2) - spot * _normal_cdf(-d1)
+        return spot * ndtr(d1) - strike * np.exp(-rate * years) * ndtr(d2)
+    return strike * np.exp(-rate * years) * ndtr(-d2) - spot * ndtr(-d1)
 
 
 def _synthetic_chain(
@@ -472,7 +490,7 @@ def _synthetic_chain(
         exdate = date + pd.to_timedelta(int(days), unit="D")
         for strike in strikes:
             for cp_flag in ("C", "P"):
-                price = _black_scholes_price(spot, strike, years, rate, vol, cp_flag)
+                price = black_scholes_price(spot, strike, years, rate, vol, cp_flag)
                 rows.append(
                     {
                         "exdate": exdate,

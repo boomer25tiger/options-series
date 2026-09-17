@@ -34,3 +34,27 @@ def query(
 ) -> pd.DataFrame:
     """Run a parameterised SQL query and return the result as a data frame."""
     return connection.raw_sql(sql, params=params)
+
+
+def table_columns(connection: wrds.Connection, schema: str, table: str) -> pd.DataFrame:
+    """Column names and types of a table, in order, from information_schema.columns."""
+    return query(
+        connection,
+        "select column_name, data_type from information_schema.columns "
+        "where table_schema = %(schema)s and table_name = %(table)s "
+        "order by ordinal_position",
+        {"schema": schema, "table": table},
+    )
+
+
+def copy_query_to_csv(
+    connection: wrds.Connection, sql: str, params: dict | None, path: Path
+) -> None:
+    """Stream the result of a parameterised query to a CSV file with a header through
+    COPY, so a large result is never held in memory."""
+    with connection.connection.connection.cursor() as cursor:
+        statement = cursor.mogrify(sql, params).decode()
+        with open(path, "wb") as handle:
+            cursor.copy_expert(
+                f"COPY ({statement}) TO STDOUT WITH (FORMAT csv, HEADER true)", handle
+            )
