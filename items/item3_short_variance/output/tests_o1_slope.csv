@@ -1,0 +1,2 @@
+block,test,n,clusters,estimate,se_clustered,ci_low,ci_high,p_clustered,p_wild_bootstrap,clustered_clears,bootstrap_clears,verdict
+C,O1 slope,152,43,-0.05289830238050708,0.13470292198997946,-0.3247398045646649,0.21894319980365073,0.6965245842224517,0.7281728172817282,False,False,not supported

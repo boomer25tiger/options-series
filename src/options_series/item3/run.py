@@ -1,5 +1,6 @@
-"""Reproduce the session 1 diagnostics of item 3. The run computes no gain of any kind
-and no realized variance over a cycle.
+"""Reproduce item 3: the pre-return diagnostics, the cycle returns and Figure 1, the
+test family with breakeven k and Figure 2, the replication analysis, and the stress and
+exploratory tables.
 
 python -m options_series.item3.run              pull from WRDS, then build
 python -m options_series.item3.run --skip-pull  build from data already on disk
@@ -15,14 +16,32 @@ import argparse
 import logging
 import time
 
+import numpy as np
 import pandas as pd
 
 from options_series.db import connect
 from options_series.item3.accounting import (
+    CELLS,
+    HEDGE_COSTS,
     MARKINGS,
     adjusted_closes,
     build_returns,
+    cell_label,
     realized_variances,
+)
+from options_series.item3.analysis import (
+    add_eta,
+    by_strike_count,
+    convexity,
+    cost_drift,
+    daily_sharpe,
+    drawdown,
+    eta_comparison,
+    eta_table,
+    named_windows,
+    replication_populations,
+    split_cycles,
+    worst_windows,
 )
 from options_series.item3.config import (
     DATA_DIR,
@@ -57,7 +76,7 @@ from options_series.item3.diagnostics import (
     strip_coverage,
     zero_bid_marks,
 )
-from options_series.item3.figures import plot_equity
+from options_series.item3.figures import plot_cost_grid, plot_equity
 from options_series.item3.pull import (
     load_atm_surface,
     load_cycle_quotes,
@@ -72,7 +91,19 @@ from options_series.item3.samples import (
     exclusion_table,
     exclusions,
     pooled_equity,
+    pooled_returns,
     rule_one,
+)
+from options_series.item3.tests import (
+    ESTIMATION_LAG,
+    HOLDOUT_LAG,
+    UNITS,
+    block_tests,
+    breakeven_row,
+    diagnostic_regressions,
+    mean_test,
+    slope_test,
+    unit_series,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -108,10 +139,11 @@ def returns_stage(
     prices: pd.DataFrame,
     calendar: pd.DatetimeIndex,
     curve: ZeroCurve,
-) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """Cycle returns, their samples and Figure 1, written as they are built."""
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Cycle returns, their samples, the daily equity and hedge paths, and Figure 1,
+    written as they are built."""
     variances = realized_variances(entries, adjusted_closes(prices), calendar)
-    returns, equity = build_returns(entries, legs, panel, prices, curve)
+    returns, equity, hedges = build_returns(entries, legs, panel, prices, curve)
     equity.to_parquet(DATA_DIR / "equity_paths.parquet", index=False)
     sample = exclusions(entries, returns)
     keep = [
@@ -160,7 +192,235 @@ def returns_stage(
     )
     plot_equity(primary, fans, OUTPUT_DIR / "fig1_equity")
     LOGGER.info("returns built for %d arm-cycles; Figure 1 written", len(returns))
-    return cycle_returns, sample, equity
+    return cycle_returns, sample, equity, hedges
+
+
+def column(k: float, c: float) -> str:
+    """Return column of a cost cell."""
+    return f"return_{cell_label(k, c)}"
+
+
+def arm_series(rows: pd.DataFrame, arm: str, name: str) -> dict[str, np.ndarray]:
+    """Each fund's and the pooled series of one arm and return column."""
+    arm_rows = rows[rows.arm == arm]
+    pooled = pooled_returns(arm_rows[["ticker", "entry", name]], name)
+    return unit_series(arm_rows, name, pooled)
+
+
+def verdict(first: bool, second: bool) -> str:
+    """Decision rule on two inference outcomes."""
+    if first and second:
+        return "supported"
+    if first != second:
+        return "not robust to inference method"
+    return "not supported"
+
+
+def tests_stage(cycle_returns: pd.DataFrame) -> None:
+    """The 22 tests, the O1 diagnostics, the robustness column, breakeven k and
+    Figure 2."""
+    estimation = cycle_returns[cycle_returns.window == "estimation"]
+    primary = estimation[estimation.primary]
+    blocks = []
+    for block, (k, c) in (("A", (0.0, 0.0)), ("B", (PRIMARY_K, PRIMARY_C))):
+        name = column(k, c)
+        by_arm = {arm: arm_series(primary, arm, name) for arm in ("strip", "straddle")}
+        blocks.append(block_tests(block, by_arm, ESTIMATION_LAG))
+    holdout = cycle_returns[
+        (cycle_returns.window == "holdout")
+        & cycle_returns.primary
+        & (cycle_returns.arm == "strip")
+    ].copy()
+    name = column(PRIMARY_K, PRIMARY_C)
+    pooled_holdout = pooled_returns(holdout[["ticker", "entry", name]], name)
+    block_c = mean_test(pooled_holdout[name].to_numpy(float), HOLDOUT_LAG)
+    clears_nw = bool(block_c["p_newey_west"] <= 0.05)
+    clears_boot = bool(block_c["p_bootstrap"] <= 0.05)
+    block_c.update(
+        block="C",
+        arm="strip",
+        unit="POOLED",
+        holm_level_newey_west=0.05,
+        holm_level_bootstrap=0.05,
+        clears_newey_west=clears_nw,
+        clears_bootstrap=clears_boot,
+        verdict=verdict(clears_nw, clears_boot),
+    )
+    blocks.append(pd.DataFrame([block_c]))
+    pd.concat(blocks, ignore_index=True).to_csv(
+        OUTPUT_DIR / "tests_family.csv", index=False
+    )
+
+    holdout["log_k"] = np.log(holdout.k_strip)
+    holdout["log_rv21"] = np.log(holdout.rv21)
+    holdout["log_rv"] = np.log(holdout.rv)
+    holdout["o1"] = holdout.log_k - holdout.log_rv21
+    slope = slope_test(holdout, name, "o1")
+    slope["verdict"] = verdict(slope["clustered_clears"], slope["bootstrap_clears"])
+    pd.DataFrame([{"block": "C", "test": "O1 slope", **slope}]).to_csv(
+        OUTPUT_DIR / "tests_o1_slope.csv", index=False
+    )
+    diagnostic_regressions(holdout, name).to_csv(
+        OUTPUT_DIR / "tests_o1_diagnostics.csv", index=False
+    )
+
+    robust = estimation[estimation.robustness & (estimation.arm == "strip")]
+    robustness = []
+    for block, (k, c) in (("A", (0.0, 0.0)), ("B", (PRIMARY_K, PRIMARY_C))):
+        name = column(k, c)
+        robustness.append(
+            block_tests(
+                block,
+                {"strip": arm_series(robust, "strip", name)},
+                ESTIMATION_LAG,
+                test=False,
+            ).assign(sample="every computable strip cycle")
+        )
+    pd.concat(robustness, ignore_index=True).to_csv(
+        OUTPUT_DIR / "tests_robustness_all_strip_cycles.csv", index=False
+    )
+
+    rows, grid = [], []
+    samples = (("estimation", primary), ("full", cycle_returns[cycle_returns.primary]))
+    for sample_name, frame in samples:
+        for arm in ("strip", "straddle"):
+            for c in HEDGE_COSTS:
+                zero = arm_series(frame, arm, column(0.0, c))
+                one = arm_series(frame, arm, column(1.0, c))
+                for unit in UNITS:
+                    if unit in zero and len(zero[unit]):
+                        rows.append(
+                            {
+                                "sample": sample_name,
+                                "arm": arm,
+                                "unit": unit,
+                                "c_bps": c * 1e4,
+                                **breakeven_row(zero[unit], one[unit], ESTIMATION_LAG),
+                            }
+                        )
+                if sample_name == "estimation":
+                    for k in EXECUTION_FRACTIONS:
+                        series = arm_series(frame, arm, column(k, c))["POOLED"]
+                        grid.append(
+                            {"arm": arm, "k": k, "c": c, "mean": float(series.mean())}
+                        )
+    pd.DataFrame(rows).to_csv(OUTPUT_DIR / "breakeven_k.csv", index=False)
+    grid = pd.DataFrame(grid)
+    grid.to_csv(OUTPUT_DIR / "fig2_cost_grid.csv", index=False)
+    plot_cost_grid(grid, OUTPUT_DIR / "fig2_cost_grid")
+    LOGGER.info("tests, breakeven k and Figure 2 written")
+
+
+def replication_stage(cycle_returns: pd.DataFrame) -> None:
+    """Part D: the two rule-2 populations, eta against both targets, both against
+    strike count."""
+    strip = cycle_returns[
+        (cycle_returns.arm == "strip") & cycle_returns.robustness
+    ].copy()
+    strip["floor_pass"] = strip.floor_pass.astype(bool)
+    strip["population"] = np.where(strip.floor_pass, "passes rule 2", "fails rule 2")
+    straddle = cycle_returns[
+        (cycle_returns.arm == "straddle") & cycle_returns.primary
+    ].assign(population="primary")
+    strip, straddle = add_eta(strip), add_eta(straddle)
+    replication_populations(strip).to_csv(
+        OUTPUT_DIR / "replication_populations.csv", index=False
+    )
+    eta_table(pd.concat([strip, straddle], ignore_index=True)).to_csv(
+        OUTPUT_DIR / "replication_eta.csv", index=False
+    )
+    eta_comparison(strip).to_csv(
+        OUTPUT_DIR / "replication_eta_comparison.csv", index=False
+    )
+    by_strike_count(strip).to_csv(
+        OUTPUT_DIR / "replication_by_strike_count.csv", index=False
+    )
+    LOGGER.info("replication analysis written")
+
+
+def stress_stage(
+    cycle_returns: pd.DataFrame,
+    sample: pd.DataFrame,
+    equity: pd.DataFrame,
+    hedges: pd.DataFrame,
+    quotes: pd.DataFrame,
+    legs: pd.DataFrame,
+    prices: pd.DataFrame,
+) -> None:
+    """Part E: split cycles, stress windows, cost drift, the convexity series and the
+    per-cycle counts."""
+    primary_name = column(PRIMARY_K, PRIMARY_C)
+    summary, daily = split_cycles(
+        cycle_returns, equity, hedges, quotes, legs, prices, primary_name
+    )
+    summary.to_csv(OUTPUT_DIR / "stress_split_cycles.csv", index=False)
+    daily.to_csv(OUTPUT_DIR / "stress_split_cycles_daily.csv", index=False)
+
+    primary = cycle_returns[cycle_returns.primary]
+    cells, markings = [], []
+    for arm in ("strip", "straddle"):
+        members = equity_members(sample, arm)
+        for k, c in CELLS:
+            pooled = pooled_returns(
+                primary[primary.arm == arm][["ticker", "entry", column(k, c)]],
+                column(k, c),
+            )
+            series = pooled_equity(arm_equity(equity, arm, k, c), members)
+            cells.append(
+                {
+                    "arm": arm,
+                    "k": k,
+                    "c_bps": c * 1e4,
+                    **worst_windows(pooled, column(k, c)),
+                    **drawdown(series),
+                }
+            )
+        for marking in MARKINGS:
+            series = pooled_equity(
+                arm_equity(equity, arm, PRIMARY_K, PRIMARY_C, marking), members
+            )
+            markings.append(
+                {
+                    "arm": arm,
+                    "marking": marking,
+                    **drawdown(series),
+                    **daily_sharpe(series),
+                }
+            )
+    pd.DataFrame(cells).to_csv(OUTPUT_DIR / "stress_cost_cells.csv", index=False)
+    pd.DataFrame(markings).to_csv(OUTPUT_DIR / "stress_markings.csv", index=False)
+    named_windows(cycle_returns, primary_name).to_csv(
+        OUTPUT_DIR / "stress_named_windows.csv", index=False
+    )
+    by_year, by_fund = cost_drift(
+        primary,
+        {
+            0.0: (column(0.0, 0.0), column(1.0, 0.0)),
+            PRIMARY_C: (column(0.0, PRIMARY_C), column(1.0, PRIMARY_C)),
+        },
+    )
+    by_year.to_csv(OUTPUT_DIR / "cost_drift_by_year.csv", index=False)
+    by_fund.to_csv(OUTPUT_DIR / "cost_drift_half_spread_by_fund.csv", index=False)
+    series, table = convexity(primary, column(0.0, 0.0))
+    series.to_csv(OUTPUT_DIR / "convexity_series.csv", index=False)
+    table.to_csv(OUTPUT_DIR / "convexity_by_u_and_g.csv", index=False)
+    counts = cycle_returns[
+        [
+            "ticker",
+            "cycle",
+            "arm",
+            "entry",
+            "window",
+            "excluded_by",
+            "hedge_days",
+            "carried_hedge_days",
+            "carried_leg_days",
+            "zero_bid_marks",
+            "carried_marks",
+        ]
+    ]
+    counts.to_csv(OUTPUT_DIR / "cycle_hedge_and_mark_counts.csv", index=False)
+    LOGGER.info("stress and exploratory tables written")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -256,8 +516,13 @@ def main(argv: list[str] | None = None) -> None:
     LOGGER.info(
         "session 1 diagnostics written in %.1f min", (time.time() - started) / 60.0
     )
-    returns_stage(entries, legs, panel, prices, calendar, curve)
-    LOGGER.info("returns stage done in %.1f min", (time.time() - started) / 60.0)
+    cycle_returns, sample, equity, hedges = returns_stage(
+        entries, legs, panel, prices, calendar, curve
+    )
+    tests_stage(cycle_returns)
+    replication_stage(cycle_returns)
+    stress_stage(cycle_returns, sample, equity, hedges, quotes, legs, prices)
+    LOGGER.info("item 3 run done in %.1f min", (time.time() - started) / 60.0)
 
 
 if __name__ == "__main__":

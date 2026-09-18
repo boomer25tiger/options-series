@@ -190,7 +190,7 @@ def plot_cost_grid(means: pd.DataFrame, path: Path) -> None:
             "execution fraction k of the quoted half-spread", fontsize=9, color=MUTED
         )
         axis.set_title(ARM_TITLES[arm], loc="left", fontsize=11, color=INK)
-        axis.legend(frameon=False, fontsize=8, loc="lower left")
+        axis.legend(frameon=False, fontsize=8, loc="upper right")
         axis.margins(x=0.12)
     axes[0].set_ylabel(
         "mean cycle return per unit of entry premium", fontsize=9, color=MUTED

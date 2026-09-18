@@ -1,0 +1,1671 @@
+ticker,cycle,arm,entry,window,excluded_by,hedge_days,carried_hedge_days,carried_leg_days,zero_bid_marks,carried_marks
+GLD,1,straddle,2008-06-23,estimation,,18,0,0,5,0
+GLD,1,strip,2008-06-23,estimation,,18,0,0,183,0
+GLD,2,straddle,2008-07-21,estimation,,19,4,4,7,0
+GLD,2,strip,2008-07-21,estimation,,19,4,16,259,0
+GLD,3,straddle,2008-08-18,estimation,,23,0,0,0,0
+GLD,3,strip,2008-08-18,estimation,,23,0,0,261,0
+GLD,4,straddle,2008-09-22,estimation,,19,0,0,1,0
+GLD,4,strip,2008-09-22,estimation,,19,0,0,205,0
+GLD,5,straddle,2008-10-20,estimation,,24,1,1,1,0
+GLD,5,strip,2008-10-20,estimation,,24,0,0,473,0
+GLD,6,straddle,2008-11-24,estimation,,18,0,0,0,0
+GLD,6,strip,2008-11-24,estimation,,18,0,0,591,0
+GLD,7,straddle,2008-12-22,estimation,,17,0,0,0,0
+GLD,7,strip,2008-12-22,estimation,,17,0,0,337,0
+GLD,8,straddle,2009-01-20,estimation,,22,2,2,3,0
+GLD,8,strip,2009-01-20,estimation,,22,2,7,249,0
+GLD,9,straddle,2009-02-23,estimation,,19,0,0,1,0
+GLD,9,strip,2009-02-23,estimation,,19,0,0,324,0
+GLD,10,straddle,2009-03-23,estimation,,18,0,0,3,0
+GLD,10,strip,2009-03-23,estimation,,18,1,1,430,0
+GLD,11,straddle,2009-04-20,estimation,,19,0,0,1,0
+GLD,11,strip,2009-04-20,estimation,,19,0,0,231,0
+GLD,12,straddle,2009-05-18,estimation,,23,0,0,0,0
+GLD,12,strip,2009-05-18,estimation,,23,0,0,285,0
+GLD,13,straddle,2009-06-22,estimation,,18,0,0,0,0
+GLD,13,strip,2009-06-22,estimation,,18,0,0,212,0
+GLD,14,straddle,2009-07-20,estimation,,24,0,0,0,0
+GLD,14,strip,2009-07-20,estimation,,24,0,0,194,0
+GLD,15,straddle,2009-08-24,estimation,,18,2,2,5,0
+GLD,15,strip,2009-08-24,estimation,,18,2,5,213,0
+GLD,16,straddle,2009-09-21,estimation,,19,0,0,3,0
+GLD,16,strip,2009-09-21,estimation,,19,0,0,280,0
+GLD,17,straddle,2009-10-19,estimation,,24,0,0,1,0
+GLD,17,strip,2009-10-19,estimation,,24,0,0,134,0
+GLD,18,straddle,2009-11-23,estimation,,18,0,0,0,0
+GLD,18,strip,2009-11-23,estimation,,18,0,0,420,0
+GLD,19,straddle,2009-12-21,estimation,,17,0,0,1,0
+GLD,19,strip,2009-12-21,estimation,,17,0,0,286,0
+GLD,20,straddle,2010-01-19,estimation,,22,0,0,0,0
+GLD,20,strip,2010-01-19,estimation,,22,0,0,141,0
+GLD,21,straddle,2010-02-22,estimation,,19,0,0,0,0
+GLD,21,strip,2010-02-22,estimation,,19,0,0,373,0
+GLD,22,straddle,2010-03-22,estimation,,18,0,0,2,0
+GLD,22,strip,2010-03-22,estimation,,18,0,0,404,0
+GLD,23,straddle,2010-04-19,estimation,,24,0,0,0,0
+GLD,23,strip,2010-04-19,estimation,,24,0,0,383,0
+GLD,24,straddle,2010-05-24,estimation,,18,0,0,1,0
+GLD,24,strip,2010-05-24,estimation,,18,0,0,401,0
+GLD,25,straddle,2010-06-21,estimation,,18,0,0,0,0
+GLD,25,strip,2010-06-21,estimation,,18,0,0,247,0
+GLD,26,straddle,2010-07-19,estimation,,24,0,0,1,0
+GLD,26,strip,2010-07-19,estimation,,24,0,0,432,0
+GLD,27,straddle,2010-08-23,estimation,,18,2,2,0,0
+GLD,27,strip,2010-08-23,estimation,,18,2,4,364,0
+GLD,28,straddle,2010-09-20,estimation,,19,0,0,1,0
+GLD,28,strip,2010-09-20,estimation,,19,0,0,167,0
+GLD,29,straddle,2010-10-18,estimation,,24,0,0,0,0
+GLD,29,strip,2010-10-18,estimation,,24,0,0,666,0
+GLD,30,straddle,2010-11-22,estimation,,18,0,0,0,0
+GLD,30,strip,2010-11-22,estimation,,18,0,0,222,0
+GLD,31,straddle,2010-12-20,estimation,,22,0,0,0,0
+GLD,31,strip,2010-12-20,estimation,,22,0,0,312,0
+GLD,32,straddle,2011-01-24,estimation,,19,0,0,1,0
+GLD,32,strip,2011-01-24,estimation,,19,0,0,389,0
+GLD,33,straddle,2011-02-22,estimation,,18,0,0,0,0
+GLD,33,strip,2011-02-22,estimation,,18,0,0,181,0
+GLD,34,straddle,2011-03-21,estimation,,19,0,0,0,0
+GLD,34,strip,2011-03-21,estimation,,19,0,0,325,0
+GLD,35,straddle,2011-04-18,estimation,,23,0,0,0,0
+GLD,35,strip,2011-04-18,estimation,,23,0,0,682,0
+GLD,36,straddle,2011-05-23,estimation,,18,0,0,0,0
+GLD,36,strip,2011-05-23,estimation,,18,0,0,507,0
+GLD,37,straddle,2011-06-20,estimation,,18,0,0,0,0
+GLD,37,strip,2011-06-20,estimation,,18,0,0,349,0
+GLD,38,straddle,2011-07-18,estimation,,24,0,0,3,0
+GLD,38,strip,2011-07-18,estimation,,24,0,0,202,0
+GLD,39,straddle,2011-08-22,estimation,,18,0,0,0,0
+GLD,39,strip,2011-08-22,estimation,,18,0,0,365,0
+GLD,40,straddle,2011-09-19,estimation,,24,0,0,1,0
+GLD,40,strip,2011-09-19,estimation,,24,0,0,452,0
+GLD,41,straddle,2011-10-24,estimation,,19,0,0,0,0
+GLD,41,strip,2011-10-24,estimation,,19,2,2,622,0
+GLD,42,straddle,2011-11-21,estimation,,18,0,0,1,0
+GLD,42,strip,2011-11-21,estimation,,18,0,0,739,0
+GLD,43,straddle,2011-12-19,estimation,,21,0,0,0,0
+GLD,43,strip,2011-12-19,estimation,,21,2,2,700,0
+GLD,44,straddle,2012-01-23,estimation,,19,0,0,0,0
+GLD,44,strip,2012-01-23,estimation,,19,0,0,608,0
+GLD,45,straddle,2012-02-21,estimation,,18,1,1,1,0
+GLD,45,strip,2012-02-21,estimation,,18,1,7,358,0
+GLD,46,straddle,2012-03-19,estimation,,23,0,0,0,0
+GLD,46,strip,2012-03-19,estimation,,23,0,0,551,0
+GLD,47,straddle,2012-04-23,estimation,,19,1,1,0,0
+GLD,47,strip,2012-04-23,estimation,,19,1,2,341,0
+GLD,48,straddle,2012-05-21,estimation,,18,0,0,0,0
+GLD,48,strip,2012-05-21,estimation,,18,0,0,569,0
+GLD,49,straddle,2012-06-18,estimation,,23,0,0,0,0
+GLD,49,strip,2012-06-18,estimation,,23,0,0,632,0
+GLD,50,straddle,2012-07-23,estimation,,19,0,0,0,0
+GLD,50,strip,2012-07-23,estimation,,19,0,0,699,0
+GLD,51,straddle,2012-08-20,estimation,,23,1,1,3,0
+GLD,51,strip,2012-08-20,estimation,,23,1,7,401,0
+GLD,52,straddle,2012-09-24,estimation,,19,0,0,0,0
+GLD,52,strip,2012-09-24,estimation,,19,0,0,267,0
+GLD,53,straddle,2012-10-22,estimation,,17,0,0,0,0
+GLD,53,strip,2012-10-22,estimation,,17,0,0,560,0
+GLD,54,straddle,2012-11-19,estimation,,23,0,0,2,0
+GLD,54,strip,2012-11-19,estimation,,23,0,0,333,0
+GLD,55,straddle,2012-12-24,estimation,,17,0,0,0,0
+GLD,55,strip,2012-12-24,estimation,,17,0,0,344,0
+GLD,56,straddle,2013-01-22,estimation,,18,0,0,1,0
+GLD,56,strip,2013-01-22,estimation,,18,0,0,277,0
+GLD,57,straddle,2013-02-19,estimation,,18,0,0,0,0
+GLD,57,strip,2013-02-19,estimation,,18,0,0,479,0
+GLD,58,straddle,2013-03-18,estimation,,23,0,0,4,0
+GLD,58,strip,2013-03-18,estimation,,23,0,0,268,0
+GLD,59,straddle,2013-04-22,estimation,,19,0,0,0,0
+GLD,59,strip,2013-04-22,estimation,,19,0,0,263,0
+GLD,60,straddle,2013-05-20,estimation,,23,0,0,1,0
+GLD,60,strip,2013-05-20,estimation,,23,0,0,566,0
+GLD,61,straddle,2013-06-24,estimation,,18,0,0,0,0
+GLD,61,strip,2013-06-24,estimation,,18,0,0,608,0
+GLD,62,straddle,2013-07-22,estimation,,19,0,0,0,0
+GLD,62,strip,2013-07-22,estimation,,19,0,0,387,0
+GLD,63,straddle,2013-08-19,estimation,,23,0,0,0,0
+GLD,63,strip,2013-08-19,estimation,,23,0,0,478,0
+GLD,64,straddle,2013-09-23,estimation,,19,0,0,0,0
+GLD,64,strip,2013-09-23,estimation,,19,0,0,302,0
+GLD,65,straddle,2013-10-21,estimation,,19,0,0,0,0
+GLD,65,strip,2013-10-21,estimation,,19,0,0,309,0
+GLD,66,straddle,2013-11-18,estimation,,23,0,0,0,0
+GLD,66,strip,2013-11-18,estimation,,23,0,0,296,0
+GLD,67,straddle,2013-12-23,estimation,,17,0,0,0,0
+GLD,67,strip,2013-12-23,estimation,,17,0,0,377,0
+GLD,68,straddle,2014-01-21,estimation,,22,0,0,0,0
+GLD,68,strip,2014-01-21,estimation,,22,0,0,195,0
+GLD,69,straddle,2014-02-24,estimation,,19,0,0,0,0
+GLD,69,strip,2014-02-24,estimation,,19,0,0,319,0
+GLD,70,straddle,2014-03-24,estimation,,18,0,0,0,0
+GLD,70,strip,2014-03-24,estimation,,18,0,0,326,0
+GLD,71,straddle,2014-04-21,estimation,,19,0,0,0,0
+GLD,71,strip,2014-04-21,estimation,,19,0,0,305,0
+GLD,72,straddle,2014-05-19,estimation,,23,0,0,0,0
+GLD,72,strip,2014-05-19,estimation,,23,0,0,405,0
+GLD,73,straddle,2014-06-23,estimation,,18,0,0,0,0
+GLD,73,strip,2014-06-23,estimation,,18,0,0,239,0
+GLD,74,straddle,2014-07-21,estimation,,19,0,0,0,0
+GLD,74,strip,2014-07-21,estimation,,19,0,0,181,0
+GLD,75,straddle,2014-08-18,estimation,,23,1,1,1,0
+GLD,75,strip,2014-08-18,estimation,,23,1,9,269,0
+GLD,76,straddle,2014-09-22,estimation,,19,0,0,0,0
+GLD,76,strip,2014-09-22,estimation,,19,0,0,252,0
+GLD,77,straddle,2014-10-20,estimation,,24,0,0,1,0
+GLD,77,strip,2014-10-20,estimation,,24,0,0,688,0
+GLD,78,straddle,2014-11-24,estimation,,18,0,0,0,0
+GLD,78,strip,2014-11-24,estimation,,18,0,0,396,0
+GLD,79,straddle,2014-12-22,estimation,,17,0,0,0,0
+GLD,79,strip,2014-12-22,estimation,,17,0,0,346,0
+GLD,80,straddle,2015-01-20,estimation,,22,0,0,2,0
+GLD,80,strip,2015-01-20,estimation,,22,2,2,610,0
+GLD,81,straddle,2015-02-23,estimation,,19,0,0,1,0
+GLD,81,strip,2015-02-23,estimation,,19,0,0,368,0
+GLD,82,straddle,2015-03-23,estimation,,18,0,0,0,0
+GLD,82,strip,2015-03-23,estimation,,18,0,0,536,0
+GLD,83,straddle,2015-04-20,estimation,,19,0,0,0,0
+GLD,83,strip,2015-04-20,estimation,,19,0,0,335,0
+GLD,84,straddle,2015-05-18,estimation,,23,0,0,0,0
+GLD,84,strip,2015-05-18,estimation,,23,0,0,573,0
+GLD,85,straddle,2015-06-22,estimation,,18,0,0,1,0
+GLD,85,strip,2015-06-22,estimation,,18,0,0,250,0
+GLD,86,straddle,2015-07-20,estimation,,24,1,1,1,0
+GLD,86,strip,2015-07-20,estimation,,24,1,1,672,0
+GLD,87,straddle,2015-08-24,estimation,,18,0,0,0,0
+GLD,87,strip,2015-08-24,estimation,,18,0,0,572,0
+GLD,88,straddle,2015-09-21,estimation,,19,0,0,2,0
+GLD,88,strip,2015-09-21,estimation,,19,1,1,297,0
+GLD,89,straddle,2015-10-19,estimation,,24,1,1,2,0
+GLD,89,strip,2015-10-19,estimation,,24,0,0,564,0
+GLD,90,straddle,2015-11-23,estimation,,18,0,0,0,0
+GLD,90,strip,2015-11-23,estimation,,18,0,0,287,0
+GLD,91,straddle,2015-12-21,estimation,,17,0,0,0,0
+GLD,91,strip,2015-12-21,estimation,,17,0,0,336,0
+GLD,92,straddle,2016-01-19,estimation,,22,0,0,6,0
+GLD,92,strip,2016-01-19,estimation,,22,0,0,439,0
+GLD,93,straddle,2016-02-22,estimation,,19,0,0,1,0
+GLD,93,strip,2016-02-22,estimation,,19,0,0,628,0
+GLD,94,straddle,2016-03-21,estimation,,18,0,0,0,0
+GLD,94,strip,2016-03-21,estimation,,18,0,0,500,0
+GLD,95,straddle,2016-04-18,estimation,,24,0,0,0,0
+GLD,95,strip,2016-04-18,estimation,,24,0,0,601,0
+GLD,96,straddle,2016-05-23,estimation,,18,0,0,0,0
+GLD,96,strip,2016-05-23,estimation,,18,1,1,383,0
+GLD,97,straddle,2016-06-20,estimation,,18,1,1,1,0
+GLD,97,strip,2016-06-20,estimation,,18,1,3,501,0
+GLD,98,straddle,2016-07-18,estimation,,24,0,0,0,0
+GLD,98,strip,2016-07-18,estimation,,24,0,0,617,0
+GLD,99,straddle,2016-08-22,estimation,,18,0,0,0,0
+GLD,99,strip,2016-08-22,estimation,,18,0,0,337,0
+GLD,100,straddle,2016-09-19,estimation,,24,0,0,2,0
+GLD,100,strip,2016-09-19,estimation,,24,0,0,500,0
+GLD,101,straddle,2016-10-24,estimation,,19,0,0,1,0
+GLD,101,strip,2016-10-24,estimation,,19,0,0,202,0
+GLD,102,straddle,2016-11-21,estimation,,18,0,0,1,0
+GLD,102,strip,2016-11-21,estimation,,18,0,0,243,0
+GLD,103,straddle,2016-12-19,estimation,,21,1,1,3,0
+GLD,103,strip,2016-12-19,estimation,,21,1,2,478,0
+GLD,104,straddle,2017-01-23,estimation,,19,0,0,0,0
+GLD,104,strip,2017-01-23,estimation,,19,0,0,453,0
+GLD,105,straddle,2017-02-21,estimation,,18,0,0,0,0
+GLD,105,strip,2017-02-21,estimation,,18,0,0,298,0
+GLD,106,straddle,2017-03-20,estimation,,23,0,0,3,0
+GLD,106,strip,2017-03-20,estimation,,23,0,0,394,0
+GLD,107,straddle,2017-04-24,estimation,,19,1,1,0,0
+GLD,107,strip,2017-04-24,estimation,,19,3,3,224,0
+GLD,108,straddle,2017-05-22,estimation,,18,0,0,0,0
+GLD,108,strip,2017-05-22,estimation,,18,0,0,242,0
+GLD,109,straddle,2017-06-19,estimation,,23,0,0,0,0
+GLD,109,strip,2017-06-19,estimation,,23,0,0,304,0
+GLD,110,straddle,2017-07-24,estimation,,19,0,0,1,0
+GLD,110,strip,2017-07-24,estimation,,19,0,0,305,0
+GLD,111,straddle,2017-08-21,estimation,,18,0,0,1,0
+GLD,111,strip,2017-08-21,estimation,,18,0,0,290,0
+GLD,112,straddle,2017-09-18,estimation,,24,0,0,0,0
+GLD,112,strip,2017-09-18,estimation,,24,0,0,439,0
+GLD,113,straddle,2017-10-23,estimation,,19,0,0,0,0
+GLD,113,strip,2017-10-23,estimation,,19,0,0,285,0
+GLD,114,straddle,2017-11-20,estimation,,18,0,0,1,0
+GLD,114,strip,2017-11-20,estimation,,18,0,0,170,0
+GLD,115,straddle,2017-12-18,estimation,,21,0,0,2,0
+GLD,115,strip,2017-12-18,estimation,,21,1,1,247,0
+GLD,116,straddle,2018-01-22,estimation,,19,0,0,0,0
+GLD,116,strip,2018-01-22,estimation,,19,0,0,159,0
+GLD,117,straddle,2018-02-20,estimation,,18,0,0,0,0
+GLD,117,strip,2018-02-20,estimation,,18,0,0,378,0
+GLD,118,straddle,2018-03-19,estimation,,23,0,0,1,0
+GLD,118,strip,2018-03-19,estimation,,23,0,0,298,0
+GLD,119,straddle,2018-04-23,estimation,,19,1,1,1,0
+GLD,119,strip,2018-04-23,estimation,,19,2,2,307,0
+GLD,120,straddle,2018-05-21,estimation,,18,0,0,0,0
+GLD,120,strip,2018-05-21,estimation,,18,0,0,291,0
+GLD,121,straddle,2018-06-18,estimation,,23,0,0,3,0
+GLD,121,strip,2018-06-18,estimation,,23,0,0,379,0
+GLD,122,straddle,2018-07-23,estimation,,19,0,0,0,0
+GLD,122,strip,2018-07-23,estimation,,19,0,0,173,0
+GLD,123,straddle,2018-08-20,estimation,,23,0,0,0,0
+GLD,123,strip,2018-08-20,estimation,,23,0,0,448,0
+GLD,124,straddle,2018-09-24,estimation,,19,0,0,0,0
+GLD,124,strip,2018-09-24,estimation,,19,0,0,184,0
+GLD,125,straddle,2018-10-22,estimation,,19,0,0,0,0
+GLD,125,strip,2018-10-22,estimation,,19,0,0,302,0
+GLD,126,straddle,2018-11-19,estimation,,22,0,0,0,0
+GLD,126,strip,2018-11-19,estimation,,22,0,0,369,0
+GLD,127,straddle,2018-12-24,estimation,,17,0,0,0,0
+GLD,127,strip,2018-12-24,estimation,,17,0,0,228,0
+GLD,128,straddle,2019-01-22,estimation,,18,0,0,1,0
+GLD,128,strip,2019-01-22,estimation,,18,0,0,380,0
+GLD,129,straddle,2019-02-19,estimation,,18,1,1,4,0
+GLD,129,strip,2019-02-19,estimation,,18,1,1,343,0
+GLD,130,straddle,2019-03-18,estimation,,23,0,0,2,0
+GLD,130,strip,2019-03-18,estimation,,23,1,3,282,0
+GLD,131,straddle,2019-04-22,estimation,,19,0,0,0,0
+GLD,131,strip,2019-04-22,estimation,,19,0,0,202,0
+GLD,132,straddle,2019-05-20,estimation,,23,6,6,3,0
+GLD,132,strip,2019-05-20,estimation,,23,6,19,240,0
+GLD,133,straddle,2019-06-24,estimation,,18,0,0,0,0
+GLD,133,strip,2019-06-24,estimation,,18,0,0,205,0
+GLD,134,straddle,2019-07-22,estimation,,19,0,0,2,0
+GLD,134,strip,2019-07-22,estimation,,19,0,0,138,0
+GLD,135,straddle,2019-08-19,estimation,,23,0,0,0,0
+GLD,135,strip,2019-08-19,estimation,,23,0,0,321,0
+GLD,136,straddle,2019-09-23,estimation,,19,0,0,0,0
+GLD,136,strip,2019-09-23,estimation,,19,0,0,331,0
+GLD,137,straddle,2019-10-21,estimation,,19,0,0,0,0
+GLD,137,strip,2019-10-21,estimation,,19,0,0,364,0
+GLD,138,straddle,2019-11-18,estimation,,23,0,0,0,0
+GLD,138,strip,2019-11-18,estimation,,23,0,0,419,0
+GLD,139,straddle,2019-12-23,estimation,,17,2,2,2,0
+GLD,139,strip,2019-12-23,estimation,,17,2,8,229,0
+GLD,140,straddle,2020-01-21,estimation,,22,0,0,0,0
+GLD,140,strip,2020-01-21,estimation,,22,0,0,268,0
+GLD,141,straddle,2020-02-24,estimation,,19,0,0,1,0
+GLD,141,strip,2020-02-24,estimation,,19,0,0,154,0
+GLD,142,straddle,2020-03-23,estimation,,18,0,0,1,0
+GLD,142,strip,2020-03-23,estimation,,18,0,0,442,0
+GLD,143,straddle,2020-04-20,estimation,,19,0,0,0,0
+GLD,143,strip,2020-04-20,estimation,,19,0,0,601,0
+GLD,144,straddle,2020-05-18,estimation,,23,0,0,0,0
+GLD,144,strip,2020-05-18,estimation,,23,0,0,844,0
+GLD,145,straddle,2020-06-22,estimation,,18,2,2,0,0
+GLD,145,strip,2020-06-22,estimation,,18,2,2,536,0
+GLD,146,straddle,2020-07-20,estimation,,24,0,0,0,0
+GLD,146,strip,2020-07-20,estimation,,24,0,0,277,0
+GLD,147,straddle,2020-08-24,estimation,,18,0,0,0,0
+GLD,147,strip,2020-08-24,estimation,,18,0,0,747,0
+GLD,148,straddle,2020-09-21,estimation,,19,0,0,0,0
+GLD,148,strip,2020-09-21,estimation,,19,0,0,338,0
+GLD,149,straddle,2020-10-19,estimation,,24,0,0,0,0
+GLD,149,strip,2020-10-19,estimation,,24,0,0,434,0
+GLD,150,straddle,2020-11-23,estimation,,18,0,0,0,0
+GLD,150,strip,2020-11-23,estimation,,18,0,0,412,0
+GLD,151,straddle,2020-12-21,estimation,,17,0,0,0,0
+GLD,151,strip,2020-12-21,estimation,,17,0,0,246,0
+GLD,152,straddle,2021-01-19,estimation,,22,1,1,1,0
+GLD,152,strip,2021-01-19,estimation,,22,1,1,292,0
+GLD,153,straddle,2021-02-22,estimation,,19,1,1,1,0
+GLD,153,strip,2021-02-22,estimation,,19,1,1,437,0
+GLD,154,straddle,2021-03-22,estimation,,18,0,0,0,0
+GLD,154,strip,2021-03-22,estimation,,18,0,0,255,0
+GLD,155,straddle,2021-04-19,estimation,,24,1,1,1,0
+GLD,155,strip,2021-04-19,estimation,,24,1,5,259,0
+GLD,156,straddle,2021-05-24,estimation,,18,0,0,0,0
+GLD,156,strip,2021-05-24,estimation,,18,0,0,590,0
+GLD,157,straddle,2021-06-21,estimation,,18,0,0,0,0
+GLD,157,strip,2021-06-21,estimation,,18,0,0,310,0
+GLD,158,straddle,2021-07-19,estimation,,24,0,0,0,0
+GLD,158,strip,2021-07-19,estimation,,24,0,0,276,0
+GLD,159,straddle,2021-08-23,estimation,,18,0,0,0,0
+GLD,159,strip,2021-08-23,estimation,,18,0,0,396,0
+GLD,160,straddle,2021-09-20,estimation,,19,0,0,0,0
+GLD,160,strip,2021-09-20,estimation,,19,0,0,198,0
+GLD,161,straddle,2021-10-18,estimation,,24,1,1,1,0
+GLD,161,strip,2021-10-18,estimation,,24,1,9,321,0
+GLD,162,straddle,2021-11-22,estimation,,18,0,0,0,0
+GLD,162,strip,2021-11-22,estimation,,18,0,0,216,0
+GLD,163,straddle,2021-12-20,estimation,,22,0,0,0,0
+GLD,163,strip,2021-12-20,estimation,,22,0,0,480,0
+GLD,164,straddle,2022-01-24,holdout,,19,0,0,0,0
+GLD,164,strip,2022-01-24,holdout,,19,0,0,319,0
+GLD,165,straddle,2022-02-22,holdout,,18,0,0,0,0
+GLD,165,strip,2022-02-22,holdout,,18,0,0,318,0
+GLD,166,straddle,2022-03-21,holdout,,18,0,0,0,0
+GLD,166,strip,2022-03-21,holdout,,18,0,0,458,0
+GLD,167,straddle,2022-04-18,holdout,,24,2,2,4,0
+GLD,167,strip,2022-04-18,holdout,,24,2,14,383,0
+GLD,168,straddle,2022-05-23,holdout,,18,0,0,0,0
+GLD,168,strip,2022-05-23,holdout,,18,0,0,332,0
+GLD,169,straddle,2022-06-21,holdout,,17,0,0,0,0
+GLD,169,strip,2022-06-21,holdout,,17,0,0,335,0
+GLD,170,straddle,2022-07-18,holdout,,24,0,0,1,0
+GLD,170,strip,2022-07-18,holdout,,24,0,0,754,0
+GLD,171,straddle,2022-08-22,holdout,,18,0,0,1,0
+GLD,171,strip,2022-08-22,holdout,,18,0,0,302,0
+GLD,172,straddle,2022-09-19,holdout,,24,0,0,1,0
+GLD,172,strip,2022-09-19,holdout,,24,0,0,664,0
+GLD,173,straddle,2022-10-24,holdout,,19,1,1,4,0
+GLD,173,strip,2022-10-24,holdout,,19,1,4,580,0
+GLD,174,straddle,2022-11-21,holdout,,18,0,0,0,0
+GLD,174,strip,2022-11-21,holdout,,18,0,0,483,0
+GLD,175,straddle,2022-12-19,holdout,,21,1,1,3,0
+GLD,175,strip,2022-12-19,holdout,,21,2,6,324,0
+GLD,176,straddle,2023-01-23,holdout,,19,0,0,2,0
+GLD,176,strip,2023-01-23,holdout,,19,1,3,372,0
+GLD,177,straddle,2023-02-21,holdout,,18,0,0,1,0
+GLD,177,strip,2023-02-21,holdout,,18,0,0,396,0
+GLD,178,straddle,2023-03-20,holdout,,23,0,0,0,0
+GLD,178,strip,2023-03-20,holdout,,23,0,0,382,0
+GLD,179,straddle,2023-04-24,holdout,,19,0,0,0,0
+GLD,179,strip,2023-04-24,holdout,,19,0,0,318,0
+GLD,180,straddle,2023-05-22,holdout,,18,0,0,0,0
+GLD,180,strip,2023-05-22,holdout,,18,0,0,601,0
+GLD,181,straddle,2023-06-20,holdout,,22,0,0,0,0
+GLD,181,strip,2023-06-20,holdout,,22,0,0,295,0
+GLD,182,straddle,2023-07-24,holdout,,19,1,1,0,0
+GLD,182,strip,2023-07-24,holdout,,19,1,5,346,0
+GLD,183,straddle,2023-08-21,holdout,,18,0,0,0,0
+GLD,183,strip,2023-08-21,holdout,,18,0,0,411,0
+GLD,184,straddle,2023-09-18,holdout,,24,4,4,0,0
+GLD,184,strip,2023-09-18,holdout,,24,5,25,155,0
+GLD,185,straddle,2023-10-23,holdout,,19,0,0,0,0
+GLD,185,strip,2023-10-23,holdout,,19,0,0,404,0
+GLD,186,straddle,2023-11-20,holdout,,18,0,0,0,0
+GLD,186,strip,2023-11-20,holdout,,18,0,0,321,0
+GLD,187,straddle,2023-12-18,holdout,,21,0,0,0,0
+GLD,187,strip,2023-12-18,holdout,,21,0,0,342,0
+GLD,188,straddle,2024-01-22,holdout,,19,0,0,0,0
+GLD,188,strip,2024-01-22,holdout,,19,0,0,440,0
+GLD,189,straddle,2024-02-20,holdout,,18,0,0,2,0
+GLD,189,strip,2024-02-20,holdout,,18,0,0,200,0
+GLD,190,straddle,2024-03-18,holdout,,23,0,0,3,0
+GLD,190,strip,2024-03-18,holdout,,23,0,0,419,0
+GLD,191,straddle,2024-04-22,holdout,,19,0,0,0,0
+GLD,191,strip,2024-04-22,holdout,,19,0,0,595,0
+GLD,192,straddle,2024-05-20,holdout,,22,6,6,0,0
+GLD,192,strip,2024-05-20,holdout,,22,6,7,567,0
+GLD,193,straddle,2024-06-24,holdout,,18,0,0,0,0
+GLD,193,strip,2024-06-24,holdout,,18,0,0,471,0
+GLD,194,straddle,2024-07-22,holdout,,19,0,0,0,0
+GLD,194,strip,2024-07-22,holdout,,19,0,0,235,0
+GLD,195,straddle,2024-08-19,holdout,,23,0,0,0,0
+GLD,195,strip,2024-08-19,holdout,,23,0,0,866,0
+GLD,196,straddle,2024-09-23,holdout,,19,0,0,0,0
+GLD,196,strip,2024-09-23,holdout,,19,0,0,626,0
+GLD,197,straddle,2024-10-21,holdout,,19,0,0,0,0
+GLD,197,strip,2024-10-21,holdout,,19,2,3,309,0
+GLD,198,straddle,2024-11-18,holdout,,23,0,0,0,0
+GLD,198,strip,2024-11-18,holdout,,23,0,0,752,0
+GLD,199,straddle,2024-12-23,holdout,,16,0,0,0,0
+GLD,199,strip,2024-12-23,holdout,,16,0,0,433,0
+GLD,200,straddle,2025-01-21,holdout,,22,8,8,1,0
+GLD,200,strip,2025-01-21,holdout,,22,10,32,458,0
+GLD,201,straddle,2025-02-24,holdout,,19,0,0,0,0
+GLD,201,strip,2025-02-24,holdout,,19,0,0,428,0
+GLD,202,straddle,2025-03-24,holdout,,18,0,0,0,0
+GLD,202,strip,2025-03-24,holdout,,18,0,0,76,0
+GLD,203,straddle,2025-04-21,holdout,,19,0,0,0,0
+GLD,203,strip,2025-04-21,holdout,,19,2,4,262,0
+GLD,204,straddle,2025-05-19,holdout,,22,0,0,0,0
+GLD,204,strip,2025-05-19,holdout,,22,0,0,479,0
+GLD,205,straddle,2025-06-23,holdout,,18,0,0,0,0
+GLD,205,strip,2025-06-23,holdout,,18,0,0,1019,0
+GLD,206,straddle,2025-07-21,holdout,,19,0,0,0,0
+GLD,206,strip,2025-07-21,holdout,,19,0,0,649,0
+SLV,1,straddle,2008-12-22,estimation,,17,0,0,2,0
+SLV,1,strip,2008-12-22,estimation,rule 2 floor,17,0,0,43,0
+SLV,2,straddle,2009-01-20,estimation,,22,0,0,9,0
+SLV,2,strip,2009-01-20,estimation,rule 2 floor,22,1,1,45,0
+SLV,3,straddle,2009-02-23,estimation,,19,0,0,8,0
+SLV,3,strip,2009-02-23,estimation,rule 2 floor,19,0,0,114,0
+SLV,4,straddle,2009-03-23,estimation,,18,0,0,8,0
+SLV,4,strip,2009-03-23,estimation,rule 2 floor,18,0,0,62,0
+SLV,5,straddle,2009-04-20,estimation,,19,1,1,8,0
+SLV,5,strip,2009-04-20,estimation,rule 2 floor,19,1,3,33,0
+SLV,6,straddle,2009-05-18,estimation,,23,0,0,0,0
+SLV,6,strip,2009-05-18,estimation,rule 2 floor,23,0,0,41,0
+SLV,7,straddle,2009-06-22,estimation,,18,0,0,0,0
+SLV,7,strip,2009-06-22,estimation,rule 2 floor,18,0,0,41,0
+SLV,8,straddle,2009-07-20,estimation,,24,0,0,6,0
+SLV,8,strip,2009-07-20,estimation,rule 2 floor,24,0,0,54,0
+SLV,9,straddle,2009-08-24,estimation,,18,6,6,8,0
+SLV,9,strip,2009-08-24,estimation,rule 2 floor,18,7,14,27,0
+SLV,10,straddle,2009-09-21,estimation,,19,0,0,1,0
+SLV,10,strip,2009-09-21,estimation,rule 2 floor,19,4,4,57,0
+SLV,11,straddle,2009-10-19,estimation,,24,0,0,0,0
+SLV,11,strip,2009-10-19,estimation,rule 2 floor,24,0,0,42,0
+SLV,12,straddle,2009-11-23,estimation,,18,0,0,1,0
+SLV,12,strip,2009-11-23,estimation,rule 2 floor,18,0,0,42,0
+SLV,13,straddle,2009-12-21,estimation,,17,2,2,1,0
+SLV,13,strip,2009-12-21,estimation,rule 2 floor,17,2,4,71,0
+SLV,14,straddle,2010-01-19,estimation,,22,4,4,3,0
+SLV,14,strip,2010-01-19,estimation,rule 2 floor,22,4,5,78,0
+SLV,15,straddle,2010-02-22,estimation,,19,0,0,1,0
+SLV,15,strip,2010-02-22,estimation,rule 2 floor,19,0,0,70,0
+SLV,16,straddle,2010-03-22,estimation,,18,1,1,2,0
+SLV,16,strip,2010-03-22,estimation,rule 2 floor,18,1,2,53,0
+SLV,17,straddle,2010-04-19,estimation,,24,0,0,0,0
+SLV,17,strip,2010-04-19,estimation,rule 2 floor,24,0,0,37,0
+SLV,18,straddle,2010-05-24,estimation,,18,0,0,0,0
+SLV,18,strip,2010-05-24,estimation,rule 2 floor,18,0,0,74,0
+SLV,19,straddle,2010-06-21,estimation,,18,0,0,0,0
+SLV,19,strip,2010-06-21,estimation,rule 2 floor,18,0,0,51,0
+SLV,20,straddle,2010-07-19,estimation,,24,0,0,2,0
+SLV,20,strip,2010-07-19,estimation,rule 2 floor,24,0,0,62,0
+SLV,21,straddle,2010-08-23,estimation,,18,2,2,2,0
+SLV,21,strip,2010-08-23,estimation,rule 2 floor,18,2,6,18,0
+SLV,22,straddle,2010-09-20,estimation,,19,2,2,3,0
+SLV,22,strip,2010-09-20,estimation,rule 2 floor,19,2,4,73,0
+SLV,23,straddle,2010-10-18,estimation,,24,0,0,0,0
+SLV,23,strip,2010-10-18,estimation,rule 2 floor,24,0,0,21,0
+SLV,24,straddle,2010-11-22,estimation,,18,0,0,0,0
+SLV,24,strip,2010-11-22,estimation,,18,0,0,115,0
+SLV,25,straddle,2010-12-20,estimation,,22,0,0,1,0
+SLV,25,strip,2010-12-20,estimation,,22,0,0,165,0
+SLV,26,straddle,2011-01-24,estimation,,19,3,3,4,0
+SLV,26,strip,2011-01-24,estimation,,19,3,3,120,0
+SLV,27,straddle,2011-02-22,estimation,,18,0,0,0,0
+SLV,27,strip,2011-02-22,estimation,,18,0,0,74,0
+SLV,28,straddle,2011-03-21,estimation,,19,0,0,1,0
+SLV,28,strip,2011-03-21,estimation,,19,0,0,114,0
+SLV,29,straddle,2011-04-18,estimation,,23,0,0,4,0
+SLV,29,strip,2011-04-18,estimation,,23,0,0,162,0
+SLV,30,straddle,2011-05-23,estimation,,18,0,0,0,0
+SLV,30,strip,2011-05-23,estimation,,18,1,1,252,0
+SLV,31,straddle,2011-06-20,estimation,,18,0,0,0,0
+SLV,31,strip,2011-06-20,estimation,,18,1,1,232,0
+SLV,32,straddle,2011-07-18,estimation,,24,0,0,0,0
+SLV,32,strip,2011-07-18,estimation,,24,0,0,167,0
+SLV,33,straddle,2011-08-22,estimation,,18,1,1,1,0
+SLV,33,strip,2011-08-22,estimation,,18,0,0,131,0
+SLV,34,straddle,2011-09-19,estimation,,24,1,1,4,0
+SLV,34,strip,2011-09-19,estimation,,24,2,12,352,0
+SLV,35,straddle,2011-10-24,estimation,,19,0,0,0,0
+SLV,35,strip,2011-10-24,estimation,,19,2,7,158,0
+SLV,36,straddle,2011-11-21,estimation,,18,0,0,1,0
+SLV,36,strip,2011-11-21,estimation,,18,2,2,294,0
+SLV,37,straddle,2011-12-19,estimation,,21,0,0,0,0
+SLV,37,strip,2011-12-19,estimation,,21,1,3,156,0
+SLV,38,straddle,2012-01-23,estimation,,19,0,0,0,0
+SLV,38,strip,2012-01-23,estimation,,19,0,0,148,0
+SLV,39,straddle,2012-02-21,estimation,,18,0,0,1,0
+SLV,39,strip,2012-02-21,estimation,,18,0,0,118,0
+SLV,40,straddle,2012-03-19,estimation,,23,0,0,0,0
+SLV,40,strip,2012-03-19,estimation,,23,0,0,290,0
+SLV,41,straddle,2012-04-23,estimation,,19,0,0,3,0
+SLV,41,strip,2012-04-23,estimation,,19,0,0,167,0
+SLV,42,straddle,2012-05-21,estimation,,18,0,0,0,0
+SLV,42,strip,2012-05-21,estimation,,18,0,0,193,0
+SLV,43,straddle,2012-06-18,estimation,,23,0,0,1,0
+SLV,43,strip,2012-06-18,estimation,,23,0,0,252,0
+SLV,44,straddle,2012-07-23,estimation,,19,0,0,1,0
+SLV,44,strip,2012-07-23,estimation,,19,0,0,187,0
+SLV,45,straddle,2012-08-20,estimation,,23,1,1,3,0
+SLV,45,strip,2012-08-20,estimation,,23,2,2,189,0
+SLV,46,straddle,2012-09-24,estimation,,19,0,0,0,0
+SLV,46,strip,2012-09-24,estimation,,19,0,0,397,0
+SLV,47,straddle,2012-10-22,estimation,,17,0,0,0,0
+SLV,47,strip,2012-10-22,estimation,,17,0,0,209,0
+SLV,48,straddle,2012-11-19,estimation,,23,0,0,1,0
+SLV,48,strip,2012-11-19,estimation,,23,0,0,259,0
+SLV,49,straddle,2012-12-24,estimation,,17,0,0,1,0
+SLV,49,strip,2012-12-24,estimation,,17,0,0,251,0
+SLV,50,straddle,2013-01-22,estimation,,18,0,0,1,0
+SLV,50,strip,2013-01-22,estimation,,18,0,0,218,0
+SLV,51,straddle,2013-02-19,estimation,,18,0,0,0,0
+SLV,51,strip,2013-02-19,estimation,rule 2 floor,18,0,0,91,0
+SLV,52,straddle,2013-03-18,estimation,,23,1,1,4,0
+SLV,52,strip,2013-03-18,estimation,,23,0,0,235,0
+SLV,53,straddle,2013-04-22,estimation,,19,0,0,0,0
+SLV,53,strip,2013-04-22,estimation,,19,0,0,139,0
+SLV,54,straddle,2013-05-20,estimation,,23,0,0,1,0
+SLV,54,strip,2013-05-20,estimation,,23,0,0,139,0
+SLV,55,straddle,2013-06-24,estimation,,18,0,0,0,0
+SLV,55,strip,2013-06-24,estimation,,18,0,0,154,0
+SLV,56,straddle,2013-07-22,estimation,,19,0,0,1,0
+SLV,56,strip,2013-07-22,estimation,,19,0,0,158,0
+SLV,57,straddle,2013-08-19,estimation,,23,0,0,0,0
+SLV,57,strip,2013-08-19,estimation,rule 2 floor,23,0,0,153,0
+SLV,58,straddle,2013-09-23,estimation,,19,0,0,0,0
+SLV,58,strip,2013-09-23,estimation,,19,0,0,138,0
+SLV,59,straddle,2013-10-21,estimation,,19,0,0,3,0
+SLV,59,strip,2013-10-21,estimation,,19,0,0,175,0
+SLV,60,straddle,2013-11-18,estimation,,23,0,0,0,0
+SLV,60,strip,2013-11-18,estimation,,23,0,0,148,0
+SLV,61,straddle,2013-12-23,estimation,,17,0,0,0,0
+SLV,61,strip,2013-12-23,estimation,rule 2 floor,17,0,0,46,0
+SLV,62,straddle,2014-01-21,estimation,,22,1,1,3,0
+SLV,62,strip,2014-01-21,estimation,,22,1,2,220,0
+SLV,63,straddle,2014-02-24,estimation,,19,0,0,1,0
+SLV,63,strip,2014-02-24,estimation,,19,0,0,229,0
+SLV,64,straddle,2014-03-24,estimation,,18,0,0,0,0
+SLV,64,strip,2014-03-24,estimation,,18,0,0,137,0
+SLV,65,straddle,2014-04-21,estimation,,19,0,0,0,0
+SLV,65,strip,2014-04-21,estimation,rule 2 floor,19,0,0,109,0
+SLV,66,straddle,2014-05-19,estimation,,23,0,0,1,0
+SLV,66,strip,2014-05-19,estimation,,23,0,0,156,0
+SLV,67,straddle,2014-06-23,estimation,,18,0,0,0,0
+SLV,67,strip,2014-06-23,estimation,,18,0,0,132,0
+SLV,68,straddle,2014-07-21,estimation,,19,1,1,2,0
+SLV,68,strip,2014-07-21,estimation,rule 2 floor,19,1,2,117,0
+SLV,69,straddle,2014-08-18,estimation,,23,0,0,2,0
+SLV,69,strip,2014-08-18,estimation,rule 2 floor,23,0,0,94,0
+SLV,70,straddle,2014-09-22,estimation,,19,0,0,0,0
+SLV,70,strip,2014-09-22,estimation,,19,0,0,157,0
+SLV,71,straddle,2014-10-20,estimation,,24,0,0,2,0
+SLV,71,strip,2014-10-20,estimation,,24,0,0,166,0
+SLV,72,straddle,2014-11-24,estimation,,18,0,0,0,0
+SLV,72,strip,2014-11-24,estimation,,18,0,0,102,0
+SLV,73,straddle,2014-12-22,estimation,,17,0,0,3,0
+SLV,73,strip,2014-12-22,estimation,,17,0,0,95,0
+SLV,74,straddle,2015-01-20,estimation,,22,0,0,2,0
+SLV,74,strip,2015-01-20,estimation,,22,0,0,216,0
+SLV,75,straddle,2015-02-23,estimation,,19,0,0,0,0
+SLV,75,strip,2015-02-23,estimation,,19,0,0,129,0
+SLV,76,straddle,2015-03-23,estimation,,18,0,0,1,0
+SLV,76,strip,2015-03-23,estimation,rule 2 floor,18,0,0,74,0
+SLV,77,straddle,2015-04-20,estimation,,19,0,0,2,0
+SLV,77,strip,2015-04-20,estimation,rule 2 floor,19,0,0,108,0
+SLV,78,straddle,2015-05-18,estimation,,23,1,1,6,0
+SLV,78,strip,2015-05-18,estimation,,23,1,1,133,0
+SLV,79,straddle,2015-06-22,estimation,,18,0,0,2,0
+SLV,79,strip,2015-06-22,estimation,rule 2 floor,18,1,1,70,0
+SLV,80,straddle,2015-07-20,estimation,,24,0,0,2,0
+SLV,80,strip,2015-07-20,estimation,,24,0,0,163,0
+SLV,81,straddle,2015-08-24,estimation,,18,0,0,0,0
+SLV,81,strip,2015-08-24,estimation,rule 2 floor,18,0,0,58,0
+SLV,82,straddle,2015-09-21,estimation,,19,0,0,2,0
+SLV,82,strip,2015-09-21,estimation,rule 2 floor,19,0,0,65,0
+SLV,83,straddle,2015-10-19,estimation,,24,1,1,5,0
+SLV,83,strip,2015-10-19,estimation,rule 2 floor,24,1,1,102,0
+SLV,84,straddle,2015-11-23,estimation,,18,0,0,1,0
+SLV,84,strip,2015-11-23,estimation,rule 2 floor,18,0,0,83,0
+SLV,85,straddle,2015-12-21,estimation,,17,0,0,0,0
+SLV,85,strip,2015-12-21,estimation,rule 2 floor,17,0,0,94,0
+SLV,86,straddle,2016-01-19,estimation,,22,0,0,4,0
+SLV,86,strip,2016-01-19,estimation,rule 2 floor,22,0,0,78,0
+SLV,87,straddle,2016-02-22,estimation,,19,0,0,1,0
+SLV,87,strip,2016-02-22,estimation,rule 2 floor,19,0,0,118,0
+SLV,88,straddle,2016-03-21,estimation,,18,0,0,1,0
+SLV,88,strip,2016-03-21,estimation,rule 2 floor,18,0,0,185,0
+SLV,89,straddle,2016-04-18,estimation,,24,0,0,0,0
+SLV,89,strip,2016-04-18,estimation,rule 2 floor,24,1,1,127,0
+SLV,90,straddle,2016-05-23,estimation,,18,0,0,3,0
+SLV,90,strip,2016-05-23,estimation,rule 2 floor,18,0,0,81,0
+SLV,91,straddle,2016-06-20,estimation,,18,1,1,6,0
+SLV,91,strip,2016-06-20,estimation,,18,1,3,92,0
+SLV,92,straddle,2016-07-18,estimation,,24,0,0,0,0
+SLV,92,strip,2016-07-18,estimation,,24,0,0,224,0
+SLV,93,straddle,2016-08-22,estimation,,18,0,0,0,0
+SLV,93,strip,2016-08-22,estimation,rule 2 floor,18,0,0,107,0
+SLV,94,straddle,2016-09-19,estimation,,24,0,0,4,0
+SLV,94,strip,2016-09-19,estimation,rule 2 floor,24,0,0,154,0
+SLV,95,straddle,2016-10-24,estimation,,19,0,0,1,0
+SLV,95,strip,2016-10-24,estimation,rule 2 floor,19,0,0,67,0
+SLV,96,straddle,2016-11-21,estimation,,18,0,0,1,0
+SLV,96,strip,2016-11-21,estimation,rule 2 floor,18,0,0,83,0
+SLV,97,straddle,2016-12-19,estimation,,21,1,1,3,0
+SLV,97,strip,2016-12-19,estimation,rule 2 floor,21,1,1,106,0
+SLV,98,straddle,2017-01-23,estimation,,19,0,0,1,0
+SLV,98,strip,2017-01-23,estimation,rule 2 floor,19,2,2,70,0
+SLV,99,straddle,2017-02-21,estimation,,18,0,0,3,0
+SLV,99,strip,2017-02-21,estimation,rule 2 floor,18,0,0,72,0
+SLV,100,straddle,2017-03-20,estimation,,23,1,1,4,0
+SLV,100,strip,2017-03-20,estimation,rule 2 floor,23,1,1,90,0
+SLV,101,straddle,2017-04-24,estimation,,19,1,1,9,0
+SLV,101,strip,2017-04-24,estimation,rule 2 floor,19,2,3,78,0
+SLV,102,straddle,2017-05-22,estimation,,18,0,0,0,0
+SLV,102,strip,2017-05-22,estimation,rule 2 floor,18,0,0,83,0
+SLV,103,straddle,2017-06-19,estimation,,23,0,0,0,0
+SLV,103,strip,2017-06-19,estimation,rule 2 floor,23,0,0,63,0
+SLV,104,straddle,2017-07-24,estimation,,19,0,0,3,0
+SLV,104,strip,2017-07-24,estimation,rule 2 floor,19,0,0,72,0
+SLV,105,straddle,2017-08-21,estimation,,18,0,0,5,0
+SLV,105,strip,2017-08-21,estimation,rule 2 floor,18,0,0,78,0
+SLV,106,straddle,2017-09-18,estimation,,24,0,0,2,0
+SLV,106,strip,2017-09-18,estimation,rule 2 floor,24,0,0,95,0
+SLV,107,straddle,2017-10-23,estimation,,19,0,0,0,0
+SLV,107,strip,2017-10-23,estimation,rule 2 floor,19,0,0,50,0
+SLV,108,straddle,2017-11-20,estimation,,18,0,0,4,0
+SLV,108,strip,2017-11-20,estimation,rule 2 floor,18,0,0,48,0
+SLV,109,straddle,2017-12-18,estimation,,21,2,2,9,0
+SLV,109,strip,2017-12-18,estimation,rule 2 floor,21,2,3,84,0
+SLV,110,straddle,2018-01-22,estimation,,19,0,0,0,0
+SLV,110,strip,2018-01-22,estimation,rule 2 floor,19,0,0,53,0
+SLV,111,straddle,2018-02-20,estimation,,18,0,0,0,0
+SLV,111,strip,2018-02-20,estimation,rule 2 floor,18,0,0,67,0
+SLV,112,straddle,2018-03-19,estimation,,23,0,0,2,0
+SLV,112,strip,2018-03-19,estimation,rule 2 floor,23,3,3,118,0
+SLV,113,straddle,2018-04-23,estimation,,19,0,0,0,0
+SLV,113,strip,2018-04-23,estimation,rule 2 floor,19,0,0,67,0
+SLV,114,straddle,2018-05-21,estimation,,18,0,0,1,0
+SLV,114,strip,2018-05-21,estimation,rule 2 floor,18,0,0,73,0
+SLV,115,straddle,2018-06-18,estimation,,23,0,0,2,0
+SLV,115,strip,2018-06-18,estimation,rule 2 floor,23,0,0,77,0
+SLV,116,straddle,2018-07-23,estimation,,19,0,0,2,0
+SLV,116,strip,2018-07-23,estimation,rule 2 floor,19,0,0,80,0
+SLV,117,straddle,2018-08-20,estimation,,23,0,0,4,0
+SLV,117,strip,2018-08-20,estimation,rule 2 floor,23,0,0,90,0
+SLV,118,straddle,2018-09-24,estimation,,19,0,0,0,0
+SLV,118,strip,2018-09-24,estimation,rule 2 floor,19,2,2,40,0
+SLV,119,straddle,2018-10-22,estimation,,19,0,0,0,0
+SLV,119,strip,2018-10-22,estimation,rule 2 floor,19,0,0,44,0
+SLV,120,straddle,2018-11-19,estimation,,22,0,0,1,0
+SLV,120,strip,2018-11-19,estimation,rule 2 floor,22,0,0,111,0
+SLV,121,straddle,2018-12-24,estimation,,17,0,0,7,0
+SLV,121,strip,2018-12-24,estimation,rule 2 floor,17,0,0,59,0
+SLV,122,straddle,2019-01-22,estimation,,18,0,0,0,0
+SLV,122,strip,2019-01-22,estimation,rule 2 floor,18,0,0,40,0
+SLV,123,straddle,2019-02-19,estimation,,18,2,2,6,0
+SLV,123,strip,2019-02-19,estimation,rule 2 floor,18,2,2,43,0
+SLV,124,straddle,2019-03-18,estimation,,23,2,2,3,0
+SLV,124,strip,2019-03-18,estimation,rule 2 floor,23,0,0,43,0
+SLV,125,straddle,2019-04-22,estimation,,19,0,0,1,0
+SLV,125,strip,2019-04-22,estimation,rule 2 floor,19,0,0,38,0
+SLV,126,straddle,2019-05-20,estimation,,23,0,0,4,0
+SLV,126,strip,2019-05-20,estimation,rule 2 floor,23,0,0,36,0
+SLV,127,straddle,2019-06-24,estimation,,18,0,0,2,0
+SLV,127,strip,2019-06-24,estimation,rule 2 floor,18,0,0,84,0
+SLV,128,straddle,2019-07-22,estimation,,19,0,0,1,0
+SLV,128,strip,2019-07-22,estimation,rule 2 floor,19,0,0,82,0
+SLV,129,straddle,2019-08-19,estimation,,23,0,0,0,0
+SLV,129,strip,2019-08-19,estimation,rule 2 floor,23,0,0,69,0
+SLV,130,straddle,2019-09-23,estimation,,19,1,1,3,0
+SLV,130,strip,2019-09-23,estimation,,19,1,1,210,0
+SLV,131,straddle,2019-10-21,estimation,,19,0,0,1,0
+SLV,131,strip,2019-10-21,estimation,rule 2 floor,19,0,0,100,0
+SLV,132,straddle,2019-11-18,estimation,,23,0,0,0,0
+SLV,132,strip,2019-11-18,estimation,rule 2 floor,23,0,0,142,0
+SLV,133,straddle,2019-12-23,estimation,,17,0,0,0,0
+SLV,133,strip,2019-12-23,estimation,rule 2 floor,17,0,0,39,0
+SLV,134,straddle,2020-01-21,estimation,,22,0,0,2,0
+SLV,134,strip,2020-01-21,estimation,rule 2 floor,22,0,0,64,0
+SLV,135,straddle,2020-02-24,estimation,,19,0,0,5,0
+SLV,135,strip,2020-02-24,estimation,rule 2 floor,19,1,4,103,0
+SLV,136,straddle,2020-03-23,estimation,,18,2,2,3,0
+SLV,136,strip,2020-03-23,estimation,,18,2,10,147,0
+SLV,137,straddle,2020-04-20,estimation,,19,0,0,0,0
+SLV,137,strip,2020-04-20,estimation,,19,0,0,110,0
+SLV,138,straddle,2020-05-18,estimation,,23,0,0,0,0
+SLV,138,strip,2020-05-18,estimation,,23,0,0,186,0
+SLV,139,straddle,2020-06-22,estimation,,18,0,0,4,0
+SLV,139,strip,2020-06-22,estimation,,18,0,0,235,0
+SLV,140,straddle,2020-07-20,estimation,,24,4,4,4,0
+SLV,140,strip,2020-07-20,estimation,,24,4,17,140,0
+SLV,141,straddle,2020-08-24,estimation,,18,0,0,0,0
+SLV,141,strip,2020-08-24,estimation,,18,1,7,321,0
+SLV,142,straddle,2020-09-21,estimation,,19,0,0,0,0
+SLV,142,strip,2020-09-21,estimation,,19,2,19,491,0
+SLV,143,straddle,2020-10-19,estimation,,24,0,0,0,0
+SLV,143,strip,2020-10-19,estimation,,24,2,18,498,0
+SLV,144,straddle,2020-11-23,estimation,,18,0,0,1,0
+SLV,144,strip,2020-11-23,estimation,,18,0,0,144,0
+SLV,145,straddle,2020-12-21,estimation,,17,0,0,0,0
+SLV,145,strip,2020-12-21,estimation,,17,1,9,363,0
+SLV,146,straddle,2021-01-19,estimation,,22,0,0,0,0
+SLV,146,strip,2021-01-19,estimation,,22,0,0,193,0
+SLV,147,straddle,2021-02-22,estimation,,19,0,0,1,0
+SLV,147,strip,2021-02-22,estimation,,19,2,12,375,0
+SLV,148,straddle,2021-03-22,estimation,,18,0,0,0,0
+SLV,148,strip,2021-03-22,estimation,,18,1,1,282,0
+SLV,149,straddle,2021-04-19,estimation,,24,0,0,1,0
+SLV,149,strip,2021-04-19,estimation,,24,1,1,315,0
+SLV,150,straddle,2021-05-24,estimation,,18,0,0,1,0
+SLV,150,strip,2021-05-24,estimation,,18,0,0,168,0
+SLV,151,straddle,2021-06-21,estimation,,18,0,0,0,0
+SLV,151,strip,2021-06-21,estimation,,18,0,0,309,0
+SLV,152,straddle,2021-07-19,estimation,,24,0,0,3,0
+SLV,152,strip,2021-07-19,estimation,,24,1,4,392,0
+SLV,153,straddle,2021-08-23,estimation,,18,0,0,0,0
+SLV,153,strip,2021-08-23,estimation,,18,0,0,170,0
+SLV,154,straddle,2021-09-20,estimation,,19,0,0,1,0
+SLV,154,strip,2021-09-20,estimation,,19,0,0,255,0
+SLV,155,straddle,2021-10-18,estimation,,24,2,2,3,0
+SLV,155,strip,2021-10-18,estimation,,24,3,5,301,0
+SLV,156,straddle,2021-11-22,estimation,,18,2,2,4,0
+SLV,156,strip,2021-11-22,estimation,,18,0,0,226,0
+SLV,157,straddle,2021-12-20,estimation,,22,1,1,2,0
+SLV,157,strip,2021-12-20,estimation,,22,1,2,320,0
+SLV,158,straddle,2022-01-24,holdout,,19,0,0,0,0
+SLV,158,strip,2022-01-24,holdout,,19,0,0,248,0
+SLV,159,straddle,2022-02-22,holdout,,18,0,0,0,0
+SLV,159,strip,2022-02-22,holdout,,18,0,0,122,0
+SLV,160,straddle,2022-03-21,holdout,,18,0,0,0,0
+SLV,160,strip,2022-03-21,holdout,,18,0,0,224,0
+SLV,161,straddle,2022-04-18,holdout,,24,8,8,8,0
+SLV,161,strip,2022-04-18,holdout,,24,8,27,434,0
+SLV,162,straddle,2022-05-23,holdout,,18,0,0,0,0
+SLV,162,strip,2022-05-23,holdout,,18,0,0,190,0
+SLV,163,straddle,2022-06-21,holdout,,17,3,3,4,0
+SLV,163,strip,2022-06-21,holdout,,17,2,3,209,0
+SLV,164,straddle,2022-07-18,holdout,,24,0,0,7,0
+SLV,164,strip,2022-07-18,holdout,,24,0,0,189,0
+SLV,165,straddle,2022-08-22,holdout,,18,0,0,0,0
+SLV,165,strip,2022-08-22,holdout,,18,0,0,133,0
+SLV,166,straddle,2022-09-19,holdout,,24,0,0,0,0
+SLV,166,strip,2022-09-19,holdout,,24,0,0,237,0
+SLV,167,straddle,2022-10-24,holdout,,19,2,2,5,0
+SLV,167,strip,2022-10-24,holdout,,19,2,4,219,0
+SLV,168,straddle,2022-11-21,holdout,,18,0,0,3,0
+SLV,168,strip,2022-11-21,holdout,,18,0,0,164,0
+SLV,169,straddle,2022-12-19,holdout,,21,0,0,1,0
+SLV,169,strip,2022-12-19,holdout,,21,0,0,265,0
+SLV,170,straddle,2023-01-23,holdout,,19,0,0,3,0
+SLV,170,strip,2023-01-23,holdout,,19,1,2,214,0
+SLV,171,straddle,2023-02-21,holdout,,18,1,1,0,0
+SLV,171,strip,2023-02-21,holdout,,18,1,1,134,0
+SLV,172,straddle,2023-03-20,holdout,,23,3,3,6,0
+SLV,172,strip,2023-03-20,holdout,,23,7,11,282,0
+SLV,173,straddle,2023-04-24,holdout,,19,2,2,1,0
+SLV,173,strip,2023-04-24,holdout,,19,2,2,160,0
+SLV,174,straddle,2023-05-22,holdout,,18,0,0,0,0
+SLV,174,strip,2023-05-22,holdout,,18,0,0,176,0
+SLV,175,straddle,2023-06-20,holdout,,22,0,0,3,0
+SLV,175,strip,2023-06-20,holdout,,22,1,1,233,0
+SLV,176,straddle,2023-07-24,holdout,,19,5,5,4,0
+SLV,176,strip,2023-07-24,holdout,,19,0,0,149,0
+SLV,177,straddle,2023-08-21,holdout,,18,0,0,1,0
+SLV,177,strip,2023-08-21,holdout,,18,0,0,142,0
+SLV,178,straddle,2023-09-18,holdout,,24,0,0,0,0
+SLV,178,strip,2023-09-18,holdout,,24,0,0,210,0
+SLV,179,straddle,2023-10-23,holdout,,19,0,0,1,0
+SLV,179,strip,2023-10-23,holdout,,19,0,0,238,0
+SLV,180,straddle,2023-11-20,holdout,,18,0,0,0,0
+SLV,180,strip,2023-11-20,holdout,,18,0,0,109,0
+SLV,181,straddle,2023-12-18,holdout,,21,0,0,2,0
+SLV,181,strip,2023-12-18,holdout,,21,0,0,214,0
+SLV,182,straddle,2024-01-22,holdout,,19,0,0,0,0
+SLV,182,strip,2024-01-22,holdout,,19,0,0,196,0
+SLV,183,straddle,2024-02-20,holdout,,18,0,0,4,0
+SLV,183,strip,2024-02-20,holdout,rule 2 floor,18,0,0,128,0
+SLV,184,straddle,2024-03-18,holdout,,23,1,1,4,0
+SLV,184,strip,2024-03-18,holdout,,23,3,5,274,0
+SLV,185,straddle,2024-04-22,holdout,,19,0,0,2,0
+SLV,185,strip,2024-04-22,holdout,,19,0,0,235,0
+SLV,186,straddle,2024-05-20,holdout,,22,1,1,0,0
+SLV,186,strip,2024-05-20,holdout,,22,1,1,213,0
+SLV,187,straddle,2024-06-24,holdout,,18,0,0,0,0
+SLV,187,strip,2024-06-24,holdout,,18,0,0,440,0
+SLV,188,straddle,2024-07-22,holdout,,19,0,0,0,0
+SLV,188,strip,2024-07-22,holdout,,19,0,0,217,0
+SLV,189,straddle,2024-08-19,holdout,,23,0,0,1,0
+SLV,189,strip,2024-08-19,holdout,,23,0,0,498,0
+SLV,190,straddle,2024-09-23,holdout,,19,0,0,0,0
+SLV,190,strip,2024-09-23,holdout,,19,0,0,198,0
+SLV,191,straddle,2024-10-21,holdout,,19,2,2,4,0
+SLV,191,strip,2024-10-21,holdout,,19,0,0,175,0
+SLV,192,straddle,2024-11-18,holdout,,23,0,0,1,0
+SLV,192,strip,2024-11-18,holdout,,23,1,1,388,0
+SLV,193,straddle,2024-12-23,holdout,,16,0,0,0,0
+SLV,193,strip,2024-12-23,holdout,,16,0,0,133,0
+SLV,194,straddle,2025-01-21,holdout,,22,2,2,0,0
+SLV,194,strip,2025-01-21,holdout,,22,2,2,249,0
+SLV,195,straddle,2025-02-24,holdout,,19,0,0,0,0
+SLV,195,strip,2025-02-24,holdout,,19,0,0,164,0
+SLV,196,straddle,2025-03-24,holdout,,18,0,0,0,0
+SLV,196,strip,2025-03-24,holdout,,18,0,0,74,0
+SLV,197,straddle,2025-04-21,holdout,,19,0,0,0,0
+SLV,197,strip,2025-04-21,holdout,,19,0,0,303,0
+SLV,198,straddle,2025-05-19,holdout,,22,3,3,5,0
+SLV,198,strip,2025-05-19,holdout,,22,7,17,198,0
+SLV,199,straddle,2025-06-23,holdout,,18,1,1,0,0
+SLV,199,strip,2025-06-23,holdout,,18,1,1,207,0
+SLV,200,straddle,2025-07-21,holdout,,19,0,0,0,0
+SLV,200,strip,2025-07-21,holdout,,19,0,0,202,0
+UNG,1,straddle,2007-05-21,estimation,,18,0,0,3,0
+UNG,1,strip,2007-05-21,estimation,rule 2 floor,18,0,0,170,0
+UNG,2,straddle,2007-06-18,estimation,,23,0,0,8,0
+UNG,2,strip,2007-06-18,estimation,,23,0,0,231,0
+UNG,3,straddle,2007-07-23,estimation,,19,1,1,3,0
+UNG,3,strip,2007-07-23,estimation,rule 2 floor,19,1,2,106,0
+UNG,4,straddle,2007-08-20,estimation,,23,0,0,0,0
+UNG,4,strip,2007-08-20,estimation,rule 2 floor,23,0,0,191,0
+UNG,5,straddle,2007-09-24,estimation,,19,0,0,0,0
+UNG,5,strip,2007-09-24,estimation,,19,0,0,147,0
+UNG,6,straddle,2007-10-22,estimation,,19,0,0,0,0
+UNG,6,strip,2007-10-22,estimation,rule 2 floor,19,0,0,60,0
+UNG,7,straddle,2007-11-19,estimation,,23,0,0,5,0
+UNG,7,strip,2007-11-19,estimation,,23,0,0,192,0
+UNG,8,straddle,2007-12-24,estimation,,17,1,1,5,0
+UNG,8,strip,2007-12-24,estimation,rule 2 floor,17,1,1,32,0
+UNG,9,straddle,2008-01-22,estimation,,18,3,3,4,0
+UNG,9,strip,2008-01-22,estimation,rule 2 floor,18,4,4,105,0
+UNG,10,straddle,2008-02-19,estimation,,22,1,1,3,0
+UNG,10,strip,2008-02-19,estimation,rule 2 floor,22,4,7,73,0
+UNG,11,straddle,2008-03-24,estimation,,19,2,2,3,0
+UNG,11,strip,2008-03-24,estimation,,19,3,7,172,0
+UNG,12,straddle,2008-04-21,estimation,,19,0,0,2,0
+UNG,12,strip,2008-04-21,estimation,,19,0,0,129,0
+UNG,13,straddle,2008-05-19,estimation,,23,4,4,7,0
+UNG,13,strip,2008-05-19,estimation,,23,4,15,174,0
+UNG,14,straddle,2008-06-23,estimation,,18,0,0,4,0
+UNG,14,strip,2008-06-23,estimation,,18,0,0,118,0
+UNG,15,straddle,2008-07-21,estimation,,19,0,0,7,0
+UNG,16,straddle,2008-08-18,estimation,,23,0,0,0,0
+UNG,16,strip,2008-08-18,estimation,rule 2 floor,23,0,0,110,0
+UNG,17,straddle,2008-09-22,estimation,,19,0,0,3,0
+UNG,17,strip,2008-09-22,estimation,,19,1,6,214,0
+UNG,18,straddle,2008-10-20,estimation,,24,0,0,1,0
+UNG,18,strip,2008-10-20,estimation,rule 2 floor,24,0,0,99,0
+UNG,19,straddle,2008-11-24,estimation,,18,0,0,3,0
+UNG,19,strip,2008-11-24,estimation,,18,1,1,133,0
+UNG,20,straddle,2008-12-22,estimation,,17,0,0,1,0
+UNG,20,strip,2008-12-22,estimation,rule 2 floor,17,1,1,103,0
+UNG,21,straddle,2009-01-20,estimation,,22,0,0,1,0
+UNG,21,strip,2009-01-20,estimation,rule 2 floor,22,1,3,123,0
+UNG,22,straddle,2009-02-23,estimation,,19,0,0,1,0
+UNG,22,strip,2009-02-23,estimation,rule 2 floor,19,0,0,65,0
+UNG,23,straddle,2009-03-23,estimation,,18,2,2,6,0
+UNG,23,strip,2009-03-23,estimation,rule 2 floor,18,3,5,95,0
+UNG,24,straddle,2009-04-20,estimation,,19,2,2,4,0
+UNG,24,strip,2009-04-20,estimation,rule 2 floor,19,2,2,54,0
+UNG,25,straddle,2009-05-18,estimation,,23,0,0,1,0
+UNG,25,strip,2009-05-18,estimation,rule 2 floor,23,0,0,73,0
+UNG,26,straddle,2009-06-22,estimation,,18,0,0,8,0
+UNG,26,strip,2009-06-22,estimation,rule 2 floor,18,1,2,105,0
+UNG,27,straddle,2009-07-20,estimation,,24,0,0,2,0
+UNG,27,strip,2009-07-20,estimation,rule 2 floor,24,0,0,82,0
+UNG,28,straddle,2009-08-24,estimation,,18,0,0,1,0
+UNG,28,strip,2009-08-24,estimation,rule 2 floor,18,0,0,45,0
+UNG,29,straddle,2009-09-21,estimation,,19,0,0,0,0
+UNG,29,strip,2009-09-21,estimation,rule 2 floor,19,0,0,69,0
+UNG,30,straddle,2009-10-19,estimation,,24,4,4,8,0
+UNG,30,strip,2009-10-19,estimation,rule 2 floor,24,2,2,42,0
+UNG,31,straddle,2009-11-23,estimation,,18,0,0,1,0
+UNG,31,strip,2009-11-23,estimation,rule 2 floor,18,0,0,51,0
+UNG,32,straddle,2009-12-21,estimation,,17,0,0,0,0
+UNG,32,strip,2009-12-21,estimation,rule 2 floor,17,0,0,78,0
+UNG,33,straddle,2010-01-19,estimation,,22,0,0,1,0
+UNG,33,strip,2010-01-19,estimation,rule 2 floor,22,0,0,43,0
+UNG,34,straddle,2010-02-22,estimation,,19,0,0,3,0
+UNG,34,strip,2010-02-22,estimation,rule 2 floor,19,0,0,52,0
+UNG,35,strip,2010-03-22,estimation,rule 2 floor,18,0,0,26,0
+UNG,36,straddle,2010-04-19,estimation,,24,0,0,0,0
+UNG,36,strip,2010-04-19,estimation,rule 2 floor,24,0,0,43,0
+UNG,37,straddle,2010-05-24,estimation,,18,0,0,4,0
+UNG,37,strip,2010-05-24,estimation,rule 2 floor,18,4,4,40,0
+UNG,38,straddle,2010-06-21,estimation,,18,0,0,0,0
+UNG,38,strip,2010-06-21,estimation,rule 2 floor,18,0,0,29,0
+UNG,39,strip,2010-07-19,estimation,rule 2 floor,24,0,0,55,0
+UNG,40,straddle,2010-08-23,estimation,,18,0,0,0,0
+UNG,41,strip,2010-09-20,estimation,rule 2 floor,19,0,0,44,0
+UNG,43,straddle,2010-11-22,estimation,,18,0,0,1,0
+UNG,43,strip,2010-11-22,estimation,rule 2 floor,18,0,0,30,0
+UNG,44,straddle,2010-12-20,estimation,,22,0,0,1,0
+UNG,45,straddle,2011-01-24,estimation,,19,0,0,3,0
+UNG,46,straddle,2011-02-22,estimation,rule 5 truncated,10,0,0,0,0
+UNG,46,strip,2011-02-22,estimation,rule 2 floor,10,0,0,9,0
+UNG,47,straddle,2011-03-21,estimation,,19,0,0,0,0
+UNG,47,strip,2011-03-21,estimation,rule 2 floor,19,0,0,55,0
+UNG,48,straddle,2011-04-18,estimation,,23,0,0,0,0
+UNG,48,strip,2011-04-18,estimation,rule 2 floor,23,3,3,45,0
+UNG,49,straddle,2011-05-23,estimation,,18,0,0,0,0
+UNG,49,strip,2011-05-23,estimation,rule 2 floor,18,0,0,15,0
+UNG,50,straddle,2011-06-20,estimation,,18,0,0,0,0
+UNG,50,strip,2011-06-20,estimation,rule 2 floor,18,0,0,34,0
+UNG,51,straddle,2011-07-18,estimation,,24,2,2,4,0
+UNG,51,strip,2011-07-18,estimation,rule 2 floor,24,2,2,52,0
+UNG,52,straddle,2011-08-22,estimation,,18,0,0,0,0
+UNG,52,strip,2011-08-22,estimation,rule 2 floor,18,1,1,39,0
+UNG,53,straddle,2011-09-19,estimation,,24,0,0,4,0
+UNG,53,strip,2011-09-19,estimation,rule 2 floor,24,0,0,69,0
+UNG,54,straddle,2011-10-24,estimation,,19,0,0,4,0
+UNG,55,straddle,2011-11-21,estimation,,18,2,2,4,0
+UNG,56,straddle,2011-12-19,estimation,,21,3,3,6,0
+UNG,57,strip,2012-01-23,estimation,rule 2 floor,19,0,0,35,0
+UNG,58,strip,2012-02-21,estimation,rule 2 floor,0,0,0,0,0
+UNG,59,straddle,2012-03-19,estimation,,23,2,2,6,0
+UNG,59,strip,2012-03-19,estimation,rule 2 floor,23,2,9,191,0
+UNG,60,straddle,2012-04-23,estimation,,19,0,0,3,0
+UNG,60,strip,2012-04-23,estimation,rule 2 floor,19,0,0,55,0
+UNG,61,straddle,2012-05-21,estimation,,18,1,1,3,0
+UNG,61,strip,2012-05-21,estimation,rule 2 floor,18,1,1,76,0
+UNG,62,straddle,2012-06-18,estimation,,23,0,0,1,0
+UNG,62,strip,2012-06-18,estimation,,23,0,0,114,0
+UNG,63,straddle,2012-07-23,estimation,,19,0,0,1,0
+UNG,63,strip,2012-07-23,estimation,,19,0,0,81,0
+UNG,64,straddle,2012-08-20,estimation,,23,0,0,0,0
+UNG,64,strip,2012-08-20,estimation,rule 2 floor,23,1,1,97,0
+UNG,65,straddle,2012-09-24,estimation,,19,0,0,4,0
+UNG,65,strip,2012-09-24,estimation,rule 2 floor,19,3,3,120,0
+UNG,66,straddle,2012-10-22,estimation,,17,0,0,0,0
+UNG,66,strip,2012-10-22,estimation,rule 2 floor,17,0,0,70,0
+UNG,67,straddle,2012-11-19,estimation,,23,3,3,5,0
+UNG,67,strip,2012-11-19,estimation,rule 2 floor,23,1,1,129,0
+UNG,68,straddle,2012-12-24,estimation,,17,0,0,0,0
+UNG,68,strip,2012-12-24,estimation,rule 2 floor,17,0,0,107,0
+UNG,69,straddle,2013-01-22,estimation,,18,0,0,4,0
+UNG,69,strip,2013-01-22,estimation,rule 2 floor,18,0,0,61,0
+UNG,70,straddle,2013-02-19,estimation,,18,1,1,5,0
+UNG,70,strip,2013-02-19,estimation,rule 2 floor,18,1,1,36,0
+UNG,71,straddle,2013-03-18,estimation,,23,0,0,2,0
+UNG,71,strip,2013-03-18,estimation,rule 2 floor,23,0,0,82,0
+UNG,72,straddle,2013-04-22,estimation,,19,0,0,1,0
+UNG,72,strip,2013-04-22,estimation,rule 2 floor,19,0,0,54,0
+UNG,73,straddle,2013-05-20,estimation,,23,0,0,2,0
+UNG,73,strip,2013-05-20,estimation,rule 2 floor,23,0,0,86,0
+UNG,74,straddle,2013-06-24,estimation,,18,0,0,0,0
+UNG,74,strip,2013-06-24,estimation,rule 2 floor,18,0,0,50,0
+UNG,75,straddle,2013-07-22,estimation,,19,3,3,6,0
+UNG,75,strip,2013-07-22,estimation,rule 2 floor,19,3,3,55,0
+UNG,76,straddle,2013-08-19,estimation,,23,1,1,4,0
+UNG,76,strip,2013-08-19,estimation,rule 2 floor,23,1,1,84,0
+UNG,77,straddle,2013-09-23,estimation,,19,0,0,0,0
+UNG,77,strip,2013-09-23,estimation,rule 2 floor,19,2,2,62,0
+UNG,78,straddle,2013-10-21,estimation,,19,0,0,2,0
+UNG,78,strip,2013-10-21,estimation,rule 2 floor,19,0,0,52,0
+UNG,79,straddle,2013-11-18,estimation,,23,3,3,7,0
+UNG,79,strip,2013-11-18,estimation,rule 2 floor,23,4,6,39,0
+UNG,80,straddle,2013-12-23,estimation,,17,0,0,0,0
+UNG,80,strip,2013-12-23,estimation,rule 2 floor,17,0,0,183,0
+UNG,81,straddle,2014-01-21,estimation,,22,0,0,3,0
+UNG,81,strip,2014-01-21,estimation,rule 2 floor,22,0,0,52,0
+UNG,82,straddle,2014-02-24,estimation,,19,0,0,1,0
+UNG,82,strip,2014-02-24,estimation,,19,0,0,148,0
+UNG,83,straddle,2014-03-24,estimation,,18,0,0,1,0
+UNG,83,strip,2014-03-24,estimation,rule 2 floor,18,0,0,129,0
+UNG,84,straddle,2014-04-21,estimation,,19,0,0,1,0
+UNG,84,strip,2014-04-21,estimation,rule 2 floor,19,0,0,49,0
+UNG,85,straddle,2014-05-19,estimation,,23,0,0,0,0
+UNG,85,strip,2014-05-19,estimation,rule 2 floor,23,2,2,102,0
+UNG,86,straddle,2014-06-23,estimation,,18,1,1,4,0
+UNG,86,strip,2014-06-23,estimation,rule 2 floor,18,1,1,110,0
+UNG,87,straddle,2014-07-21,estimation,,19,0,0,0,0
+UNG,87,strip,2014-07-21,estimation,,19,0,0,120,0
+UNG,88,straddle,2014-08-18,estimation,,23,0,0,0,0
+UNG,88,strip,2014-08-18,estimation,,23,0,0,137,0
+UNG,89,straddle,2014-09-22,estimation,,19,0,0,0,0
+UNG,89,strip,2014-09-22,estimation,rule 2 floor,19,0,0,78,0
+UNG,90,straddle,2014-10-20,estimation,,24,3,3,2,0
+UNG,90,strip,2014-10-20,estimation,,24,3,6,136,0
+UNG,91,straddle,2014-11-24,estimation,,18,0,0,4,0
+UNG,91,strip,2014-11-24,estimation,rule 2 floor,18,2,2,259,0
+UNG,92,straddle,2014-12-22,estimation,,17,0,0,0,0
+UNG,92,strip,2014-12-22,estimation,,17,2,4,230,0
+UNG,93,straddle,2015-01-20,estimation,,22,0,0,0,0
+UNG,93,strip,2015-01-20,estimation,,22,0,0,277,0
+UNG,94,straddle,2015-02-23,estimation,,19,0,0,0,0
+UNG,94,strip,2015-02-23,estimation,rule 2 floor,19,0,0,106,0
+UNG,95,straddle,2015-03-23,estimation,,18,0,0,3,0
+UNG,95,strip,2015-03-23,estimation,rule 2 floor,18,3,9,120,0
+UNG,96,straddle,2015-04-20,estimation,,19,0,0,1,0
+UNG,96,strip,2015-04-20,estimation,rule 2 floor,19,1,1,56,0
+UNG,97,straddle,2015-05-18,estimation,,23,0,0,0,0
+UNG,97,strip,2015-05-18,estimation,rule 2 floor,23,0,0,104,0
+UNG,98,straddle,2015-06-22,estimation,,18,0,0,0,0
+UNG,98,strip,2015-06-22,estimation,rule 2 floor,18,0,0,58,0
+UNG,99,straddle,2015-07-20,estimation,,24,0,0,0,0
+UNG,99,strip,2015-07-20,estimation,rule 2 floor,24,0,0,112,0
+UNG,100,straddle,2015-08-24,estimation,,18,0,0,0,0
+UNG,100,strip,2015-08-24,estimation,rule 2 floor,18,0,0,40,0
+UNG,101,straddle,2015-09-21,estimation,,19,0,0,1,0
+UNG,101,strip,2015-09-21,estimation,rule 2 floor,19,0,0,94,0
+UNG,102,straddle,2015-10-19,estimation,,24,0,0,2,0
+UNG,102,strip,2015-10-19,estimation,rule 2 floor,24,2,4,104,0
+UNG,103,straddle,2015-11-23,estimation,,18,0,0,3,0
+UNG,103,strip,2015-11-23,estimation,rule 2 floor,18,1,1,45,0
+UNG,104,straddle,2015-12-21,estimation,,17,0,0,0,0
+UNG,104,strip,2015-12-21,estimation,rule 2 floor,17,1,1,31,0
+UNG,105,straddle,2016-01-19,estimation,,22,0,0,1,0
+UNG,105,strip,2016-01-19,estimation,rule 2 floor,22,0,0,55,0
+UNG,106,straddle,2016-02-22,estimation,,19,0,0,0,0
+UNG,106,strip,2016-02-22,estimation,rule 2 floor,19,0,0,39,0
+UNG,107,straddle,2016-03-21,estimation,,18,0,0,2,0
+UNG,107,strip,2016-03-21,estimation,rule 2 floor,18,2,2,52,0
+UNG,108,straddle,2016-04-18,estimation,,24,0,0,0,0
+UNG,108,strip,2016-04-18,estimation,rule 2 floor,24,0,0,63,0
+UNG,109,straddle,2016-05-23,estimation,,18,2,2,8,0
+UNG,109,strip,2016-05-23,estimation,rule 2 floor,18,3,4,18,0
+UNG,110,straddle,2016-06-20,estimation,,18,0,0,0,0
+UNG,110,strip,2016-06-20,estimation,rule 2 floor,18,0,0,44,0
+UNG,111,straddle,2016-07-18,estimation,,24,0,0,0,0
+UNG,111,strip,2016-07-18,estimation,rule 2 floor,24,0,0,79,0
+UNG,112,straddle,2016-08-22,estimation,,18,0,0,1,0
+UNG,112,strip,2016-08-22,estimation,rule 2 floor,18,0,0,22,0
+UNG,113,straddle,2016-09-19,estimation,,24,2,2,5,0
+UNG,113,strip,2016-09-19,estimation,rule 2 floor,24,2,2,92,0
+UNG,114,straddle,2016-10-24,estimation,,19,1,1,6,0
+UNG,114,strip,2016-10-24,estimation,rule 2 floor,19,3,3,67,0
+UNG,115,straddle,2016-11-21,estimation,,18,1,1,7,0
+UNG,115,strip,2016-11-21,estimation,rule 2 floor,18,2,2,57,0
+UNG,116,straddle,2016-12-19,estimation,,21,0,0,0,0
+UNG,116,strip,2016-12-19,estimation,rule 2 floor,21,0,0,91,0
+UNG,117,straddle,2017-01-23,estimation,,19,1,1,3,0
+UNG,117,strip,2017-01-23,estimation,rule 2 floor,19,1,1,60,0
+UNG,118,straddle,2017-02-21,estimation,,18,3,3,5,0
+UNG,118,strip,2017-02-21,estimation,rule 2 floor,18,3,3,41,0
+UNG,119,straddle,2017-03-20,estimation,,23,0,0,0,0
+UNG,119,strip,2017-03-20,estimation,rule 2 floor,23,0,0,76,0
+UNG,120,straddle,2017-04-24,estimation,,19,0,0,0,0
+UNG,120,strip,2017-04-24,estimation,rule 2 floor,19,2,2,44,0
+UNG,121,straddle,2017-05-22,estimation,,18,0,0,6,0
+UNG,121,strip,2017-05-22,estimation,rule 2 floor,18,0,0,34,0
+UNG,122,straddle,2017-06-19,estimation,,23,2,2,3,0
+UNG,122,strip,2017-06-19,estimation,rule 2 floor,23,2,2,43,0
+UNG,123,straddle,2017-07-24,estimation,,19,0,0,1,0
+UNG,124,straddle,2017-08-21,estimation,,18,0,0,2,0
+UNG,124,strip,2017-08-21,estimation,rule 2 floor,18,0,0,15,0
+UNG,125,straddle,2017-09-18,estimation,,24,2,2,10,0
+UNG,125,strip,2017-09-18,estimation,rule 2 floor,24,0,0,50,0
+UNG,126,straddle,2017-10-23,estimation,,19,0,0,1,0
+UNG,127,straddle,2017-11-20,estimation,,18,1,1,5,0
+UNG,127,strip,2017-11-20,estimation,rule 2 floor,18,0,0,35,0
+UNG,128,straddle,2017-12-18,estimation,rule 5 truncated,11,0,0,0,0
+UNG,129,straddle,2018-01-22,estimation,,19,1,1,5,0
+UNG,129,strip,2018-01-22,estimation,rule 2 floor,19,1,1,149,0
+UNG,130,straddle,2018-02-20,estimation,,18,0,0,3,0
+UNG,130,strip,2018-02-20,estimation,,18,0,0,102,0
+UNG,131,straddle,2018-03-19,estimation,,23,0,0,1,0
+UNG,131,strip,2018-03-19,estimation,rule 2 floor,23,0,0,123,0
+UNG,132,straddle,2018-04-23,estimation,,19,0,0,1,0
+UNG,132,strip,2018-04-23,estimation,rule 2 floor,19,0,0,90,0
+UNG,133,straddle,2018-05-21,estimation,,18,0,0,1,0
+UNG,133,strip,2018-05-21,estimation,rule 2 floor,18,0,0,68,0
+UNG,134,straddle,2018-06-18,estimation,,23,0,0,6,0
+UNG,134,strip,2018-06-18,estimation,rule 2 floor,23,0,0,156,0
+UNG,135,straddle,2018-07-23,estimation,,19,0,0,7,0
+UNG,135,strip,2018-07-23,estimation,rule 2 floor,19,0,0,51,0
+UNG,136,straddle,2018-08-20,estimation,,23,0,0,2,0
+UNG,136,strip,2018-08-20,estimation,rule 2 floor,23,0,0,95,0
+UNG,137,straddle,2018-09-24,estimation,,19,1,1,2,0
+UNG,137,strip,2018-09-24,estimation,rule 2 floor,19,1,1,56,0
+UNG,138,straddle,2018-10-22,estimation,,19,3,3,8,0
+UNG,138,strip,2018-10-22,estimation,,19,5,15,108,0
+UNG,139,straddle,2018-11-19,estimation,,22,1,1,1,0
+UNG,139,strip,2018-11-19,estimation,rule 2 floor,22,1,9,205,0
+UNG,140,straddle,2018-12-24,estimation,,17,0,0,0,0
+UNG,140,strip,2018-12-24,estimation,,17,1,3,342,0
+UNG,141,straddle,2019-01-22,estimation,,18,2,2,9,0
+UNG,141,strip,2019-01-22,estimation,,18,3,9,287,0
+UNG,142,straddle,2019-02-19,estimation,,18,3,3,7,0
+UNG,142,strip,2019-02-19,estimation,rule 2 floor,18,3,4,73,0
+UNG,143,straddle,2019-03-18,estimation,,23,5,5,3,0
+UNG,143,strip,2019-03-18,estimation,rule 2 floor,23,5,6,116,0
+UNG,144,straddle,2019-04-22,estimation,,19,0,0,2,0
+UNG,144,strip,2019-04-22,estimation,rule 2 floor,19,0,0,70,0
+UNG,145,straddle,2019-05-20,estimation,,23,6,6,11,0
+UNG,145,strip,2019-05-20,estimation,rule 2 floor,23,8,12,102,0
+UNG,146,straddle,2019-06-24,estimation,,18,2,2,2,0
+UNG,146,strip,2019-06-24,estimation,,18,2,2,78,0
+UNG,147,straddle,2019-07-22,estimation,,19,1,1,4,0
+UNG,147,strip,2019-07-22,estimation,rule 2 floor,19,0,0,77,0
+UNG,148,straddle,2019-08-19,estimation,,23,1,1,4,0
+UNG,148,strip,2019-08-19,estimation,,23,5,14,85,0
+UNG,149,straddle,2019-09-23,estimation,,19,0,0,3,0
+UNG,149,strip,2019-09-23,estimation,,19,2,2,131,0
+UNG,150,straddle,2019-10-21,estimation,,19,1,1,1,0
+UNG,150,strip,2019-10-21,estimation,rule 2 floor,19,5,7,101,0
+UNG,151,straddle,2019-11-18,estimation,,23,0,0,3,0
+UNG,151,strip,2019-11-18,estimation,,23,1,2,242,0
+UNG,152,straddle,2019-12-23,estimation,,17,0,0,0,0
+UNG,152,strip,2019-12-23,estimation,,17,0,0,191,0
+UNG,153,straddle,2020-01-21,estimation,,22,0,0,0,0
+UNG,153,strip,2020-01-21,estimation,rule 2 floor,22,0,0,144,0
+UNG,154,straddle,2020-02-24,estimation,,19,0,0,2,0
+UNG,154,strip,2020-02-24,estimation,rule 2 floor,19,0,0,24,0
+UNG,155,straddle,2020-03-23,estimation,,18,0,0,0,0
+UNG,155,strip,2020-03-23,estimation,rule 2 floor,18,0,0,102,0
+UNG,156,straddle,2020-04-20,estimation,,19,0,0,1,0
+UNG,156,strip,2020-04-20,estimation,,19,2,7,114,0
+UNG,157,straddle,2020-05-18,estimation,,23,0,0,2,0
+UNG,157,strip,2020-05-18,estimation,,23,3,9,226,0
+UNG,158,straddle,2020-06-22,estimation,,18,0,0,0,0
+UNG,158,strip,2020-06-22,estimation,,18,1,2,155,0
+UNG,159,straddle,2020-07-20,estimation,,24,3,3,6,0
+UNG,159,strip,2020-07-20,estimation,,24,3,15,134,0
+UNG,160,straddle,2020-08-24,estimation,,18,0,0,2,0
+UNG,160,strip,2020-08-24,estimation,,18,0,0,109,0
+UNG,161,straddle,2020-09-21,estimation,,19,0,0,0,0
+UNG,161,strip,2020-09-21,estimation,,19,0,0,123,0
+UNG,162,straddle,2020-10-19,estimation,,24,0,0,3,0
+UNG,162,strip,2020-10-19,estimation,,24,3,14,225,0
+UNG,163,straddle,2020-11-23,estimation,,18,0,0,0,0
+UNG,163,strip,2020-11-23,estimation,rule 2 floor,18,1,4,156,0
+UNG,164,straddle,2020-12-21,estimation,,17,0,0,0,0
+UNG,164,strip,2020-12-21,estimation,rule 2 floor,17,1,1,95,0
+UNG,165,straddle,2021-01-19,estimation,,22,0,0,3,0
+UNG,165,strip,2021-01-19,estimation,rule 2 floor,22,1,1,114,0
+UNG,166,straddle,2021-02-22,estimation,,19,0,0,4,0
+UNG,166,strip,2021-02-22,estimation,rule 2 floor,19,1,1,96,0
+UNG,167,straddle,2021-03-22,estimation,,18,0,0,0,0
+UNG,167,strip,2021-03-22,estimation,rule 2 floor,18,0,0,72,0
+UNG,168,straddle,2021-04-19,estimation,,24,0,0,2,0
+UNG,168,strip,2021-04-19,estimation,rule 2 floor,24,0,0,74,0
+UNG,169,straddle,2021-05-24,estimation,,18,0,0,5,0
+UNG,169,strip,2021-05-24,estimation,rule 2 floor,18,1,1,29,0
+UNG,170,straddle,2021-06-21,estimation,,18,3,3,4,0
+UNG,170,strip,2021-06-21,estimation,rule 2 floor,18,4,9,54,0
+UNG,171,straddle,2021-07-19,estimation,,24,0,0,1,0
+UNG,171,strip,2021-07-19,estimation,rule 2 floor,24,0,0,108,0
+UNG,172,straddle,2021-08-23,estimation,,18,3,3,6,0
+UNG,172,strip,2021-08-23,estimation,rule 2 floor,18,5,19,50,0
+UNG,173,straddle,2021-09-20,estimation,,19,1,1,0,0
+UNG,173,strip,2021-09-20,estimation,,19,1,4,163,0
+UNG,174,straddle,2021-10-18,estimation,,24,0,0,0,0
+UNG,174,strip,2021-10-18,estimation,,24,2,13,168,0
+UNG,175,straddle,2021-11-22,estimation,,18,2,2,1,0
+UNG,175,strip,2021-11-22,estimation,rule 2 floor,18,3,47,221,0
+UNG,176,straddle,2021-12-20,estimation,,22,0,0,1,0
+UNG,176,strip,2021-12-20,estimation,,22,2,19,314,0
+UNG,177,straddle,2022-01-24,holdout,,19,0,0,2,0
+UNG,177,strip,2022-01-24,holdout,,19,4,11,170,0
+UNG,178,straddle,2022-02-22,holdout,,18,0,0,0,0
+UNG,178,strip,2022-02-22,holdout,,18,1,1,179,0
+UNG,179,straddle,2022-03-21,holdout,,18,0,0,5,0
+UNG,179,strip,2022-03-21,holdout,,18,2,9,142,0
+UNG,180,straddle,2022-04-18,holdout,,24,0,0,0,0
+UNG,180,strip,2022-04-18,holdout,rule 2 floor,24,2,10,120,0
+UNG,181,straddle,2022-05-23,holdout,,18,0,0,1,0
+UNG,181,strip,2022-05-23,holdout,rule 2 floor,18,1,1,119,0
+UNG,182,straddle,2022-06-21,holdout,,17,0,0,0,0
+UNG,182,strip,2022-06-21,holdout,,17,1,1,174,0
+UNG,183,straddle,2022-07-18,holdout,,24,0,0,4,0
+UNG,183,strip,2022-07-18,holdout,,24,3,12,166,0
+UNG,184,straddle,2022-08-22,holdout,,18,0,0,0,0
+UNG,184,strip,2022-08-22,holdout,rule 2 floor,18,3,4,119,0
+UNG,185,straddle,2022-09-19,holdout,,24,2,2,3,0
+UNG,185,strip,2022-09-19,holdout,,24,3,32,292,0
+UNG,186,straddle,2022-10-24,holdout,,19,0,0,0,0
+UNG,186,strip,2022-10-24,holdout,rule 2 floor,19,2,9,212,0
+UNG,187,straddle,2022-11-21,holdout,,18,0,0,0,0
+UNG,187,strip,2022-11-21,holdout,,18,5,20,285,0
+UNG,188,straddle,2022-12-19,holdout,,21,1,1,5,0
+UNG,188,strip,2022-12-19,holdout,,21,6,69,413,0
+UNG,189,straddle,2023-01-23,holdout,,19,2,2,4,0
+UNG,189,strip,2023-01-23,holdout,,19,3,25,188,0
+UNG,190,straddle,2023-02-21,holdout,,18,1,1,3,0
+UNG,190,strip,2023-02-21,holdout,rule 2 floor,18,2,5,98,0
+UNG,191,straddle,2023-03-20,holdout,,23,0,0,0,0
+UNG,191,strip,2023-03-20,holdout,rule 2 floor,23,3,13,199,0
+UNG,192,straddle,2023-04-24,holdout,,19,0,0,0,0
+UNG,192,strip,2023-04-24,holdout,rule 2 floor,19,1,1,90,0
+UNG,193,straddle,2023-05-22,holdout,,18,0,0,0,0
+UNG,193,strip,2023-05-22,holdout,rule 2 floor,18,1,1,78,0
+UNG,194,straddle,2023-06-20,holdout,,22,0,0,0,0
+UNG,194,strip,2023-06-20,holdout,rule 2 floor,22,1,2,158,0
+UNG,195,straddle,2023-07-24,holdout,,19,0,0,0,0
+UNG,195,strip,2023-07-24,holdout,rule 2 floor,19,0,0,65,0
+UNG,196,straddle,2023-08-21,holdout,,18,0,0,0,0
+UNG,196,strip,2023-08-21,holdout,rule 2 floor,18,1,1,100,0
+UNG,197,straddle,2023-09-18,holdout,,24,0,0,0,0
+UNG,197,strip,2023-09-18,holdout,rule 2 floor,24,1,2,165,0
+UNG,198,straddle,2023-10-23,holdout,,19,0,0,0,0
+UNG,198,strip,2023-10-23,holdout,rule 2 floor,19,0,0,65,0
+UNG,199,straddle,2023-11-20,holdout,,18,1,1,4,0
+UNG,199,strip,2023-11-20,holdout,rule 2 floor,18,3,10,73,0
+UNG,200,straddle,2023-12-18,holdout,,21,1,1,4,0
+UNG,200,strip,2023-12-18,holdout,rule 2 floor,21,3,4,43,0
+UNG,201,straddle,2024-01-22,holdout,rule 5 truncated,1,0,0,0,0
+UNG,201,strip,2024-01-22,holdout,rule 2 floor,1,0,0,0,0
+UNG,202,straddle,2024-02-20,holdout,,18,0,0,0,0
+UNG,202,strip,2024-02-20,holdout,,18,1,2,143,0
+UNG,203,straddle,2024-03-18,holdout,,23,0,0,1,0
+UNG,203,strip,2024-03-18,holdout,,23,3,9,230,0
+UNG,204,straddle,2024-04-22,holdout,,19,0,0,2,0
+UNG,204,strip,2024-04-22,holdout,,19,0,0,104,0
+UNG,205,straddle,2024-05-20,holdout,,22,0,0,0,0
+UNG,205,strip,2024-05-20,holdout,,22,0,0,101,0
+UNG,206,straddle,2024-06-24,holdout,,18,3,3,4,0
+UNG,206,strip,2024-06-24,holdout,,18,10,24,169,0
+UNG,207,straddle,2024-07-22,holdout,,19,0,0,0,0
+UNG,207,strip,2024-07-22,holdout,,19,1,3,117,0
+UNG,208,straddle,2024-08-19,holdout,,23,0,0,0,0
+UNG,208,strip,2024-08-19,holdout,,23,2,4,120,0
+UNG,209,straddle,2024-09-23,holdout,,19,0,0,2,0
+UNG,209,strip,2024-09-23,holdout,,19,2,7,119,0
+UNG,210,straddle,2024-10-21,holdout,,19,0,0,0,0
+UNG,210,strip,2024-10-21,holdout,,19,1,2,132,0
+UNG,211,straddle,2024-11-18,holdout,,23,0,0,0,0
+UNG,211,strip,2024-11-18,holdout,,23,3,6,183,0
+UNG,212,straddle,2024-12-23,holdout,,16,0,0,0,0
+UNG,212,strip,2024-12-23,holdout,,16,3,11,82,0
+UNG,213,straddle,2025-01-21,holdout,,22,0,0,1,0
+UNG,213,strip,2025-01-21,holdout,,22,1,2,53,0
+UNG,214,straddle,2025-02-24,holdout,,19,0,0,0,0
+UNG,214,strip,2025-02-24,holdout,,19,1,2,81,0
+UNG,215,straddle,2025-03-24,holdout,,18,2,2,0,0
+UNG,215,strip,2025-03-24,holdout,,18,5,19,156,0
+UNG,216,straddle,2025-04-21,holdout,,19,0,0,0,0
+UNG,216,strip,2025-04-21,holdout,rule 2 floor,19,1,1,43,0
+UNG,217,straddle,2025-05-19,holdout,,22,0,0,0,0
+UNG,217,strip,2025-05-19,holdout,rule 2 floor,22,2,3,126,0
+UNG,218,straddle,2025-06-23,holdout,,18,3,3,0,0
+UNG,218,strip,2025-06-23,holdout,,18,0,0,227,0
+UNG,219,straddle,2025-07-21,holdout,,19,0,0,2,0
+UNG,219,strip,2025-07-21,holdout,rule 2 floor,19,0,0,98,0
+USO,1,straddle,2007-05-21,estimation,,18,0,0,0,0
+USO,1,strip,2007-05-21,estimation,rule 2 floor,18,0,0,86,0
+USO,2,straddle,2007-06-18,estimation,,23,0,0,5,0
+USO,2,strip,2007-06-18,estimation,,23,0,0,146,0
+USO,3,straddle,2007-07-23,estimation,,19,0,0,1,0
+USO,3,strip,2007-07-23,estimation,,19,0,0,94,0
+USO,4,straddle,2007-08-20,estimation,,23,2,2,7,0
+USO,4,strip,2007-08-20,estimation,,23,3,15,139,0
+USO,5,straddle,2007-09-24,estimation,,19,0,0,2,0
+USO,5,strip,2007-09-24,estimation,rule 2 floor,19,0,0,87,0
+USO,6,straddle,2007-10-22,estimation,,19,0,0,3,0
+USO,6,strip,2007-10-22,estimation,rule 2 floor,19,1,1,127,0
+USO,7,straddle,2007-11-19,estimation,,23,0,0,1,0
+USO,7,strip,2007-11-19,estimation,,23,0,0,197,0
+USO,8,straddle,2007-12-24,estimation,,17,0,0,1,0
+USO,8,strip,2007-12-24,estimation,,17,0,0,99,0
+USO,9,straddle,2008-01-22,estimation,,18,1,1,1,0
+USO,9,strip,2008-01-22,estimation,rule 2 floor,18,3,4,48,0
+USO,10,straddle,2008-02-19,estimation,,22,3,3,1,0
+USO,10,strip,2008-02-19,estimation,rule 2 floor,22,3,3,145,0
+USO,11,straddle,2008-03-24,estimation,,19,2,2,4,0
+USO,11,strip,2008-03-24,estimation,,19,4,5,276,0
+USO,12,straddle,2008-04-21,estimation,,19,0,0,2,0
+USO,12,strip,2008-04-21,estimation,,19,0,0,150,0
+USO,13,straddle,2008-05-19,estimation,,23,0,0,1,0
+USO,13,strip,2008-05-19,estimation,,23,0,0,208,0
+USO,14,straddle,2008-06-23,estimation,,18,0,0,0,0
+USO,14,strip,2008-06-23,estimation,,18,0,0,242,0
+USO,15,straddle,2008-07-21,estimation,,19,4,4,4,0
+USO,15,strip,2008-07-21,estimation,,19,4,15,424,0
+USO,16,straddle,2008-08-18,estimation,,23,0,0,4,0
+USO,16,strip,2008-08-18,estimation,,23,0,0,370,0
+USO,17,straddle,2008-09-22,estimation,,19,2,2,4,0
+USO,17,strip,2008-09-22,estimation,,19,2,55,409,0
+USO,18,straddle,2008-10-20,estimation,,24,1,1,3,0
+USO,18,strip,2008-10-20,estimation,,24,2,37,380,0
+USO,19,straddle,2008-11-24,estimation,,18,0,0,2,0
+USO,19,strip,2008-11-24,estimation,,18,2,14,284,0
+USO,20,straddle,2008-12-22,estimation,,17,0,0,0,0
+USO,20,strip,2008-12-22,estimation,,17,1,7,247,0
+USO,21,straddle,2009-01-20,estimation,,22,0,0,2,0
+USO,21,strip,2009-01-20,estimation,,22,2,11,186,0
+USO,22,straddle,2009-02-23,estimation,,19,1,1,4,0
+USO,22,strip,2009-02-23,estimation,,19,2,6,107,0
+USO,23,straddle,2009-03-23,estimation,,18,0,0,1,0
+USO,23,strip,2009-03-23,estimation,,18,0,0,158,0
+USO,24,straddle,2009-04-20,estimation,,19,0,0,5,0
+USO,24,strip,2009-04-20,estimation,,19,0,0,90,0
+USO,25,straddle,2009-05-18,estimation,,23,1,1,6,0
+USO,25,strip,2009-05-18,estimation,,23,2,4,99,0
+USO,26,straddle,2009-06-22,estimation,,18,0,0,4,0
+USO,26,strip,2009-06-22,estimation,,18,0,0,163,0
+USO,27,straddle,2009-07-20,estimation,,24,0,0,2,0
+USO,27,strip,2009-07-20,estimation,,24,1,1,116,0
+USO,28,straddle,2009-08-24,estimation,,18,0,0,0,0
+USO,28,strip,2009-08-24,estimation,,18,0,0,128,0
+USO,29,straddle,2009-09-21,estimation,,19,0,0,2,0
+USO,29,strip,2009-09-21,estimation,,19,0,0,101,0
+USO,30,straddle,2009-10-19,estimation,,24,0,0,0,0
+USO,30,strip,2009-10-19,estimation,,24,0,0,49,0
+USO,31,straddle,2009-11-23,estimation,,18,0,0,1,0
+USO,31,strip,2009-11-23,estimation,,18,0,0,78,0
+USO,32,straddle,2009-12-21,estimation,,17,0,0,1,0
+USO,32,strip,2009-12-21,estimation,,17,0,0,200,0
+USO,33,straddle,2010-01-19,estimation,,22,0,0,0,0
+USO,33,strip,2010-01-19,estimation,,22,0,0,105,0
+USO,34,straddle,2010-02-22,estimation,,19,0,0,0,0
+USO,34,strip,2010-02-22,estimation,,19,0,0,82,0
+USO,35,straddle,2010-03-22,estimation,,18,0,0,1,0
+USO,35,strip,2010-03-22,estimation,,18,1,1,180,0
+USO,36,straddle,2010-04-19,estimation,,24,0,0,3,0
+USO,36,strip,2010-04-19,estimation,,24,0,0,127,0
+USO,37,straddle,2010-05-24,estimation,,18,0,0,1,0
+USO,37,strip,2010-05-24,estimation,,18,0,0,115,0
+USO,38,straddle,2010-06-21,estimation,,18,0,0,0,0
+USO,38,strip,2010-06-21,estimation,,18,0,0,140,0
+USO,39,straddle,2010-07-19,estimation,,24,0,0,0,0
+USO,39,strip,2010-07-19,estimation,,24,0,0,149,0
+USO,40,straddle,2010-08-23,estimation,,18,0,0,0,0
+USO,40,strip,2010-08-23,estimation,rule 2 floor,18,0,0,118,0
+USO,41,straddle,2010-09-20,estimation,,19,0,0,2,0
+USO,41,strip,2010-09-20,estimation,,19,0,0,106,0
+USO,42,straddle,2010-10-18,estimation,,24,0,0,0,0
+USO,42,strip,2010-10-18,estimation,,24,0,0,94,0
+USO,43,straddle,2010-11-22,estimation,,18,1,1,2,0
+USO,43,strip,2010-11-22,estimation,rule 2 floor,18,1,1,63,0
+USO,44,straddle,2010-12-20,estimation,,22,0,0,0,0
+USO,44,strip,2010-12-20,estimation,,22,0,0,169,0
+USO,45,straddle,2011-01-24,estimation,,19,0,0,0,0
+USO,45,strip,2011-01-24,estimation,,19,0,0,62,0
+USO,46,straddle,2011-02-22,estimation,,18,0,0,0,0
+USO,46,strip,2011-02-22,estimation,,18,0,0,83,0
+USO,47,straddle,2011-03-21,estimation,,19,0,0,0,0
+USO,47,strip,2011-03-21,estimation,,19,0,0,225,0
+USO,48,straddle,2011-04-18,estimation,,23,1,1,2,0
+USO,48,strip,2011-04-18,estimation,,23,0,0,199,0
+USO,49,straddle,2011-05-23,estimation,,18,0,0,0,0
+USO,49,strip,2011-05-23,estimation,,18,0,0,138,0
+USO,50,straddle,2011-06-20,estimation,,18,0,0,0,0
+USO,50,strip,2011-06-20,estimation,,18,0,0,146,0
+USO,51,straddle,2011-07-18,estimation,,24,0,0,3,0
+USO,51,strip,2011-07-18,estimation,,24,0,0,201,0
+USO,52,straddle,2011-08-22,estimation,,18,0,0,0,0
+USO,52,strip,2011-08-22,estimation,,18,1,1,140,0
+USO,53,straddle,2011-09-19,estimation,,24,0,0,0,0
+USO,53,strip,2011-09-19,estimation,,24,0,0,209,0
+USO,54,straddle,2011-10-24,estimation,,19,0,0,0,0
+USO,54,strip,2011-10-24,estimation,,19,1,3,164,0
+USO,55,straddle,2011-11-21,estimation,,18,0,0,0,0
+USO,55,strip,2011-11-21,estimation,,18,1,2,338,0
+USO,56,straddle,2011-12-19,estimation,,21,0,0,1,0
+USO,56,strip,2011-12-19,estimation,,21,0,0,300,0
+USO,57,straddle,2012-01-23,estimation,,19,0,0,0,0
+USO,57,strip,2012-01-23,estimation,,19,0,0,193,0
+USO,58,straddle,2012-02-21,estimation,,18,0,0,0,0
+USO,58,strip,2012-02-21,estimation,,18,0,0,235,0
+USO,59,straddle,2012-03-19,estimation,,23,0,0,0,0
+USO,59,strip,2012-03-19,estimation,,23,0,0,323,0
+USO,60,straddle,2012-04-23,estimation,,19,0,0,3,0
+USO,60,strip,2012-04-23,estimation,,19,0,0,164,0
+USO,61,straddle,2012-05-21,estimation,,18,0,0,3,0
+USO,61,strip,2012-05-21,estimation,,18,0,0,238,0
+USO,62,straddle,2012-06-18,estimation,,23,0,0,1,0
+USO,62,strip,2012-06-18,estimation,,23,0,0,227,0
+USO,63,straddle,2012-07-23,estimation,,19,1,1,2,0
+USO,63,strip,2012-07-23,estimation,,19,1,1,254,0
+USO,64,straddle,2012-08-20,estimation,,23,0,0,0,0
+USO,64,strip,2012-08-20,estimation,,23,0,0,303,0
+USO,65,straddle,2012-09-24,estimation,,19,0,0,0,0
+USO,65,strip,2012-09-24,estimation,,19,0,0,236,0
+USO,66,straddle,2012-10-22,estimation,,17,0,0,1,0
+USO,66,strip,2012-10-22,estimation,,17,0,0,291,0
+USO,67,straddle,2012-11-19,estimation,,23,0,0,0,0
+USO,67,strip,2012-11-19,estimation,,23,0,0,556,0
+USO,68,straddle,2012-12-24,estimation,,17,0,0,2,0
+USO,68,strip,2012-12-24,estimation,,17,0,0,123,0
+USO,69,straddle,2013-01-22,estimation,,18,0,0,0,0
+USO,69,strip,2013-01-22,estimation,,18,0,0,253,0
+USO,70,straddle,2013-02-19,estimation,,18,0,0,4,0
+USO,70,strip,2013-02-19,estimation,,18,0,0,203,0
+USO,71,straddle,2013-03-18,estimation,,23,0,0,1,0
+USO,71,strip,2013-03-18,estimation,,23,1,1,271,0
+USO,72,straddle,2013-04-22,estimation,,19,0,0,0,0
+USO,72,strip,2013-04-22,estimation,,19,0,0,119,0
+USO,73,straddle,2013-05-20,estimation,,23,0,0,0,0
+USO,73,strip,2013-05-20,estimation,,23,0,0,353,0
+USO,74,straddle,2013-06-24,estimation,,18,0,0,4,0
+USO,74,strip,2013-06-24,estimation,,18,0,0,132,0
+USO,75,straddle,2013-07-22,estimation,,19,0,0,0,0
+USO,75,strip,2013-07-22,estimation,,19,0,0,273,0
+USO,76,straddle,2013-08-19,estimation,,23,0,0,0,0
+USO,76,strip,2013-08-19,estimation,,23,0,0,160,0
+USO,77,straddle,2013-09-23,estimation,,19,0,0,1,0
+USO,77,strip,2013-09-23,estimation,,19,0,0,160,0
+USO,78,straddle,2013-10-21,estimation,,19,0,0,6,0
+USO,78,strip,2013-10-21,estimation,,19,0,0,221,0
+USO,79,straddle,2013-11-18,estimation,,23,0,0,2,0
+USO,79,strip,2013-11-18,estimation,,23,0,0,145,0
+USO,80,straddle,2013-12-23,estimation,,17,0,0,6,0
+USO,80,strip,2013-12-23,estimation,,17,0,0,93,0
+USO,81,straddle,2014-01-21,estimation,,22,0,0,3,0
+USO,81,strip,2014-01-21,estimation,,22,0,0,66,0
+USO,82,straddle,2014-02-24,estimation,,19,0,0,2,0
+USO,82,strip,2014-02-24,estimation,,19,0,0,122,0
+USO,83,straddle,2014-03-24,estimation,,18,0,0,0,0
+USO,83,strip,2014-03-24,estimation,,18,0,0,225,0
+USO,84,straddle,2014-04-21,estimation,,19,0,0,0,0
+USO,84,strip,2014-04-21,estimation,,19,0,0,200,0
+USO,85,straddle,2014-05-19,estimation,,23,0,0,3,0
+USO,85,strip,2014-05-19,estimation,,23,0,0,178,0
+USO,86,straddle,2014-06-23,estimation,,18,1,1,4,0
+USO,86,strip,2014-06-23,estimation,,18,1,1,280,0
+USO,87,straddle,2014-07-21,estimation,,19,1,1,3,0
+USO,87,strip,2014-07-21,estimation,,19,1,1,127,0
+USO,88,straddle,2014-08-18,estimation,,23,0,0,0,0
+USO,88,strip,2014-08-18,estimation,,23,0,0,337,0
+USO,89,straddle,2014-09-22,estimation,,19,0,0,3,0
+USO,89,strip,2014-09-22,estimation,,19,1,1,69,0
+USO,90,straddle,2014-10-20,estimation,,24,1,1,1,0
+USO,90,strip,2014-10-20,estimation,,24,1,2,142,0
+USO,91,straddle,2014-11-24,estimation,,18,1,1,10,0
+USO,91,strip,2014-11-24,estimation,,18,3,18,226,0
+USO,92,straddle,2014-12-22,estimation,,17,2,2,4,0
+USO,92,strip,2014-12-22,estimation,,17,1,1,225,0
+USO,93,straddle,2015-01-20,estimation,,22,1,1,1,0
+USO,93,strip,2015-01-20,estimation,,22,1,2,224,0
+USO,94,straddle,2015-02-23,estimation,,19,0,0,1,0
+USO,94,strip,2015-02-23,estimation,,19,0,0,237,0
+USO,95,straddle,2015-03-23,estimation,,18,1,1,2,0
+USO,95,strip,2015-03-23,estimation,,18,1,2,118,0
+USO,96,straddle,2015-04-20,estimation,,19,0,0,0,0
+USO,96,strip,2015-04-20,estimation,,19,0,0,182,0
+USO,97,straddle,2015-05-18,estimation,,23,0,0,0,0
+USO,97,strip,2015-05-18,estimation,,23,0,0,166,0
+USO,98,straddle,2015-06-22,estimation,,18,0,0,5,0
+USO,98,strip,2015-06-22,estimation,,18,0,0,110,0
+USO,99,straddle,2015-07-20,estimation,,24,0,0,5,0
+USO,99,strip,2015-07-20,estimation,,24,3,5,177,0
+USO,100,straddle,2015-08-24,estimation,,18,1,1,3,0
+USO,100,strip,2015-08-24,estimation,,18,4,4,149,0
+USO,101,straddle,2015-09-21,estimation,,19,0,0,0,0
+USO,101,strip,2015-09-21,estimation,,19,0,0,176,0
+USO,102,straddle,2015-10-19,estimation,,24,0,0,3,0
+USO,102,strip,2015-10-19,estimation,,24,1,1,163,0
+USO,103,straddle,2015-11-23,estimation,,18,1,1,4,0
+USO,103,strip,2015-11-23,estimation,,18,1,2,111,0
+USO,104,straddle,2015-12-21,estimation,,17,0,0,3,0
+USO,104,strip,2015-12-21,estimation,rule 2 floor,17,0,0,75,0
+USO,105,straddle,2016-01-19,estimation,,22,0,0,0,0
+USO,105,strip,2016-01-19,estimation,rule 2 floor,22,0,0,116,0
+USO,106,straddle,2016-02-22,estimation,,19,0,0,2,0
+USO,106,strip,2016-02-22,estimation,rule 2 floor,19,1,1,94,0
+USO,107,straddle,2016-03-21,estimation,,18,0,0,0,0
+USO,107,strip,2016-03-21,estimation,,18,0,0,111,0
+USO,108,straddle,2016-04-18,estimation,,24,0,0,4,0
+USO,108,strip,2016-04-18,estimation,,24,0,0,100,0
+USO,109,straddle,2016-05-23,estimation,,18,0,0,0,0
+USO,109,strip,2016-05-23,estimation,rule 2 floor,18,0,0,67,0
+USO,110,straddle,2016-06-20,estimation,,18,0,0,3,0
+USO,110,strip,2016-06-20,estimation,rule 2 floor,18,0,0,51,0
+USO,111,straddle,2016-07-18,estimation,,24,0,0,0,0
+USO,111,strip,2016-07-18,estimation,rule 2 floor,24,0,0,94,0
+USO,112,straddle,2016-08-22,estimation,,18,0,0,2,0
+USO,112,strip,2016-08-22,estimation,rule 2 floor,18,0,0,52,0
+USO,113,straddle,2016-09-19,estimation,,24,3,3,5,0
+USO,113,strip,2016-09-19,estimation,rule 2 floor,24,4,6,54,0
+USO,114,straddle,2016-10-24,estimation,,19,1,1,5,0
+USO,114,strip,2016-10-24,estimation,rule 2 floor,19,0,0,50,0
+USO,115,straddle,2016-11-21,estimation,,18,0,0,0,0
+USO,115,strip,2016-11-21,estimation,rule 2 floor,18,0,0,56,0
+USO,116,straddle,2016-12-19,estimation,,21,0,0,1,0
+USO,116,strip,2016-12-19,estimation,rule 2 floor,21,0,0,75,0
+USO,117,straddle,2017-01-23,estimation,,19,0,0,0,0
+USO,117,strip,2017-01-23,estimation,rule 2 floor,19,0,0,78,0
+USO,118,straddle,2017-02-21,estimation,,18,1,1,5,0
+USO,118,strip,2017-02-21,estimation,rule 2 floor,18,1,1,33,0
+USO,119,straddle,2017-03-20,estimation,,23,0,0,0,0
+USO,119,strip,2017-03-20,estimation,rule 2 floor,23,1,1,31,0
+USO,120,straddle,2017-04-24,estimation,,19,0,0,0,0
+USO,120,strip,2017-04-24,estimation,rule 2 floor,19,0,0,34,0
+USO,121,straddle,2017-05-22,estimation,,18,0,0,4,0
+USO,121,strip,2017-05-22,estimation,rule 2 floor,18,1,1,39,0
+USO,122,straddle,2017-06-19,estimation,,23,1,1,3,0
+USO,122,strip,2017-06-19,estimation,rule 2 floor,23,1,1,52,0
+USO,123,straddle,2017-07-24,estimation,,19,0,0,0,0
+USO,123,strip,2017-07-24,estimation,rule 2 floor,19,0,0,47,0
+USO,124,straddle,2017-08-21,estimation,,18,1,1,2,0
+USO,124,strip,2017-08-21,estimation,rule 2 floor,18,1,1,37,0
+USO,125,straddle,2017-09-18,estimation,,24,1,1,3,0
+USO,125,strip,2017-09-18,estimation,rule 2 floor,24,1,1,56,0
+USO,126,straddle,2017-10-23,estimation,,19,0,0,6,0
+USO,126,strip,2017-10-23,estimation,rule 2 floor,19,1,1,45,0
+USO,127,straddle,2017-11-20,estimation,,18,0,0,0,0
+USO,127,strip,2017-11-20,estimation,rule 2 floor,18,1,1,111,0
+USO,128,straddle,2017-12-18,estimation,,21,8,8,7,0
+USO,128,strip,2017-12-18,estimation,rule 2 floor,21,11,16,59,0
+USO,129,straddle,2018-01-22,estimation,,19,2,2,5,0
+USO,129,strip,2018-01-22,estimation,rule 2 floor,19,0,0,40,0
+USO,130,straddle,2018-02-20,estimation,,18,0,0,0,0
+USO,130,strip,2018-02-20,estimation,rule 2 floor,18,0,0,128,0
+USO,131,straddle,2018-03-19,estimation,,23,2,2,5,0
+USO,131,strip,2018-03-19,estimation,rule 2 floor,23,2,3,113,0
+USO,132,straddle,2018-04-23,estimation,,19,0,0,2,0
+USO,132,strip,2018-04-23,estimation,rule 2 floor,19,1,1,176,0
+USO,133,straddle,2018-05-21,estimation,,18,0,0,9,0
+USO,133,strip,2018-05-21,estimation,rule 2 floor,18,0,0,168,0
+USO,134,straddle,2018-06-18,estimation,,23,3,3,3,0
+USO,134,strip,2018-06-18,estimation,rule 2 floor,23,7,10,198,0
+USO,135,straddle,2018-07-23,estimation,,19,0,0,1,0
+USO,135,strip,2018-07-23,estimation,rule 2 floor,19,0,0,81,0
+USO,136,straddle,2018-08-20,estimation,,23,1,1,3,0
+USO,136,strip,2018-08-20,estimation,rule 2 floor,23,3,4,86,0
+USO,137,straddle,2018-09-24,estimation,,19,1,1,2,0
+USO,137,strip,2018-09-24,estimation,rule 2 floor,19,0,0,43,0
+USO,138,straddle,2018-10-22,estimation,,19,0,0,7,0
+USO,138,strip,2018-10-22,estimation,rule 2 floor,19,0,0,145,0
+USO,139,straddle,2018-11-19,estimation,,22,1,1,4,0
+USO,139,strip,2018-11-19,estimation,,22,1,1,119,0
+USO,140,straddle,2018-12-24,estimation,,17,1,1,3,0
+USO,140,strip,2018-12-24,estimation,rule 2 floor,17,3,6,74,0
+USO,141,straddle,2019-01-22,estimation,,18,0,0,0,0
+USO,141,strip,2019-01-22,estimation,rule 2 floor,18,1,1,153,0
+USO,142,straddle,2019-02-19,estimation,,18,0,0,0,0
+USO,142,strip,2019-02-19,estimation,rule 2 floor,18,1,1,67,0
+USO,143,straddle,2019-03-18,estimation,,23,0,0,2,0
+USO,143,strip,2019-03-18,estimation,rule 2 floor,23,5,5,75,0
+USO,144,straddle,2019-04-22,estimation,,19,0,0,2,0
+USO,144,strip,2019-04-22,estimation,rule 2 floor,19,0,0,73,0
+USO,145,straddle,2019-05-20,estimation,,23,3,3,12,0
+USO,145,strip,2019-05-20,estimation,rule 2 floor,23,5,11,148,0
+USO,146,straddle,2019-06-24,estimation,,18,0,0,1,0
+USO,146,strip,2019-06-24,estimation,,18,0,0,114,0
+USO,147,straddle,2019-07-22,estimation,,19,0,0,0,0
+USO,147,strip,2019-07-22,estimation,rule 2 floor,19,1,4,163,0
+USO,148,straddle,2019-08-19,estimation,,23,0,0,1,0
+USO,148,strip,2019-08-19,estimation,rule 2 floor,23,0,0,127,0
+USO,149,straddle,2019-09-23,estimation,,19,1,1,3,0
+USO,149,strip,2019-09-23,estimation,rule 2 floor,19,1,1,132,0
+USO,150,straddle,2019-10-21,estimation,,19,1,1,4,0
+USO,150,strip,2019-10-21,estimation,rule 2 floor,19,2,4,150,0
+USO,151,straddle,2019-11-18,estimation,,23,1,1,3,0
+USO,151,strip,2019-11-18,estimation,,23,2,3,239,0
+USO,152,straddle,2019-12-23,estimation,,17,0,0,0,0
+USO,152,strip,2019-12-23,estimation,rule 2 floor,17,0,0,42,0
+USO,153,straddle,2020-01-21,estimation,,22,2,2,11,0
+USO,153,strip,2020-01-21,estimation,rule 2 floor,22,0,0,159,0
+USO,154,straddle,2020-02-24,estimation,,19,2,3,7,0
+USO,154,strip,2020-02-24,estimation,rule 2 floor,19,4,20,68,0
+USO,155,straddle,2020-03-23,estimation,,18,0,0,1,0
+USO,155,strip,2020-03-23,estimation,,18,12,36,99,0
+USO,156,strip,2020-04-20,estimation,rule 5 truncated,6,6,10,7,0
+USO,157,straddle,2020-05-18,estimation,,23,0,0,0,0
+USO,157,strip,2020-05-18,estimation,,23,8,28,239,0
+USO,158,straddle,2020-06-22,estimation,,18,0,0,0,0
+USO,158,strip,2020-06-22,estimation,,18,3,7,258,0
+USO,159,straddle,2020-07-20,estimation,,24,0,0,0,0
+USO,159,strip,2020-07-20,estimation,,24,1,2,273,0
+USO,160,straddle,2020-08-24,estimation,,18,0,0,3,0
+USO,160,strip,2020-08-24,estimation,,18,0,0,136,0
+USO,161,straddle,2020-09-21,estimation,,19,0,0,0,0
+USO,161,strip,2020-09-21,estimation,,19,2,3,277,0
+USO,162,straddle,2020-10-19,estimation,,24,0,0,0,0
+USO,162,strip,2020-10-19,estimation,,24,2,2,177,0
+USO,163,straddle,2020-11-23,estimation,,18,0,0,1,0
+USO,163,strip,2020-11-23,estimation,,18,2,2,106,0
+USO,164,straddle,2020-12-21,estimation,,17,0,0,1,0
+USO,164,strip,2020-12-21,estimation,,17,7,18,267,0
+USO,165,straddle,2021-01-19,estimation,,22,0,0,1,0
+USO,165,strip,2021-01-19,estimation,,22,1,2,210,0
+USO,166,straddle,2021-02-22,estimation,,19,0,0,0,0
+USO,166,strip,2021-02-22,estimation,,19,2,4,153,0
+USO,167,straddle,2021-03-22,estimation,,18,0,0,0,0
+USO,167,strip,2021-03-22,estimation,,18,0,0,138,0
+USO,168,straddle,2021-04-19,estimation,,24,0,0,0,0
+USO,168,strip,2021-04-19,estimation,,24,3,8,237,0
+USO,169,straddle,2021-05-24,estimation,,18,0,0,0,0
+USO,169,strip,2021-05-24,estimation,,18,0,0,256,0
+USO,170,straddle,2021-06-21,estimation,,18,0,0,0,0
+USO,170,strip,2021-06-21,estimation,,18,0,0,179,0
+USO,171,straddle,2021-07-19,estimation,,24,0,0,0,0
+USO,171,strip,2021-07-19,estimation,,24,1,7,434,0
+USO,172,straddle,2021-08-23,estimation,,18,0,0,2,0
+USO,172,strip,2021-08-23,estimation,,18,3,6,217,0
+USO,173,straddle,2021-09-20,estimation,,19,0,0,3,0
+USO,173,strip,2021-09-20,estimation,,19,3,3,178,0
+USO,174,straddle,2021-10-18,estimation,,24,0,0,0,0
+USO,174,strip,2021-10-18,estimation,,24,0,0,136,0
+USO,175,straddle,2021-11-22,estimation,,18,0,0,2,0
+USO,175,strip,2021-11-22,estimation,,18,0,0,212,0
+USO,176,straddle,2021-12-20,estimation,,22,0,0,3,0
+USO,176,strip,2021-12-20,estimation,,22,6,39,336,0
+USO,177,straddle,2022-01-24,holdout,,19,0,0,0,0
+USO,177,strip,2022-01-24,holdout,,19,0,0,163,0
+USO,178,straddle,2022-02-22,holdout,,18,0,0,0,0
+USO,178,strip,2022-02-22,holdout,,18,1,1,141,0
+USO,179,straddle,2022-03-21,holdout,,18,0,0,0,0
+USO,179,strip,2022-03-21,holdout,,18,0,0,231,0
+USO,180,straddle,2022-04-18,holdout,,24,0,0,0,0
+USO,180,strip,2022-04-18,holdout,,24,1,1,263,0
+USO,181,straddle,2022-05-23,holdout,,18,0,0,0,0
+USO,181,strip,2022-05-23,holdout,,18,1,1,178,0
+USO,182,straddle,2022-06-21,holdout,,17,0,0,1,0
+USO,182,strip,2022-06-21,holdout,,17,3,8,309,0
+USO,183,straddle,2022-07-18,holdout,,24,0,0,0,0
+USO,183,strip,2022-07-18,holdout,,24,1,4,377,0
+USO,184,straddle,2022-08-22,holdout,,18,0,0,1,0
+USO,184,strip,2022-08-22,holdout,,18,0,0,117,0
+USO,185,straddle,2022-09-19,holdout,,24,0,0,0,0
+USO,185,strip,2022-09-19,holdout,,24,1,1,260,0
+USO,186,straddle,2022-10-24,holdout,,19,0,0,0,0
+USO,186,strip,2022-10-24,holdout,,19,0,0,183,0
+USO,187,straddle,2022-11-21,holdout,,18,0,0,0,0
+USO,187,strip,2022-11-21,holdout,,18,0,0,158,0
+USO,188,straddle,2022-12-19,holdout,,21,0,0,0,0
+USO,188,strip,2022-12-19,holdout,,21,0,0,303,0
+USO,189,straddle,2023-01-23,holdout,,19,0,0,0,0
+USO,189,strip,2023-01-23,holdout,,19,0,0,150,0
+USO,190,straddle,2023-02-21,holdout,,18,1,1,2,0
+USO,190,strip,2023-02-21,holdout,,18,1,6,110,0
+USO,191,straddle,2023-03-20,holdout,,23,1,1,4,0
+USO,191,strip,2023-03-20,holdout,,23,4,5,298,0
+USO,192,straddle,2023-04-24,holdout,,19,2,2,3,0
+USO,192,strip,2023-04-24,holdout,,19,2,5,243,0
+USO,193,straddle,2023-05-22,holdout,,18,0,0,0,0
+USO,193,strip,2023-05-22,holdout,,18,1,1,136,0
+USO,194,straddle,2023-06-20,holdout,,22,0,0,0,0
+USO,194,strip,2023-06-20,holdout,,22,0,0,370,0
+USO,195,straddle,2023-07-24,holdout,,19,0,0,0,0
+USO,195,strip,2023-07-24,holdout,,19,0,0,276,0
+USO,196,straddle,2023-08-21,holdout,,18,1,1,2,0
+USO,196,strip,2023-08-21,holdout,,18,1,2,152,0
+USO,197,straddle,2023-09-18,holdout,,24,0,0,0,0
+USO,197,strip,2023-09-18,holdout,,24,0,0,137,0
+USO,198,straddle,2023-10-23,holdout,,19,0,0,2,0
+USO,198,strip,2023-10-23,holdout,,19,0,0,173,0
+USO,199,straddle,2023-11-20,holdout,,18,0,0,4,0
+USO,199,strip,2023-11-20,holdout,,18,2,3,337,0
+USO,200,straddle,2023-12-18,holdout,,21,0,0,0,0
+USO,200,strip,2023-12-18,holdout,,21,0,0,240,0
+USO,201,straddle,2024-01-22,holdout,,19,0,0,0,0
+USO,201,strip,2024-01-22,holdout,,19,0,0,161,0
+USO,202,straddle,2024-02-20,holdout,,18,0,0,1,0
+USO,202,strip,2024-02-20,holdout,,18,0,0,164,0
+USO,203,straddle,2024-03-18,holdout,,23,0,0,0,0
+USO,203,strip,2024-03-18,holdout,,23,0,0,379,0
+USO,204,straddle,2024-04-22,holdout,,19,1,1,2,0
+USO,204,strip,2024-04-22,holdout,,19,1,1,221,0
+USO,205,straddle,2024-05-20,holdout,,22,0,0,0,0
+USO,205,strip,2024-05-20,holdout,,22,0,0,289,0
+USO,206,straddle,2024-06-24,holdout,,18,0,0,0,0
+USO,206,strip,2024-06-24,holdout,,18,0,0,257,0
+USO,207,straddle,2024-07-22,holdout,,19,0,0,0,0
+USO,207,strip,2024-07-22,holdout,,19,0,0,98,0
+USO,208,straddle,2024-08-19,holdout,,23,0,0,0,0
+USO,208,strip,2024-08-19,holdout,,23,0,0,304,0
+USO,209,straddle,2024-09-23,holdout,,19,0,0,0,0
+USO,209,strip,2024-09-23,holdout,,19,0,0,115,0
+USO,210,straddle,2024-10-21,holdout,,19,0,0,0,0
+USO,210,strip,2024-10-21,holdout,,19,0,0,65,0
+USO,211,straddle,2024-11-18,holdout,,23,0,0,0,0
+USO,211,strip,2024-11-18,holdout,,23,0,0,158,0
+USO,212,straddle,2024-12-23,holdout,,16,2,2,2,0
+USO,212,strip,2024-12-23,holdout,,16,6,10,190,0
+USO,213,straddle,2025-01-21,holdout,,22,1,1,0,0
+USO,213,strip,2025-01-21,holdout,,22,1,1,161,0
+USO,214,straddle,2025-02-24,holdout,,19,0,0,0,0
+USO,214,strip,2025-02-24,holdout,,19,3,4,213,0
+USO,215,straddle,2025-03-24,holdout,,18,4,4,1,0
+USO,215,strip,2025-03-24,holdout,,18,4,18,171,0
+USO,216,straddle,2025-04-21,holdout,,19,0,0,0,0
+USO,216,strip,2025-04-21,holdout,,19,0,0,116,0
+USO,217,straddle,2025-05-19,holdout,,22,0,0,0,0
+USO,217,strip,2025-05-19,holdout,,22,1,3,57,0
+USO,218,straddle,2025-06-23,holdout,,18,0,0,0,0
+USO,218,strip,2025-06-23,holdout,,18,0,0,165,0
+USO,219,straddle,2025-07-21,holdout,,19,0,0,0,0
+USO,219,strip,2025-07-21,holdout,,19,0,0,145,0

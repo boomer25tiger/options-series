@@ -62,6 +62,7 @@ class ArmPath:
     record: dict[str, object]
     dates: pd.DatetimeIndex
     equity: np.ndarray
+    hedge: np.ndarray
 
 
 def _marks(bid: np.ndarray, offer: np.ndarray, present: np.ndarray, marking: str):
@@ -275,7 +276,7 @@ def simulate_arm(
         )
     record["gain_gross"] = cash[0, GROSS_CELL]
     record["gain_primary"] = cash[0, PRIMARY_CELL]
-    return ArmPath(record, dates, equity / premium)
+    return ArmPath(record, dates, equity / premium, hedge)
 
 
 def adjusted_closes(prices: pd.DataFrame) -> pd.DataFrame:
@@ -331,9 +332,9 @@ def build_returns(
     panel: pd.DataFrame,
     prices: pd.DataFrame,
     curve: ZeroCurve,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Every computable arm-cycle's accounting: one row per arm-cycle and the daily
-    equity paths in long form."""
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Every computable arm-cycle's accounting: one row per arm-cycle, the daily equity
+    paths in long form and the daily share hedge."""
     closes = prices.pivot(index="date", columns="ticker", values="close")
     rate_cache: dict[tuple[pd.Timestamp, int], float] = {}
 
@@ -375,7 +376,22 @@ def build_returns(
             )
         records.append(record)
         paths.append((ticker, cycle, arm, path))
-    return pd.DataFrame(records), equity_frame(paths)
+    hedges = pd.concat(
+        [
+            pd.DataFrame(
+                {
+                    "ticker": ticker,
+                    "cycle": cycle,
+                    "arm": arm,
+                    "date": path.dates,
+                    "hedge_shares": path.hedge,
+                }
+            )
+            for ticker, cycle, arm, path in paths
+        ],
+        ignore_index=True,
+    )
+    return pd.DataFrame(records), equity_frame(paths), hedges
 
 
 def equity_frame(paths: list[tuple[str, int, str, ArmPath]]) -> pd.DataFrame:
