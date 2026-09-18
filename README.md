@@ -2,7 +2,7 @@
 
 Do options on commodity ETFs price variance the way index options do, and does the premium depend on whether the futures curve is in contango or backwardation?
 
-We studied options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. Built implied variance model-free from the full strike ladder on the CBOE VIX method; on SPX, the construction tracks VIX at 0.999 correlation with a median gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
+We studied options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. We built implied variance model-free from the full strike ladder on the CBOE VIX method; on SPX, the construction tracks VIX at 0.999 correlation with a median gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
 
 Eighteen tests were registered, eight on the level of the premium and ten on its relation to the curve slope, with Holm correction inside each block. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
 
@@ -10,9 +10,9 @@ Eighteen tests were registered, eight on the level of the premium and ten on its
 
 ## Results
 
-Across the four commodity ETFs, 30-day implied variance ran 23 percent above the variance that followed, on average. The mean log ratio of implied to realized variance is 0.20 with a 95 percent interval of 0.16 to 0.24 on 4,165 trading days, using the at-the-money measure that covers every date. The gap rises to 43 percent on days where all four chains support the model-free construction. and every commodity carries the premium on its own at both maturities. SPX over the same window runs at 77 percent model-free against 43 percent for the commodities, so the commodity premium is a little over half the index premium in percentage terms and about 0.6 of it in log units.
+Across the four commodity ETFs, 30-day implied variance ran 23 percent above the variance that followed, on average. The mean log ratio of implied to realized variance is 0.20 with a 95 percent interval of 0.16 to 0.24 on 4,165 trading days, using the at-the-money measure that covers every date. The gap rises to 43 percent on days where all four chains support the model-free construction, and every commodity carries the premium on its own at both maturities. SPX over the same window runs at 77 percent model-free against 43 percent for the commodities, so the commodity premium is a little over half the index premium in percentage terms and about 0.6 of it in log units.
 
-Important to note that the premium does not depend on the curve. None of the ten slope tests cleared the pre-set bar. The largest effect of a one-standard-deviation move in the curve slope is 0.08 log units. One cell, silver at 30 days, has intervals that exclude zero under both methods and still fails the Holm-corrected level on the bootstrap, which is the case the two-method rule exists to catch. The common factor across the four premia explains about 47 percent of their variance and moves by less than a point after conditioning on slope.
+The premium does not depend on the curve. None of the ten slope tests cleared the pre-set bar. The largest effect of a one-standard-deviation move in the curve slope is 0.08 log units. One cell, silver at 30 days, has intervals that exclude zero under both methods and still fails the Holm-corrected level on the bootstrap, which is the case the two-method rule exists to catch. The common factor across the four premia explains about 47 percent of their variance and moves by less than a point after conditioning on slope.
 
 | node | ETF | series | n | mean log ratio | p Newey-West | p bootstrap | verdict |
 |---|---|---|---|---|---|---|---|
@@ -45,13 +45,13 @@ Important to note that the premium does not depend on the curve. None of the ten
 | 91 | model-free | 0.5241 | 0.5186 | -0.0055 |
 | 91 | ATM | 0.5635 | 0.5556 | -0.0079 |
 
-Three of the four ETFs report the at-the-money measure as headline because a registered check found their model-free drop dates differ from retained dates in premium level; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
+For every commodity ETF except SLV, a registered check found that at one maturity or both the at-the-money premium on the dates the model-free construction drops differs at p below 0.05 from the premium on the dates it retains, so the at-the-money measure, which covers every date, carries their headline; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
 
-**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represebts a measurement of how options are priced against what the underlying then does.
+**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represents a measurement of how options are priced against what the underlying then does. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec.
 
 ## Reproduce
 
-Requires a WRDS account with OptionMetrics, Datastream futures and CBOE index access, and a ~/.pgpass entry.
+Reproducing the study requires a WRDS account with OptionMetrics, Datastream futures and CBOE index access, and a ~/.pgpass entry.
 
     pip install -r requirements.txt
     python -m options_series.item1.run
@@ -121,7 +121,7 @@ Every H1 and H2 number is also reported at the money and with value weights, and
 
 ## Reproduce
 
-Requires a WRDS account with OptionMetrics, CRSP and the CRSP-OptionMetrics link, and a ~/.pgpass entry.
+Reproducing the study requires a WRDS account with OptionMetrics, CRSP and the CRSP-OptionMetrics link, and a ~/.pgpass entry.
 
     pip install -r requirements.txt
     python -m options_series.item2.run
