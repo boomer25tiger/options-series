@@ -91,6 +91,7 @@ from options_series.item3.figures import (
     plot_cost_grid,
     plot_equity,
     plot_gates,
+    plot_o2,
     plot_pooled_equity,
 )
 from options_series.item3.pull import (
@@ -399,7 +400,8 @@ def signals_stage(cycle_returns: pd.DataFrame) -> None:
     series, table = o2_series(cycle_returns, flags, name)
     series.to_csv(OUTPUT_DIR / "o2_series.csv", index=False)
     table.to_csv(OUTPUT_DIR / "o2_by_quintile.csv", index=False)
-    LOGGER.info("gates, O2 series and Figure 4 written")
+    plot_o2(table, OUTPUT_DIR / "fig5_o2_series")
+    LOGGER.info("gates, O2 series and Figures 4 and 5 written")
 
 
 def stress_stage(

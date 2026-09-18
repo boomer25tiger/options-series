@@ -370,3 +370,64 @@ def plot_gates(curves: pd.DataFrame, path: Path) -> None:
     figure.subplots_adjust(left=0.07, right=0.83, top=0.9, bottom=0.12)
     _save(figure, path)
     shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)
+
+
+def plot_o2(table: pd.DataFrame, path: Path) -> None:
+    """Section 7's O2 exploratory series: mean and median cycle return at k = 0.5 and
+    c = 2 bps by O2 quintile, one panel per arm, with no p-value."""
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4.4))
+    for axis, arm in zip(axes, ("strip", "straddle")):
+        rows = table[(table.arm == arm) & (table.o2_quintile != "all")].copy()
+        rows["o2_quintile"] = rows.o2_quintile.astype(int)
+        rows = rows.sort_values("o2_quintile")
+        color = ARM_COLORS[arm]
+        axis.plot(
+            rows.o2_quintile,
+            rows.mean_return,
+            color=color,
+            lw=1.6,
+            marker="o",
+            ms=6,
+            zorder=3,
+            label="mean",
+        )
+        axis.plot(
+            rows.o2_quintile,
+            rows.median_return,
+            color=color,
+            lw=1.0,
+            ls=(0, (4, 3)),
+            marker="o",
+            ms=6,
+            markerfacecolor="white",
+            zorder=3,
+            label="median",
+        )
+        _style(axis)
+        axis.set_xticks(
+            rows.o2_quintile,
+            [
+                f"{low:.2f} to {high:.2f}"
+                for low, high in zip(rows.o2_low, rows.o2_high)
+            ],
+            fontsize=7.5,
+        )
+        axis.set_xlabel(
+            "O2 = IV30 / IV91 at entry, by quintile", fontsize=9, color=MUTED
+        )
+        axis.set_title(ARM_TITLES[arm], loc="left", fontsize=11, color=INK)
+        axis.legend(frameon=False, fontsize=8, loc="lower right")
+        axis.margins(x=0.08)
+    axes[0].set_ylabel(
+        "cycle return per unit of entry premium", fontsize=9, color=MUTED
+    )
+    figure.suptitle(
+        "O2 against cycle returns at k = 0.5 and c = 2 bps, exploratory with no p-value",
+        x=0.01,
+        ha="left",
+        fontsize=11,
+        color=INK,
+    )
+    figure.tight_layout()
+    _save(figure, path)
+    shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)
