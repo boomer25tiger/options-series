@@ -2,8 +2,8 @@
 
 Amendments to items/item3_short_variance/SPEC.md. Entries A1 through A11 were recorded before
 any return, gain or cycle realized variance existed, during the chain-diagnostic and
-housekeeping work. Entries A12 through A23 were recorded after the returns were computed and
-say so. A1 is recorded as withdrawn, with its text kept in place, so the reasoning that
+housekeeping work. Those numbered A12 through A23 were recorded after the returns were computed
+and say so. A1 is recorded as withdrawn, with its text kept in place, so the reasoning that
 produced it and then reversed it stays auditable.
 
 ## A1. WITHDRAWN. The strip coverage floor stands as pre-registered.
@@ -65,10 +65,10 @@ path never executed and its removal changes no computed value.
 ## A4. K_0 defined at or below F
 
 K_0 is the highest strike at or below F among strikes passing the row filters. The correction
-term −(1/T)(F/K_0 − 1)² is the second-order remainder from expanding ln(F/K_0) and vanishes
-when F equals K_0, so a strike sitting at F minimizes it. The per-cycle table found the call
-and put mids tying exactly in 13 of 844 cycles, where F lands on K* and the strict wording
-pushed K_0 one strike lower.
+term −(1/T)(F/K_0 − 1)² is the second-order remainder from expanding ln(F/K_0) and vanishes when
+F equals K_0, so a strike sitting at F minimizes it. A per-cycle table found the call and put
+mids tying exactly in 13 of 844 cycles, where F lands on K* and the strict wording pushed K_0
+one strike lower.
 
 ## A5. T and the expiration date measured to the last trading day
 
@@ -87,12 +87,11 @@ February 2015, so the comparison between the two series carries a break there ev
 ## A6. Marking rule restated exhaustively
 
 A leg with best_bid > 0 and best_offer > 0 marks at their midpoint, which covers normal, locked
-and crossed quotes. A leg with best_bid = 0 and best_offer > 0 marks at best_offer / 2.
-Anything else carries the last valid mark and counts. The section 3 entry filter continues to
-require best_offer > best_bid strictly, and the two rules differ deliberately because entry
-requires a two-sided market and marking does not. Locked or crossed quotes appear on 732 of
-588,023 strip marks, 0.12 percent, 710 locked and 22 crossed. The carry branch never
-fired.
+and crossed quotes. Where best_bid = 0 and best_offer > 0, the mark is best_offer / 2. Anything
+else carries the last valid mark and counts. The section 3 entry filter continues to require
+best_offer > best_bid strictly, and the two rules differ deliberately because entry requires a
+two-sided market and marking does not. Locked or crossed quotes appear on 732 of 588,023 strip
+marks, 0.12 percent, 710 locked and 22 crossed. The carry branch never fired.
 
 ## A7. Section 3 sentence on K corrected
 
@@ -120,11 +119,11 @@ mean.
 
 ## A9. Traded maturity disclosed
 
-Section 13 gains a disclosure that cycle days to expiration at entry run 24 to 32 with a
-median of 25, so the traded maturity sits below item 1's constant 30-day node and any
-comparison between K and item 1's series carries that mismatch. Section 15's sentence
-attributing 30 and 91 day measures to both items is corrected to attribute them to item 1 and
-to state item 3's monthly cycle with its median maturity.
+Section 13 gains a disclosure that cycle days to expiration at entry run 24 to 32 with a median
+of 25, so the traded maturity sits below item 1's constant 30-day node and any comparison
+between K and item 1's series carries that mismatch. In section 15, the sentence attributing 30
+and 91 day measures to both items is corrected to attribute them to item 1 and to state item 3's
+monthly cycle with its median maturity.
 
 ## A10. Marking sensitivity on the stress table
 
@@ -161,12 +160,12 @@ cancels only approximately in the slope and adds noise to the regressor that att
 estimate toward zero. Its standard deviation of 0.026 against O1's 0.40 keeps that attenuation
 small.
 
-The section 5 replication target is sensitive to it. The per-cycle difference between the
-realized return and the 1 − RV/K target measures −0.048 for rule-2-passing cycles and
-−0.057 for the rest. Against a target built on Σr²/T with both sides on calendar time it
+The section 5 replication target is sensitive to it. Measured as the per-cycle difference
+between the realized return and the 1 − RV/K target, it runs −0.048 for rule-2-passing cycles
+and −0.057 for the rest. Against a target built on Σr²/T with both sides on calendar time it
 measures −0.001 and −0.0031. The second figure carries a standard error of 5.1 percentage
 points, so the failing population's replication error is not measured with useful precision.
-The consistent target governs the diagnostic and both figures are reported.
+Both figures are reported, with the consistent target governing the diagnostic.
 
 ## A13. The hedge carry operates per leg
 
@@ -182,9 +181,9 @@ reading, and that check is emitted to carry_verdict_invariance.csv.
 ## A14. The O1 slope sits outside section 9's Holm family
 
 Section 9 lists the slope among block C's two tests while section 7 states that the slope's
-procedure replaces section 9's and the two are never combined. Section 7 governs, so block C's
-mean was tested alone at the five percent level and the slope under its own clustered
-procedure. Neither test clears under either reading.
+procedure replaces section 9's and the two are never combined. Following section 7, block C's
+mean was tested alone at the five percent level and the slope under its own clustered procedure.
+Neither test clears under either reading.
 
 ## A15. Bootstrap block length
 
@@ -215,16 +214,17 @@ daily equity curve up to their truncation date and stay out of every test in sec
 
 UNG's cycle entered 2012-02-21 truncated after 1 trading day and its cycle entered 2024-01-22
 after 2. Both were entered and carry the entry cost, so the first reports a gross return of
-0.000 and a primary-cell return of −0.030 from cost alone. Both stay out of the tests.
+0.000 and a primary-cell return of −0.030 from cost alone. Neither enters the tests.
 
 ## A20. Withdrawn-amendment figures corrected
 
 The withdrawn argument in A1 rested on summary statistics plus a second-order moment expansion
 that fails at the dispersions involved. Its signs were right and its magnitudes were wrong in
-both directions, four overstated and two understated. Its three standard deviations of 0.030, 0.129 and 0.043 all exceed the
-measured 0.0192, 0.0495 and 0.0367, and its full-sample bias of +0.56 percentage points
-exceeds the measured +0.47. Its two subsample biases of −0.09 and +0.89 points understate the
-measured −0.41 and +2.17. A1's table above carries the measured values throughout.
+both directions, four overstated and two understated. Four figures came out too high, the
+standard deviations of 0.030, 0.129 and 0.043 against the measured 0.0192, 0.0495 and 0.0367,
+together with the full-sample bias of +0.56 percentage points against +0.47. Two came out too
+low, the subsample biases of −0.09 and +0.89 points against −0.41 and +2.17. A1's table above
+carries the measured values throughout.
 
 ## A21. Hedge cost shapes the strip's result more than option cost
 
@@ -239,11 +239,11 @@ mean return.
 ## A22. The pre-named stress window was profitable
 
 Section 11 named April 2020 as the stress case. USO's cycle entered 2020-04-20, the day WTI
-settled below zero, and returned +0.494 gross to its truncation on 2020-04-28, with a
-residual of +0.353 that entry Greeks do not capture. The worst single cycle in the sample is
-the 2013-03-18 entry, losing 3.09 units pooled at the primary cell as GLD lost 5.29 and SLV
-3.44 in the April 2013 gold decline, and it stays the worst strip cycle in all twenty cost
-cells. The stress section reports both and states that the pre-named window was not the worst.
+settled below zero, and returned +0.494 gross to its truncation on 2020-04-28, with a residual
+of +0.353 that entry Greeks do not capture. The worst single cycle in the sample is the
+2013-03-18 entry, losing 3.09 units pooled at the primary cell as GLD lost 5.29 and SLV 3.44 in
+the April 2013 gold decline, and it stays the worst strip cycle in all twenty cost cells. Both
+appear in the stress section, which states that the pre-named window was not the worst.
 
 ## A23. Gate details section 7 left open
 
