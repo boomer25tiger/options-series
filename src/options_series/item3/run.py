@@ -18,7 +18,15 @@ import time
 import pandas as pd
 
 from options_series.db import connect
+from options_series.item3.accounting import (
+    MARKINGS,
+    adjusted_closes,
+    build_returns,
+    realized_variances,
+)
 from options_series.item3.config import (
+    DATA_DIR,
+    EXECUTION_FRACTIONS,
     FIGURES_DIR,
     ITEM1_MODEL_FREE_PATH,
     ITEM1_OPTION_QUOTES_DIR,
@@ -49,6 +57,7 @@ from options_series.item3.diagnostics import (
     strip_coverage,
     zero_bid_marks,
 )
+from options_series.item3.figures import plot_equity
 from options_series.item3.pull import (
     load_atm_surface,
     load_cycle_quotes,
@@ -59,8 +68,99 @@ from options_series.item3.pull import (
     pull_all_cycle_quotes,
     pull_calendar_inputs,
 )
+from options_series.item3.samples import (
+    exclusion_table,
+    exclusions,
+    pooled_equity,
+    rule_one,
+)
 
 LOGGER = logging.getLogger(__name__)
+PRIMARY_K, PRIMARY_C = 0.5, 0.0002
+
+
+def equity_members(sample: pd.DataFrame, arm: str) -> pd.DataFrame:
+    """Fund-cycles drawn in the pooled equity path of an arm: those entering their block
+    and truncated cycles that pass every earlier rule."""
+    rows = sample[
+        (sample.arm == arm)
+        & (sample.primary | (sample.excluded_by == "rule 5 truncated"))
+    ]
+    return rows[["ticker", "cycle", "entry"]]
+
+
+def arm_equity(
+    equity: pd.DataFrame, arm: str, k: float, c: float, marking: str = MARKINGS[0]
+) -> pd.DataFrame:
+    """Daily paths of one arm at one cost cell and marking."""
+    return equity[
+        (equity.arm == arm)
+        & (equity.marking == marking)
+        & (equity.k == k)
+        & (equity.c == c)
+    ]
+
+
+def returns_stage(
+    entries: pd.DataFrame,
+    legs: pd.DataFrame,
+    panel: pd.DataFrame,
+    prices: pd.DataFrame,
+    calendar: pd.DatetimeIndex,
+    curve: ZeroCurve,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Cycle returns, their samples and Figure 1, written as they are built."""
+    variances = realized_variances(entries, adjusted_closes(prices), calendar)
+    returns, equity = build_returns(entries, legs, panel, prices, curve)
+    equity.to_parquet(DATA_DIR / "equity_paths.parquet", index=False)
+    sample = exclusions(entries, returns)
+    keep = [
+        "ticker",
+        "cycle",
+        "entry",
+        "expiration",
+        "window",
+        "entry_year",
+        "years_to_expiration",
+        "k_strip",
+        "k_flat_tail",
+        "shortfall_ratio",
+        "sigma_atm",
+        "strip_puts",
+        "strip_calls",
+        "floor_pass",
+    ]
+    cycle_returns = (
+        returns.merge(entries[keep], on=["ticker", "cycle"])
+        .merge(variances, on=["ticker", "cycle"])
+        .merge(
+            sample[["ticker", "cycle", "arm", "excluded_by", "primary", "robustness"]],
+            on=["ticker", "cycle", "arm"],
+        )
+    )
+    cycle_returns.to_csv(OUTPUT_DIR / "cycle_returns.csv", index=False)
+    sample.to_csv(OUTPUT_DIR / "sample_membership.csv", index=False)
+    exclusion_table(sample).to_csv(OUTPUT_DIR / "sample_exclusions.csv", index=False)
+    rule_one(sample).to_csv(OUTPUT_DIR / "sample_rule_1.csv", index=False)
+
+    primary, fans, pooled = {}, {}, []
+    for arm in ("strip", "straddle"):
+        members = equity_members(sample, arm)
+        primary[arm] = pooled_equity(
+            arm_equity(equity, arm, PRIMARY_K, PRIMARY_C), members
+        )
+        fans[arm] = {
+            k: pooled_equity(arm_equity(equity, arm, k, PRIMARY_C), members)
+            for k in EXECUTION_FRACTIONS
+        }
+        for k, series in fans[arm].items():
+            pooled.append(series.assign(arm=arm, k=k, c=PRIMARY_C))
+    pd.concat(pooled, ignore_index=True).to_csv(
+        OUTPUT_DIR / "fig1_pooled_equity.csv", index=False
+    )
+    plot_equity(primary, fans, OUTPUT_DIR / "fig1_equity")
+    LOGGER.info("returns built for %d arm-cycles; Figure 1 written", len(returns))
+    return cycle_returns, sample, equity
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -156,6 +256,8 @@ def main(argv: list[str] | None = None) -> None:
     LOGGER.info(
         "session 1 diagnostics written in %.1f min", (time.time() - started) / 60.0
     )
+    returns_stage(entries, legs, panel, prices, calendar, curve)
+    LOGGER.info("returns stage done in %.1f min", (time.time() - started) / 60.0)
 
 
 if __name__ == "__main__":

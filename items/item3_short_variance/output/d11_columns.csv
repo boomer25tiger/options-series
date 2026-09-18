@@ -1,0 +1,23 @@
+column,use,in_item1_cache
+date,row key,True
+exdate,row key,True
+optionid,tracking a leg through its cycle,False
+cp_flag,row key,True
+strike_price,row key and strip strikes,True
+best_bid,"row filter, entry mid, cost, marks",True
+best_offer,"row filter, entry mid, cost, marks",True
+impl_volatility,σ_ATM and the delta fallback,True
+delta,daily hedge,False
+gamma,section 11 entry Greeks,False
+vega,section 11 entry Greeks,False
+theta,section 11 entry Greeks,False
+ss_flag,section 3 row filter,True
+contract_size,section 3 row filter,True
+am_settlement,expiry identity under item 1's rules,True
+expiry_indicator,identifying the standard monthly expiry,False
+forward_price,item 1's rule comparison in D9,True
+cfadj,tracking contracts through a corporate action,False
+root,contract identity before 2010,True
+suffix,contract identity before 2010,True
+volume,not used in session 1,True
+open_interest,not used in session 1,True

@@ -1,0 +1,1689 @@
+ticker,cycle,arm,entry,window,block,excluded_by,primary,robustness,truncated
+GLD,1,strip,2008-06-23,estimation,A and B,,True,True,False
+GLD,1,straddle,2008-06-23,estimation,A and B,,True,False,False
+GLD,2,strip,2008-07-21,estimation,A and B,,True,True,False
+GLD,2,straddle,2008-07-21,estimation,A and B,,True,False,False
+GLD,3,strip,2008-08-18,estimation,A and B,,True,True,False
+GLD,3,straddle,2008-08-18,estimation,A and B,,True,False,False
+GLD,4,strip,2008-09-22,estimation,A and B,,True,True,False
+GLD,4,straddle,2008-09-22,estimation,A and B,,True,False,False
+GLD,5,strip,2008-10-20,estimation,A and B,,True,True,False
+GLD,5,straddle,2008-10-20,estimation,A and B,,True,False,False
+GLD,6,strip,2008-11-24,estimation,A and B,,True,True,False
+GLD,6,straddle,2008-11-24,estimation,A and B,,True,False,False
+GLD,7,strip,2008-12-22,estimation,A and B,,True,True,False
+GLD,7,straddle,2008-12-22,estimation,A and B,,True,False,False
+GLD,8,strip,2009-01-20,estimation,A and B,,True,True,False
+GLD,8,straddle,2009-01-20,estimation,A and B,,True,False,False
+GLD,9,strip,2009-02-23,estimation,A and B,,True,True,False
+GLD,9,straddle,2009-02-23,estimation,A and B,,True,False,False
+GLD,10,strip,2009-03-23,estimation,A and B,,True,True,False
+GLD,10,straddle,2009-03-23,estimation,A and B,,True,False,False
+GLD,11,strip,2009-04-20,estimation,A and B,,True,True,False
+GLD,11,straddle,2009-04-20,estimation,A and B,,True,False,False
+GLD,12,strip,2009-05-18,estimation,A and B,,True,True,False
+GLD,12,straddle,2009-05-18,estimation,A and B,,True,False,False
+GLD,13,strip,2009-06-22,estimation,A and B,,True,True,False
+GLD,13,straddle,2009-06-22,estimation,A and B,,True,False,False
+GLD,14,strip,2009-07-20,estimation,A and B,,True,True,False
+GLD,14,straddle,2009-07-20,estimation,A and B,,True,False,False
+GLD,15,strip,2009-08-24,estimation,A and B,,True,True,False
+GLD,15,straddle,2009-08-24,estimation,A and B,,True,False,False
+GLD,16,strip,2009-09-21,estimation,A and B,,True,True,False
+GLD,16,straddle,2009-09-21,estimation,A and B,,True,False,False
+GLD,17,strip,2009-10-19,estimation,A and B,,True,True,False
+GLD,17,straddle,2009-10-19,estimation,A and B,,True,False,False
+GLD,18,strip,2009-11-23,estimation,A and B,,True,True,False
+GLD,18,straddle,2009-11-23,estimation,A and B,,True,False,False
+GLD,19,strip,2009-12-21,estimation,A and B,,True,True,False
+GLD,19,straddle,2009-12-21,estimation,A and B,,True,False,False
+GLD,20,strip,2010-01-19,estimation,A and B,,True,True,False
+GLD,20,straddle,2010-01-19,estimation,A and B,,True,False,False
+GLD,21,strip,2010-02-22,estimation,A and B,,True,True,False
+GLD,21,straddle,2010-02-22,estimation,A and B,,True,False,False
+GLD,22,strip,2010-03-22,estimation,A and B,,True,True,False
+GLD,22,straddle,2010-03-22,estimation,A and B,,True,False,False
+GLD,23,strip,2010-04-19,estimation,A and B,,True,True,False
+GLD,23,straddle,2010-04-19,estimation,A and B,,True,False,False
+GLD,24,strip,2010-05-24,estimation,A and B,,True,True,False
+GLD,24,straddle,2010-05-24,estimation,A and B,,True,False,False
+GLD,25,strip,2010-06-21,estimation,A and B,,True,True,False
+GLD,25,straddle,2010-06-21,estimation,A and B,,True,False,False
+GLD,26,strip,2010-07-19,estimation,A and B,,True,True,False
+GLD,26,straddle,2010-07-19,estimation,A and B,,True,False,False
+GLD,27,strip,2010-08-23,estimation,A and B,,True,True,False
+GLD,27,straddle,2010-08-23,estimation,A and B,,True,False,False
+GLD,28,strip,2010-09-20,estimation,A and B,,True,True,False
+GLD,28,straddle,2010-09-20,estimation,A and B,,True,False,False
+GLD,29,strip,2010-10-18,estimation,A and B,,True,True,False
+GLD,29,straddle,2010-10-18,estimation,A and B,,True,False,False
+GLD,30,strip,2010-11-22,estimation,A and B,,True,True,False
+GLD,30,straddle,2010-11-22,estimation,A and B,,True,False,False
+GLD,31,strip,2010-12-20,estimation,A and B,,True,True,False
+GLD,31,straddle,2010-12-20,estimation,A and B,,True,False,False
+GLD,32,strip,2011-01-24,estimation,A and B,,True,True,False
+GLD,32,straddle,2011-01-24,estimation,A and B,,True,False,False
+GLD,33,strip,2011-02-22,estimation,A and B,,True,True,False
+GLD,33,straddle,2011-02-22,estimation,A and B,,True,False,False
+GLD,34,strip,2011-03-21,estimation,A and B,,True,True,False
+GLD,34,straddle,2011-03-21,estimation,A and B,,True,False,False
+GLD,35,strip,2011-04-18,estimation,A and B,,True,True,False
+GLD,35,straddle,2011-04-18,estimation,A and B,,True,False,False
+GLD,36,strip,2011-05-23,estimation,A and B,,True,True,False
+GLD,36,straddle,2011-05-23,estimation,A and B,,True,False,False
+GLD,37,strip,2011-06-20,estimation,A and B,,True,True,False
+GLD,37,straddle,2011-06-20,estimation,A and B,,True,False,False
+GLD,38,strip,2011-07-18,estimation,A and B,,True,True,False
+GLD,38,straddle,2011-07-18,estimation,A and B,,True,False,False
+GLD,39,strip,2011-08-22,estimation,A and B,,True,True,False
+GLD,39,straddle,2011-08-22,estimation,A and B,,True,False,False
+GLD,40,strip,2011-09-19,estimation,A and B,,True,True,False
+GLD,40,straddle,2011-09-19,estimation,A and B,,True,False,False
+GLD,41,strip,2011-10-24,estimation,A and B,,True,True,False
+GLD,41,straddle,2011-10-24,estimation,A and B,,True,False,False
+GLD,42,strip,2011-11-21,estimation,A and B,,True,True,False
+GLD,42,straddle,2011-11-21,estimation,A and B,,True,False,False
+GLD,43,strip,2011-12-19,estimation,A and B,,True,True,False
+GLD,43,straddle,2011-12-19,estimation,A and B,,True,False,False
+GLD,44,strip,2012-01-23,estimation,A and B,,True,True,False
+GLD,44,straddle,2012-01-23,estimation,A and B,,True,False,False
+GLD,45,strip,2012-02-21,estimation,A and B,,True,True,False
+GLD,45,straddle,2012-02-21,estimation,A and B,,True,False,False
+GLD,46,strip,2012-03-19,estimation,A and B,,True,True,False
+GLD,46,straddle,2012-03-19,estimation,A and B,,True,False,False
+GLD,47,strip,2012-04-23,estimation,A and B,,True,True,False
+GLD,47,straddle,2012-04-23,estimation,A and B,,True,False,False
+GLD,48,strip,2012-05-21,estimation,A and B,,True,True,False
+GLD,48,straddle,2012-05-21,estimation,A and B,,True,False,False
+GLD,49,strip,2012-06-18,estimation,A and B,,True,True,False
+GLD,49,straddle,2012-06-18,estimation,A and B,,True,False,False
+GLD,50,strip,2012-07-23,estimation,A and B,,True,True,False
+GLD,50,straddle,2012-07-23,estimation,A and B,,True,False,False
+GLD,51,strip,2012-08-20,estimation,A and B,,True,True,False
+GLD,51,straddle,2012-08-20,estimation,A and B,,True,False,False
+GLD,52,strip,2012-09-24,estimation,A and B,,True,True,False
+GLD,52,straddle,2012-09-24,estimation,A and B,,True,False,False
+GLD,53,strip,2012-10-22,estimation,A and B,,True,True,False
+GLD,53,straddle,2012-10-22,estimation,A and B,,True,False,False
+GLD,54,strip,2012-11-19,estimation,A and B,,True,True,False
+GLD,54,straddle,2012-11-19,estimation,A and B,,True,False,False
+GLD,55,strip,2012-12-24,estimation,A and B,,True,True,False
+GLD,55,straddle,2012-12-24,estimation,A and B,,True,False,False
+GLD,56,strip,2013-01-22,estimation,A and B,,True,True,False
+GLD,56,straddle,2013-01-22,estimation,A and B,,True,False,False
+GLD,57,strip,2013-02-19,estimation,A and B,,True,True,False
+GLD,57,straddle,2013-02-19,estimation,A and B,,True,False,False
+GLD,58,strip,2013-03-18,estimation,A and B,,True,True,False
+GLD,58,straddle,2013-03-18,estimation,A and B,,True,False,False
+GLD,59,strip,2013-04-22,estimation,A and B,,True,True,False
+GLD,59,straddle,2013-04-22,estimation,A and B,,True,False,False
+GLD,60,strip,2013-05-20,estimation,A and B,,True,True,False
+GLD,60,straddle,2013-05-20,estimation,A and B,,True,False,False
+GLD,61,strip,2013-06-24,estimation,A and B,,True,True,False
+GLD,61,straddle,2013-06-24,estimation,A and B,,True,False,False
+GLD,62,strip,2013-07-22,estimation,A and B,,True,True,False
+GLD,62,straddle,2013-07-22,estimation,A and B,,True,False,False
+GLD,63,strip,2013-08-19,estimation,A and B,,True,True,False
+GLD,63,straddle,2013-08-19,estimation,A and B,,True,False,False
+GLD,64,strip,2013-09-23,estimation,A and B,,True,True,False
+GLD,64,straddle,2013-09-23,estimation,A and B,,True,False,False
+GLD,65,strip,2013-10-21,estimation,A and B,,True,True,False
+GLD,65,straddle,2013-10-21,estimation,A and B,,True,False,False
+GLD,66,strip,2013-11-18,estimation,A and B,,True,True,False
+GLD,66,straddle,2013-11-18,estimation,A and B,,True,False,False
+GLD,67,strip,2013-12-23,estimation,A and B,,True,True,False
+GLD,67,straddle,2013-12-23,estimation,A and B,,True,False,False
+GLD,68,strip,2014-01-21,estimation,A and B,,True,True,False
+GLD,68,straddle,2014-01-21,estimation,A and B,,True,False,False
+GLD,69,strip,2014-02-24,estimation,A and B,,True,True,False
+GLD,69,straddle,2014-02-24,estimation,A and B,,True,False,False
+GLD,70,strip,2014-03-24,estimation,A and B,,True,True,False
+GLD,70,straddle,2014-03-24,estimation,A and B,,True,False,False
+GLD,71,strip,2014-04-21,estimation,A and B,,True,True,False
+GLD,71,straddle,2014-04-21,estimation,A and B,,True,False,False
+GLD,72,strip,2014-05-19,estimation,A and B,,True,True,False
+GLD,72,straddle,2014-05-19,estimation,A and B,,True,False,False
+GLD,73,strip,2014-06-23,estimation,A and B,,True,True,False
+GLD,73,straddle,2014-06-23,estimation,A and B,,True,False,False
+GLD,74,strip,2014-07-21,estimation,A and B,,True,True,False
+GLD,74,straddle,2014-07-21,estimation,A and B,,True,False,False
+GLD,75,strip,2014-08-18,estimation,A and B,,True,True,False
+GLD,75,straddle,2014-08-18,estimation,A and B,,True,False,False
+GLD,76,strip,2014-09-22,estimation,A and B,,True,True,False
+GLD,76,straddle,2014-09-22,estimation,A and B,,True,False,False
+GLD,77,strip,2014-10-20,estimation,A and B,,True,True,False
+GLD,77,straddle,2014-10-20,estimation,A and B,,True,False,False
+GLD,78,strip,2014-11-24,estimation,A and B,,True,True,False
+GLD,78,straddle,2014-11-24,estimation,A and B,,True,False,False
+GLD,79,strip,2014-12-22,estimation,A and B,,True,True,False
+GLD,79,straddle,2014-12-22,estimation,A and B,,True,False,False
+GLD,80,strip,2015-01-20,estimation,A and B,,True,True,False
+GLD,80,straddle,2015-01-20,estimation,A and B,,True,False,False
+GLD,81,strip,2015-02-23,estimation,A and B,,True,True,False
+GLD,81,straddle,2015-02-23,estimation,A and B,,True,False,False
+GLD,82,strip,2015-03-23,estimation,A and B,,True,True,False
+GLD,82,straddle,2015-03-23,estimation,A and B,,True,False,False
+GLD,83,strip,2015-04-20,estimation,A and B,,True,True,False
+GLD,83,straddle,2015-04-20,estimation,A and B,,True,False,False
+GLD,84,strip,2015-05-18,estimation,A and B,,True,True,False
+GLD,84,straddle,2015-05-18,estimation,A and B,,True,False,False
+GLD,85,strip,2015-06-22,estimation,A and B,,True,True,False
+GLD,85,straddle,2015-06-22,estimation,A and B,,True,False,False
+GLD,86,strip,2015-07-20,estimation,A and B,,True,True,False
+GLD,86,straddle,2015-07-20,estimation,A and B,,True,False,False
+GLD,87,strip,2015-08-24,estimation,A and B,,True,True,False
+GLD,87,straddle,2015-08-24,estimation,A and B,,True,False,False
+GLD,88,strip,2015-09-21,estimation,A and B,,True,True,False
+GLD,88,straddle,2015-09-21,estimation,A and B,,True,False,False
+GLD,89,strip,2015-10-19,estimation,A and B,,True,True,False
+GLD,89,straddle,2015-10-19,estimation,A and B,,True,False,False
+GLD,90,strip,2015-11-23,estimation,A and B,,True,True,False
+GLD,90,straddle,2015-11-23,estimation,A and B,,True,False,False
+GLD,91,strip,2015-12-21,estimation,A and B,,True,True,False
+GLD,91,straddle,2015-12-21,estimation,A and B,,True,False,False
+GLD,92,strip,2016-01-19,estimation,A and B,,True,True,False
+GLD,92,straddle,2016-01-19,estimation,A and B,,True,False,False
+GLD,93,strip,2016-02-22,estimation,A and B,,True,True,False
+GLD,93,straddle,2016-02-22,estimation,A and B,,True,False,False
+GLD,94,strip,2016-03-21,estimation,A and B,,True,True,False
+GLD,94,straddle,2016-03-21,estimation,A and B,,True,False,False
+GLD,95,strip,2016-04-18,estimation,A and B,,True,True,False
+GLD,95,straddle,2016-04-18,estimation,A and B,,True,False,False
+GLD,96,strip,2016-05-23,estimation,A and B,,True,True,False
+GLD,96,straddle,2016-05-23,estimation,A and B,,True,False,False
+GLD,97,strip,2016-06-20,estimation,A and B,,True,True,False
+GLD,97,straddle,2016-06-20,estimation,A and B,,True,False,False
+GLD,98,strip,2016-07-18,estimation,A and B,,True,True,False
+GLD,98,straddle,2016-07-18,estimation,A and B,,True,False,False
+GLD,99,strip,2016-08-22,estimation,A and B,,True,True,False
+GLD,99,straddle,2016-08-22,estimation,A and B,,True,False,False
+GLD,100,strip,2016-09-19,estimation,A and B,,True,True,False
+GLD,100,straddle,2016-09-19,estimation,A and B,,True,False,False
+GLD,101,strip,2016-10-24,estimation,A and B,,True,True,False
+GLD,101,straddle,2016-10-24,estimation,A and B,,True,False,False
+GLD,102,strip,2016-11-21,estimation,A and B,,True,True,False
+GLD,102,straddle,2016-11-21,estimation,A and B,,True,False,False
+GLD,103,strip,2016-12-19,estimation,A and B,,True,True,False
+GLD,103,straddle,2016-12-19,estimation,A and B,,True,False,False
+GLD,104,strip,2017-01-23,estimation,A and B,,True,True,False
+GLD,104,straddle,2017-01-23,estimation,A and B,,True,False,False
+GLD,105,strip,2017-02-21,estimation,A and B,,True,True,False
+GLD,105,straddle,2017-02-21,estimation,A and B,,True,False,False
+GLD,106,strip,2017-03-20,estimation,A and B,,True,True,False
+GLD,106,straddle,2017-03-20,estimation,A and B,,True,False,False
+GLD,107,strip,2017-04-24,estimation,A and B,,True,True,False
+GLD,107,straddle,2017-04-24,estimation,A and B,,True,False,False
+GLD,108,strip,2017-05-22,estimation,A and B,,True,True,False
+GLD,108,straddle,2017-05-22,estimation,A and B,,True,False,False
+GLD,109,strip,2017-06-19,estimation,A and B,,True,True,False
+GLD,109,straddle,2017-06-19,estimation,A and B,,True,False,False
+GLD,110,strip,2017-07-24,estimation,A and B,,True,True,False
+GLD,110,straddle,2017-07-24,estimation,A and B,,True,False,False
+GLD,111,strip,2017-08-21,estimation,A and B,,True,True,False
+GLD,111,straddle,2017-08-21,estimation,A and B,,True,False,False
+GLD,112,strip,2017-09-18,estimation,A and B,,True,True,False
+GLD,112,straddle,2017-09-18,estimation,A and B,,True,False,False
+GLD,113,strip,2017-10-23,estimation,A and B,,True,True,False
+GLD,113,straddle,2017-10-23,estimation,A and B,,True,False,False
+GLD,114,strip,2017-11-20,estimation,A and B,,True,True,False
+GLD,114,straddle,2017-11-20,estimation,A and B,,True,False,False
+GLD,115,strip,2017-12-18,estimation,A and B,,True,True,False
+GLD,115,straddle,2017-12-18,estimation,A and B,,True,False,False
+GLD,116,strip,2018-01-22,estimation,A and B,,True,True,False
+GLD,116,straddle,2018-01-22,estimation,A and B,,True,False,False
+GLD,117,strip,2018-02-20,estimation,A and B,,True,True,False
+GLD,117,straddle,2018-02-20,estimation,A and B,,True,False,False
+GLD,118,strip,2018-03-19,estimation,A and B,,True,True,False
+GLD,118,straddle,2018-03-19,estimation,A and B,,True,False,False
+GLD,119,strip,2018-04-23,estimation,A and B,,True,True,False
+GLD,119,straddle,2018-04-23,estimation,A and B,,True,False,False
+GLD,120,strip,2018-05-21,estimation,A and B,,True,True,False
+GLD,120,straddle,2018-05-21,estimation,A and B,,True,False,False
+GLD,121,strip,2018-06-18,estimation,A and B,,True,True,False
+GLD,121,straddle,2018-06-18,estimation,A and B,,True,False,False
+GLD,122,strip,2018-07-23,estimation,A and B,,True,True,False
+GLD,122,straddle,2018-07-23,estimation,A and B,,True,False,False
+GLD,123,strip,2018-08-20,estimation,A and B,,True,True,False
+GLD,123,straddle,2018-08-20,estimation,A and B,,True,False,False
+GLD,124,strip,2018-09-24,estimation,A and B,,True,True,False
+GLD,124,straddle,2018-09-24,estimation,A and B,,True,False,False
+GLD,125,strip,2018-10-22,estimation,A and B,,True,True,False
+GLD,125,straddle,2018-10-22,estimation,A and B,,True,False,False
+GLD,126,strip,2018-11-19,estimation,A and B,,True,True,False
+GLD,126,straddle,2018-11-19,estimation,A and B,,True,False,False
+GLD,127,strip,2018-12-24,estimation,A and B,,True,True,False
+GLD,127,straddle,2018-12-24,estimation,A and B,,True,False,False
+GLD,128,strip,2019-01-22,estimation,A and B,,True,True,False
+GLD,128,straddle,2019-01-22,estimation,A and B,,True,False,False
+GLD,129,strip,2019-02-19,estimation,A and B,,True,True,False
+GLD,129,straddle,2019-02-19,estimation,A and B,,True,False,False
+GLD,130,strip,2019-03-18,estimation,A and B,,True,True,False
+GLD,130,straddle,2019-03-18,estimation,A and B,,True,False,False
+GLD,131,strip,2019-04-22,estimation,A and B,,True,True,False
+GLD,131,straddle,2019-04-22,estimation,A and B,,True,False,False
+GLD,132,strip,2019-05-20,estimation,A and B,,True,True,False
+GLD,132,straddle,2019-05-20,estimation,A and B,,True,False,False
+GLD,133,strip,2019-06-24,estimation,A and B,,True,True,False
+GLD,133,straddle,2019-06-24,estimation,A and B,,True,False,False
+GLD,134,strip,2019-07-22,estimation,A and B,,True,True,False
+GLD,134,straddle,2019-07-22,estimation,A and B,,True,False,False
+GLD,135,strip,2019-08-19,estimation,A and B,,True,True,False
+GLD,135,straddle,2019-08-19,estimation,A and B,,True,False,False
+GLD,136,strip,2019-09-23,estimation,A and B,,True,True,False
+GLD,136,straddle,2019-09-23,estimation,A and B,,True,False,False
+GLD,137,strip,2019-10-21,estimation,A and B,,True,True,False
+GLD,137,straddle,2019-10-21,estimation,A and B,,True,False,False
+GLD,138,strip,2019-11-18,estimation,A and B,,True,True,False
+GLD,138,straddle,2019-11-18,estimation,A and B,,True,False,False
+GLD,139,strip,2019-12-23,estimation,A and B,,True,True,False
+GLD,139,straddle,2019-12-23,estimation,A and B,,True,False,False
+GLD,140,strip,2020-01-21,estimation,A and B,,True,True,False
+GLD,140,straddle,2020-01-21,estimation,A and B,,True,False,False
+GLD,141,strip,2020-02-24,estimation,A and B,,True,True,False
+GLD,141,straddle,2020-02-24,estimation,A and B,,True,False,False
+GLD,142,strip,2020-03-23,estimation,A and B,,True,True,False
+GLD,142,straddle,2020-03-23,estimation,A and B,,True,False,False
+GLD,143,strip,2020-04-20,estimation,A and B,,True,True,False
+GLD,143,straddle,2020-04-20,estimation,A and B,,True,False,False
+GLD,144,strip,2020-05-18,estimation,A and B,,True,True,False
+GLD,144,straddle,2020-05-18,estimation,A and B,,True,False,False
+GLD,145,strip,2020-06-22,estimation,A and B,,True,True,False
+GLD,145,straddle,2020-06-22,estimation,A and B,,True,False,False
+GLD,146,strip,2020-07-20,estimation,A and B,,True,True,False
+GLD,146,straddle,2020-07-20,estimation,A and B,,True,False,False
+GLD,147,strip,2020-08-24,estimation,A and B,,True,True,False
+GLD,147,straddle,2020-08-24,estimation,A and B,,True,False,False
+GLD,148,strip,2020-09-21,estimation,A and B,,True,True,False
+GLD,148,straddle,2020-09-21,estimation,A and B,,True,False,False
+GLD,149,strip,2020-10-19,estimation,A and B,,True,True,False
+GLD,149,straddle,2020-10-19,estimation,A and B,,True,False,False
+GLD,150,strip,2020-11-23,estimation,A and B,,True,True,False
+GLD,150,straddle,2020-11-23,estimation,A and B,,True,False,False
+GLD,151,strip,2020-12-21,estimation,A and B,,True,True,False
+GLD,151,straddle,2020-12-21,estimation,A and B,,True,False,False
+GLD,152,strip,2021-01-19,estimation,A and B,,True,True,False
+GLD,152,straddle,2021-01-19,estimation,A and B,,True,False,False
+GLD,153,strip,2021-02-22,estimation,A and B,,True,True,False
+GLD,153,straddle,2021-02-22,estimation,A and B,,True,False,False
+GLD,154,strip,2021-03-22,estimation,A and B,,True,True,False
+GLD,154,straddle,2021-03-22,estimation,A and B,,True,False,False
+GLD,155,strip,2021-04-19,estimation,A and B,,True,True,False
+GLD,155,straddle,2021-04-19,estimation,A and B,,True,False,False
+GLD,156,strip,2021-05-24,estimation,A and B,,True,True,False
+GLD,156,straddle,2021-05-24,estimation,A and B,,True,False,False
+GLD,157,strip,2021-06-21,estimation,A and B,,True,True,False
+GLD,157,straddle,2021-06-21,estimation,A and B,,True,False,False
+GLD,158,strip,2021-07-19,estimation,A and B,,True,True,False
+GLD,158,straddle,2021-07-19,estimation,A and B,,True,False,False
+GLD,159,strip,2021-08-23,estimation,A and B,,True,True,False
+GLD,159,straddle,2021-08-23,estimation,A and B,,True,False,False
+GLD,160,strip,2021-09-20,estimation,A and B,,True,True,False
+GLD,160,straddle,2021-09-20,estimation,A and B,,True,False,False
+GLD,161,strip,2021-10-18,estimation,A and B,,True,True,False
+GLD,161,straddle,2021-10-18,estimation,A and B,,True,False,False
+GLD,162,strip,2021-11-22,estimation,A and B,,True,True,False
+GLD,162,straddle,2021-11-22,estimation,A and B,,True,False,False
+GLD,163,strip,2021-12-20,estimation,A and B,,True,True,False
+GLD,163,straddle,2021-12-20,estimation,A and B,,True,False,False
+GLD,164,strip,2022-01-24,holdout,C,,True,True,False
+GLD,164,straddle,2022-01-24,holdout,C,,True,False,False
+GLD,165,strip,2022-02-22,holdout,C,,True,True,False
+GLD,165,straddle,2022-02-22,holdout,C,,True,False,False
+GLD,166,strip,2022-03-21,holdout,C,,True,True,False
+GLD,166,straddle,2022-03-21,holdout,C,,True,False,False
+GLD,167,strip,2022-04-18,holdout,C,,True,True,False
+GLD,167,straddle,2022-04-18,holdout,C,,True,False,False
+GLD,168,strip,2022-05-23,holdout,C,,True,True,False
+GLD,168,straddle,2022-05-23,holdout,C,,True,False,False
+GLD,169,strip,2022-06-21,holdout,C,,True,True,False
+GLD,169,straddle,2022-06-21,holdout,C,,True,False,False
+GLD,170,strip,2022-07-18,holdout,C,,True,True,False
+GLD,170,straddle,2022-07-18,holdout,C,,True,False,False
+GLD,171,strip,2022-08-22,holdout,C,,True,True,False
+GLD,171,straddle,2022-08-22,holdout,C,,True,False,False
+GLD,172,strip,2022-09-19,holdout,C,,True,True,False
+GLD,172,straddle,2022-09-19,holdout,C,,True,False,False
+GLD,173,strip,2022-10-24,holdout,C,,True,True,False
+GLD,173,straddle,2022-10-24,holdout,C,,True,False,False
+GLD,174,strip,2022-11-21,holdout,C,,True,True,False
+GLD,174,straddle,2022-11-21,holdout,C,,True,False,False
+GLD,175,strip,2022-12-19,holdout,C,,True,True,False
+GLD,175,straddle,2022-12-19,holdout,C,,True,False,False
+GLD,176,strip,2023-01-23,holdout,C,,True,True,False
+GLD,176,straddle,2023-01-23,holdout,C,,True,False,False
+GLD,177,strip,2023-02-21,holdout,C,,True,True,False
+GLD,177,straddle,2023-02-21,holdout,C,,True,False,False
+GLD,178,strip,2023-03-20,holdout,C,,True,True,False
+GLD,178,straddle,2023-03-20,holdout,C,,True,False,False
+GLD,179,strip,2023-04-24,holdout,C,,True,True,False
+GLD,179,straddle,2023-04-24,holdout,C,,True,False,False
+GLD,180,strip,2023-05-22,holdout,C,,True,True,False
+GLD,180,straddle,2023-05-22,holdout,C,,True,False,False
+GLD,181,strip,2023-06-20,holdout,C,,True,True,False
+GLD,181,straddle,2023-06-20,holdout,C,,True,False,False
+GLD,182,strip,2023-07-24,holdout,C,,True,True,False
+GLD,182,straddle,2023-07-24,holdout,C,,True,False,False
+GLD,183,strip,2023-08-21,holdout,C,,True,True,False
+GLD,183,straddle,2023-08-21,holdout,C,,True,False,False
+GLD,184,strip,2023-09-18,holdout,C,,True,True,False
+GLD,184,straddle,2023-09-18,holdout,C,,True,False,False
+GLD,185,strip,2023-10-23,holdout,C,,True,True,False
+GLD,185,straddle,2023-10-23,holdout,C,,True,False,False
+GLD,186,strip,2023-11-20,holdout,C,,True,True,False
+GLD,186,straddle,2023-11-20,holdout,C,,True,False,False
+GLD,187,strip,2023-12-18,holdout,C,,True,True,False
+GLD,187,straddle,2023-12-18,holdout,C,,True,False,False
+GLD,188,strip,2024-01-22,holdout,C,,True,True,False
+GLD,188,straddle,2024-01-22,holdout,C,,True,False,False
+GLD,189,strip,2024-02-20,holdout,C,,True,True,False
+GLD,189,straddle,2024-02-20,holdout,C,,True,False,False
+GLD,190,strip,2024-03-18,holdout,C,,True,True,False
+GLD,190,straddle,2024-03-18,holdout,C,,True,False,False
+GLD,191,strip,2024-04-22,holdout,C,,True,True,False
+GLD,191,straddle,2024-04-22,holdout,C,,True,False,False
+GLD,192,strip,2024-05-20,holdout,C,,True,True,False
+GLD,192,straddle,2024-05-20,holdout,C,,True,False,False
+GLD,193,strip,2024-06-24,holdout,C,,True,True,False
+GLD,193,straddle,2024-06-24,holdout,C,,True,False,False
+GLD,194,strip,2024-07-22,holdout,C,,True,True,False
+GLD,194,straddle,2024-07-22,holdout,C,,True,False,False
+GLD,195,strip,2024-08-19,holdout,C,,True,True,False
+GLD,195,straddle,2024-08-19,holdout,C,,True,False,False
+GLD,196,strip,2024-09-23,holdout,C,,True,True,False
+GLD,196,straddle,2024-09-23,holdout,C,,True,False,False
+GLD,197,strip,2024-10-21,holdout,C,,True,True,False
+GLD,197,straddle,2024-10-21,holdout,C,,True,False,False
+GLD,198,strip,2024-11-18,holdout,C,,True,True,False
+GLD,198,straddle,2024-11-18,holdout,C,,True,False,False
+GLD,199,strip,2024-12-23,holdout,C,,True,True,False
+GLD,199,straddle,2024-12-23,holdout,C,,True,False,False
+GLD,200,strip,2025-01-21,holdout,C,,True,True,False
+GLD,200,straddle,2025-01-21,holdout,C,,True,False,False
+GLD,201,strip,2025-02-24,holdout,C,,True,True,False
+GLD,201,straddle,2025-02-24,holdout,C,,True,False,False
+GLD,202,strip,2025-03-24,holdout,C,,True,True,False
+GLD,202,straddle,2025-03-24,holdout,C,,True,False,False
+GLD,203,strip,2025-04-21,holdout,C,,True,True,False
+GLD,203,straddle,2025-04-21,holdout,C,,True,False,False
+GLD,204,strip,2025-05-19,holdout,C,,True,True,False
+GLD,204,straddle,2025-05-19,holdout,C,,True,False,False
+GLD,205,strip,2025-06-23,holdout,C,,True,True,False
+GLD,205,straddle,2025-06-23,holdout,C,,True,False,False
+GLD,206,strip,2025-07-21,holdout,C,,True,True,False
+GLD,206,straddle,2025-07-21,holdout,C,,True,False,False
+SLV,1,strip,2008-12-22,estimation,,rule 2 floor,False,True,False
+SLV,1,straddle,2008-12-22,estimation,A and B,,True,False,False
+SLV,2,strip,2009-01-20,estimation,,rule 2 floor,False,True,False
+SLV,2,straddle,2009-01-20,estimation,A and B,,True,False,False
+SLV,3,strip,2009-02-23,estimation,,rule 2 floor,False,True,False
+SLV,3,straddle,2009-02-23,estimation,A and B,,True,False,False
+SLV,4,strip,2009-03-23,estimation,,rule 2 floor,False,True,False
+SLV,4,straddle,2009-03-23,estimation,A and B,,True,False,False
+SLV,5,strip,2009-04-20,estimation,,rule 2 floor,False,True,False
+SLV,5,straddle,2009-04-20,estimation,A and B,,True,False,False
+SLV,6,strip,2009-05-18,estimation,,rule 2 floor,False,True,False
+SLV,6,straddle,2009-05-18,estimation,A and B,,True,False,False
+SLV,7,strip,2009-06-22,estimation,,rule 2 floor,False,True,False
+SLV,7,straddle,2009-06-22,estimation,A and B,,True,False,False
+SLV,8,strip,2009-07-20,estimation,,rule 2 floor,False,True,False
+SLV,8,straddle,2009-07-20,estimation,A and B,,True,False,False
+SLV,9,strip,2009-08-24,estimation,,rule 2 floor,False,True,False
+SLV,9,straddle,2009-08-24,estimation,A and B,,True,False,False
+SLV,10,strip,2009-09-21,estimation,,rule 2 floor,False,True,False
+SLV,10,straddle,2009-09-21,estimation,A and B,,True,False,False
+SLV,11,strip,2009-10-19,estimation,,rule 2 floor,False,True,False
+SLV,11,straddle,2009-10-19,estimation,A and B,,True,False,False
+SLV,12,strip,2009-11-23,estimation,,rule 2 floor,False,True,False
+SLV,12,straddle,2009-11-23,estimation,A and B,,True,False,False
+SLV,13,strip,2009-12-21,estimation,,rule 2 floor,False,True,False
+SLV,13,straddle,2009-12-21,estimation,A and B,,True,False,False
+SLV,14,strip,2010-01-19,estimation,,rule 2 floor,False,True,False
+SLV,14,straddle,2010-01-19,estimation,A and B,,True,False,False
+SLV,15,strip,2010-02-22,estimation,,rule 2 floor,False,True,False
+SLV,15,straddle,2010-02-22,estimation,A and B,,True,False,False
+SLV,16,strip,2010-03-22,estimation,,rule 2 floor,False,True,False
+SLV,16,straddle,2010-03-22,estimation,A and B,,True,False,False
+SLV,17,strip,2010-04-19,estimation,,rule 2 floor,False,True,False
+SLV,17,straddle,2010-04-19,estimation,A and B,,True,False,False
+SLV,18,strip,2010-05-24,estimation,,rule 2 floor,False,True,False
+SLV,18,straddle,2010-05-24,estimation,A and B,,True,False,False
+SLV,19,strip,2010-06-21,estimation,,rule 2 floor,False,True,False
+SLV,19,straddle,2010-06-21,estimation,A and B,,True,False,False
+SLV,20,strip,2010-07-19,estimation,,rule 2 floor,False,True,False
+SLV,20,straddle,2010-07-19,estimation,A and B,,True,False,False
+SLV,21,strip,2010-08-23,estimation,,rule 2 floor,False,True,False
+SLV,21,straddle,2010-08-23,estimation,A and B,,True,False,False
+SLV,22,strip,2010-09-20,estimation,,rule 2 floor,False,True,False
+SLV,22,straddle,2010-09-20,estimation,A and B,,True,False,False
+SLV,23,strip,2010-10-18,estimation,,rule 2 floor,False,True,False
+SLV,23,straddle,2010-10-18,estimation,A and B,,True,False,False
+SLV,24,strip,2010-11-22,estimation,A and B,,True,True,False
+SLV,24,straddle,2010-11-22,estimation,A and B,,True,False,False
+SLV,25,strip,2010-12-20,estimation,A and B,,True,True,False
+SLV,25,straddle,2010-12-20,estimation,A and B,,True,False,False
+SLV,26,strip,2011-01-24,estimation,A and B,,True,True,False
+SLV,26,straddle,2011-01-24,estimation,A and B,,True,False,False
+SLV,27,strip,2011-02-22,estimation,A and B,,True,True,False
+SLV,27,straddle,2011-02-22,estimation,A and B,,True,False,False
+SLV,28,strip,2011-03-21,estimation,A and B,,True,True,False
+SLV,28,straddle,2011-03-21,estimation,A and B,,True,False,False
+SLV,29,strip,2011-04-18,estimation,A and B,,True,True,False
+SLV,29,straddle,2011-04-18,estimation,A and B,,True,False,False
+SLV,30,strip,2011-05-23,estimation,A and B,,True,True,False
+SLV,30,straddle,2011-05-23,estimation,A and B,,True,False,False
+SLV,31,strip,2011-06-20,estimation,A and B,,True,True,False
+SLV,31,straddle,2011-06-20,estimation,A and B,,True,False,False
+SLV,32,strip,2011-07-18,estimation,A and B,,True,True,False
+SLV,32,straddle,2011-07-18,estimation,A and B,,True,False,False
+SLV,33,strip,2011-08-22,estimation,A and B,,True,True,False
+SLV,33,straddle,2011-08-22,estimation,A and B,,True,False,False
+SLV,34,strip,2011-09-19,estimation,A and B,,True,True,False
+SLV,34,straddle,2011-09-19,estimation,A and B,,True,False,False
+SLV,35,strip,2011-10-24,estimation,A and B,,True,True,False
+SLV,35,straddle,2011-10-24,estimation,A and B,,True,False,False
+SLV,36,strip,2011-11-21,estimation,A and B,,True,True,False
+SLV,36,straddle,2011-11-21,estimation,A and B,,True,False,False
+SLV,37,strip,2011-12-19,estimation,A and B,,True,True,False
+SLV,37,straddle,2011-12-19,estimation,A and B,,True,False,False
+SLV,38,strip,2012-01-23,estimation,A and B,,True,True,False
+SLV,38,straddle,2012-01-23,estimation,A and B,,True,False,False
+SLV,39,strip,2012-02-21,estimation,A and B,,True,True,False
+SLV,39,straddle,2012-02-21,estimation,A and B,,True,False,False
+SLV,40,strip,2012-03-19,estimation,A and B,,True,True,False
+SLV,40,straddle,2012-03-19,estimation,A and B,,True,False,False
+SLV,41,strip,2012-04-23,estimation,A and B,,True,True,False
+SLV,41,straddle,2012-04-23,estimation,A and B,,True,False,False
+SLV,42,strip,2012-05-21,estimation,A and B,,True,True,False
+SLV,42,straddle,2012-05-21,estimation,A and B,,True,False,False
+SLV,43,strip,2012-06-18,estimation,A and B,,True,True,False
+SLV,43,straddle,2012-06-18,estimation,A and B,,True,False,False
+SLV,44,strip,2012-07-23,estimation,A and B,,True,True,False
+SLV,44,straddle,2012-07-23,estimation,A and B,,True,False,False
+SLV,45,strip,2012-08-20,estimation,A and B,,True,True,False
+SLV,45,straddle,2012-08-20,estimation,A and B,,True,False,False
+SLV,46,strip,2012-09-24,estimation,A and B,,True,True,False
+SLV,46,straddle,2012-09-24,estimation,A and B,,True,False,False
+SLV,47,strip,2012-10-22,estimation,A and B,,True,True,False
+SLV,47,straddle,2012-10-22,estimation,A and B,,True,False,False
+SLV,48,strip,2012-11-19,estimation,A and B,,True,True,False
+SLV,48,straddle,2012-11-19,estimation,A and B,,True,False,False
+SLV,49,strip,2012-12-24,estimation,A and B,,True,True,False
+SLV,49,straddle,2012-12-24,estimation,A and B,,True,False,False
+SLV,50,strip,2013-01-22,estimation,A and B,,True,True,False
+SLV,50,straddle,2013-01-22,estimation,A and B,,True,False,False
+SLV,51,strip,2013-02-19,estimation,,rule 2 floor,False,True,False
+SLV,51,straddle,2013-02-19,estimation,A and B,,True,False,False
+SLV,52,strip,2013-03-18,estimation,A and B,,True,True,False
+SLV,52,straddle,2013-03-18,estimation,A and B,,True,False,False
+SLV,53,strip,2013-04-22,estimation,A and B,,True,True,False
+SLV,53,straddle,2013-04-22,estimation,A and B,,True,False,False
+SLV,54,strip,2013-05-20,estimation,A and B,,True,True,False
+SLV,54,straddle,2013-05-20,estimation,A and B,,True,False,False
+SLV,55,strip,2013-06-24,estimation,A and B,,True,True,False
+SLV,55,straddle,2013-06-24,estimation,A and B,,True,False,False
+SLV,56,strip,2013-07-22,estimation,A and B,,True,True,False
+SLV,56,straddle,2013-07-22,estimation,A and B,,True,False,False
+SLV,57,strip,2013-08-19,estimation,,rule 2 floor,False,True,False
+SLV,57,straddle,2013-08-19,estimation,A and B,,True,False,False
+SLV,58,strip,2013-09-23,estimation,A and B,,True,True,False
+SLV,58,straddle,2013-09-23,estimation,A and B,,True,False,False
+SLV,59,strip,2013-10-21,estimation,A and B,,True,True,False
+SLV,59,straddle,2013-10-21,estimation,A and B,,True,False,False
+SLV,60,strip,2013-11-18,estimation,A and B,,True,True,False
+SLV,60,straddle,2013-11-18,estimation,A and B,,True,False,False
+SLV,61,strip,2013-12-23,estimation,,rule 2 floor,False,True,False
+SLV,61,straddle,2013-12-23,estimation,A and B,,True,False,False
+SLV,62,strip,2014-01-21,estimation,A and B,,True,True,False
+SLV,62,straddle,2014-01-21,estimation,A and B,,True,False,False
+SLV,63,strip,2014-02-24,estimation,A and B,,True,True,False
+SLV,63,straddle,2014-02-24,estimation,A and B,,True,False,False
+SLV,64,strip,2014-03-24,estimation,A and B,,True,True,False
+SLV,64,straddle,2014-03-24,estimation,A and B,,True,False,False
+SLV,65,strip,2014-04-21,estimation,,rule 2 floor,False,True,False
+SLV,65,straddle,2014-04-21,estimation,A and B,,True,False,False
+SLV,66,strip,2014-05-19,estimation,A and B,,True,True,False
+SLV,66,straddle,2014-05-19,estimation,A and B,,True,False,False
+SLV,67,strip,2014-06-23,estimation,A and B,,True,True,False
+SLV,67,straddle,2014-06-23,estimation,A and B,,True,False,False
+SLV,68,strip,2014-07-21,estimation,,rule 2 floor,False,True,False
+SLV,68,straddle,2014-07-21,estimation,A and B,,True,False,False
+SLV,69,strip,2014-08-18,estimation,,rule 2 floor,False,True,False
+SLV,69,straddle,2014-08-18,estimation,A and B,,True,False,False
+SLV,70,strip,2014-09-22,estimation,A and B,,True,True,False
+SLV,70,straddle,2014-09-22,estimation,A and B,,True,False,False
+SLV,71,strip,2014-10-20,estimation,A and B,,True,True,False
+SLV,71,straddle,2014-10-20,estimation,A and B,,True,False,False
+SLV,72,strip,2014-11-24,estimation,A and B,,True,True,False
+SLV,72,straddle,2014-11-24,estimation,A and B,,True,False,False
+SLV,73,strip,2014-12-22,estimation,A and B,,True,True,False
+SLV,73,straddle,2014-12-22,estimation,A and B,,True,False,False
+SLV,74,strip,2015-01-20,estimation,A and B,,True,True,False
+SLV,74,straddle,2015-01-20,estimation,A and B,,True,False,False
+SLV,75,strip,2015-02-23,estimation,A and B,,True,True,False
+SLV,75,straddle,2015-02-23,estimation,A and B,,True,False,False
+SLV,76,strip,2015-03-23,estimation,,rule 2 floor,False,True,False
+SLV,76,straddle,2015-03-23,estimation,A and B,,True,False,False
+SLV,77,strip,2015-04-20,estimation,,rule 2 floor,False,True,False
+SLV,77,straddle,2015-04-20,estimation,A and B,,True,False,False
+SLV,78,strip,2015-05-18,estimation,A and B,,True,True,False
+SLV,78,straddle,2015-05-18,estimation,A and B,,True,False,False
+SLV,79,strip,2015-06-22,estimation,,rule 2 floor,False,True,False
+SLV,79,straddle,2015-06-22,estimation,A and B,,True,False,False
+SLV,80,strip,2015-07-20,estimation,A and B,,True,True,False
+SLV,80,straddle,2015-07-20,estimation,A and B,,True,False,False
+SLV,81,strip,2015-08-24,estimation,,rule 2 floor,False,True,False
+SLV,81,straddle,2015-08-24,estimation,A and B,,True,False,False
+SLV,82,strip,2015-09-21,estimation,,rule 2 floor,False,True,False
+SLV,82,straddle,2015-09-21,estimation,A and B,,True,False,False
+SLV,83,strip,2015-10-19,estimation,,rule 2 floor,False,True,False
+SLV,83,straddle,2015-10-19,estimation,A and B,,True,False,False
+SLV,84,strip,2015-11-23,estimation,,rule 2 floor,False,True,False
+SLV,84,straddle,2015-11-23,estimation,A and B,,True,False,False
+SLV,85,strip,2015-12-21,estimation,,rule 2 floor,False,True,False
+SLV,85,straddle,2015-12-21,estimation,A and B,,True,False,False
+SLV,86,strip,2016-01-19,estimation,,rule 2 floor,False,True,False
+SLV,86,straddle,2016-01-19,estimation,A and B,,True,False,False
+SLV,87,strip,2016-02-22,estimation,,rule 2 floor,False,True,False
+SLV,87,straddle,2016-02-22,estimation,A and B,,True,False,False
+SLV,88,strip,2016-03-21,estimation,,rule 2 floor,False,True,False
+SLV,88,straddle,2016-03-21,estimation,A and B,,True,False,False
+SLV,89,strip,2016-04-18,estimation,,rule 2 floor,False,True,False
+SLV,89,straddle,2016-04-18,estimation,A and B,,True,False,False
+SLV,90,strip,2016-05-23,estimation,,rule 2 floor,False,True,False
+SLV,90,straddle,2016-05-23,estimation,A and B,,True,False,False
+SLV,91,strip,2016-06-20,estimation,A and B,,True,True,False
+SLV,91,straddle,2016-06-20,estimation,A and B,,True,False,False
+SLV,92,strip,2016-07-18,estimation,A and B,,True,True,False
+SLV,92,straddle,2016-07-18,estimation,A and B,,True,False,False
+SLV,93,strip,2016-08-22,estimation,,rule 2 floor,False,True,False
+SLV,93,straddle,2016-08-22,estimation,A and B,,True,False,False
+SLV,94,strip,2016-09-19,estimation,,rule 2 floor,False,True,False
+SLV,94,straddle,2016-09-19,estimation,A and B,,True,False,False
+SLV,95,strip,2016-10-24,estimation,,rule 2 floor,False,True,False
+SLV,95,straddle,2016-10-24,estimation,A and B,,True,False,False
+SLV,96,strip,2016-11-21,estimation,,rule 2 floor,False,True,False
+SLV,96,straddle,2016-11-21,estimation,A and B,,True,False,False
+SLV,97,strip,2016-12-19,estimation,,rule 2 floor,False,True,False
+SLV,97,straddle,2016-12-19,estimation,A and B,,True,False,False
+SLV,98,strip,2017-01-23,estimation,,rule 2 floor,False,True,False
+SLV,98,straddle,2017-01-23,estimation,A and B,,True,False,False
+SLV,99,strip,2017-02-21,estimation,,rule 2 floor,False,True,False
+SLV,99,straddle,2017-02-21,estimation,A and B,,True,False,False
+SLV,100,strip,2017-03-20,estimation,,rule 2 floor,False,True,False
+SLV,100,straddle,2017-03-20,estimation,A and B,,True,False,False
+SLV,101,strip,2017-04-24,estimation,,rule 2 floor,False,True,False
+SLV,101,straddle,2017-04-24,estimation,A and B,,True,False,False
+SLV,102,strip,2017-05-22,estimation,,rule 2 floor,False,True,False
+SLV,102,straddle,2017-05-22,estimation,A and B,,True,False,False
+SLV,103,strip,2017-06-19,estimation,,rule 2 floor,False,True,False
+SLV,103,straddle,2017-06-19,estimation,A and B,,True,False,False
+SLV,104,strip,2017-07-24,estimation,,rule 2 floor,False,True,False
+SLV,104,straddle,2017-07-24,estimation,A and B,,True,False,False
+SLV,105,strip,2017-08-21,estimation,,rule 2 floor,False,True,False
+SLV,105,straddle,2017-08-21,estimation,A and B,,True,False,False
+SLV,106,strip,2017-09-18,estimation,,rule 2 floor,False,True,False
+SLV,106,straddle,2017-09-18,estimation,A and B,,True,False,False
+SLV,107,strip,2017-10-23,estimation,,rule 2 floor,False,True,False
+SLV,107,straddle,2017-10-23,estimation,A and B,,True,False,False
+SLV,108,strip,2017-11-20,estimation,,rule 2 floor,False,True,False
+SLV,108,straddle,2017-11-20,estimation,A and B,,True,False,False
+SLV,109,strip,2017-12-18,estimation,,rule 2 floor,False,True,False
+SLV,109,straddle,2017-12-18,estimation,A and B,,True,False,False
+SLV,110,strip,2018-01-22,estimation,,rule 2 floor,False,True,False
+SLV,110,straddle,2018-01-22,estimation,A and B,,True,False,False
+SLV,111,strip,2018-02-20,estimation,,rule 2 floor,False,True,False
+SLV,111,straddle,2018-02-20,estimation,A and B,,True,False,False
+SLV,112,strip,2018-03-19,estimation,,rule 2 floor,False,True,False
+SLV,112,straddle,2018-03-19,estimation,A and B,,True,False,False
+SLV,113,strip,2018-04-23,estimation,,rule 2 floor,False,True,False
+SLV,113,straddle,2018-04-23,estimation,A and B,,True,False,False
+SLV,114,strip,2018-05-21,estimation,,rule 2 floor,False,True,False
+SLV,114,straddle,2018-05-21,estimation,A and B,,True,False,False
+SLV,115,strip,2018-06-18,estimation,,rule 2 floor,False,True,False
+SLV,115,straddle,2018-06-18,estimation,A and B,,True,False,False
+SLV,116,strip,2018-07-23,estimation,,rule 2 floor,False,True,False
+SLV,116,straddle,2018-07-23,estimation,A and B,,True,False,False
+SLV,117,strip,2018-08-20,estimation,,rule 2 floor,False,True,False
+SLV,117,straddle,2018-08-20,estimation,A and B,,True,False,False
+SLV,118,strip,2018-09-24,estimation,,rule 2 floor,False,True,False
+SLV,118,straddle,2018-09-24,estimation,A and B,,True,False,False
+SLV,119,strip,2018-10-22,estimation,,rule 2 floor,False,True,False
+SLV,119,straddle,2018-10-22,estimation,A and B,,True,False,False
+SLV,120,strip,2018-11-19,estimation,,rule 2 floor,False,True,False
+SLV,120,straddle,2018-11-19,estimation,A and B,,True,False,False
+SLV,121,strip,2018-12-24,estimation,,rule 2 floor,False,True,False
+SLV,121,straddle,2018-12-24,estimation,A and B,,True,False,False
+SLV,122,strip,2019-01-22,estimation,,rule 2 floor,False,True,False
+SLV,122,straddle,2019-01-22,estimation,A and B,,True,False,False
+SLV,123,strip,2019-02-19,estimation,,rule 2 floor,False,True,False
+SLV,123,straddle,2019-02-19,estimation,A and B,,True,False,False
+SLV,124,strip,2019-03-18,estimation,,rule 2 floor,False,True,False
+SLV,124,straddle,2019-03-18,estimation,A and B,,True,False,False
+SLV,125,strip,2019-04-22,estimation,,rule 2 floor,False,True,False
+SLV,125,straddle,2019-04-22,estimation,A and B,,True,False,False
+SLV,126,strip,2019-05-20,estimation,,rule 2 floor,False,True,False
+SLV,126,straddle,2019-05-20,estimation,A and B,,True,False,False
+SLV,127,strip,2019-06-24,estimation,,rule 2 floor,False,True,False
+SLV,127,straddle,2019-06-24,estimation,A and B,,True,False,False
+SLV,128,strip,2019-07-22,estimation,,rule 2 floor,False,True,False
+SLV,128,straddle,2019-07-22,estimation,A and B,,True,False,False
+SLV,129,strip,2019-08-19,estimation,,rule 2 floor,False,True,False
+SLV,129,straddle,2019-08-19,estimation,A and B,,True,False,False
+SLV,130,strip,2019-09-23,estimation,A and B,,True,True,False
+SLV,130,straddle,2019-09-23,estimation,A and B,,True,False,False
+SLV,131,strip,2019-10-21,estimation,,rule 2 floor,False,True,False
+SLV,131,straddle,2019-10-21,estimation,A and B,,True,False,False
+SLV,132,strip,2019-11-18,estimation,,rule 2 floor,False,True,False
+SLV,132,straddle,2019-11-18,estimation,A and B,,True,False,False
+SLV,133,strip,2019-12-23,estimation,,rule 2 floor,False,True,False
+SLV,133,straddle,2019-12-23,estimation,A and B,,True,False,False
+SLV,134,strip,2020-01-21,estimation,,rule 2 floor,False,True,False
+SLV,134,straddle,2020-01-21,estimation,A and B,,True,False,False
+SLV,135,strip,2020-02-24,estimation,,rule 2 floor,False,True,False
+SLV,135,straddle,2020-02-24,estimation,A and B,,True,False,False
+SLV,136,strip,2020-03-23,estimation,A and B,,True,True,False
+SLV,136,straddle,2020-03-23,estimation,A and B,,True,False,False
+SLV,137,strip,2020-04-20,estimation,A and B,,True,True,False
+SLV,137,straddle,2020-04-20,estimation,A and B,,True,False,False
+SLV,138,strip,2020-05-18,estimation,A and B,,True,True,False
+SLV,138,straddle,2020-05-18,estimation,A and B,,True,False,False
+SLV,139,strip,2020-06-22,estimation,A and B,,True,True,False
+SLV,139,straddle,2020-06-22,estimation,A and B,,True,False,False
+SLV,140,strip,2020-07-20,estimation,A and B,,True,True,False
+SLV,140,straddle,2020-07-20,estimation,A and B,,True,False,False
+SLV,141,strip,2020-08-24,estimation,A and B,,True,True,False
+SLV,141,straddle,2020-08-24,estimation,A and B,,True,False,False
+SLV,142,strip,2020-09-21,estimation,A and B,,True,True,False
+SLV,142,straddle,2020-09-21,estimation,A and B,,True,False,False
+SLV,143,strip,2020-10-19,estimation,A and B,,True,True,False
+SLV,143,straddle,2020-10-19,estimation,A and B,,True,False,False
+SLV,144,strip,2020-11-23,estimation,A and B,,True,True,False
+SLV,144,straddle,2020-11-23,estimation,A and B,,True,False,False
+SLV,145,strip,2020-12-21,estimation,A and B,,True,True,False
+SLV,145,straddle,2020-12-21,estimation,A and B,,True,False,False
+SLV,146,strip,2021-01-19,estimation,A and B,,True,True,False
+SLV,146,straddle,2021-01-19,estimation,A and B,,True,False,False
+SLV,147,strip,2021-02-22,estimation,A and B,,True,True,False
+SLV,147,straddle,2021-02-22,estimation,A and B,,True,False,False
+SLV,148,strip,2021-03-22,estimation,A and B,,True,True,False
+SLV,148,straddle,2021-03-22,estimation,A and B,,True,False,False
+SLV,149,strip,2021-04-19,estimation,A and B,,True,True,False
+SLV,149,straddle,2021-04-19,estimation,A and B,,True,False,False
+SLV,150,strip,2021-05-24,estimation,A and B,,True,True,False
+SLV,150,straddle,2021-05-24,estimation,A and B,,True,False,False
+SLV,151,strip,2021-06-21,estimation,A and B,,True,True,False
+SLV,151,straddle,2021-06-21,estimation,A and B,,True,False,False
+SLV,152,strip,2021-07-19,estimation,A and B,,True,True,False
+SLV,152,straddle,2021-07-19,estimation,A and B,,True,False,False
+SLV,153,strip,2021-08-23,estimation,A and B,,True,True,False
+SLV,153,straddle,2021-08-23,estimation,A and B,,True,False,False
+SLV,154,strip,2021-09-20,estimation,A and B,,True,True,False
+SLV,154,straddle,2021-09-20,estimation,A and B,,True,False,False
+SLV,155,strip,2021-10-18,estimation,A and B,,True,True,False
+SLV,155,straddle,2021-10-18,estimation,A and B,,True,False,False
+SLV,156,strip,2021-11-22,estimation,A and B,,True,True,False
+SLV,156,straddle,2021-11-22,estimation,A and B,,True,False,False
+SLV,157,strip,2021-12-20,estimation,A and B,,True,True,False
+SLV,157,straddle,2021-12-20,estimation,A and B,,True,False,False
+SLV,158,strip,2022-01-24,holdout,C,,True,True,False
+SLV,158,straddle,2022-01-24,holdout,C,,True,False,False
+SLV,159,strip,2022-02-22,holdout,C,,True,True,False
+SLV,159,straddle,2022-02-22,holdout,C,,True,False,False
+SLV,160,strip,2022-03-21,holdout,C,,True,True,False
+SLV,160,straddle,2022-03-21,holdout,C,,True,False,False
+SLV,161,strip,2022-04-18,holdout,C,,True,True,False
+SLV,161,straddle,2022-04-18,holdout,C,,True,False,False
+SLV,162,strip,2022-05-23,holdout,C,,True,True,False
+SLV,162,straddle,2022-05-23,holdout,C,,True,False,False
+SLV,163,strip,2022-06-21,holdout,C,,True,True,False
+SLV,163,straddle,2022-06-21,holdout,C,,True,False,False
+SLV,164,strip,2022-07-18,holdout,C,,True,True,False
+SLV,164,straddle,2022-07-18,holdout,C,,True,False,False
+SLV,165,strip,2022-08-22,holdout,C,,True,True,False
+SLV,165,straddle,2022-08-22,holdout,C,,True,False,False
+SLV,166,strip,2022-09-19,holdout,C,,True,True,False
+SLV,166,straddle,2022-09-19,holdout,C,,True,False,False
+SLV,167,strip,2022-10-24,holdout,C,,True,True,False
+SLV,167,straddle,2022-10-24,holdout,C,,True,False,False
+SLV,168,strip,2022-11-21,holdout,C,,True,True,False
+SLV,168,straddle,2022-11-21,holdout,C,,True,False,False
+SLV,169,strip,2022-12-19,holdout,C,,True,True,False
+SLV,169,straddle,2022-12-19,holdout,C,,True,False,False
+SLV,170,strip,2023-01-23,holdout,C,,True,True,False
+SLV,170,straddle,2023-01-23,holdout,C,,True,False,False
+SLV,171,strip,2023-02-21,holdout,C,,True,True,False
+SLV,171,straddle,2023-02-21,holdout,C,,True,False,False
+SLV,172,strip,2023-03-20,holdout,C,,True,True,False
+SLV,172,straddle,2023-03-20,holdout,C,,True,False,False
+SLV,173,strip,2023-04-24,holdout,C,,True,True,False
+SLV,173,straddle,2023-04-24,holdout,C,,True,False,False
+SLV,174,strip,2023-05-22,holdout,C,,True,True,False
+SLV,174,straddle,2023-05-22,holdout,C,,True,False,False
+SLV,175,strip,2023-06-20,holdout,C,,True,True,False
+SLV,175,straddle,2023-06-20,holdout,C,,True,False,False
+SLV,176,strip,2023-07-24,holdout,C,,True,True,False
+SLV,176,straddle,2023-07-24,holdout,C,,True,False,False
+SLV,177,strip,2023-08-21,holdout,C,,True,True,False
+SLV,177,straddle,2023-08-21,holdout,C,,True,False,False
+SLV,178,strip,2023-09-18,holdout,C,,True,True,False
+SLV,178,straddle,2023-09-18,holdout,C,,True,False,False
+SLV,179,strip,2023-10-23,holdout,C,,True,True,False
+SLV,179,straddle,2023-10-23,holdout,C,,True,False,False
+SLV,180,strip,2023-11-20,holdout,C,,True,True,False
+SLV,180,straddle,2023-11-20,holdout,C,,True,False,False
+SLV,181,strip,2023-12-18,holdout,C,,True,True,False
+SLV,181,straddle,2023-12-18,holdout,C,,True,False,False
+SLV,182,strip,2024-01-22,holdout,C,,True,True,False
+SLV,182,straddle,2024-01-22,holdout,C,,True,False,False
+SLV,183,strip,2024-02-20,holdout,,rule 2 floor,False,True,False
+SLV,183,straddle,2024-02-20,holdout,C,,True,False,False
+SLV,184,strip,2024-03-18,holdout,C,,True,True,False
+SLV,184,straddle,2024-03-18,holdout,C,,True,False,False
+SLV,185,strip,2024-04-22,holdout,C,,True,True,False
+SLV,185,straddle,2024-04-22,holdout,C,,True,False,False
+SLV,186,strip,2024-05-20,holdout,C,,True,True,False
+SLV,186,straddle,2024-05-20,holdout,C,,True,False,False
+SLV,187,strip,2024-06-24,holdout,C,,True,True,False
+SLV,187,straddle,2024-06-24,holdout,C,,True,False,False
+SLV,188,strip,2024-07-22,holdout,C,,True,True,False
+SLV,188,straddle,2024-07-22,holdout,C,,True,False,False
+SLV,189,strip,2024-08-19,holdout,C,,True,True,False
+SLV,189,straddle,2024-08-19,holdout,C,,True,False,False
+SLV,190,strip,2024-09-23,holdout,C,,True,True,False
+SLV,190,straddle,2024-09-23,holdout,C,,True,False,False
+SLV,191,strip,2024-10-21,holdout,C,,True,True,False
+SLV,191,straddle,2024-10-21,holdout,C,,True,False,False
+SLV,192,strip,2024-11-18,holdout,C,,True,True,False
+SLV,192,straddle,2024-11-18,holdout,C,,True,False,False
+SLV,193,strip,2024-12-23,holdout,C,,True,True,False
+SLV,193,straddle,2024-12-23,holdout,C,,True,False,False
+SLV,194,strip,2025-01-21,holdout,C,,True,True,False
+SLV,194,straddle,2025-01-21,holdout,C,,True,False,False
+SLV,195,strip,2025-02-24,holdout,C,,True,True,False
+SLV,195,straddle,2025-02-24,holdout,C,,True,False,False
+SLV,196,strip,2025-03-24,holdout,C,,True,True,False
+SLV,196,straddle,2025-03-24,holdout,C,,True,False,False
+SLV,197,strip,2025-04-21,holdout,C,,True,True,False
+SLV,197,straddle,2025-04-21,holdout,C,,True,False,False
+SLV,198,strip,2025-05-19,holdout,C,,True,True,False
+SLV,198,straddle,2025-05-19,holdout,C,,True,False,False
+SLV,199,strip,2025-06-23,holdout,C,,True,True,False
+SLV,199,straddle,2025-06-23,holdout,C,,True,False,False
+SLV,200,strip,2025-07-21,holdout,C,,True,True,False
+SLV,200,straddle,2025-07-21,holdout,C,,True,False,False
+USO,1,strip,2007-05-21,estimation,,rule 2 floor,False,True,False
+USO,1,straddle,2007-05-21,estimation,A and B,,True,False,False
+USO,2,strip,2007-06-18,estimation,A and B,,True,True,False
+USO,2,straddle,2007-06-18,estimation,A and B,,True,False,False
+USO,3,strip,2007-07-23,estimation,A and B,,True,True,False
+USO,3,straddle,2007-07-23,estimation,A and B,,True,False,False
+USO,4,strip,2007-08-20,estimation,A and B,,True,True,False
+USO,4,straddle,2007-08-20,estimation,A and B,,True,False,False
+USO,5,strip,2007-09-24,estimation,,rule 2 floor,False,True,False
+USO,5,straddle,2007-09-24,estimation,A and B,,True,False,False
+USO,6,strip,2007-10-22,estimation,,rule 2 floor,False,True,False
+USO,6,straddle,2007-10-22,estimation,A and B,,True,False,False
+USO,7,strip,2007-11-19,estimation,A and B,,True,True,False
+USO,7,straddle,2007-11-19,estimation,A and B,,True,False,False
+USO,8,strip,2007-12-24,estimation,A and B,,True,True,False
+USO,8,straddle,2007-12-24,estimation,A and B,,True,False,False
+USO,9,strip,2008-01-22,estimation,,rule 2 floor,False,True,False
+USO,9,straddle,2008-01-22,estimation,A and B,,True,False,False
+USO,10,strip,2008-02-19,estimation,,rule 2 floor,False,True,False
+USO,10,straddle,2008-02-19,estimation,A and B,,True,False,False
+USO,11,strip,2008-03-24,estimation,A and B,,True,True,False
+USO,11,straddle,2008-03-24,estimation,A and B,,True,False,False
+USO,12,strip,2008-04-21,estimation,A and B,,True,True,False
+USO,12,straddle,2008-04-21,estimation,A and B,,True,False,False
+USO,13,strip,2008-05-19,estimation,A and B,,True,True,False
+USO,13,straddle,2008-05-19,estimation,A and B,,True,False,False
+USO,14,strip,2008-06-23,estimation,A and B,,True,True,False
+USO,14,straddle,2008-06-23,estimation,A and B,,True,False,False
+USO,15,strip,2008-07-21,estimation,A and B,,True,True,False
+USO,15,straddle,2008-07-21,estimation,A and B,,True,False,False
+USO,16,strip,2008-08-18,estimation,A and B,,True,True,False
+USO,16,straddle,2008-08-18,estimation,A and B,,True,False,False
+USO,17,strip,2008-09-22,estimation,A and B,,True,True,False
+USO,17,straddle,2008-09-22,estimation,A and B,,True,False,False
+USO,18,strip,2008-10-20,estimation,A and B,,True,True,False
+USO,18,straddle,2008-10-20,estimation,A and B,,True,False,False
+USO,19,strip,2008-11-24,estimation,A and B,,True,True,False
+USO,19,straddle,2008-11-24,estimation,A and B,,True,False,False
+USO,20,strip,2008-12-22,estimation,A and B,,True,True,False
+USO,20,straddle,2008-12-22,estimation,A and B,,True,False,False
+USO,21,strip,2009-01-20,estimation,A and B,,True,True,False
+USO,21,straddle,2009-01-20,estimation,A and B,,True,False,False
+USO,22,strip,2009-02-23,estimation,A and B,,True,True,False
+USO,22,straddle,2009-02-23,estimation,A and B,,True,False,False
+USO,23,strip,2009-03-23,estimation,A and B,,True,True,False
+USO,23,straddle,2009-03-23,estimation,A and B,,True,False,False
+USO,24,strip,2009-04-20,estimation,A and B,,True,True,False
+USO,24,straddle,2009-04-20,estimation,A and B,,True,False,False
+USO,25,strip,2009-05-18,estimation,A and B,,True,True,False
+USO,25,straddle,2009-05-18,estimation,A and B,,True,False,False
+USO,26,strip,2009-06-22,estimation,A and B,,True,True,False
+USO,26,straddle,2009-06-22,estimation,A and B,,True,False,False
+USO,27,strip,2009-07-20,estimation,A and B,,True,True,False
+USO,27,straddle,2009-07-20,estimation,A and B,,True,False,False
+USO,28,strip,2009-08-24,estimation,A and B,,True,True,False
+USO,28,straddle,2009-08-24,estimation,A and B,,True,False,False
+USO,29,strip,2009-09-21,estimation,A and B,,True,True,False
+USO,29,straddle,2009-09-21,estimation,A and B,,True,False,False
+USO,30,strip,2009-10-19,estimation,A and B,,True,True,False
+USO,30,straddle,2009-10-19,estimation,A and B,,True,False,False
+USO,31,strip,2009-11-23,estimation,A and B,,True,True,False
+USO,31,straddle,2009-11-23,estimation,A and B,,True,False,False
+USO,32,strip,2009-12-21,estimation,A and B,,True,True,False
+USO,32,straddle,2009-12-21,estimation,A and B,,True,False,False
+USO,33,strip,2010-01-19,estimation,A and B,,True,True,False
+USO,33,straddle,2010-01-19,estimation,A and B,,True,False,False
+USO,34,strip,2010-02-22,estimation,A and B,,True,True,False
+USO,34,straddle,2010-02-22,estimation,A and B,,True,False,False
+USO,35,strip,2010-03-22,estimation,A and B,,True,True,False
+USO,35,straddle,2010-03-22,estimation,A and B,,True,False,False
+USO,36,strip,2010-04-19,estimation,A and B,,True,True,False
+USO,36,straddle,2010-04-19,estimation,A and B,,True,False,False
+USO,37,strip,2010-05-24,estimation,A and B,,True,True,False
+USO,37,straddle,2010-05-24,estimation,A and B,,True,False,False
+USO,38,strip,2010-06-21,estimation,A and B,,True,True,False
+USO,38,straddle,2010-06-21,estimation,A and B,,True,False,False
+USO,39,strip,2010-07-19,estimation,A and B,,True,True,False
+USO,39,straddle,2010-07-19,estimation,A and B,,True,False,False
+USO,40,strip,2010-08-23,estimation,,rule 2 floor,False,True,False
+USO,40,straddle,2010-08-23,estimation,A and B,,True,False,False
+USO,41,strip,2010-09-20,estimation,A and B,,True,True,False
+USO,41,straddle,2010-09-20,estimation,A and B,,True,False,False
+USO,42,strip,2010-10-18,estimation,A and B,,True,True,False
+USO,42,straddle,2010-10-18,estimation,A and B,,True,False,False
+USO,43,strip,2010-11-22,estimation,,rule 2 floor,False,True,False
+USO,43,straddle,2010-11-22,estimation,A and B,,True,False,False
+USO,44,strip,2010-12-20,estimation,A and B,,True,True,False
+USO,44,straddle,2010-12-20,estimation,A and B,,True,False,False
+USO,45,strip,2011-01-24,estimation,A and B,,True,True,False
+USO,45,straddle,2011-01-24,estimation,A and B,,True,False,False
+USO,46,strip,2011-02-22,estimation,A and B,,True,True,False
+USO,46,straddle,2011-02-22,estimation,A and B,,True,False,False
+USO,47,strip,2011-03-21,estimation,A and B,,True,True,False
+USO,47,straddle,2011-03-21,estimation,A and B,,True,False,False
+USO,48,strip,2011-04-18,estimation,A and B,,True,True,False
+USO,48,straddle,2011-04-18,estimation,A and B,,True,False,False
+USO,49,strip,2011-05-23,estimation,A and B,,True,True,False
+USO,49,straddle,2011-05-23,estimation,A and B,,True,False,False
+USO,50,strip,2011-06-20,estimation,A and B,,True,True,False
+USO,50,straddle,2011-06-20,estimation,A and B,,True,False,False
+USO,51,strip,2011-07-18,estimation,A and B,,True,True,False
+USO,51,straddle,2011-07-18,estimation,A and B,,True,False,False
+USO,52,strip,2011-08-22,estimation,A and B,,True,True,False
+USO,52,straddle,2011-08-22,estimation,A and B,,True,False,False
+USO,53,strip,2011-09-19,estimation,A and B,,True,True,False
+USO,53,straddle,2011-09-19,estimation,A and B,,True,False,False
+USO,54,strip,2011-10-24,estimation,A and B,,True,True,False
+USO,54,straddle,2011-10-24,estimation,A and B,,True,False,False
+USO,55,strip,2011-11-21,estimation,A and B,,True,True,False
+USO,55,straddle,2011-11-21,estimation,A and B,,True,False,False
+USO,56,strip,2011-12-19,estimation,A and B,,True,True,False
+USO,56,straddle,2011-12-19,estimation,A and B,,True,False,False
+USO,57,strip,2012-01-23,estimation,A and B,,True,True,False
+USO,57,straddle,2012-01-23,estimation,A and B,,True,False,False
+USO,58,strip,2012-02-21,estimation,A and B,,True,True,False
+USO,58,straddle,2012-02-21,estimation,A and B,,True,False,False
+USO,59,strip,2012-03-19,estimation,A and B,,True,True,False
+USO,59,straddle,2012-03-19,estimation,A and B,,True,False,False
+USO,60,strip,2012-04-23,estimation,A and B,,True,True,False
+USO,60,straddle,2012-04-23,estimation,A and B,,True,False,False
+USO,61,strip,2012-05-21,estimation,A and B,,True,True,False
+USO,61,straddle,2012-05-21,estimation,A and B,,True,False,False
+USO,62,strip,2012-06-18,estimation,A and B,,True,True,False
+USO,62,straddle,2012-06-18,estimation,A and B,,True,False,False
+USO,63,strip,2012-07-23,estimation,A and B,,True,True,False
+USO,63,straddle,2012-07-23,estimation,A and B,,True,False,False
+USO,64,strip,2012-08-20,estimation,A and B,,True,True,False
+USO,64,straddle,2012-08-20,estimation,A and B,,True,False,False
+USO,65,strip,2012-09-24,estimation,A and B,,True,True,False
+USO,65,straddle,2012-09-24,estimation,A and B,,True,False,False
+USO,66,strip,2012-10-22,estimation,A and B,,True,True,False
+USO,66,straddle,2012-10-22,estimation,A and B,,True,False,False
+USO,67,strip,2012-11-19,estimation,A and B,,True,True,False
+USO,67,straddle,2012-11-19,estimation,A and B,,True,False,False
+USO,68,strip,2012-12-24,estimation,A and B,,True,True,False
+USO,68,straddle,2012-12-24,estimation,A and B,,True,False,False
+USO,69,strip,2013-01-22,estimation,A and B,,True,True,False
+USO,69,straddle,2013-01-22,estimation,A and B,,True,False,False
+USO,70,strip,2013-02-19,estimation,A and B,,True,True,False
+USO,70,straddle,2013-02-19,estimation,A and B,,True,False,False
+USO,71,strip,2013-03-18,estimation,A and B,,True,True,False
+USO,71,straddle,2013-03-18,estimation,A and B,,True,False,False
+USO,72,strip,2013-04-22,estimation,A and B,,True,True,False
+USO,72,straddle,2013-04-22,estimation,A and B,,True,False,False
+USO,73,strip,2013-05-20,estimation,A and B,,True,True,False
+USO,73,straddle,2013-05-20,estimation,A and B,,True,False,False
+USO,74,strip,2013-06-24,estimation,A and B,,True,True,False
+USO,74,straddle,2013-06-24,estimation,A and B,,True,False,False
+USO,75,strip,2013-07-22,estimation,A and B,,True,True,False
+USO,75,straddle,2013-07-22,estimation,A and B,,True,False,False
+USO,76,strip,2013-08-19,estimation,A and B,,True,True,False
+USO,76,straddle,2013-08-19,estimation,A and B,,True,False,False
+USO,77,strip,2013-09-23,estimation,A and B,,True,True,False
+USO,77,straddle,2013-09-23,estimation,A and B,,True,False,False
+USO,78,strip,2013-10-21,estimation,A and B,,True,True,False
+USO,78,straddle,2013-10-21,estimation,A and B,,True,False,False
+USO,79,strip,2013-11-18,estimation,A and B,,True,True,False
+USO,79,straddle,2013-11-18,estimation,A and B,,True,False,False
+USO,80,strip,2013-12-23,estimation,A and B,,True,True,False
+USO,80,straddle,2013-12-23,estimation,A and B,,True,False,False
+USO,81,strip,2014-01-21,estimation,A and B,,True,True,False
+USO,81,straddle,2014-01-21,estimation,A and B,,True,False,False
+USO,82,strip,2014-02-24,estimation,A and B,,True,True,False
+USO,82,straddle,2014-02-24,estimation,A and B,,True,False,False
+USO,83,strip,2014-03-24,estimation,A and B,,True,True,False
+USO,83,straddle,2014-03-24,estimation,A and B,,True,False,False
+USO,84,strip,2014-04-21,estimation,A and B,,True,True,False
+USO,84,straddle,2014-04-21,estimation,A and B,,True,False,False
+USO,85,strip,2014-05-19,estimation,A and B,,True,True,False
+USO,85,straddle,2014-05-19,estimation,A and B,,True,False,False
+USO,86,strip,2014-06-23,estimation,A and B,,True,True,False
+USO,86,straddle,2014-06-23,estimation,A and B,,True,False,False
+USO,87,strip,2014-07-21,estimation,A and B,,True,True,False
+USO,87,straddle,2014-07-21,estimation,A and B,,True,False,False
+USO,88,strip,2014-08-18,estimation,A and B,,True,True,False
+USO,88,straddle,2014-08-18,estimation,A and B,,True,False,False
+USO,89,strip,2014-09-22,estimation,A and B,,True,True,False
+USO,89,straddle,2014-09-22,estimation,A and B,,True,False,False
+USO,90,strip,2014-10-20,estimation,A and B,,True,True,False
+USO,90,straddle,2014-10-20,estimation,A and B,,True,False,False
+USO,91,strip,2014-11-24,estimation,A and B,,True,True,False
+USO,91,straddle,2014-11-24,estimation,A and B,,True,False,False
+USO,92,strip,2014-12-22,estimation,A and B,,True,True,False
+USO,92,straddle,2014-12-22,estimation,A and B,,True,False,False
+USO,93,strip,2015-01-20,estimation,A and B,,True,True,False
+USO,93,straddle,2015-01-20,estimation,A and B,,True,False,False
+USO,94,strip,2015-02-23,estimation,A and B,,True,True,False
+USO,94,straddle,2015-02-23,estimation,A and B,,True,False,False
+USO,95,strip,2015-03-23,estimation,A and B,,True,True,False
+USO,95,straddle,2015-03-23,estimation,A and B,,True,False,False
+USO,96,strip,2015-04-20,estimation,A and B,,True,True,False
+USO,96,straddle,2015-04-20,estimation,A and B,,True,False,False
+USO,97,strip,2015-05-18,estimation,A and B,,True,True,False
+USO,97,straddle,2015-05-18,estimation,A and B,,True,False,False
+USO,98,strip,2015-06-22,estimation,A and B,,True,True,False
+USO,98,straddle,2015-06-22,estimation,A and B,,True,False,False
+USO,99,strip,2015-07-20,estimation,A and B,,True,True,False
+USO,99,straddle,2015-07-20,estimation,A and B,,True,False,False
+USO,100,strip,2015-08-24,estimation,A and B,,True,True,False
+USO,100,straddle,2015-08-24,estimation,A and B,,True,False,False
+USO,101,strip,2015-09-21,estimation,A and B,,True,True,False
+USO,101,straddle,2015-09-21,estimation,A and B,,True,False,False
+USO,102,strip,2015-10-19,estimation,A and B,,True,True,False
+USO,102,straddle,2015-10-19,estimation,A and B,,True,False,False
+USO,103,strip,2015-11-23,estimation,A and B,,True,True,False
+USO,103,straddle,2015-11-23,estimation,A and B,,True,False,False
+USO,104,strip,2015-12-21,estimation,,rule 2 floor,False,True,False
+USO,104,straddle,2015-12-21,estimation,A and B,,True,False,False
+USO,105,strip,2016-01-19,estimation,,rule 2 floor,False,True,False
+USO,105,straddle,2016-01-19,estimation,A and B,,True,False,False
+USO,106,strip,2016-02-22,estimation,,rule 2 floor,False,True,False
+USO,106,straddle,2016-02-22,estimation,A and B,,True,False,False
+USO,107,strip,2016-03-21,estimation,A and B,,True,True,False
+USO,107,straddle,2016-03-21,estimation,A and B,,True,False,False
+USO,108,strip,2016-04-18,estimation,A and B,,True,True,False
+USO,108,straddle,2016-04-18,estimation,A and B,,True,False,False
+USO,109,strip,2016-05-23,estimation,,rule 2 floor,False,True,False
+USO,109,straddle,2016-05-23,estimation,A and B,,True,False,False
+USO,110,strip,2016-06-20,estimation,,rule 2 floor,False,True,False
+USO,110,straddle,2016-06-20,estimation,A and B,,True,False,False
+USO,111,strip,2016-07-18,estimation,,rule 2 floor,False,True,False
+USO,111,straddle,2016-07-18,estimation,A and B,,True,False,False
+USO,112,strip,2016-08-22,estimation,,rule 2 floor,False,True,False
+USO,112,straddle,2016-08-22,estimation,A and B,,True,False,False
+USO,113,strip,2016-09-19,estimation,,rule 2 floor,False,True,False
+USO,113,straddle,2016-09-19,estimation,A and B,,True,False,False
+USO,114,strip,2016-10-24,estimation,,rule 2 floor,False,True,False
+USO,114,straddle,2016-10-24,estimation,A and B,,True,False,False
+USO,115,strip,2016-11-21,estimation,,rule 2 floor,False,True,False
+USO,115,straddle,2016-11-21,estimation,A and B,,True,False,False
+USO,116,strip,2016-12-19,estimation,,rule 2 floor,False,True,False
+USO,116,straddle,2016-12-19,estimation,A and B,,True,False,False
+USO,117,strip,2017-01-23,estimation,,rule 2 floor,False,True,False
+USO,117,straddle,2017-01-23,estimation,A and B,,True,False,False
+USO,118,strip,2017-02-21,estimation,,rule 2 floor,False,True,False
+USO,118,straddle,2017-02-21,estimation,A and B,,True,False,False
+USO,119,strip,2017-03-20,estimation,,rule 2 floor,False,True,False
+USO,119,straddle,2017-03-20,estimation,A and B,,True,False,False
+USO,120,strip,2017-04-24,estimation,,rule 2 floor,False,True,False
+USO,120,straddle,2017-04-24,estimation,A and B,,True,False,False
+USO,121,strip,2017-05-22,estimation,,rule 2 floor,False,True,False
+USO,121,straddle,2017-05-22,estimation,A and B,,True,False,False
+USO,122,strip,2017-06-19,estimation,,rule 2 floor,False,True,False
+USO,122,straddle,2017-06-19,estimation,A and B,,True,False,False
+USO,123,strip,2017-07-24,estimation,,rule 2 floor,False,True,False
+USO,123,straddle,2017-07-24,estimation,A and B,,True,False,False
+USO,124,strip,2017-08-21,estimation,,rule 2 floor,False,True,False
+USO,124,straddle,2017-08-21,estimation,A and B,,True,False,False
+USO,125,strip,2017-09-18,estimation,,rule 2 floor,False,True,False
+USO,125,straddle,2017-09-18,estimation,A and B,,True,False,False
+USO,126,strip,2017-10-23,estimation,,rule 2 floor,False,True,False
+USO,126,straddle,2017-10-23,estimation,A and B,,True,False,False
+USO,127,strip,2017-11-20,estimation,,rule 2 floor,False,True,False
+USO,127,straddle,2017-11-20,estimation,A and B,,True,False,False
+USO,128,strip,2017-12-18,estimation,,rule 2 floor,False,True,False
+USO,128,straddle,2017-12-18,estimation,A and B,,True,False,False
+USO,129,strip,2018-01-22,estimation,,rule 2 floor,False,True,False
+USO,129,straddle,2018-01-22,estimation,A and B,,True,False,False
+USO,130,strip,2018-02-20,estimation,,rule 2 floor,False,True,False
+USO,130,straddle,2018-02-20,estimation,A and B,,True,False,False
+USO,131,strip,2018-03-19,estimation,,rule 2 floor,False,True,False
+USO,131,straddle,2018-03-19,estimation,A and B,,True,False,False
+USO,132,strip,2018-04-23,estimation,,rule 2 floor,False,True,False
+USO,132,straddle,2018-04-23,estimation,A and B,,True,False,False
+USO,133,strip,2018-05-21,estimation,,rule 2 floor,False,True,False
+USO,133,straddle,2018-05-21,estimation,A and B,,True,False,False
+USO,134,strip,2018-06-18,estimation,,rule 2 floor,False,True,False
+USO,134,straddle,2018-06-18,estimation,A and B,,True,False,False
+USO,135,strip,2018-07-23,estimation,,rule 2 floor,False,True,False
+USO,135,straddle,2018-07-23,estimation,A and B,,True,False,False
+USO,136,strip,2018-08-20,estimation,,rule 2 floor,False,True,False
+USO,136,straddle,2018-08-20,estimation,A and B,,True,False,False
+USO,137,strip,2018-09-24,estimation,,rule 2 floor,False,True,False
+USO,137,straddle,2018-09-24,estimation,A and B,,True,False,False
+USO,138,strip,2018-10-22,estimation,,rule 2 floor,False,True,False
+USO,138,straddle,2018-10-22,estimation,A and B,,True,False,False
+USO,139,strip,2018-11-19,estimation,A and B,,True,True,False
+USO,139,straddle,2018-11-19,estimation,A and B,,True,False,False
+USO,140,strip,2018-12-24,estimation,,rule 2 floor,False,True,False
+USO,140,straddle,2018-12-24,estimation,A and B,,True,False,False
+USO,141,strip,2019-01-22,estimation,,rule 2 floor,False,True,False
+USO,141,straddle,2019-01-22,estimation,A and B,,True,False,False
+USO,142,strip,2019-02-19,estimation,,rule 2 floor,False,True,False
+USO,142,straddle,2019-02-19,estimation,A and B,,True,False,False
+USO,143,strip,2019-03-18,estimation,,rule 2 floor,False,True,False
+USO,143,straddle,2019-03-18,estimation,A and B,,True,False,False
+USO,144,strip,2019-04-22,estimation,,rule 2 floor,False,True,False
+USO,144,straddle,2019-04-22,estimation,A and B,,True,False,False
+USO,145,strip,2019-05-20,estimation,,rule 2 floor,False,True,False
+USO,145,straddle,2019-05-20,estimation,A and B,,True,False,False
+USO,146,strip,2019-06-24,estimation,A and B,,True,True,False
+USO,146,straddle,2019-06-24,estimation,A and B,,True,False,False
+USO,147,strip,2019-07-22,estimation,,rule 2 floor,False,True,False
+USO,147,straddle,2019-07-22,estimation,A and B,,True,False,False
+USO,148,strip,2019-08-19,estimation,,rule 2 floor,False,True,False
+USO,148,straddle,2019-08-19,estimation,A and B,,True,False,False
+USO,149,strip,2019-09-23,estimation,,rule 2 floor,False,True,False
+USO,149,straddle,2019-09-23,estimation,A and B,,True,False,False
+USO,150,strip,2019-10-21,estimation,,rule 2 floor,False,True,False
+USO,150,straddle,2019-10-21,estimation,A and B,,True,False,False
+USO,151,strip,2019-11-18,estimation,A and B,,True,True,False
+USO,151,straddle,2019-11-18,estimation,A and B,,True,False,False
+USO,152,strip,2019-12-23,estimation,,rule 2 floor,False,True,False
+USO,152,straddle,2019-12-23,estimation,A and B,,True,False,False
+USO,153,strip,2020-01-21,estimation,,rule 2 floor,False,True,False
+USO,153,straddle,2020-01-21,estimation,A and B,,True,False,False
+USO,154,strip,2020-02-24,estimation,,rule 2 floor,False,True,False
+USO,154,straddle,2020-02-24,estimation,A and B,,True,False,False
+USO,155,strip,2020-03-23,estimation,A and B,,True,True,False
+USO,155,straddle,2020-03-23,estimation,A and B,,True,False,False
+USO,156,strip,2020-04-20,estimation,,rule 5 truncated,False,False,True
+USO,156,straddle,2020-04-20,estimation,,rule 3 straddle distance,False,False,False
+USO,157,strip,2020-05-18,estimation,A and B,,True,True,False
+USO,157,straddle,2020-05-18,estimation,A and B,,True,False,False
+USO,158,strip,2020-06-22,estimation,A and B,,True,True,False
+USO,158,straddle,2020-06-22,estimation,A and B,,True,False,False
+USO,159,strip,2020-07-20,estimation,A and B,,True,True,False
+USO,159,straddle,2020-07-20,estimation,A and B,,True,False,False
+USO,160,strip,2020-08-24,estimation,A and B,,True,True,False
+USO,160,straddle,2020-08-24,estimation,A and B,,True,False,False
+USO,161,strip,2020-09-21,estimation,A and B,,True,True,False
+USO,161,straddle,2020-09-21,estimation,A and B,,True,False,False
+USO,162,strip,2020-10-19,estimation,A and B,,True,True,False
+USO,162,straddle,2020-10-19,estimation,A and B,,True,False,False
+USO,163,strip,2020-11-23,estimation,A and B,,True,True,False
+USO,163,straddle,2020-11-23,estimation,A and B,,True,False,False
+USO,164,strip,2020-12-21,estimation,A and B,,True,True,False
+USO,164,straddle,2020-12-21,estimation,A and B,,True,False,False
+USO,165,strip,2021-01-19,estimation,A and B,,True,True,False
+USO,165,straddle,2021-01-19,estimation,A and B,,True,False,False
+USO,166,strip,2021-02-22,estimation,A and B,,True,True,False
+USO,166,straddle,2021-02-22,estimation,A and B,,True,False,False
+USO,167,strip,2021-03-22,estimation,A and B,,True,True,False
+USO,167,straddle,2021-03-22,estimation,A and B,,True,False,False
+USO,168,strip,2021-04-19,estimation,A and B,,True,True,False
+USO,168,straddle,2021-04-19,estimation,A and B,,True,False,False
+USO,169,strip,2021-05-24,estimation,A and B,,True,True,False
+USO,169,straddle,2021-05-24,estimation,A and B,,True,False,False
+USO,170,strip,2021-06-21,estimation,A and B,,True,True,False
+USO,170,straddle,2021-06-21,estimation,A and B,,True,False,False
+USO,171,strip,2021-07-19,estimation,A and B,,True,True,False
+USO,171,straddle,2021-07-19,estimation,A and B,,True,False,False
+USO,172,strip,2021-08-23,estimation,A and B,,True,True,False
+USO,172,straddle,2021-08-23,estimation,A and B,,True,False,False
+USO,173,strip,2021-09-20,estimation,A and B,,True,True,False
+USO,173,straddle,2021-09-20,estimation,A and B,,True,False,False
+USO,174,strip,2021-10-18,estimation,A and B,,True,True,False
+USO,174,straddle,2021-10-18,estimation,A and B,,True,False,False
+USO,175,strip,2021-11-22,estimation,A and B,,True,True,False
+USO,175,straddle,2021-11-22,estimation,A and B,,True,False,False
+USO,176,strip,2021-12-20,estimation,A and B,,True,True,False
+USO,176,straddle,2021-12-20,estimation,A and B,,True,False,False
+USO,177,strip,2022-01-24,holdout,C,,True,True,False
+USO,177,straddle,2022-01-24,holdout,C,,True,False,False
+USO,178,strip,2022-02-22,holdout,C,,True,True,False
+USO,178,straddle,2022-02-22,holdout,C,,True,False,False
+USO,179,strip,2022-03-21,holdout,C,,True,True,False
+USO,179,straddle,2022-03-21,holdout,C,,True,False,False
+USO,180,strip,2022-04-18,holdout,C,,True,True,False
+USO,180,straddle,2022-04-18,holdout,C,,True,False,False
+USO,181,strip,2022-05-23,holdout,C,,True,True,False
+USO,181,straddle,2022-05-23,holdout,C,,True,False,False
+USO,182,strip,2022-06-21,holdout,C,,True,True,False
+USO,182,straddle,2022-06-21,holdout,C,,True,False,False
+USO,183,strip,2022-07-18,holdout,C,,True,True,False
+USO,183,straddle,2022-07-18,holdout,C,,True,False,False
+USO,184,strip,2022-08-22,holdout,C,,True,True,False
+USO,184,straddle,2022-08-22,holdout,C,,True,False,False
+USO,185,strip,2022-09-19,holdout,C,,True,True,False
+USO,185,straddle,2022-09-19,holdout,C,,True,False,False
+USO,186,strip,2022-10-24,holdout,C,,True,True,False
+USO,186,straddle,2022-10-24,holdout,C,,True,False,False
+USO,187,strip,2022-11-21,holdout,C,,True,True,False
+USO,187,straddle,2022-11-21,holdout,C,,True,False,False
+USO,188,strip,2022-12-19,holdout,C,,True,True,False
+USO,188,straddle,2022-12-19,holdout,C,,True,False,False
+USO,189,strip,2023-01-23,holdout,C,,True,True,False
+USO,189,straddle,2023-01-23,holdout,C,,True,False,False
+USO,190,strip,2023-02-21,holdout,C,,True,True,False
+USO,190,straddle,2023-02-21,holdout,C,,True,False,False
+USO,191,strip,2023-03-20,holdout,C,,True,True,False
+USO,191,straddle,2023-03-20,holdout,C,,True,False,False
+USO,192,strip,2023-04-24,holdout,C,,True,True,False
+USO,192,straddle,2023-04-24,holdout,C,,True,False,False
+USO,193,strip,2023-05-22,holdout,C,,True,True,False
+USO,193,straddle,2023-05-22,holdout,C,,True,False,False
+USO,194,strip,2023-06-20,holdout,C,,True,True,False
+USO,194,straddle,2023-06-20,holdout,C,,True,False,False
+USO,195,strip,2023-07-24,holdout,C,,True,True,False
+USO,195,straddle,2023-07-24,holdout,C,,True,False,False
+USO,196,strip,2023-08-21,holdout,C,,True,True,False
+USO,196,straddle,2023-08-21,holdout,C,,True,False,False
+USO,197,strip,2023-09-18,holdout,C,,True,True,False
+USO,197,straddle,2023-09-18,holdout,C,,True,False,False
+USO,198,strip,2023-10-23,holdout,C,,True,True,False
+USO,198,straddle,2023-10-23,holdout,C,,True,False,False
+USO,199,strip,2023-11-20,holdout,C,,True,True,False
+USO,199,straddle,2023-11-20,holdout,C,,True,False,False
+USO,200,strip,2023-12-18,holdout,C,,True,True,False
+USO,200,straddle,2023-12-18,holdout,C,,True,False,False
+USO,201,strip,2024-01-22,holdout,C,,True,True,False
+USO,201,straddle,2024-01-22,holdout,C,,True,False,False
+USO,202,strip,2024-02-20,holdout,C,,True,True,False
+USO,202,straddle,2024-02-20,holdout,C,,True,False,False
+USO,203,strip,2024-03-18,holdout,C,,True,True,False
+USO,203,straddle,2024-03-18,holdout,C,,True,False,False
+USO,204,strip,2024-04-22,holdout,C,,True,True,False
+USO,204,straddle,2024-04-22,holdout,C,,True,False,False
+USO,205,strip,2024-05-20,holdout,C,,True,True,False
+USO,205,straddle,2024-05-20,holdout,C,,True,False,False
+USO,206,strip,2024-06-24,holdout,C,,True,True,False
+USO,206,straddle,2024-06-24,holdout,C,,True,False,False
+USO,207,strip,2024-07-22,holdout,C,,True,True,False
+USO,207,straddle,2024-07-22,holdout,C,,True,False,False
+USO,208,strip,2024-08-19,holdout,C,,True,True,False
+USO,208,straddle,2024-08-19,holdout,C,,True,False,False
+USO,209,strip,2024-09-23,holdout,C,,True,True,False
+USO,209,straddle,2024-09-23,holdout,C,,True,False,False
+USO,210,strip,2024-10-21,holdout,C,,True,True,False
+USO,210,straddle,2024-10-21,holdout,C,,True,False,False
+USO,211,strip,2024-11-18,holdout,C,,True,True,False
+USO,211,straddle,2024-11-18,holdout,C,,True,False,False
+USO,212,strip,2024-12-23,holdout,C,,True,True,False
+USO,212,straddle,2024-12-23,holdout,C,,True,False,False
+USO,213,strip,2025-01-21,holdout,C,,True,True,False
+USO,213,straddle,2025-01-21,holdout,C,,True,False,False
+USO,214,strip,2025-02-24,holdout,C,,True,True,False
+USO,214,straddle,2025-02-24,holdout,C,,True,False,False
+USO,215,strip,2025-03-24,holdout,C,,True,True,False
+USO,215,straddle,2025-03-24,holdout,C,,True,False,False
+USO,216,strip,2025-04-21,holdout,C,,True,True,False
+USO,216,straddle,2025-04-21,holdout,C,,True,False,False
+USO,217,strip,2025-05-19,holdout,C,,True,True,False
+USO,217,straddle,2025-05-19,holdout,C,,True,False,False
+USO,218,strip,2025-06-23,holdout,C,,True,True,False
+USO,218,straddle,2025-06-23,holdout,C,,True,False,False
+USO,219,strip,2025-07-21,holdout,C,,True,True,False
+USO,219,straddle,2025-07-21,holdout,C,,True,False,False
+UNG,1,strip,2007-05-21,estimation,,rule 2 floor,False,True,False
+UNG,1,straddle,2007-05-21,estimation,A and B,,True,False,False
+UNG,2,strip,2007-06-18,estimation,A and B,,True,True,False
+UNG,2,straddle,2007-06-18,estimation,A and B,,True,False,False
+UNG,3,strip,2007-07-23,estimation,,rule 2 floor,False,True,False
+UNG,3,straddle,2007-07-23,estimation,A and B,,True,False,False
+UNG,4,strip,2007-08-20,estimation,,rule 2 floor,False,True,False
+UNG,4,straddle,2007-08-20,estimation,A and B,,True,False,False
+UNG,5,strip,2007-09-24,estimation,A and B,,True,True,False
+UNG,5,straddle,2007-09-24,estimation,A and B,,True,False,False
+UNG,6,strip,2007-10-22,estimation,,rule 2 floor,False,True,False
+UNG,6,straddle,2007-10-22,estimation,A and B,,True,False,False
+UNG,7,strip,2007-11-19,estimation,A and B,,True,True,False
+UNG,7,straddle,2007-11-19,estimation,A and B,,True,False,False
+UNG,8,strip,2007-12-24,estimation,,rule 2 floor,False,True,False
+UNG,8,straddle,2007-12-24,estimation,A and B,,True,False,False
+UNG,9,strip,2008-01-22,estimation,,rule 2 floor,False,True,False
+UNG,9,straddle,2008-01-22,estimation,A and B,,True,False,False
+UNG,10,strip,2008-02-19,estimation,,rule 2 floor,False,True,False
+UNG,10,straddle,2008-02-19,estimation,A and B,,True,False,False
+UNG,11,strip,2008-03-24,estimation,A and B,,True,True,False
+UNG,11,straddle,2008-03-24,estimation,A and B,,True,False,False
+UNG,12,strip,2008-04-21,estimation,A and B,,True,True,False
+UNG,12,straddle,2008-04-21,estimation,A and B,,True,False,False
+UNG,13,strip,2008-05-19,estimation,A and B,,True,True,False
+UNG,13,straddle,2008-05-19,estimation,A and B,,True,False,False
+UNG,14,strip,2008-06-23,estimation,A and B,,True,True,False
+UNG,14,straddle,2008-06-23,estimation,A and B,,True,False,False
+UNG,15,strip,2008-07-21,estimation,,section 3 filters,False,False,False
+UNG,15,straddle,2008-07-21,estimation,A and B,,True,False,False
+UNG,16,strip,2008-08-18,estimation,,rule 2 floor,False,True,False
+UNG,16,straddle,2008-08-18,estimation,A and B,,True,False,False
+UNG,17,strip,2008-09-22,estimation,A and B,,True,True,False
+UNG,17,straddle,2008-09-22,estimation,A and B,,True,False,False
+UNG,18,strip,2008-10-20,estimation,,rule 2 floor,False,True,False
+UNG,18,straddle,2008-10-20,estimation,A and B,,True,False,False
+UNG,19,strip,2008-11-24,estimation,A and B,,True,True,False
+UNG,19,straddle,2008-11-24,estimation,A and B,,True,False,False
+UNG,20,strip,2008-12-22,estimation,,rule 2 floor,False,True,False
+UNG,20,straddle,2008-12-22,estimation,A and B,,True,False,False
+UNG,21,strip,2009-01-20,estimation,,rule 2 floor,False,True,False
+UNG,21,straddle,2009-01-20,estimation,A and B,,True,False,False
+UNG,22,strip,2009-02-23,estimation,,rule 2 floor,False,True,False
+UNG,22,straddle,2009-02-23,estimation,A and B,,True,False,False
+UNG,23,strip,2009-03-23,estimation,,rule 2 floor,False,True,False
+UNG,23,straddle,2009-03-23,estimation,A and B,,True,False,False
+UNG,24,strip,2009-04-20,estimation,,rule 2 floor,False,True,False
+UNG,24,straddle,2009-04-20,estimation,A and B,,True,False,False
+UNG,25,strip,2009-05-18,estimation,,rule 2 floor,False,True,False
+UNG,25,straddle,2009-05-18,estimation,A and B,,True,False,False
+UNG,26,strip,2009-06-22,estimation,,rule 2 floor,False,True,False
+UNG,26,straddle,2009-06-22,estimation,A and B,,True,False,False
+UNG,27,strip,2009-07-20,estimation,,rule 2 floor,False,True,False
+UNG,27,straddle,2009-07-20,estimation,A and B,,True,False,False
+UNG,28,strip,2009-08-24,estimation,,rule 2 floor,False,True,False
+UNG,28,straddle,2009-08-24,estimation,A and B,,True,False,False
+UNG,29,strip,2009-09-21,estimation,,rule 2 floor,False,True,False
+UNG,29,straddle,2009-09-21,estimation,A and B,,True,False,False
+UNG,30,strip,2009-10-19,estimation,,rule 2 floor,False,True,False
+UNG,30,straddle,2009-10-19,estimation,A and B,,True,False,False
+UNG,31,strip,2009-11-23,estimation,,rule 2 floor,False,True,False
+UNG,31,straddle,2009-11-23,estimation,A and B,,True,False,False
+UNG,32,strip,2009-12-21,estimation,,rule 2 floor,False,True,False
+UNG,32,straddle,2009-12-21,estimation,A and B,,True,False,False
+UNG,33,strip,2010-01-19,estimation,,rule 2 floor,False,True,False
+UNG,33,straddle,2010-01-19,estimation,A and B,,True,False,False
+UNG,34,strip,2010-02-22,estimation,,rule 2 floor,False,True,False
+UNG,34,straddle,2010-02-22,estimation,A and B,,True,False,False
+UNG,35,strip,2010-03-22,estimation,,rule 2 floor,False,True,False
+UNG,35,straddle,2010-03-22,estimation,,rule 3 straddle distance,False,False,False
+UNG,36,strip,2010-04-19,estimation,,rule 2 floor,False,True,False
+UNG,36,straddle,2010-04-19,estimation,A and B,,True,False,False
+UNG,37,strip,2010-05-24,estimation,,rule 2 floor,False,True,False
+UNG,37,straddle,2010-05-24,estimation,A and B,,True,False,False
+UNG,38,strip,2010-06-21,estimation,,rule 2 floor,False,True,False
+UNG,38,straddle,2010-06-21,estimation,A and B,,True,False,False
+UNG,39,strip,2010-07-19,estimation,,rule 2 floor,False,True,False
+UNG,39,straddle,2010-07-19,estimation,,rule 3 straddle distance,False,False,False
+UNG,40,strip,2010-08-23,estimation,,section 3 filters,False,False,False
+UNG,40,straddle,2010-08-23,estimation,A and B,,True,False,False
+UNG,41,strip,2010-09-20,estimation,,rule 2 floor,False,True,False
+UNG,41,straddle,2010-09-20,estimation,,rule 3 straddle distance,False,False,False
+UNG,42,strip,2010-10-18,estimation,,section 3 filters,False,False,False
+UNG,42,straddle,2010-10-18,estimation,,rule 3 straddle distance,False,False,False
+UNG,43,strip,2010-11-22,estimation,,rule 2 floor,False,True,False
+UNG,43,straddle,2010-11-22,estimation,A and B,,True,False,False
+UNG,44,strip,2010-12-20,estimation,,section 3 filters,False,False,False
+UNG,44,straddle,2010-12-20,estimation,A and B,,True,False,False
+UNG,45,strip,2011-01-24,estimation,,section 3 filters,False,False,False
+UNG,45,straddle,2011-01-24,estimation,A and B,,True,False,False
+UNG,46,strip,2011-02-22,estimation,,rule 2 floor,False,False,True
+UNG,46,straddle,2011-02-22,estimation,,rule 5 truncated,False,False,True
+UNG,47,strip,2011-03-21,estimation,,rule 2 floor,False,True,False
+UNG,47,straddle,2011-03-21,estimation,A and B,,True,False,False
+UNG,48,strip,2011-04-18,estimation,,rule 2 floor,False,True,False
+UNG,48,straddle,2011-04-18,estimation,A and B,,True,False,False
+UNG,49,strip,2011-05-23,estimation,,rule 2 floor,False,True,False
+UNG,49,straddle,2011-05-23,estimation,A and B,,True,False,False
+UNG,50,strip,2011-06-20,estimation,,rule 2 floor,False,True,False
+UNG,50,straddle,2011-06-20,estimation,A and B,,True,False,False
+UNG,51,strip,2011-07-18,estimation,,rule 2 floor,False,True,False
+UNG,51,straddle,2011-07-18,estimation,A and B,,True,False,False
+UNG,52,strip,2011-08-22,estimation,,rule 2 floor,False,True,False
+UNG,52,straddle,2011-08-22,estimation,A and B,,True,False,False
+UNG,53,strip,2011-09-19,estimation,,rule 2 floor,False,True,False
+UNG,53,straddle,2011-09-19,estimation,A and B,,True,False,False
+UNG,54,strip,2011-10-24,estimation,,section 3 filters,False,False,False
+UNG,54,straddle,2011-10-24,estimation,A and B,,True,False,False
+UNG,55,strip,2011-11-21,estimation,,section 3 filters,False,False,False
+UNG,55,straddle,2011-11-21,estimation,A and B,,True,False,False
+UNG,56,strip,2011-12-19,estimation,,section 3 filters,False,False,False
+UNG,56,straddle,2011-12-19,estimation,A and B,,True,False,False
+UNG,57,strip,2012-01-23,estimation,,rule 2 floor,False,True,False
+UNG,57,straddle,2012-01-23,estimation,,rule 3 straddle distance,False,False,False
+UNG,58,strip,2012-02-21,estimation,,rule 2 floor,False,False,True
+UNG,58,straddle,2012-02-21,estimation,,rule 3 straddle distance,False,False,False
+UNG,59,strip,2012-03-19,estimation,,rule 2 floor,False,True,False
+UNG,59,straddle,2012-03-19,estimation,A and B,,True,False,False
+UNG,60,strip,2012-04-23,estimation,,rule 2 floor,False,True,False
+UNG,60,straddle,2012-04-23,estimation,A and B,,True,False,False
+UNG,61,strip,2012-05-21,estimation,,rule 2 floor,False,True,False
+UNG,61,straddle,2012-05-21,estimation,A and B,,True,False,False
+UNG,62,strip,2012-06-18,estimation,A and B,,True,True,False
+UNG,62,straddle,2012-06-18,estimation,A and B,,True,False,False
+UNG,63,strip,2012-07-23,estimation,A and B,,True,True,False
+UNG,63,straddle,2012-07-23,estimation,A and B,,True,False,False
+UNG,64,strip,2012-08-20,estimation,,rule 2 floor,False,True,False
+UNG,64,straddle,2012-08-20,estimation,A and B,,True,False,False
+UNG,65,strip,2012-09-24,estimation,,rule 2 floor,False,True,False
+UNG,65,straddle,2012-09-24,estimation,A and B,,True,False,False
+UNG,66,strip,2012-10-22,estimation,,rule 2 floor,False,True,False
+UNG,66,straddle,2012-10-22,estimation,A and B,,True,False,False
+UNG,67,strip,2012-11-19,estimation,,rule 2 floor,False,True,False
+UNG,67,straddle,2012-11-19,estimation,A and B,,True,False,False
+UNG,68,strip,2012-12-24,estimation,,rule 2 floor,False,True,False
+UNG,68,straddle,2012-12-24,estimation,A and B,,True,False,False
+UNG,69,strip,2013-01-22,estimation,,rule 2 floor,False,True,False
+UNG,69,straddle,2013-01-22,estimation,A and B,,True,False,False
+UNG,70,strip,2013-02-19,estimation,,rule 2 floor,False,True,False
+UNG,70,straddle,2013-02-19,estimation,A and B,,True,False,False
+UNG,71,strip,2013-03-18,estimation,,rule 2 floor,False,True,False
+UNG,71,straddle,2013-03-18,estimation,A and B,,True,False,False
+UNG,72,strip,2013-04-22,estimation,,rule 2 floor,False,True,False
+UNG,72,straddle,2013-04-22,estimation,A and B,,True,False,False
+UNG,73,strip,2013-05-20,estimation,,rule 2 floor,False,True,False
+UNG,73,straddle,2013-05-20,estimation,A and B,,True,False,False
+UNG,74,strip,2013-06-24,estimation,,rule 2 floor,False,True,False
+UNG,74,straddle,2013-06-24,estimation,A and B,,True,False,False
+UNG,75,strip,2013-07-22,estimation,,rule 2 floor,False,True,False
+UNG,75,straddle,2013-07-22,estimation,A and B,,True,False,False
+UNG,76,strip,2013-08-19,estimation,,rule 2 floor,False,True,False
+UNG,76,straddle,2013-08-19,estimation,A and B,,True,False,False
+UNG,77,strip,2013-09-23,estimation,,rule 2 floor,False,True,False
+UNG,77,straddle,2013-09-23,estimation,A and B,,True,False,False
+UNG,78,strip,2013-10-21,estimation,,rule 2 floor,False,True,False
+UNG,78,straddle,2013-10-21,estimation,A and B,,True,False,False
+UNG,79,strip,2013-11-18,estimation,,rule 2 floor,False,True,False
+UNG,79,straddle,2013-11-18,estimation,A and B,,True,False,False
+UNG,80,strip,2013-12-23,estimation,,rule 2 floor,False,True,False
+UNG,80,straddle,2013-12-23,estimation,A and B,,True,False,False
+UNG,81,strip,2014-01-21,estimation,,rule 2 floor,False,True,False
+UNG,81,straddle,2014-01-21,estimation,A and B,,True,False,False
+UNG,82,strip,2014-02-24,estimation,A and B,,True,True,False
+UNG,82,straddle,2014-02-24,estimation,A and B,,True,False,False
+UNG,83,strip,2014-03-24,estimation,,rule 2 floor,False,True,False
+UNG,83,straddle,2014-03-24,estimation,A and B,,True,False,False
+UNG,84,strip,2014-04-21,estimation,,rule 2 floor,False,True,False
+UNG,84,straddle,2014-04-21,estimation,A and B,,True,False,False
+UNG,85,strip,2014-05-19,estimation,,rule 2 floor,False,True,False
+UNG,85,straddle,2014-05-19,estimation,A and B,,True,False,False
+UNG,86,strip,2014-06-23,estimation,,rule 2 floor,False,True,False
+UNG,86,straddle,2014-06-23,estimation,A and B,,True,False,False
+UNG,87,strip,2014-07-21,estimation,A and B,,True,True,False
+UNG,87,straddle,2014-07-21,estimation,A and B,,True,False,False
+UNG,88,strip,2014-08-18,estimation,A and B,,True,True,False
+UNG,88,straddle,2014-08-18,estimation,A and B,,True,False,False
+UNG,89,strip,2014-09-22,estimation,,rule 2 floor,False,True,False
+UNG,89,straddle,2014-09-22,estimation,A and B,,True,False,False
+UNG,90,strip,2014-10-20,estimation,A and B,,True,True,False
+UNG,90,straddle,2014-10-20,estimation,A and B,,True,False,False
+UNG,91,strip,2014-11-24,estimation,,rule 2 floor,False,True,False
+UNG,91,straddle,2014-11-24,estimation,A and B,,True,False,False
+UNG,92,strip,2014-12-22,estimation,A and B,,True,True,False
+UNG,92,straddle,2014-12-22,estimation,A and B,,True,False,False
+UNG,93,strip,2015-01-20,estimation,A and B,,True,True,False
+UNG,93,straddle,2015-01-20,estimation,A and B,,True,False,False
+UNG,94,strip,2015-02-23,estimation,,rule 2 floor,False,True,False
+UNG,94,straddle,2015-02-23,estimation,A and B,,True,False,False
+UNG,95,strip,2015-03-23,estimation,,rule 2 floor,False,True,False
+UNG,95,straddle,2015-03-23,estimation,A and B,,True,False,False
+UNG,96,strip,2015-04-20,estimation,,rule 2 floor,False,True,False
+UNG,96,straddle,2015-04-20,estimation,A and B,,True,False,False
+UNG,97,strip,2015-05-18,estimation,,rule 2 floor,False,True,False
+UNG,97,straddle,2015-05-18,estimation,A and B,,True,False,False
+UNG,98,strip,2015-06-22,estimation,,rule 2 floor,False,True,False
+UNG,98,straddle,2015-06-22,estimation,A and B,,True,False,False
+UNG,99,strip,2015-07-20,estimation,,rule 2 floor,False,True,False
+UNG,99,straddle,2015-07-20,estimation,A and B,,True,False,False
+UNG,100,strip,2015-08-24,estimation,,rule 2 floor,False,True,False
+UNG,100,straddle,2015-08-24,estimation,A and B,,True,False,False
+UNG,101,strip,2015-09-21,estimation,,rule 2 floor,False,True,False
+UNG,101,straddle,2015-09-21,estimation,A and B,,True,False,False
+UNG,102,strip,2015-10-19,estimation,,rule 2 floor,False,True,False
+UNG,102,straddle,2015-10-19,estimation,A and B,,True,False,False
+UNG,103,strip,2015-11-23,estimation,,rule 2 floor,False,True,False
+UNG,103,straddle,2015-11-23,estimation,A and B,,True,False,False
+UNG,104,strip,2015-12-21,estimation,,rule 2 floor,False,True,False
+UNG,104,straddle,2015-12-21,estimation,A and B,,True,False,False
+UNG,105,strip,2016-01-19,estimation,,rule 2 floor,False,True,False
+UNG,105,straddle,2016-01-19,estimation,A and B,,True,False,False
+UNG,106,strip,2016-02-22,estimation,,rule 2 floor,False,True,False
+UNG,106,straddle,2016-02-22,estimation,A and B,,True,False,False
+UNG,107,strip,2016-03-21,estimation,,rule 2 floor,False,True,False
+UNG,107,straddle,2016-03-21,estimation,A and B,,True,False,False
+UNG,108,strip,2016-04-18,estimation,,rule 2 floor,False,True,False
+UNG,108,straddle,2016-04-18,estimation,A and B,,True,False,False
+UNG,109,strip,2016-05-23,estimation,,rule 2 floor,False,True,False
+UNG,109,straddle,2016-05-23,estimation,A and B,,True,False,False
+UNG,110,strip,2016-06-20,estimation,,rule 2 floor,False,True,False
+UNG,110,straddle,2016-06-20,estimation,A and B,,True,False,False
+UNG,111,strip,2016-07-18,estimation,,rule 2 floor,False,True,False
+UNG,111,straddle,2016-07-18,estimation,A and B,,True,False,False
+UNG,112,strip,2016-08-22,estimation,,rule 2 floor,False,True,False
+UNG,112,straddle,2016-08-22,estimation,A and B,,True,False,False
+UNG,113,strip,2016-09-19,estimation,,rule 2 floor,False,True,False
+UNG,113,straddle,2016-09-19,estimation,A and B,,True,False,False
+UNG,114,strip,2016-10-24,estimation,,rule 2 floor,False,True,False
+UNG,114,straddle,2016-10-24,estimation,A and B,,True,False,False
+UNG,115,strip,2016-11-21,estimation,,rule 2 floor,False,True,False
+UNG,115,straddle,2016-11-21,estimation,A and B,,True,False,False
+UNG,116,strip,2016-12-19,estimation,,rule 2 floor,False,True,False
+UNG,116,straddle,2016-12-19,estimation,A and B,,True,False,False
+UNG,117,strip,2017-01-23,estimation,,rule 2 floor,False,True,False
+UNG,117,straddle,2017-01-23,estimation,A and B,,True,False,False
+UNG,118,strip,2017-02-21,estimation,,rule 2 floor,False,True,False
+UNG,118,straddle,2017-02-21,estimation,A and B,,True,False,False
+UNG,119,strip,2017-03-20,estimation,,rule 2 floor,False,True,False
+UNG,119,straddle,2017-03-20,estimation,A and B,,True,False,False
+UNG,120,strip,2017-04-24,estimation,,rule 2 floor,False,True,False
+UNG,120,straddle,2017-04-24,estimation,A and B,,True,False,False
+UNG,121,strip,2017-05-22,estimation,,rule 2 floor,False,True,False
+UNG,121,straddle,2017-05-22,estimation,A and B,,True,False,False
+UNG,122,strip,2017-06-19,estimation,,rule 2 floor,False,True,False
+UNG,122,straddle,2017-06-19,estimation,A and B,,True,False,False
+UNG,123,strip,2017-07-24,estimation,,section 3 filters,False,False,False
+UNG,123,straddle,2017-07-24,estimation,A and B,,True,False,False
+UNG,124,strip,2017-08-21,estimation,,rule 2 floor,False,True,False
+UNG,124,straddle,2017-08-21,estimation,A and B,,True,False,False
+UNG,125,strip,2017-09-18,estimation,,rule 2 floor,False,True,False
+UNG,125,straddle,2017-09-18,estimation,A and B,,True,False,False
+UNG,126,strip,2017-10-23,estimation,,section 3 filters,False,False,False
+UNG,126,straddle,2017-10-23,estimation,A and B,,True,False,False
+UNG,127,strip,2017-11-20,estimation,,rule 2 floor,False,True,False
+UNG,127,straddle,2017-11-20,estimation,A and B,,True,False,False
+UNG,128,strip,2017-12-18,estimation,,section 3 filters,False,False,False
+UNG,128,straddle,2017-12-18,estimation,,rule 5 truncated,False,False,True
+UNG,129,strip,2018-01-22,estimation,,rule 2 floor,False,True,False
+UNG,129,straddle,2018-01-22,estimation,A and B,,True,False,False
+UNG,130,strip,2018-02-20,estimation,A and B,,True,True,False
+UNG,130,straddle,2018-02-20,estimation,A and B,,True,False,False
+UNG,131,strip,2018-03-19,estimation,,rule 2 floor,False,True,False
+UNG,131,straddle,2018-03-19,estimation,A and B,,True,False,False
+UNG,132,strip,2018-04-23,estimation,,rule 2 floor,False,True,False
+UNG,132,straddle,2018-04-23,estimation,A and B,,True,False,False
+UNG,133,strip,2018-05-21,estimation,,rule 2 floor,False,True,False
+UNG,133,straddle,2018-05-21,estimation,A and B,,True,False,False
+UNG,134,strip,2018-06-18,estimation,,rule 2 floor,False,True,False
+UNG,134,straddle,2018-06-18,estimation,A and B,,True,False,False
+UNG,135,strip,2018-07-23,estimation,,rule 2 floor,False,True,False
+UNG,135,straddle,2018-07-23,estimation,A and B,,True,False,False
+UNG,136,strip,2018-08-20,estimation,,rule 2 floor,False,True,False
+UNG,136,straddle,2018-08-20,estimation,A and B,,True,False,False
+UNG,137,strip,2018-09-24,estimation,,rule 2 floor,False,True,False
+UNG,137,straddle,2018-09-24,estimation,A and B,,True,False,False
+UNG,138,strip,2018-10-22,estimation,A and B,,True,True,False
+UNG,138,straddle,2018-10-22,estimation,A and B,,True,False,False
+UNG,139,strip,2018-11-19,estimation,,rule 2 floor,False,True,False
+UNG,139,straddle,2018-11-19,estimation,A and B,,True,False,False
+UNG,140,strip,2018-12-24,estimation,A and B,,True,True,False
+UNG,140,straddle,2018-12-24,estimation,A and B,,True,False,False
+UNG,141,strip,2019-01-22,estimation,A and B,,True,True,False
+UNG,141,straddle,2019-01-22,estimation,A and B,,True,False,False
+UNG,142,strip,2019-02-19,estimation,,rule 2 floor,False,True,False
+UNG,142,straddle,2019-02-19,estimation,A and B,,True,False,False
+UNG,143,strip,2019-03-18,estimation,,rule 2 floor,False,True,False
+UNG,143,straddle,2019-03-18,estimation,A and B,,True,False,False
+UNG,144,strip,2019-04-22,estimation,,rule 2 floor,False,True,False
+UNG,144,straddle,2019-04-22,estimation,A and B,,True,False,False
+UNG,145,strip,2019-05-20,estimation,,rule 2 floor,False,True,False
+UNG,145,straddle,2019-05-20,estimation,A and B,,True,False,False
+UNG,146,strip,2019-06-24,estimation,A and B,,True,True,False
+UNG,146,straddle,2019-06-24,estimation,A and B,,True,False,False
+UNG,147,strip,2019-07-22,estimation,,rule 2 floor,False,True,False
+UNG,147,straddle,2019-07-22,estimation,A and B,,True,False,False
+UNG,148,strip,2019-08-19,estimation,A and B,,True,True,False
+UNG,148,straddle,2019-08-19,estimation,A and B,,True,False,False
+UNG,149,strip,2019-09-23,estimation,A and B,,True,True,False
+UNG,149,straddle,2019-09-23,estimation,A and B,,True,False,False
+UNG,150,strip,2019-10-21,estimation,,rule 2 floor,False,True,False
+UNG,150,straddle,2019-10-21,estimation,A and B,,True,False,False
+UNG,151,strip,2019-11-18,estimation,A and B,,True,True,False
+UNG,151,straddle,2019-11-18,estimation,A and B,,True,False,False
+UNG,152,strip,2019-12-23,estimation,A and B,,True,True,False
+UNG,152,straddle,2019-12-23,estimation,A and B,,True,False,False
+UNG,153,strip,2020-01-21,estimation,,rule 2 floor,False,True,False
+UNG,153,straddle,2020-01-21,estimation,A and B,,True,False,False
+UNG,154,strip,2020-02-24,estimation,,rule 2 floor,False,True,False
+UNG,154,straddle,2020-02-24,estimation,A and B,,True,False,False
+UNG,155,strip,2020-03-23,estimation,,rule 2 floor,False,True,False
+UNG,155,straddle,2020-03-23,estimation,A and B,,True,False,False
+UNG,156,strip,2020-04-20,estimation,A and B,,True,True,False
+UNG,156,straddle,2020-04-20,estimation,A and B,,True,False,False
+UNG,157,strip,2020-05-18,estimation,A and B,,True,True,False
+UNG,157,straddle,2020-05-18,estimation,A and B,,True,False,False
+UNG,158,strip,2020-06-22,estimation,A and B,,True,True,False
+UNG,158,straddle,2020-06-22,estimation,A and B,,True,False,False
+UNG,159,strip,2020-07-20,estimation,A and B,,True,True,False
+UNG,159,straddle,2020-07-20,estimation,A and B,,True,False,False
+UNG,160,strip,2020-08-24,estimation,A and B,,True,True,False
+UNG,160,straddle,2020-08-24,estimation,A and B,,True,False,False
+UNG,161,strip,2020-09-21,estimation,A and B,,True,True,False
+UNG,161,straddle,2020-09-21,estimation,A and B,,True,False,False
+UNG,162,strip,2020-10-19,estimation,A and B,,True,True,False
+UNG,162,straddle,2020-10-19,estimation,A and B,,True,False,False
+UNG,163,strip,2020-11-23,estimation,,rule 2 floor,False,True,False
+UNG,163,straddle,2020-11-23,estimation,A and B,,True,False,False
+UNG,164,strip,2020-12-21,estimation,,rule 2 floor,False,True,False
+UNG,164,straddle,2020-12-21,estimation,A and B,,True,False,False
+UNG,165,strip,2021-01-19,estimation,,rule 2 floor,False,True,False
+UNG,165,straddle,2021-01-19,estimation,A and B,,True,False,False
+UNG,166,strip,2021-02-22,estimation,,rule 2 floor,False,True,False
+UNG,166,straddle,2021-02-22,estimation,A and B,,True,False,False
+UNG,167,strip,2021-03-22,estimation,,rule 2 floor,False,True,False
+UNG,167,straddle,2021-03-22,estimation,A and B,,True,False,False
+UNG,168,strip,2021-04-19,estimation,,rule 2 floor,False,True,False
+UNG,168,straddle,2021-04-19,estimation,A and B,,True,False,False
+UNG,169,strip,2021-05-24,estimation,,rule 2 floor,False,True,False
+UNG,169,straddle,2021-05-24,estimation,A and B,,True,False,False
+UNG,170,strip,2021-06-21,estimation,,rule 2 floor,False,True,False
+UNG,170,straddle,2021-06-21,estimation,A and B,,True,False,False
+UNG,171,strip,2021-07-19,estimation,,rule 2 floor,False,True,False
+UNG,171,straddle,2021-07-19,estimation,A and B,,True,False,False
+UNG,172,strip,2021-08-23,estimation,,rule 2 floor,False,True,False
+UNG,172,straddle,2021-08-23,estimation,A and B,,True,False,False
+UNG,173,strip,2021-09-20,estimation,A and B,,True,True,False
+UNG,173,straddle,2021-09-20,estimation,A and B,,True,False,False
+UNG,174,strip,2021-10-18,estimation,A and B,,True,True,False
+UNG,174,straddle,2021-10-18,estimation,A and B,,True,False,False
+UNG,175,strip,2021-11-22,estimation,,rule 2 floor,False,True,False
+UNG,175,straddle,2021-11-22,estimation,A and B,,True,False,False
+UNG,176,strip,2021-12-20,estimation,A and B,,True,True,False
+UNG,176,straddle,2021-12-20,estimation,A and B,,True,False,False
+UNG,177,strip,2022-01-24,holdout,C,,True,True,False
+UNG,177,straddle,2022-01-24,holdout,C,,True,False,False
+UNG,178,strip,2022-02-22,holdout,C,,True,True,False
+UNG,178,straddle,2022-02-22,holdout,C,,True,False,False
+UNG,179,strip,2022-03-21,holdout,C,,True,True,False
+UNG,179,straddle,2022-03-21,holdout,C,,True,False,False
+UNG,180,strip,2022-04-18,holdout,,rule 2 floor,False,True,False
+UNG,180,straddle,2022-04-18,holdout,C,,True,False,False
+UNG,181,strip,2022-05-23,holdout,,rule 2 floor,False,True,False
+UNG,181,straddle,2022-05-23,holdout,C,,True,False,False
+UNG,182,strip,2022-06-21,holdout,C,,True,True,False
+UNG,182,straddle,2022-06-21,holdout,C,,True,False,False
+UNG,183,strip,2022-07-18,holdout,C,,True,True,False
+UNG,183,straddle,2022-07-18,holdout,C,,True,False,False
+UNG,184,strip,2022-08-22,holdout,,rule 2 floor,False,True,False
+UNG,184,straddle,2022-08-22,holdout,C,,True,False,False
+UNG,185,strip,2022-09-19,holdout,C,,True,True,False
+UNG,185,straddle,2022-09-19,holdout,C,,True,False,False
+UNG,186,strip,2022-10-24,holdout,,rule 2 floor,False,True,False
+UNG,186,straddle,2022-10-24,holdout,C,,True,False,False
+UNG,187,strip,2022-11-21,holdout,C,,True,True,False
+UNG,187,straddle,2022-11-21,holdout,C,,True,False,False
+UNG,188,strip,2022-12-19,holdout,C,,True,True,False
+UNG,188,straddle,2022-12-19,holdout,C,,True,False,False
+UNG,189,strip,2023-01-23,holdout,C,,True,True,False
+UNG,189,straddle,2023-01-23,holdout,C,,True,False,False
+UNG,190,strip,2023-02-21,holdout,,rule 2 floor,False,True,False
+UNG,190,straddle,2023-02-21,holdout,C,,True,False,False
+UNG,191,strip,2023-03-20,holdout,,rule 2 floor,False,True,False
+UNG,191,straddle,2023-03-20,holdout,C,,True,False,False
+UNG,192,strip,2023-04-24,holdout,,rule 2 floor,False,True,False
+UNG,192,straddle,2023-04-24,holdout,C,,True,False,False
+UNG,193,strip,2023-05-22,holdout,,rule 2 floor,False,True,False
+UNG,193,straddle,2023-05-22,holdout,C,,True,False,False
+UNG,194,strip,2023-06-20,holdout,,rule 2 floor,False,True,False
+UNG,194,straddle,2023-06-20,holdout,C,,True,False,False
+UNG,195,strip,2023-07-24,holdout,,rule 2 floor,False,True,False
+UNG,195,straddle,2023-07-24,holdout,C,,True,False,False
+UNG,196,strip,2023-08-21,holdout,,rule 2 floor,False,True,False
+UNG,196,straddle,2023-08-21,holdout,C,,True,False,False
+UNG,197,strip,2023-09-18,holdout,,rule 2 floor,False,True,False
+UNG,197,straddle,2023-09-18,holdout,C,,True,False,False
+UNG,198,strip,2023-10-23,holdout,,rule 2 floor,False,True,False
+UNG,198,straddle,2023-10-23,holdout,C,,True,False,False
+UNG,199,strip,2023-11-20,holdout,,rule 2 floor,False,True,False
+UNG,199,straddle,2023-11-20,holdout,C,,True,False,False
+UNG,200,strip,2023-12-18,holdout,,rule 2 floor,False,True,False
+UNG,200,straddle,2023-12-18,holdout,C,,True,False,False
+UNG,201,strip,2024-01-22,holdout,,rule 2 floor,False,False,True
+UNG,201,straddle,2024-01-22,holdout,,rule 5 truncated,False,False,True
+UNG,202,strip,2024-02-20,holdout,C,,True,True,False
+UNG,202,straddle,2024-02-20,holdout,C,,True,False,False
+UNG,203,strip,2024-03-18,holdout,C,,True,True,False
+UNG,203,straddle,2024-03-18,holdout,C,,True,False,False
+UNG,204,strip,2024-04-22,holdout,C,,True,True,False
+UNG,204,straddle,2024-04-22,holdout,C,,True,False,False
+UNG,205,strip,2024-05-20,holdout,C,,True,True,False
+UNG,205,straddle,2024-05-20,holdout,C,,True,False,False
+UNG,206,strip,2024-06-24,holdout,C,,True,True,False
+UNG,206,straddle,2024-06-24,holdout,C,,True,False,False
+UNG,207,strip,2024-07-22,holdout,C,,True,True,False
+UNG,207,straddle,2024-07-22,holdout,C,,True,False,False
+UNG,208,strip,2024-08-19,holdout,C,,True,True,False
+UNG,208,straddle,2024-08-19,holdout,C,,True,False,False
+UNG,209,strip,2024-09-23,holdout,C,,True,True,False
+UNG,209,straddle,2024-09-23,holdout,C,,True,False,False
+UNG,210,strip,2024-10-21,holdout,C,,True,True,False
+UNG,210,straddle,2024-10-21,holdout,C,,True,False,False
+UNG,211,strip,2024-11-18,holdout,C,,True,True,False
+UNG,211,straddle,2024-11-18,holdout,C,,True,False,False
+UNG,212,strip,2024-12-23,holdout,C,,True,True,False
+UNG,212,straddle,2024-12-23,holdout,C,,True,False,False
+UNG,213,strip,2025-01-21,holdout,C,,True,True,False
+UNG,213,straddle,2025-01-21,holdout,C,,True,False,False
+UNG,214,strip,2025-02-24,holdout,C,,True,True,False
+UNG,214,straddle,2025-02-24,holdout,C,,True,False,False
+UNG,215,strip,2025-03-24,holdout,C,,True,True,False
+UNG,215,straddle,2025-03-24,holdout,C,,True,False,False
+UNG,216,strip,2025-04-21,holdout,,rule 2 floor,False,True,False
+UNG,216,straddle,2025-04-21,holdout,C,,True,False,False
+UNG,217,strip,2025-05-19,holdout,,rule 2 floor,False,True,False
+UNG,217,straddle,2025-05-19,holdout,C,,True,False,False
+UNG,218,strip,2025-06-23,holdout,C,,True,True,False
+UNG,218,straddle,2025-06-23,holdout,C,,True,False,False
+UNG,219,strip,2025-07-21,holdout,,rule 2 floor,False,True,False
+UNG,219,straddle,2025-07-21,holdout,C,,True,False,False

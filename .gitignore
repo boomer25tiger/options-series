@@ -1,9 +1,10 @@
 items/*/data/
-items/*/output/
+items/*/output/*
 probe/
 scratchpad/
 *.parquet
 *.csv
+!items/item3_short_variance/output/*.csv
 *.pkl
 .DS_Store
 __pycache__/

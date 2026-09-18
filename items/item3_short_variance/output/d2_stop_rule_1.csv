@@ -1,0 +1,13 @@
+ticker,arm,rule,estimation_cycles,passing,share,floor,drops_from_family
+GLD,strip,section 3,163,163,1.0,0.8,False
+GLD,strip,section 3 and rule 2 floor,163,163,1.0,0.8,False
+GLD,straddle,section 3,163,163,1.0,0.8,False
+SLV,strip,section 3,157,157,1.0,0.8,False
+SLV,strip,section 3 and rule 2 floor,157,73,0.46496815286624205,0.8,True
+SLV,straddle,section 3,157,157,1.0,0.8,False
+UNG,strip,section 3,176,165,0.9375,0.8,False
+UNG,strip,section 3 and rule 2 floor,176,36,0.20454545454545456,0.8,True
+UNG,straddle,section 3,176,170,0.9659090909090909,0.8,False
+USO,strip,section 3,176,176,1.0,0.8,False
+USO,strip,section 3 and rule 2 floor,176,123,0.6988636363636364,0.8,True
+USO,straddle,section 3,176,175,0.9943181818181818,0.8,False

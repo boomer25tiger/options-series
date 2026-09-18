@@ -1,0 +1,17 @@
+ticker,arm,window,cycles,section 3 filters,rule 2 floor,rule 3 straddle distance,rule 4 missing return,rule 5 truncated,entering,robustness_sample
+GLD,straddle,estimation,163,0,0,0,0,0,163,0
+GLD,straddle,holdout,43,0,0,0,0,0,43,0
+GLD,strip,estimation,163,0,0,0,0,0,163,163
+GLD,strip,holdout,43,0,0,0,0,0,43,43
+SLV,straddle,estimation,157,0,0,0,0,0,157,0
+SLV,straddle,holdout,43,0,0,0,0,0,43,0
+SLV,strip,estimation,157,0,84,0,0,0,73,157
+SLV,strip,holdout,43,0,1,0,0,0,42,43
+UNG,straddle,estimation,176,0,0,6,0,2,168,0
+UNG,straddle,holdout,43,0,0,0,0,1,42,0
+UNG,strip,estimation,176,11,129,0,0,0,36,163
+UNG,strip,holdout,43,0,19,0,0,0,24,42
+USO,straddle,estimation,176,0,0,1,0,0,175,0
+USO,straddle,holdout,43,0,0,0,0,0,43,0
+USO,strip,estimation,176,0,53,0,0,1,122,175
+USO,strip,holdout,43,0,0,0,0,0,43,43

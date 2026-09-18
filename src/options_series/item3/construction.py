@@ -14,8 +14,9 @@ them before it read any quote.
   curve date.
 - Strip quantities run in proportion to w_i = ΔK_i / K_i², and the call and the put at
   K_0 share its weight equally, which prices K_0 at the average of the two mids.
-- The traded span on each side runs in log strike from F, ln(F / lowest strike) below
-  and ln(highest strike / F) above, in units of σ_ATM √T.
+- K_0 is the highest paired strike at or below F (amendment A4).
+- The traded span on each side runs in log-moneyness from K_0, ln(K_0 / lowest strike)
+  below and ln(highest strike / K_0) above, in units of σ_ATM √T (amendment A11).
 - Flat-tail extrapolation inverts each strip mid to a Black volatility on the parity
   forward, takes the mean of the two at K_0, interpolates linearly in strike and holds
   the edge volatility flat beyond the outermost listed strike, on item 2's 1,000-strike
@@ -210,7 +211,7 @@ def build_entry(
             (0.5 * (straddle.best_offer - straddle.best_bid)).sum()
         )
 
-    below = paired[paired < forward]
+    below = paired[paired <= forward]
     if not len(below):
         record["strip_status"] = NO_K0
         return record, empty, straddle
@@ -262,10 +263,10 @@ def build_entry(
     )
 
     scale = record["sigma_atm"] * sqrt(years)
-    record["span_put"] = np.log(forward / strikes[0]) / scale
-    record["span_call"] = np.log(strikes[-1] / forward) / scale
-    record["span_put_price"] = (forward - strikes[0]) / forward / scale
-    record["span_call_price"] = (strikes[-1] - forward) / forward / scale
+    record["span_put"] = np.log(k0 / strikes[0]) / scale
+    record["span_call"] = np.log(strikes[-1] / k0) / scale
+    record["span_put_price"] = (k0 - strikes[0]) / k0 / scale
+    record["span_call_price"] = (strikes[-1] - k0) / k0 / scale
     record["floor_pass"] = bool(
         len(put_strikes) >= STRIP_MIN_STRIKES
         and len(call_strikes) >= STRIP_MIN_STRIKES

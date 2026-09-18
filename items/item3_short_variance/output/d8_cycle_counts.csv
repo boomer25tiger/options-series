@@ -1,0 +1,19 @@
+item,measured,spec,agrees
+GLD estimation cycles,163,163,True
+GLD holdout cycles,43,43,True
+GLD first entry,2008-06-23,2008-06-23,True
+SLV estimation cycles,157,157,True
+SLV holdout cycles,43,43,True
+SLV first entry,2008-12-22,2008-12-22,True
+UNG estimation cycles,176,176,True
+UNG holdout cycles,43,43,True
+UNG first entry,2007-05-21,2007-05-21,True
+USO estimation cycles,176,176,True
+USO holdout cycles,43,43,True
+USO first entry,2007-05-21,2007-05-21,True
+pooled estimation cycles,176,176,True
+pooled holdout cycles,43,43,True
+last estimation entry,2021-12-20,2021-12-20,True
+first holdout entry,2022-01-24,2022-01-24,True
+last holdout entry,2025-07-21,2025-07-21,True
+last holdout expiration,2025-08-15,2025-08-15,True

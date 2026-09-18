@@ -1,0 +1,5 @@
+ticker,item3_rows,cached_rows,cached_share,cache_duplicate_keys,uncached_rows_under_7_days,uncached_rows_7_days_or_more,cached_quotes_agree_share,cached_iv_agree_share,item3_pull_bytes,incremental_on_cached_rows_bytes,incremental_uncached_rows_bytes,cache_first_date,cache_min_days_to_expiry,incremental_total_bytes
+GLD,1114637,854395,0.7665230922712954,0,260242,0,1.0,1.0,38340672,17812184,6803740,2008-06-20,7,24615924
+SLV,428727,331130,0.7723563013292841,0,97597,0,1.0,1.0,15526129,7696364,2418648,2008-12-19,7,10115012
+UNG,332991,254153,0.7632428504073684,0,78838,0,1.0,1.0,12077984,6299546,1889208,2007-05-18,7,8188754
+USO,510399,392621,0.769243278297959,0,117778,0,1.0,1.0,19256187,9428691,3159307,2007-05-18,7,12587998
