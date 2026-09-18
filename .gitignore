@@ -12,3 +12,5 @@ __pycache__/
 *.egg-info/
 scripts/output/
 storage_manifest.yaml
+scripts/storage_ledger.py
+scripts/raw_hashes.py

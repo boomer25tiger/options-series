@@ -244,7 +244,7 @@ Reproducing the study requires a WRDS account with OptionMetrics access and a ~/
     pip install -r requirements.txt
     python -m options_series.item3.run
 
-The run pulls daily fund prices, the zero curve, the at-the-money surface nodes and a daily count of contracts by settlement type, then every contract on each cycle's expiry from the day before entry through expiration, about 90 MB of disk. It then builds both arms and writes every figure and table under items/item3_short_variance/output/. Item 3 reads the model-free series written by python -m options_series.item1.run, which runs first, and python -m options_series.item3.run --skip-pull rebuilds everything from the data on disk.
+The run pulls daily fund prices, the zero curve, the at-the-money surface nodes and a daily count of contracts by settlement type, then every contract on each cycle's expiry from the day before entry through expiration. It then builds both arms and writes every figure and table under items/item3_short_variance/output/. Item 3 reads the model-free series written by python -m options_series.item1.run, which runs first, and python -m options_series.item3.run --skip-pull rebuilds everything from the data on disk.
 
 ## References
 
