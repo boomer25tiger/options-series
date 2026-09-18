@@ -15,6 +15,9 @@ root classifies each leaf by the longest matching path, and a leaf no entry matc
 stays unknown. A leaf holding purchased Databento files, whose names the DATABENTO
 pattern matches, is irreplaceable unless an entry names it.
 
+A regenerable leaf the manifest marks keep stays out of the reclaim table, and leaves
+unrelated to the quant projects report in their own block.
+
 The reclaim table ranks regenerable leaves by megabytes freed per minute of
 regeneration, so large leaves that rebuild fast come first, with a running total. Each
 run writes the report to scripts/output/storage_ledger.txt, which git ignores, and prints
@@ -88,31 +91,50 @@ class Directory:
     named: bool = False
 
 
-def read_manifest(path: Path) -> list[dict[str, str]]:
-    """Entries of the manifest, a top-level `entries:` list of flat mappings in which
-    each `- key: value` line opens an entry and each indented `key: value` line continues
-    it. The parser skips comments and blank lines and strips quotes from values."""
-    entries: list[dict[str, str]] = []
+CLASSIFICATIONS = ("regenerable", "irreplaceable", "unrelated", "unknown")
+
+
+def _scalar(text: str) -> str | dict[str, str]:
+    """A manifest value, a flow mapping such as {a: 1, b: 2} read as a dict of strings
+    and anything else as a string without its quotes."""
+    text = text.strip()
+    if text.startswith("{") and text.endswith("}"):
+        pairs = [part.split(": ", 1) for part in text[1:-1].split(", ") if part]
+        return {key.strip(): value.strip().strip("'\"") for key, value in pairs}
+    return text.strip("'\"")
+
+
+def read_manifest(path: Path) -> list[dict]:
+    """Entries of the manifest, a top-level `entries:` list of mappings indented two
+    spaces per level. A `key:` line with no value opens a nested mapping; a value in
+    braces reads as a flow mapping. The reader skips comments and blank lines, checks each
+    entry's classification and requires a command and a time on regenerable entries."""
+    entries: list[dict] = []
+    stack: list[tuple[int, dict]] = []
     for number, raw in enumerate(path.read_text().splitlines(), 1):
-        line = raw.split(" #")[0].rstrip() if not raw.lstrip().startswith("#") else ""
-        if not line or line == "entries:":
+        line = raw.split(" #")[0].rstrip()
+        if not line.strip() or line.lstrip().startswith("#") or line == "entries:":
             continue
-        match = re.fullmatch(r"\s*(- )?([a-z_]+):\s*(.*)", line)
-        if not match:
-            raise ValueError(f"{path.name} line {number}: cannot read {raw!r}")
-        opens, key, value = match.groups()
-        if opens:
+        indent = len(line) - len(line.lstrip())
+        body = line.strip()
+        if body.startswith("- "):
             entries.append({})
-        if not entries:
-            raise ValueError(f"{path.name} line {number}: key outside an entry")
-        entries[-1][key] = value.strip().strip("'\"")
+            stack = [(indent + 2, entries[-1])]
+            indent, body = indent + 2, body[2:]
+        while stack and stack[-1][0] > indent:
+            stack.pop()
+        key, separator, value = body.partition(":")
+        if not stack or stack[-1][0] != indent or not separator:
+            raise ValueError(f"{path.name} line {number}: cannot read {raw!r}")
+        container = stack[-1][1]
+        if value.strip():
+            container[key] = _scalar(value)
+        else:
+            container[key] = {}
+            stack.append((indent + 2, container[key]))
     for entry in entries:
         entry["resolved"] = str(Path(os.path.expanduser(entry["path"])))
-        if entry.get("classification") not in (
-            "regenerable",
-            "irreplaceable",
-            "unknown",
-        ):
+        if entry.get("classification") not in CLASSIFICATIONS:
             raise ValueError(f"bad classification in manifest entry {entry['path']}")
         if entry["classification"] == "regenerable" and not (
             entry.get("command") and entry.get("regeneration_minutes")
@@ -268,6 +290,18 @@ def classify(
     return {"classification": "unknown", "command": "", "regeneration_minutes": ""}
 
 
+def bucket(entry: dict) -> str:
+    """Reporting bucket of a classified leaf, with a regenerable leaf that the manifest
+    marks keep held apart from the reclaimable ones."""
+    if entry["classification"] == "regenerable" and entry.get("keep") == "true":
+        return "kept"
+    return entry["classification"]
+
+
+BUCKETS = ("regenerable", "kept", "irreplaceable", "unrelated", "unknown")
+BUCKET_HEADERS = [f"{name} MB" for name in BUCKETS]
+
+
 def megabytes(size: int) -> str:
     """Size in MB with thousands separators."""
     return f"{size / 1024**2:,.1f}"
@@ -337,16 +371,14 @@ def main() -> None:
         if record.databento:
             databento_leaves.add(leaf)
 
-    reclaim, irreplaceable, unknown = [], [], []
+    rows_by_bucket: dict[str, list] = {name: [] for name in BUCKETS}
     by_root: dict[Path, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     for (root, leaf), stats in leaves.items():
         entry = classify(leaf, leaf in databento_leaves, manifest)
-        kind = entry["classification"]
+        kind = bucket(entry)
         by_root[root][kind] += stats.size
-        row = (root, leaf, stats, entry)
-        {"regenerable": reclaim, "irreplaceable": irreplaceable, "unknown": unknown}[
-            kind
-        ].append(row)
+        rows_by_bucket[kind].append((root, leaf, stats, entry))
+    reclaim = rows_by_bucket["regenerable"]
 
     for root in roots:
         lines += [
@@ -423,14 +455,37 @@ def main() -> None:
         ],
         reclaim_rows,
     )
+
+    def largest(name: str, count: int | None = None) -> list:
+        return sorted(rows_by_bucket[name], key=lambda row: -row[2].size)[:count]
+
+    lines += ["", "Regenerable but kept by the manifest, no reclaim suggestion"]
+    lines += table(
+        ["leaf", "MB", "reason"],
+        [
+            [str(leaf), megabytes(stats.size), entry.get("basis", "")]
+            for _, leaf, stats, entry in largest("kept")
+        ],
+    )
     lines += ["", "Irreplaceable, no reclaim suggestion"]
     lines += table(
         ["leaf", "MB", "reason"],
         [
             [str(leaf), megabytes(stats.size), entry.get("basis", "")]
-            for _, leaf, stats, entry in sorted(
-                irreplaceable, key=lambda row: -row[2].size
-            )
+            for _, leaf, stats, entry in largest("irreplaceable")
+        ],
+    )
+    lines += ["", "Unrelated to the quant projects, largest 30"]
+    lines += table(
+        ["leaf", "MB", "replaceable", "rebuild with"],
+        [
+            [
+                str(leaf),
+                megabytes(stats.size),
+                entry.get("replaceable", ""),
+                entry.get("command", ""),
+            ]
+            for _, leaf, stats, entry in largest("unrelated", 30)
         ],
     )
     lines += ["", "Unknown, largest 25"]
@@ -438,7 +493,7 @@ def main() -> None:
         ["leaf", "MB"],
         [
             [str(leaf), megabytes(stats.size)]
-            for _, leaf, stats, _ in sorted(unknown, key=lambda row: -row[2].size)[:25]
+            for _, leaf, stats, _ in largest("unknown", 25)
         ],
     )
 
@@ -461,9 +516,7 @@ def main() -> None:
             "inside root",
             "own MB",
             "with nested MB",
-            "regenerable MB",
-            "irreplaceable MB",
-            "unknown MB",
+            *BUCKET_HEADERS,
         ],
         [
             [
@@ -471,9 +524,7 @@ def main() -> None:
                 str(parent_of[root] or ""),
                 megabytes(sum(by_root[root].values())),
                 megabytes(with_nested[root]),
-                megabytes(by_root[root]["regenerable"]),
-                megabytes(by_root[root]["irreplaceable"]),
-                megabytes(by_root[root]["unknown"]),
+                *(megabytes(by_root[root][name]) for name in BUCKETS),
             ]
             for root in roots
         ],
@@ -486,35 +537,25 @@ def main() -> None:
             for (root, leaf), stats in leaves.items():
                 if root == REPOSITORY and leaf.is_relative_to(part):
                     kinds[
-                        classify(leaf, leaf in databento_leaves, manifest)[
-                            "classification"
-                        ]
+                        bucket(classify(leaf, leaf in databento_leaves, manifest))
                     ] += stats.size
             parts.append(
                 [
                     label,
                     megabytes(sum(kinds.values())),
-                    megabytes(kinds["regenerable"]),
-                    megabytes(kinds["irreplaceable"]),
-                    megabytes(kinds["unknown"]),
+                    *(megabytes(kinds[name]) for name in BUCKETS),
                 ]
             )
         lines += ["", f"{REPOSITORY.name} by part"]
-        lines += table(
-            ["part", "total MB", "regenerable MB", "irreplaceable MB", "unknown MB"],
-            parts,
-        )
+        lines += table(["part", "total MB", *BUCKET_HEADERS], parts)
     everything = defaultdict(int)
     for root in roots:
         for kind, size in by_root[root].items():
             everything[kind] += size
     lines += [
         "",
-        (
-            f"All roots: regenerable {megabytes(everything['regenerable'])} MB, "
-            f"irreplaceable {megabytes(everything['irreplaceable'])} MB, "
-            f"unknown {megabytes(everything['unknown'])} MB"
-        ),
+        "All roots: "
+        + ", ".join(f"{name} {megabytes(everything[name])} MB" for name in BUCKETS),
     ]
 
     report = "\n".join(lines) + "\n"
