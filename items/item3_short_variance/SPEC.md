@@ -447,8 +447,10 @@ Checked before freeze, Sep 17 2026.
 **Prokopczuk, Symeonidis and Wese Simen (2017, JBF 81, 136-149).** Their sample is American
 options on commodity futures from the Commodity Research Bureau, January 1984 to July 2011, 21
 commodities, 60-day synthetic variance swaps held to expiry with no delta hedge, and costs entered
-as assumed haircuts. Item 1 and item 3 use ETF options from OptionMetrics over 2007 to 2025 at 30
-and 91 days with daily delta hedging and a quoted-spread sweep. The instrument, vendor, sample
+as assumed haircuts. Item 1 measures premia on ETF options from OptionMetrics at 30 and 91 days
+over December 2008 to August 2025. Item 3 trades the same ETF options on a monthly expiration
+cycle over 2007 to 2025, entering 24 to 32 calendar days before expiration with a 25-day median,
+with daily delta hedging and a quoted-spread sweep. The instrument, vendor, sample
 period, horizon, hedging protocol and cost method all differ, and the samples do not overlap after
 2011. Neither item is an update or a replication of that paper, and both state the instrument
 difference explicitly. The difference is asset-dependent, since GLD and SLV track spot bullion
@@ -488,10 +490,11 @@ the wild cluster bootstrap.
 1. An ETF with fewer than 80 percent of its estimation cycles passing the section 3 filters drops
    from that arm's family, the drop is recorded, and the test count falls accordingly. Floors apply
    per arm, so an ETF may remain in one arm and drop from the other.
-2. Struck by amendment A1. ~~A strip cycle requires at least 6 strikes with two-sided quotes on each
-   side of K_0 and a traded span of at least 1.5 σ_ATM √T on each side of F. A cycle failing either
-   condition is excluded for the strip arm and counted. The floor is a viability bar; the section 8
-   replication shortfall, not the floor, governs how a passing cycle is interpreted.~~
+2. A strip cycle requires at least 6 strikes with two-sided quotes on each side of K_0 and a traded
+   span of at least 1.5 σ_ATM √T in log-moneyness on each side of K_0, measured as
+   ln(K_0 / lowest traded strike) below and ln(highest traded strike / K_0) above. A cycle failing
+   either condition is excluded for the strip arm and counted. The floor is a viability bar; the
+   section 8 replication shortfall, not the floor, governs how a passing cycle is interpreted.
 3. A straddle cycle with no filter-passing strike within 5 percent of F is excluded for that arm
    and counted.
 4. A cycle carrying a missing return under section 4 is excluded for both arms and counted.
@@ -524,9 +527,9 @@ section 7 shows K carries no power to forecast cycle RV, a nonzero slope is repo
 rather than predictive. Power against a modest monotone effect is low at this sample size and the
 writeup says so before reporting the estimate.
 
-**N-E, data does not support the trade.** Entry quotes, straddle strike availability or return
-completeness fail the section 16 floors for one or more ETFs or one arm entirely, and the item
-reports the chain properties that block the measurement.
+**N-E, data does not support the trade.** Entry quotes, strike coverage, straddle strike
+availability or return completeness fail the section 16 floors for one or more ETFs or one arm
+entirely, and the item reports the chain properties that block the measurement.
 
 ## 18. Figures
 
