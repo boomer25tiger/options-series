@@ -75,6 +75,34 @@ def _end_label(axis: Axes, series: pd.DataFrame, text: str, color: str) -> None:
     axis.plot([last.date], [last.equity], "o", ms=4, color=color, zorder=4)
 
 
+def _panel_a(axis: Axes, primary: dict[str, pd.DataFrame], prefix: str) -> None:
+    """Pooled daily marked equity at the primary cell for both arms, with the stress
+    windows shaded."""
+    _shade(axis, label=True)
+    for arm, series in primary.items():
+        axis.plot(
+            series.date,
+            series.equity,
+            color=ARM_COLORS[arm],
+            lw=1.4,
+            zorder=3,
+            label=ARM_LABELS[arm],
+        )
+        _end_label(axis, series, ARM_LABELS[arm], ARM_COLORS[arm])
+    _style(axis)
+    axis.set_title(
+        f"{prefix}Pooled daily marked equity, k = 0.5 and c = 2 bps",
+        loc="left",
+        fontsize=11,
+        color=INK,
+    )
+    axis.set_ylabel(
+        "cumulative return per unit of entry premium", fontsize=9, color=MUTED
+    )
+    axis.legend(frameon=False, fontsize=8.5, loc="upper left", bbox_to_anchor=(0, 0.93))
+    axis.margins(x=0.06)
+
+
 def plot_equity(
     primary: dict[str, pd.DataFrame],
     fans: dict[str, dict[float, pd.DataFrame]],
@@ -86,30 +114,7 @@ def plot_equity(
     grid = figure.add_gridspec(
         2, 2, height_ratios=(1.15, 1), hspace=0.38, wspace=0.28, bottom=0.12, top=0.95
     )
-    top = figure.add_subplot(grid[0, :])
-    _shade(top, label=True)
-    for arm, series in primary.items():
-        top.plot(
-            series.date,
-            series.equity,
-            color=ARM_COLORS[arm],
-            lw=1.4,
-            zorder=3,
-            label=ARM_LABELS[arm],
-        )
-        _end_label(top, series, ARM_LABELS[arm], ARM_COLORS[arm])
-    _style(top)
-    top.set_title(
-        "A. Pooled daily marked equity, k = 0.5 and c = 2 bps",
-        loc="left",
-        fontsize=11,
-        color=INK,
-    )
-    top.set_ylabel(
-        "cumulative return per unit of entry premium", fontsize=9, color=MUTED
-    )
-    top.legend(frameon=False, fontsize=8.5, loc="upper left", bbox_to_anchor=(0, 0.93))
-    top.margins(x=0.06)
+    _panel_a(figure.add_subplot(grid[0, :]), primary, "A. ")
     for position, (arm, by_k) in enumerate(fans.items()):
         axis = figure.add_subplot(grid[1, position])
         _shade(axis, label=False)
@@ -203,5 +208,88 @@ def plot_cost_grid(means: pd.DataFrame, path: Path) -> None:
         color=INK,
     )
     figure.tight_layout()
+    _save(figure, path)
+    shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)
+
+
+def plot_pooled_equity(primary: dict[str, pd.DataFrame], path: Path) -> None:
+    """Figure 1 panel A on its own, the section figure of the writeup."""
+    figure, axis = plt.subplots(figsize=(11, 4.6))
+    _panel_a(axis, primary, "")
+    figure.text(
+        0.01,
+        0.015,
+        "Strip on rule-2-passing cycles, straddle on cycles within 5 percent of F; "
+        "truncated split cycles enter to their last valid mark. Shading marks the "
+        "section 11 stress windows.",
+        fontsize=7.5,
+        color=MUTED,
+    )
+    figure.subplots_adjust(left=0.07, right=0.9, top=0.92, bottom=0.12)
+    _save(figure, path)
+    shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)
+
+
+def plot_cost_drift(by_year: pd.DataFrame, path: Path, c_bps: float = 2.0) -> None:
+    """Breakeven k by entry year at one hedge cost, both arms, with the holdout years
+    shaded and the grid's bounds at k = 0 and k = 1 marked."""
+    column = f"breakeven_k_c{c_bps:g}"
+    figure, axis = plt.subplots(figsize=(11, 4.6))
+    holdout = by_year.loc[by_year.holdout, "entry_year"]
+    axis.axvspan(holdout.min() - 0.5, holdout.max() + 0.5, color=SHADE, lw=0, zorder=0)
+    axis.annotate(
+        "holdout",
+        (holdout.min() - 0.5, 1.0),
+        xycoords=("data", "axes fraction"),
+        xytext=(3, -11),
+        textcoords="offset points",
+        fontsize=7.5,
+        color=MUTED,
+    )
+    axis.axhline(1.0, color=MUTED, lw=0.8, ls=(0, (4, 3)), zorder=1)
+    for arm in ("strip", "straddle"):
+        rows = by_year[by_year.arm == arm].sort_values("entry_year")
+        axis.plot(
+            rows.entry_year,
+            rows[column],
+            color=ARM_COLORS[arm],
+            lw=1.6,
+            marker="o",
+            ms=5,
+            zorder=3,
+            label=ARM_LABELS[arm],
+        )
+        last = rows.iloc[-1]
+        axis.annotate(
+            ARM_LABELS[arm],
+            (last.entry_year, last[column]),
+            xytext=(6, 0),
+            textcoords="offset points",
+            va="center",
+            fontsize=8,
+            color=INK,
+        )
+    _style(axis)
+    axis.set_xticks(sorted(by_year.entry_year.unique()))
+    axis.set_xlim(by_year.entry_year.min() - 0.6, by_year.entry_year.max() + 1.4)
+    axis.set_xlabel("entry year", fontsize=9, color=MUTED)
+    axis.set_ylabel(f"breakeven k at c = {c_bps:g} bps", fontsize=9, color=MUTED)
+    axis.set_title(
+        f"Breakeven execution fraction by entry year, c = {c_bps:g} bps",
+        loc="left",
+        fontsize=11,
+        color=INK,
+    )
+    axis.legend(frameon=False, fontsize=8.5, loc="upper right")
+    figure.text(
+        0.01,
+        0.015,
+        "Pooled per entry date, then averaged over the year's entries. The dashed line "
+        "marks k = 1, the full quoted half-spread; above it the arm survives the full "
+        "half-spread, and below 0 it loses at mid.",
+        fontsize=7.5,
+        color=MUTED,
+    )
+    figure.subplots_adjust(left=0.07, right=0.93, top=0.9, bottom=0.17)
     _save(figure, path)
     shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)

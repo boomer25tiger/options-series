@@ -138,3 +138,115 @@ Jiang, G. and Tian, Y. (2005). The model-free implied volatility and its informa
 Conrad, J., Dittmar, R. and Ghysels, E. (2013). Ex ante skewness and expected stock returns. Journal of Finance 68(1), 85–124.
 Bai, J. and Perron, P. (1998). Estimating and testing linear models with multiple structural changes. Econometrica 66(1), 47–78.
 Politis, D. and Romano, J. (1994). The stationary bootstrap. Journal of the American Statistical Association 89(428), 1303–1313.
+
+# Short commodity variance: delta-hedged returns after measured costs
+
+Does a seller of the variance premium the commodity study measured keep a positive return after hedging delta daily and paying a measured share of the quoted option spread?
+
+We sold variance on GLD, SLV, USO and UNG options in monthly non-overlapping cycles from 2007 to 2025. Each cycle enters on the first trading day after a standard monthly expiration and runs to the next one, 24 to 32 calendar days with a median of 25. Two instruments run as parallel arms, a variance-swap replicating strip of out-of-the-money options weighted by ΔK/K² and an at-the-money straddle. We hedge both in shares of the fund at every close and size each so its entry mid premium equals one unit, which makes every return below a multiple of the premium sold. The strip trades a cycle only when at least six strikes with two-sided quotes sit on each side of the at-the-money strike and span 1.5 σ√T in log-moneyness, a floor that 546 of 829 computable strip cycles pass, while the straddle enters 834 of 844 cycles.
+
+Costs sweep five execution fractions k of each leg's quoted half-spread, from 0 to 1, against four hedge costs c of 0, 2, 5 and 10 basis points on every share trade, twenty cells in all. The primary cell pairs k = 0.5, which charges half the quoted half-spread, with c = 2 basis points. We registered twenty-two tests. Blocks A and B ask for a positive mean at mid and at the primary cell on each fund and on the pooled series for both arms over the estimation window. Block C tests the pooled strip mean and the slope of returns on log(K/RV21) over the holdout, which we fixed at cycles entered from 2022 onward before computing any return. Holm correction runs within each block, and a test counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level. Because Holm assumes nothing about the dependence between the two arms on one fund, the correction is conservative. The commodity study measured the premium from 2008 to 2025, so no unconditional result here is out of sample in the strict sense.
+
+![Pooled daily marked equity of the variance strip and the ATM straddle at k = 0.5 and c = 2 bps](items/item3_short_variance/figures/post_fig1.png)
+
+## Results
+
+Hedge cost shapes the strip's result more than option cost does, and no series in the held data anchors it. Over the primary estimation cycles the strip's hedge trades shares worth 92 times its entry premium on average, from 47 times on UNG to 136 times on GLD, against 52 times for the straddle. Raising c from 0 to 10 basis points lowers the pooled strip mean by 0.107 at k = 0, 2.4 times the 0.044 that raising k from 0 to 1 costs at c = 0.
+
+At the primary cell the pooled strip earns a mean of 0.122 per cycle on 172 estimation cycles, with a bootstrap 95 percent interval of 0.057 to 0.179, and clears both methods after correction. That mean sits on a median of 0.222 and a skewness of −3.76, so a typical cycle earns more than the mean and a few large losses pull it down. The worst 5 percent of cycles carry 71 percent of the cumulative loss, and the 5 percent CVaR is −1.36. GLD on 163 cycles and USO on 122 clear on their own, while SLV on 73 and UNG on 36 do not.
+
+The straddle fails at the same cell. Its pooled mean of 0.012 on 176 cycles sits on a median of 0.025 and a skewness of −1.44, with Newey-West and bootstrap p-values of 0.139 and 0.147, and no single fund clears. At mid with no hedge cost the pooled straddle earns 0.032 and clears, so the straddle collects a premium that the quoted spread and the hedge cost consume.
+
+Forty-three holdout cycles cannot resolve a small effect. On them the pooled strip mean is 0.065 with a bootstrap interval of −0.027 to 0.140. Its median is 0.166 and its skewness is −2.53. Neither method clears the mean, with p-values of 0.066 and 0.074. The O1 slope asks whether log(K/RV21) at entry orders holdout returns, and at 43 clusters it has little power against a modest monotone effect. Its estimate is −0.053 per log unit, with a clustered 95 percent interval of −0.325 to 0.219 and a wild cluster bootstrap p-value of 0.728, so O1 does not order returns in the holdout. K does forecast the cycle's realized variance, with a coefficient of 0.84 on log K and an R² of 0.80 in the diagnostic regression of log cycle RV, so the flat slope says returns do not scale with the premium's size at entry.
+
+The pooled strip's deepest drawdown at the primary cell runs 4.89 units of entry premium from 2020-02-14 to 2020-03-16, and equity regained that peak on 2021-06-09, 311 trading days after the trough. For the straddle the drawdown is 1.68 units from 2017-11-16 to 2020-03-16, recovered after 348 trading days. Daily marked equity gives an annualized Sharpe ratio of 0.70 for the strip and 0.14 for the straddle, each with a Newey-West error of 0.21. The spec named April 2020 as the stress case, and that window made money. USO's strip entered 2020-04-20, the day WTI futures settled below zero, and returned +0.494 gross up to 2020-04-28, its last mark before the fund's 1-for-8 reverse split on 2020-04-29 moved its contracts off standard terms. The worst cycle in the sample is the 2013-03-18 entry, which lost 3.09 units pooled at the primary cell as GLD lost 5.29 and SLV 3.44 in the April 2013 gold decline, and it stays the worst strip cycle in all twenty cost cells. For the straddle the worst cycle is the 2020-02-24 entry at −0.96.
+
+Breakeven k, the execution fraction at which the mean reaches zero, carries the pooled strip past the full quoted half-spread at every hedge cost in the estimation window, reaching 3.24 at 2 basis points with a bootstrap interval of 1.78 to 4.73. The pooled straddle breaks even inside the grid at 5 basis points and loses at mid at 10. Across entry years the strip's breakeven at 2 basis points falls in each holdout year, from 2.49 in 2022 to 0.28 in 2025, and the straddle's turns negative in 2024 and 2025.
+
+| block | arm | unit | n | estimate | p Newey-West | p bootstrap | verdict |
+|---|---|---|---|---|---|---|---|
+| A | strip | GLD | 163 | +0.1824 | 9.29e-06 | <0.0001 | supported |
+| A | strip | SLV | 73 | +0.1598 | 0.0279 | 0.0346 | not supported |
+| A | strip | USO | 122 | +0.1941 | 1.16e-08 | <0.0001 | supported |
+| A | strip | UNG | 36 | +0.0736 | 0.1274 | 0.1168 | not supported |
+| A | strip | pooled | 172 | +0.1653 | 2.53e-08 | <0.0001 | supported |
+| A | straddle | GLD | 163 | +0.0332 | 0.0367 | 0.0375 | not supported |
+| A | straddle | SLV | 157 | +0.0535 | 0.0039 | 0.0070 | supported |
+| A | straddle | USO | 175 | +0.0157 | 0.2084 | 0.2017 | not supported |
+| A | straddle | UNG | 168 | +0.0363 | 0.0092 | 0.0128 | not robust to inference method |
+| A | straddle | pooled | 176 | +0.0321 | 0.0019 | 0.0038 | supported |
+| B | strip | GLD | 163 | +0.1380 | 0.0006 | 0.0016 | supported |
+| B | strip | SLV | 73 | +0.1270 | 0.0642 | 0.0705 | not supported |
+| B | strip | USO | 122 | +0.1544 | 6.44e-06 | <0.0001 | supported |
+| B | strip | UNG | 36 | +0.0296 | 0.3263 | 0.3189 | not supported |
+| B | strip | pooled | 172 | +0.1216 | 3.55e-05 | <0.0001 | supported |
+| B | straddle | GLD | 163 | +0.0117 | 0.2654 | 0.2701 | not supported |
+| B | straddle | SLV | 157 | +0.0356 | 0.0373 | 0.0476 | not supported |
+| B | straddle | USO | 175 | -0.0012 | 0.5245 | 0.5258 | not supported |
+| B | straddle | UNG | 168 | +0.0151 | 0.1624 | 0.1743 | not supported |
+| B | straddle | pooled | 176 | +0.0122 | 0.1385 | 0.1465 | not supported |
+| C | strip | pooled | 43 | +0.0645 | 0.0657 | 0.0737 | not supported |
+| C | strip | O1 slope, clustered and wild bootstrap | 152 | -0.0529 | 0.6965 | 0.7282 | not supported |
+
+| arm | unit | c = 0 | c = 2 bps | c = 2 bps bootstrap interval | c = 5 bps | c = 10 bps |
+|---|---|---|---|---|---|---|
+| strip | GLD | 5.31 | 4.52 | [+1.88, +6.70] | 3.33 | 1.35 |
+| strip | SLV | 3.88 | 3.58 | [-0.65, +7.11] | 3.14 | 2.40 |
+| strip | USO | 3.67 | 3.42 | [+2.04, +5.19] | 3.05 | 2.42 |
+| strip | UNG | 1.06 | 0.93 | [-0.82, +2.93] | 0.72 | 0.39 |
+| strip | pooled | 3.72 | 3.24 | [+1.78, +4.73] | 2.52 | 1.31 |
+| straddle | GLD | 3.65 | 1.79 | [-2.34, +5.66] | negative at mid | negative at mid |
+| straddle | SLV | 3.29 | 2.69 | [+0.07, +5.43] | 1.78 | 0.27 |
+| straddle | USO | 0.94 | 0.43 | [-1.77, +2.87] | negative at mid | negative at mid |
+| straddle | UNG | 1.24 | 1.01 | [-0.08, +2.10] | 0.68 | 0.11 |
+| straddle | pooled | 1.68 | 1.14 | [-0.06, +2.47] | 0.33 | negative at mid |
+
+![Breakeven k by entry year at c = 2 bps for both arms, holdout years shaded](items/item3_short_variance/figures/fig3_cost_drift.png)
+
+| entry year | window | strip breakeven k | straddle breakeven k | strip half-spread share | straddle half-spread share |
+|---|---|---|---|---|---|
+| 2007 | estimation | 0.95 | 0.40 | 0.116 | 0.049 |
+| 2008 | estimation | -0.12 | -1.68 | 0.065 | 0.034 |
+| 2009 | estimation | 5.65 | 2.10 | 0.061 | 0.026 |
+| 2010 | estimation | 6.94 | 6.85 | 0.028 | 0.008 |
+| 2011 | estimation | 2.02 | 1.02 | 0.024 | 0.006 |
+| 2012 | estimation | 8.21 | 10.94 | 0.034 | 0.006 |
+| 2013 | estimation | -0.79 | 0.42 | 0.035 | 0.007 |
+| 2014 | estimation | 2.58 | 0.03 | 0.055 | 0.009 |
+| 2015 | estimation | 4.99 | 2.84 | 0.044 | 0.014 |
+| 2016 | estimation | 5.63 | -0.40 | 0.033 | 0.018 |
+| 2017 | estimation | 8.86 | 2.33 | 0.030 | 0.017 |
+| 2018 | estimation | 1.53 | -0.25 | 0.038 | 0.019 |
+| 2019 | estimation | 3.25 | -0.20 | 0.035 | 0.014 |
+| 2020 | estimation | 4.65 | 0.79 | 0.032 | 0.012 |
+| 2021 | estimation | 5.61 | 3.45 | 0.040 | 0.011 |
+| 2022 | holdout | 2.49 | 1.28 | 0.044 | 0.012 |
+| 2023 | holdout | 1.69 | 1.99 | 0.041 | 0.012 |
+| 2024 | holdout | 1.29 | -0.91 | 0.061 | 0.013 |
+| 2025 | holdout | 0.28 | -1.84 | 0.037 | 0.015 |
+
+In the last table the half-spread share is the median entry quoted half-spread over the entry premium across the year's cycles. The spec at items/item3_short_variance/SPEC.md holds the construction rules and the test family. Its amendments file, items/item3_short_variance/AMENDMENTS.md, separates the amendments made before any return existed, A1 to A11, from those recorded after, A12 to A22.
+
+**What's not included:** Options on the underlying futures contracts sit outside the OptionMetrics coverage used here, so the study measures a trade in ETF options. The feed ends 2025-08-29, which closes the sample in August 2025, and nothing here speaks to the period since. We do not model margin, and returns stay per unit of entry premium, so they say nothing about return on posted margin. Early exercise of the American ETF options goes unmodelled, which matters more for the strip because its weights put the largest quantities on low-strike puts. The hedge cost c enters as a sweep with no measured anchor, since the held data carries no series of execution costs for share trades in these funds.
+
+## Reproduce
+
+Reproducing the study requires a WRDS account with OptionMetrics access and a ~/.pgpass entry.
+
+    pip install -r requirements.txt
+    python -m options_series.item3.run
+
+The run pulls daily fund prices, the zero curve, the at-the-money surface nodes and a daily count of contracts by settlement type, then every contract on each cycle's expiry from the day before entry through expiration, about 86 MB on disk. It then builds both arms and writes every figure and table under items/item3_short_variance/output/. Item 3 reads the model-free series written by python -m options_series.item1.run, which runs first, and python -m options_series.item3.run --skip-pull rebuilds everything from the data on disk.
+
+## References
+
+Carr, P. and Madan, D. (1998). Towards a theory of volatility trading. In Jarrow, R. (ed.), Volatility: New Estimation Techniques for Pricing Derivatives, 417–427. London: Risk Books.
+Demeterfi, K., Derman, E., Kamal, M. and Zou, J. (1999). A guide to volatility and variance swaps. Journal of Derivatives 6(4), 9–32.
+Bakshi, G. and Kapadia, N. (2003). Delta-hedged gains and the negative market volatility risk premium. Review of Financial Studies 16(2), 527–566.
+Carr, P. and Wu, L. (2009). Variance risk premiums. Review of Financial Studies 22(3), 1311–1341.
+Goyal, A. and Saretto, A. (2009). Cross-section of option returns and volatility. Journal of Financial Economics 94(2), 310–326.
+Trolle, A. and Schwartz, E. (2010). Variance risk premia in energy commodities. Journal of Derivatives 17(3), 15–32.
+Muravyev, D. and Pearson, N. (2020). Options trading costs are lower than you think. Review of Financial Studies 33(11), 4973–5014.
+Johnson, T. (2017). Risk premia and the VIX term structure. Journal of Financial and Quantitative Analysis 52(6), 2461–2490.
+Politis, D. and Romano, J. (1994). The stationary bootstrap. Journal of the American Statistical Association 89(428), 1303–1313.
+Cameron, A., Gelbach, J. and Miller, D. (2008). Bootstrap-based improvements for inference with clustered errors. Review of Economics and Statistics 90(3), 414–427.

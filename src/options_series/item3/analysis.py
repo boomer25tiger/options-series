@@ -469,3 +469,65 @@ def convexity(frame: pd.DataFrame, name: str) -> tuple[pd.DataFrame, pd.DataFram
     series["u_bin"] = series.u_bin.astype(str)
     series["g_bin"] = series.g_bin.astype(str)
     return series, table
+
+
+def hedge_turnover(frame: pd.DataFrame) -> pd.DataFrame:
+    """Share turnover of the delta hedge over a cycle per unit of entry premium, per arm
+    and fund and over all fund-cycles of the arm."""
+    rows = []
+    for arm, rows_arm in frame.groupby("arm"):
+        groups = [*rows_arm.groupby("ticker"), ("ALL", rows_arm)]
+        for unit, group in groups:
+            turnover = group.hedge_turnover
+            rows.append(
+                {
+                    "arm": arm,
+                    "unit": unit,
+                    "cycles": len(group),
+                    "mean": turnover.mean(),
+                    "median": turnover.median(),
+                    "min": turnover.min(),
+                    "max": turnover.max(),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def cost_surface(grid: pd.DataFrame) -> pd.DataFrame:
+    """Per arm, how far the pooled mean falls across the swept range of each cost, the
+    execution fraction from 0 to 1 and the hedge cost from 0 to 10 basis points."""
+    rows = []
+    for arm, group in grid.groupby("arm"):
+        means = group.set_index(["k", "c"])["mean"]
+        top = group.c.max()
+        rows.append(
+            {
+                "arm": arm,
+                "mean_k0_c0": means[(0.0, 0.0)],
+                "mean_k1_c0": means[(1.0, 0.0)],
+                "mean_k0_c10": means[(0.0, top)],
+                "mean_k1_c10": means[(1.0, top)],
+                "fall_over_k_at_c0": means[(0.0, 0.0)] - means[(1.0, 0.0)],
+                "fall_over_c_at_k0": means[(0.0, 0.0)] - means[(0.0, top)],
+            }
+        )
+    table = pd.DataFrame(rows)
+    table["c_to_k_ratio"] = table.fall_over_c_at_k0 / table.fall_over_k_at_c0
+    return table
+
+
+def position_carry(frame: pd.DataFrame, names: tuple[str, ...]) -> pd.DataFrame:
+    """Mean cycle return with each leg's last delta carried against the position's hedge
+    carried whole, per fund and arm, at the named cost cells."""
+    rows = []
+    for (arm, ticker), group in frame.groupby(["arm", "ticker"]):
+        row = {"arm": arm, "ticker": ticker, "cycles": len(group)}
+        for name in names:
+            per_leg = group[name]
+            whole = group[f"{name}_position_carry"]
+            row[f"{name}_per_leg"] = per_leg.mean()
+            row[f"{name}_position"] = whole.mean()
+            row[f"{name}_difference"] = (whole - per_leg).mean()
+            row[f"{name}_cycles_differing"] = int((~np.isclose(whole, per_leg)).sum())
+        rows.append(row)
+    return pd.DataFrame(rows)

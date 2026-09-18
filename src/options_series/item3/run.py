@@ -34,11 +34,14 @@ from options_series.item3.analysis import (
     by_strike_count,
     convexity,
     cost_drift,
+    cost_surface,
     daily_sharpe,
     drawdown,
     eta_comparison,
     eta_table,
+    hedge_turnover,
     named_windows,
+    position_carry,
     replication_populations,
     split_cycles,
     worst_windows,
@@ -76,7 +79,12 @@ from options_series.item3.diagnostics import (
     strip_coverage,
     zero_bid_marks,
 )
-from options_series.item3.figures import plot_cost_grid, plot_equity
+from options_series.item3.figures import (
+    plot_cost_drift,
+    plot_cost_grid,
+    plot_equity,
+    plot_pooled_equity,
+)
 from options_series.item3.pull import (
     load_atm_surface,
     load_cycle_quotes,
@@ -191,6 +199,7 @@ def returns_stage(
         OUTPUT_DIR / "fig1_pooled_equity.csv", index=False
     )
     plot_equity(primary, fans, OUTPUT_DIR / "fig1_equity")
+    plot_pooled_equity(primary, OUTPUT_DIR / "post_fig1")
     LOGGER.info("returns built for %d arm-cycles; Figure 1 written", len(returns))
     return cycle_returns, sample, equity, hedges
 
@@ -307,6 +316,7 @@ def tests_stage(cycle_returns: pd.DataFrame) -> None:
     pd.DataFrame(rows).to_csv(OUTPUT_DIR / "breakeven_k.csv", index=False)
     grid = pd.DataFrame(grid)
     grid.to_csv(OUTPUT_DIR / "fig2_cost_grid.csv", index=False)
+    cost_surface(grid).to_csv(OUTPUT_DIR / "cost_surface.csv", index=False)
     plot_cost_grid(grid, OUTPUT_DIR / "fig2_cost_grid")
     LOGGER.info("tests, breakeven k and Figure 2 written")
 
@@ -400,6 +410,7 @@ def stress_stage(
         },
     )
     by_year.to_csv(OUTPUT_DIR / "cost_drift_by_year.csv", index=False)
+    plot_cost_drift(by_year, OUTPUT_DIR / "fig3_cost_drift")
     by_fund.to_csv(OUTPUT_DIR / "cost_drift_half_spread_by_fund.csv", index=False)
     series, table = convexity(primary, column(0.0, 0.0))
     series.to_csv(OUTPUT_DIR / "convexity_series.csv", index=False)
@@ -420,6 +431,11 @@ def stress_stage(
         ]
     ]
     counts.to_csv(OUTPUT_DIR / "cycle_hedge_and_mark_counts.csv", index=False)
+    estimation = primary[primary.window == "estimation"]
+    hedge_turnover(estimation).to_csv(OUTPUT_DIR / "hedge_turnover.csv", index=False)
+    position_carry(estimation, (column(0.0, 0.0), column(PRIMARY_K, PRIMARY_C))).to_csv(
+        OUTPUT_DIR / "returns_position_carry.csv", index=False
+    )
     LOGGER.info("stress and exploratory tables written")
 
 
