@@ -2,7 +2,7 @@
 
 Do options on commodity ETFs price variance the way index options do, and does the premium depend on whether the futures curve is in contango or backwardation?
 
-We studied options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. We built implied variance model-free from the full strike ladder on the CBOE VIX method; on SPX, the construction tracks VIX at 0.999 correlation with a median gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
+We studied options on GLD, SLV, USO and UNG from December 2008 to August 2025, with SPX as the equity benchmark. The implied variance measure is model-free, built from the full strike ladder on the CBOE VIX method; on SPX it tracks VIX at 0.999 correlation with a median absolute gap of 0.23 vol points. Realized variance is the sum of squared daily log returns over the following 21 or 63 trading days, annualized by 252 over the window length. The curve state for each commodity comes from individual futures settlements, nearest and second-nearest contract by last trading date.
 
 Eighteen tests were registered, eight on the level of the premium and ten on its relation to the curve slope, with Holm correction inside each block. A result counts as supported only when Newey-West and a stationary block bootstrap both clear the corrected level.
 
@@ -47,7 +47,7 @@ The premium does not depend on the curve. None of the ten slope tests cleared th
 
 For every commodity ETF except SLV, a registered check found that at one maturity or both the at-the-money premium on the dates the model-free construction drops differs at p below 0.05 from the premium on the dates it retains, so the at-the-money measure, which covers every date, carries their headline; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
 
-**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represents a measurement of how options are priced against what the underlying then does. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec. The study prices variance on the ETFs themselves. Options on the underlying futures contracts fall outside the OptionMetrics coverage used here, so what is measured is the premium on ETF options, and an extension to CME futures options would test the premium on the contracts the funds hold. GLD and SLV are bullion trusts whose shares track spot closely, while USO and UNG hold rolling futures and have carried roll drag and reverse splits, so their share variance diverges further from front-futures variance than the metals' does.
+**What's not included:** The OptionMetrics feed used here ends 2025-08-29, so the sample closes in August 2025 and nothing is claimed about the period since. There isn't a trading strategy attached to the study, no cost model or hedging. The premium represents a measurement of how options are priced against what the underlying then does. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec. The design was written and committed before any result was computed. Options on the underlying futures contracts fall outside the OptionMetrics coverage used here, so what is measured is the premium on ETF options, and an extension to CME futures options would test the premium on the contracts the funds hold. The study prices variance on the ETFs themselves. GLD and SLV are bullion trusts whose shares track spot closely, while USO and UNG hold rolling futures and have carried roll drag and reverse splits, so their share variance diverges further from front-futures variance than the metals' does.
 
 ## Reproduce
 
@@ -119,7 +119,7 @@ The gap fell after COVID. At 30 days it fell by 0.25 from 2010–2019 to 2021–
 
 Every H1 and H2 number is also reported at the money and with value weights, and every table in the full results carries the SPX gap between the surface and strike-ladder measures, a median of −0.030 log units at 30 days and −0.095 at 91 days. Full construction rules, the test family and every judgment call are in items/item2_correlation_premium/SPEC.md.
 
-**What's not included:** There is no trading strategy attached to the study, no dispersion trade, cost model or hedging. The gap measures how index and single-name options are priced against what each then realizes.
+**What's not included:** The OptionMetrics feed used here ends 2025-08-29, so the sample closes in August 2025 and nothing is claimed about the period since. There is no trading strategy attached to the study, no dispersion trade, cost model or hedging. The gap measures how index and single-name options are priced against what each then realizes.
 
 ## Reproduce
 
