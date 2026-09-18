@@ -47,7 +47,7 @@ The premium does not depend on the curve. None of the ten slope tests cleared th
 
 For every commodity ETF except SLV, a registered check found that at one maturity or both the at-the-money premium on the dates the model-free construction drops differs at p below 0.05 from the premium on the dates it retains, so the at-the-money measure, which covers every date, carries their headline; the model-free numbers are larger in every case. Full construction rules, the test family and every judgment call are in items/item1_commodity_vrp/SPEC.md.
 
-**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represents a measurement of how options are priced against what the underlying then does. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec.
+**What's not included:** There isn't a trading strategy attached to the study, no cost model or hedging. The premium represents a measurement of how options are priced against what the underlying then does. Five changes made after the data pull and before any test, covering a data filter, the futures source and two registered diagnostics, are logged in section 13 of the spec. The study prices variance on the ETFs themselves. Options on the underlying futures contracts fall outside the OptionMetrics coverage used here, so what is measured is the premium on ETF options, and an extension to CME futures options would test the premium on the contracts the funds hold. GLD and SLV are bullion trusts whose shares track spot closely, while USO and UNG hold rolling futures and have carried roll drag and reverse splits, so their share variance diverges further from front-futures variance than the metals' does.
 
 ## Reproduce
 
@@ -63,6 +63,8 @@ The run pulls quotes for five underlyings and thirteen futures classes (four pri
 Carr, P. and Wu, L. (2009). Variance risk premiums. Review of Financial Studies 22(3), 1311–1341.
 Jiang, G. and Tian, Y. (2005). The model-free implied volatility and its information content. Review of Financial Studies 18(4), 1305–1342.
 Prokopczuk, M., Symeonidis, L. and Wese Simen, C. (2017). Variance risk in commodity markets. Journal of Banking and Finance 81, 136–149.
+Trolle, A. and Schwartz, E. (2010). Variance risk premia in energy commodities. Journal of Derivatives 17(3), 15–32.
+Jia, X., Ruan, X. and Zhang, J.E. (2023). Carr and Wu's (2020) framework in the oil ETF option market. Journal of Commodity Markets 31, 100334.
 Ng, V. and Pirrong, S. (1994). Fundamentals and volatility: storage, spreads, and the dynamics of metals prices. Journal of Business 67(2), 203–230.
 Politis, D. and Romano, J. (1994). The stationary bootstrap. Journal of the American Statistical Association 89(428), 1303–1313.
 
