@@ -48,6 +48,7 @@ from options_series.item3.analysis import (
     o2_series,
     position_carry,
     replication_populations,
+    rv21_window_span,
     split_cycles,
     worst_windows,
 )
@@ -596,6 +597,9 @@ def main(argv: list[str] | None = None) -> None:
         entries, legs, panel, prices, calendar, curve
     )
     tests_stage(cycle_returns)
+    rv21_window_span(cycle_returns, calendar).to_csv(
+        OUTPUT_DIR / "o1_rv21_span.csv", index=False
+    )
     replication_stage(cycle_returns)
     stress_stage(cycle_returns, sample, equity, hedges, quotes, legs, prices)
     signals_stage(cycle_returns)

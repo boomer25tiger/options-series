@@ -2,9 +2,9 @@
 
 Amendments to items/item3_short_variance/SPEC.md. Entries A1 through A11 were recorded before
 any return, gain or cycle realized variance existed, during the chain-diagnostic and
-housekeeping work. Entries A12 through A22 were recorded after the returns were computed and
-say so. A1 is recorded as withdrawn rather than removed, so the reasoning that produced it and
-then reversed it stays auditable.
+housekeeping work. Entries A12 through A23 were recorded after the returns were computed and
+say so. A1 is recorded as withdrawn, with its text kept in place, so the reasoning that
+produced it and then reversed it stays auditable.
 
 ## A1. WITHDRAWN. The strip coverage floor stands as pre-registered.
 
@@ -12,7 +12,7 @@ An earlier entry struck stop rule 2 and replaced it with a one-strike computabil
 requirement. That amendment is withdrawn and rule 2 governs as SPEC.md wrote it, with the
 clarifications in A11.
 
-The withdrawn argument ran as follows. Rule 2 rejected 285 of 833 strip cycles, and the
+The withdrawn argument ran as follows. Rule 2 rejects 286 of 833 strip cycles, and the
 listed-to-extrapolated variance strike ratio had a median of 0.9993 with a 5th percentile of
 0.972. Reading the dispersion from that lower tail under a normal assumption gave a standard
 deviation of 0.0166, and assuming a mean ratio of exactly 1 gave a second-order bias in the
@@ -33,6 +33,9 @@ reversed.
 | 5th to 95th percentile | 0.974 to 1.010 | 0.966 to 1.124 |
 | E[1/r] | 1.0058 | 0.9738 |
 | Bias in mean cycle return (SE) | −0.0041 (0.0008) | +0.0217 (0.0025) |
+
+The table counts the 829 computable strip cycles that ran to expiration, and A11 counts all
+833, which include the 4 truncated cycles.
 
 Admitting the rule-2 failures moves the sample's replication bias from −0.41 percentage
 points against the seller to +0.47 in the seller's favour, a swing of 0.88 points, because
@@ -77,7 +80,9 @@ on the expiration date, and no ETF close exists on the Saturday that pre-Februar
 contracts carried as their exdate. K scales as 2/T, so a one-day difference on the sample's
 25-day median cycle gives 26/25 = 1.04, matching the 4 percent by which K ran above item
 1's value before 2015. Item 3's series carries no break at February 2015 because this
-convention applies throughout.
+convention applies throughout. K's ratio to item 1's value falls from 1.042 to 1.018 across
+February 2015, so the comparison between the two series carries a break there even though item
+3's own series does not.
 
 ## A6. Marking rule restated exhaustively
 
@@ -151,6 +156,10 @@ on trading days.
 No tested quantity moves. Section 5 computes the reported return from marks, settlement, hedge
 trades, financing and costs over the entry mid premium, so realized variance never enters a
 tested number. O1 carries a level offset that cancels in a slope and in an expanding quantile.
+The offset varies with each RV21 window's calendar span, which runs 31 to 35 days, so it
+cancels only approximately in the slope and adds noise to the regressor that attenuates the
+estimate toward zero. Its standard deviation of 0.026 against O1's 0.40 keeps that attenuation
+small.
 
 The section 5 replication target is sensitive to it. The per-cycle difference between the
 realized return and the 1 − RV/K target measures −0.048 for rule-2-passing cycles and
@@ -164,9 +173,10 @@ The consistent target governs the diagnostic and both figures are reported.
 Section 3's fallback reads "the prior day's hedge is carried" without saying whether the
 position's net hedge or each leg's delta is carried. Each leg's last delta is carried, because
 carrying the whole position's hedge froze USO's March and April 2020 hedges for weeks. The
-literal position-level reading is computed alongside and reported in returns_position_carry.csv,
-where strip fund means move by GLD −1.03, SLV +0.91, UNG −1.24, USO +1.12 percentage points
-and straddle means by 0.02 points or less. No block A or B verdict changes under either
+literal position-level reading is computed alongside and reported in returns_position_carry.csv.
+At k = 0 and c = 0 strip fund means move by GLD −1.03, SLV +0.91, UNG −1.24, USO +1.12
+percentage points, and at the primary cell by GLD −1.01, SLV +0.94, UNG −1.20, USO +1.15.
+Straddle means move by 0.02 points or less in both cells. No block A or B verdict changes under either
 reading, and that check is emitted to carry_verdict_invariance.csv.
 
 ## A14. The O1 slope sits outside section 9's Holm family
@@ -210,8 +220,8 @@ after 2. Both were entered and carry the entry cost, so the first reports a gros
 ## A20. Withdrawn-amendment figures corrected
 
 The withdrawn argument in A1 rested on summary statistics plus a second-order moment expansion
-that fails at the dispersions involved. Its signs were right and two of its magnitudes were
-wrong in each direction. Its three standard deviations of 0.030, 0.129 and 0.043 all exceed the
+that fails at the dispersions involved. Its signs were right and its magnitudes were wrong in
+both directions, four overstated and two understated. Its three standard deviations of 0.030, 0.129 and 0.043 all exceed the
 measured 0.0192, 0.0495 and 0.0367, and its full-sample bias of +0.56 percentage points
 exceeds the measured +0.47. Its two subsample biases of −0.09 and +0.89 points understate the
 measured −0.41 and +2.17. A1's table above carries the measured values throughout.
@@ -234,3 +244,12 @@ residual of +0.353 that entry Greeks do not capture. The worst single cycle in t
 the 2013-03-18 entry, losing 3.09 units pooled at the primary cell as GLD lost 5.29 and SLV
 3.44 in the April 2013 gold decline, and it stays the worst strip cycle in all twenty cost
 cells. The stress section reports both and states that the pre-named window was not the worst.
+
+## A23. Gate details section 7 left open
+
+Section 7 defines the O1 and O2 gates without fixing four details, and the implementation
+resolved each one. O1's history uses every cycle where O1 can be computed, including cycles
+the strip did not trade. A cycle with a missing signal trades, so a gate skips only on an
+observed state. "First 36 cycles" means the fund's own cycles 1 to 36. The O2 gate skips when
+O2 sits above the 90th percentile of the fund's prior values, the inverted term structure
+section 7 names as the state to avoid.

@@ -616,7 +616,8 @@ def gate_curves(
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Pooled cumulative strip return at one cost cell with each gate, skipped cycles
     entering as zero, beside the unconditional series; and a summary per gate and
-    window."""
+    window, with the mean fund-cycle return over all, traded and skipped cycles so a
+    gate's selection compares like for like against the unconditional series."""
     rows = frame[(frame.arm == "strip") & frame.primary].copy()
     rows["entry"] = pd.to_datetime(rows.entry)
     rows = rows.merge(
@@ -656,6 +657,13 @@ def gate_curves(
                     "share_traded": float(traded[fund_cycles].mean()),
                     "mean_pooled_return": float(pooled.gated[in_window].mean()),
                     "cumulative_return": float(pooled.gated[in_window].sum()),
+                    "mean_fund_cycle_all": float(rows.loc[fund_cycles, name].mean()),
+                    "mean_fund_cycle_traded": float(
+                        rows.loc[fund_cycles & traded, name].mean()
+                    ),
+                    "mean_fund_cycle_skipped": float(
+                        rows.loc[fund_cycles & ~traded, name].mean()
+                    ),
                 }
             )
     return pd.concat(curves, ignore_index=True), pd.DataFrame(summary)
@@ -704,3 +712,42 @@ def o2_series(
             }
         )
     return series, pd.DataFrame(table)
+
+
+def rv21_window_span(frame: pd.DataFrame, calendar: pd.DatetimeIndex) -> pd.DataFrame:
+    """Calendar span of each cycle's RV21 window, the 21 returns ending at the entry
+    close, and the level offset it puts on O1: ln(365 x 21 / (252 x span)), the gap
+    between RV21 on the calendar clock and on the trading-day clock. Reported over every
+    fund-cycle with an RV21 and over the holdout rows of the O1 slope."""
+    cycles = frame.drop_duplicates(["ticker", "cycle"]).copy()
+    cycles = cycles[np.isfinite(cycles.rv21)]
+    entries = pd.to_datetime(cycles.entry)
+    positions = calendar.searchsorted(entries)
+    starts = calendar[np.maximum(positions - 21, 0)]
+    cycles["span_days"] = (entries.to_numpy() - starts.to_numpy()) / np.timedelta64(
+        1, "D"
+    )
+    cycles["offset"] = np.log(365.0 * 21 / (252.0 * cycles.span_days))
+    slope_rows = frame[
+        (frame.arm == "strip") & frame.primary & (frame.window == "holdout")
+    ][["ticker", "cycle"]]
+    rows = []
+    for population, group in (
+        ("every cycle with RV21", cycles),
+        ("holdout O1 slope rows", cycles.merge(slope_rows, on=["ticker", "cycle"])),
+    ):
+        rows.append(
+            {
+                "population": population,
+                "cycles": len(group),
+                "min_span_days": group.span_days.min(),
+                "median_span_days": group.span_days.median(),
+                "mean_span_days": group.span_days.mean(),
+                "max_span_days": group.span_days.max(),
+                "min_offset": group.offset.min(),
+                "max_offset": group.offset.max(),
+                "sd_offset": group.offset.std(),
+                "sd_o1": np.log(group.k_strip / group.rv21).std(),
+            }
+        )
+    return pd.DataFrame(rows)
