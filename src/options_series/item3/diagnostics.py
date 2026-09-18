@@ -1034,3 +1034,54 @@ def column_reuse(quotes: pd.DataFrame) -> pd.DataFrame:
             if column not in ("ticker", "secid")
         ]
     )
+
+
+def locked_crossed(panel: pd.DataFrame) -> pd.DataFrame:
+    """D6 companion: among the strip marks of the zero-bid table, the two-sided quotes
+    with the offer at or below the bid, split into locked and crossed per fund."""
+    strip = panel[
+        (panel.arm == "strip") & (panel.cycle_day >= 0) & (panel.days_to_expiration > 0)
+    ]
+    bid, offer = strip.best_bid, strip.best_offer
+    frame = strip.assign(
+        locked=((bid > 0) & (offer == bid)).fillna(False),
+        crossed=((bid > 0) & (offer > 0) & (offer < bid)).fillna(False),
+    )
+    table = (
+        _with_pooled(frame)
+        .groupby("ticker")
+        .agg(
+            marks=("locked", "size"),
+            locked=("locked", "sum"),
+            crossed=("crossed", "sum"),
+        )
+        .reset_index()
+    )
+    table["locked_or_crossed"] = table.locked + table.crossed
+    table["share_locked_or_crossed"] = table.locked_or_crossed / table.marks
+    return table
+
+
+def k_ratio_by_exdate(entries: pd.DataFrame, model_free: pd.DataFrame) -> pd.DataFrame:
+    """D9 companion: entry K over item 1's 30-day model-free value on the entry date,
+    split by whether the contract's recorded exdate falls on a Saturday, the convention
+    before February 2015."""
+    item1 = model_free[
+        (model_free.node == 30)
+        & (model_free.strike_floor == ITEM1_STRIKE_FLOOR)
+        & (model_free.drop_code == OK)
+    ][["ticker", "date", "implied_var"]].rename(
+        columns={"date": "entry", "implied_var": "item1_model_free_30"}
+    )
+    frame = entries[entries.strip_status == OK].merge(item1, on=["ticker", "entry"])
+    frame = frame.assign(
+        ratio=frame.k_strip / frame.item1_model_free_30,
+        exdate_convention=np.where(
+            pd.to_datetime(frame.exdate).dt.dayofweek == 5, "Saturday", "trading day"
+        ),
+    )
+    return (
+        frame.groupby("exdate_convention")
+        .ratio.agg(cycles="size", median_ratio="median", mean_ratio="mean")
+        .reset_index()
+    )

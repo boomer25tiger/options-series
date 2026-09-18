@@ -531,3 +531,176 @@ def position_carry(frame: pd.DataFrame, names: tuple[str, ...]) -> pd.DataFrame:
             row[f"{name}_cycles_differing"] = int((~np.isclose(whole, per_leg)).sum())
         rows.append(row)
     return pd.DataFrame(rows)
+
+
+def annualization_clock(frame: pd.DataFrame) -> pd.DataFrame:
+    """Calendar-time over trading-day realized variance per cycle, n / (252 T), which is
+    the factor separating the two clocks of amendment A12, over every fund-cycle with a
+    complete return series and over the rule-2-passing strip cycles."""
+    cycles = frame.drop_duplicates(["ticker", "cycle"])
+    cycles = cycles[(cycles.missing_returns == 0) & (cycles.n_returns > 0)]
+    ratio = cycles.n_returns / (252.0 * cycles.years_to_expiration)
+    rows = []
+    for population, mask in (
+        ("every cycle", np.ones(len(cycles), bool)),
+        ("rule-2-passing strip cycles", cycles.floor_pass.eq(True).to_numpy()),
+    ):
+        values = ratio[mask]
+        rows.append(
+            {
+                "population": population,
+                "cycles": len(values),
+                "mean_ratio": values.mean(),
+                "median_ratio": values.median(),
+                "min_ratio": values.min(),
+                "max_ratio": values.max(),
+                "mean_percent_above": 100 * (values.mean() - 1),
+                "median_percent_above": 100 * (values.median() - 1),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+GATE_BURN_IN = 36
+O1_GATE_QUANTILE = 0.5
+O2_GATE_QUANTILE = 0.9
+
+
+def entry_signals(frame: pd.DataFrame, surface: pd.DataFrame) -> pd.DataFrame:
+    """Per fund-cycle, O1 = log(K / RV21) and O2 = IV30 / IV91 at entry, where IV is the
+    mean of the vsurfd 50-delta call and put volatilities at that node."""
+    atm = surface.assign(
+        atm_vol=surface[["iv_call_50", "iv_put_50"]].mean(axis=1, skipna=False)
+    )
+    wide = atm.pivot_table(
+        index=["ticker", "date"], columns="node", values="atm_vol"
+    ).reset_index()
+    wide = wide.rename(columns={30: "iv30", 91: "iv91", "date": "entry"})
+    cycles = frame.drop_duplicates(["ticker", "cycle"])[
+        ["ticker", "cycle", "entry", "k_strip", "rv21"]
+    ].copy()
+    cycles["entry"] = pd.to_datetime(cycles.entry)
+    cycles = cycles.merge(wide[["ticker", "entry", "iv30", "iv91"]], how="left")
+    cycles["o1"] = np.log(cycles.k_strip / cycles.rv21)
+    cycles["o2"] = cycles.iv30 / cycles.iv91
+    return cycles.sort_values(["ticker", "entry"]).reset_index(drop=True)
+
+
+def _expanding_prior(values: pd.Series, quantile: float) -> pd.Series:
+    """Quantile of the finite values on strictly earlier rows."""
+    return values.expanding().quantile(quantile).shift(1)
+
+
+def gate_flags(signals: pd.DataFrame) -> pd.DataFrame:
+    """Section 7's implementation gates. A fund's first 36 cycles always trade. After
+    them the O1 gate trades when O1 sits at or above the median of that fund's O1 on
+    prior entry dates, and the O2 gate trades unless O2 sits above the 90th percentile
+    of that fund's prior O2. A missing signal trades, so a gate skips only on an
+    observed state."""
+    frames = []
+    for _, group in signals.groupby("ticker"):
+        group = group.sort_values("entry").copy()
+        o1_cut = _expanding_prior(group.o1, O1_GATE_QUANTILE)
+        o2_cut = _expanding_prior(group.o2, O2_GATE_QUANTILE)
+        burn_in = group.cycle <= GATE_BURN_IN
+        group["o1_median_prior"] = o1_cut
+        group["o2_p90_prior"] = o2_cut
+        group["o1_trade"] = burn_in | ~(group.o1 < o1_cut)
+        group["o2_trade"] = burn_in | ~(group.o2 > o2_cut)
+        frames.append(group)
+    return pd.concat(frames, ignore_index=True)
+
+
+def gate_curves(
+    frame: pd.DataFrame, flags: pd.DataFrame, name: str
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Pooled cumulative strip return at one cost cell with each gate, skipped cycles
+    entering as zero, beside the unconditional series; and a summary per gate and
+    window."""
+    rows = frame[(frame.arm == "strip") & frame.primary].copy()
+    rows["entry"] = pd.to_datetime(rows.entry)
+    rows = rows.merge(
+        flags[["ticker", "entry", "o1_trade", "o2_trade"]], on=["ticker", "entry"]
+    )
+    series = {
+        "unconditional": rows[name],
+        "O1 gate": rows[name].where(rows.o1_trade, 0.0),
+        "O2 gate": rows[name].where(rows.o2_trade, 0.0),
+    }
+    curves, summary = [], []
+    for label, values in series.items():
+        pooled = pooled_returns(
+            rows.assign(gated=values)[["ticker", "entry", "gated"]], "gated"
+        )
+        pooled["cumulative"] = pooled.gated.cumsum()
+        curves.append(pooled.assign(series=label))
+        traded = (
+            rows.o1_trade
+            if label == "O1 gate"
+            else rows.o2_trade
+            if label == "O2 gate"
+            else pd.Series(True, index=rows.index)
+        )
+        for window in ("estimation", "holdout"):
+            in_window = pooled.entry < pd.Timestamp("2022-01-01")
+            if window == "holdout":
+                in_window = ~in_window
+            fund_cycles = rows.window == window
+            summary.append(
+                {
+                    "series": label,
+                    "window": window,
+                    "pooled_cycles": int(in_window.sum()),
+                    "fund_cycles": int(fund_cycles.sum()),
+                    "fund_cycles_traded": int(traded[fund_cycles].sum()),
+                    "share_traded": float(traded[fund_cycles].mean()),
+                    "mean_pooled_return": float(pooled.gated[in_window].mean()),
+                    "cumulative_return": float(pooled.gated[in_window].sum()),
+                }
+            )
+    return pd.concat(curves, ignore_index=True), pd.DataFrame(summary)
+
+
+def o2_series(
+    frame: pd.DataFrame, signals: pd.DataFrame, name: str
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """O2 against cycle returns at one cost cell for both arms on their primary samples:
+    the per-cycle series and mean returns by O2 quintile, with no p-value."""
+    rows = frame[frame.primary].copy()
+    rows["entry"] = pd.to_datetime(rows.entry)
+    rows = rows.merge(
+        signals[["ticker", "entry", "iv30", "iv91", "o2"]], on=["ticker", "entry"]
+    )
+    series = rows[
+        ["ticker", "cycle", "arm", "entry", "window", "iv30", "iv91", "o2", name]
+    ].rename(columns={name: "cycle_return"})
+    table = []
+    for arm, group in series.dropna(subset=["o2"]).groupby("arm"):
+        group = group.assign(quintile=pd.qcut(group.o2, 5, labels=False) + 1)
+        for quintile, part in group.groupby("quintile"):
+            table.append(
+                {
+                    "arm": arm,
+                    "o2_quintile": int(quintile),
+                    "cycles": len(part),
+                    "o2_low": part.o2.min(),
+                    "o2_high": part.o2.max(),
+                    "mean_return": part.cycle_return.mean(),
+                    "median_return": part.cycle_return.median(),
+                }
+            )
+        table.append(
+            {
+                "arm": arm,
+                "o2_quintile": "all",
+                "cycles": len(group),
+                "o2_low": group.o2.min(),
+                "o2_high": group.o2.max(),
+                "mean_return": group.cycle_return.mean(),
+                "median_return": group.cycle_return.median(),
+                "spearman_with_return": group.o2.corr(
+                    group.cycle_return, method="spearman"
+                ),
+            }
+        )
+    return series, pd.DataFrame(table)

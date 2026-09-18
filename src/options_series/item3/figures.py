@@ -293,3 +293,80 @@ def plot_cost_drift(by_year: pd.DataFrame, path: Path, c_bps: float = 2.0) -> No
     figure.subplots_adjust(left=0.07, right=0.93, top=0.9, bottom=0.17)
     _save(figure, path)
     shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)
+
+
+GATE_COLORS = {
+    "unconditional": "#2a78d6",
+    "O1 gate": "#1baf7a",
+    "O2 gate": "#eda100",
+}
+GATE_LABELS = {
+    "unconditional": "unconditional strip",
+    "O1 gate": "O1 gate, median",
+    "O2 gate": "O2 gate, 90th percentile",
+}
+
+
+def plot_gates(curves: pd.DataFrame, path: Path) -> None:
+    """Section 7's implementation figure: pooled cumulative strip return at k = 0.5 and
+    c = 2 bps, unconditional and under each gate, with the holdout shaded."""
+    figure, axis = plt.subplots(figsize=(11, 4.6))
+    axis.axvspan(
+        pd.Timestamp("2022-01-01"), curves.entry.max(), color=SHADE, lw=0, zorder=0
+    )
+    axis.annotate(
+        "holdout",
+        (pd.Timestamp("2022-01-01"), 1.0),
+        xycoords=("data", "axes fraction"),
+        xytext=(3, -11),
+        textcoords="offset points",
+        fontsize=7.5,
+        color=MUTED,
+    )
+    ends = []
+    for label, color in GATE_COLORS.items():
+        rows = curves[curves.series == label].sort_values("entry")
+        axis.plot(
+            rows.entry,
+            rows.cumulative,
+            color=color,
+            lw=1.6,
+            zorder=3,
+            label=GATE_LABELS[label],
+        )
+        ends.append((rows.cumulative.iloc[-1], rows.entry.iloc[-1], label, color))
+    ends.sort()
+    for position, (value, date, label, color) in enumerate(ends):
+        axis.annotate(
+            GATE_LABELS[label],
+            (date, value),
+            xytext=(6, -10 + 10 * position),
+            textcoords="offset points",
+            va="center",
+            fontsize=8,
+            color=INK,
+        )
+        axis.plot([date], [value], "o", ms=4, color=color, zorder=4)
+    _style(axis)
+    axis.set_title(
+        "O1 and O2 gates on the strip, pooled cycle returns at k = 0.5 and c = 2 bps",
+        loc="left",
+        fontsize=11,
+        color=INK,
+    )
+    axis.set_ylabel(
+        "cumulative return per unit of entry premium", fontsize=9, color=MUTED
+    )
+    axis.legend(frameon=False, fontsize=8.5, loc="upper left")
+    axis.margins(x=0.02)
+    figure.text(
+        0.01,
+        0.015,
+        "Implementation view with no test. Skipped cycles enter as zero returns; each "
+        "fund's first 36 cycles always trade.",
+        fontsize=7.5,
+        color=MUTED,
+    )
+    figure.subplots_adjust(left=0.07, right=0.83, top=0.9, bottom=0.12)
+    _save(figure, path)
+    shutil.copy(path.with_suffix(".png"), FIGURES_DIR / path.with_suffix(".png").name)

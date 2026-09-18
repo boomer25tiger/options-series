@@ -31,16 +31,21 @@ from options_series.item3.accounting import (
 )
 from options_series.item3.analysis import (
     add_eta,
+    annualization_clock,
     by_strike_count,
     convexity,
     cost_drift,
     cost_surface,
     daily_sharpe,
     drawdown,
+    entry_signals,
     eta_comparison,
     eta_table,
+    gate_curves,
+    gate_flags,
     hedge_turnover,
     named_windows,
+    o2_series,
     position_carry,
     replication_populations,
     split_cycles,
@@ -71,7 +76,9 @@ from options_series.item3.diagnostics import (
     entry_spread_share,
     hedge_paths,
     implied_correlations,
+    k_ratio_by_exdate,
     leg_day_panel,
+    locked_crossed,
     missing_returns,
     shortfall_and_rounding,
     ss_flag_runs,
@@ -83,6 +90,7 @@ from options_series.item3.figures import (
     plot_cost_drift,
     plot_cost_grid,
     plot_equity,
+    plot_gates,
     plot_pooled_equity,
 )
 from options_series.item3.pull import (
@@ -289,6 +297,33 @@ def tests_stage(cycle_returns: pd.DataFrame) -> None:
         OUTPUT_DIR / "tests_robustness_all_strip_cycles.csv", index=False
     )
 
+    carry = []
+    for block, (k, c) in (("A", (0.0, 0.0)), ("B", (PRIMARY_K, PRIMARY_C))):
+        name = column(k, c)
+        tables = {
+            reading: block_tests(
+                block,
+                {
+                    arm: arm_series(primary, arm, name + suffix)
+                    for arm in ("strip", "straddle")
+                },
+                ESTIMATION_LAG,
+            )
+            for reading, suffix in (("per_leg", ""), ("position", "_position_carry"))
+        }
+        both = tables["per_leg"][
+            ["block", "arm", "unit", "n", "mean", "verdict"]
+        ].merge(
+            tables["position"][["arm", "unit", "mean", "verdict"]],
+            on=["arm", "unit"],
+            suffixes=("_per_leg", "_position"),
+        )
+        both["same_verdict"] = both.verdict_per_leg == both.verdict_position
+        carry.append(both)
+    pd.concat(carry, ignore_index=True).to_csv(
+        OUTPUT_DIR / "carry_verdict_invariance.csv", index=False
+    )
+
     rows, grid = [], []
     samples = (("estimation", primary), ("full", cycle_returns[cycle_returns.primary]))
     for sample_name, frame in samples:
@@ -345,7 +380,26 @@ def replication_stage(cycle_returns: pd.DataFrame) -> None:
     by_strike_count(strip).to_csv(
         OUTPUT_DIR / "replication_by_strike_count.csv", index=False
     )
+    annualization_clock(cycle_returns).to_csv(
+        OUTPUT_DIR / "replication_clock.csv", index=False
+    )
     LOGGER.info("replication analysis written")
+
+
+def signals_stage(cycle_returns: pd.DataFrame) -> None:
+    """Section 7's implementation figure for the O1 and O2 gates and the O2
+    exploratory series, with no test attached."""
+    name = column(PRIMARY_K, PRIMARY_C)
+    flags = gate_flags(entry_signals(cycle_returns, load_atm_surface()))
+    flags.to_csv(OUTPUT_DIR / "gate_signals.csv", index=False)
+    curves, summary = gate_curves(cycle_returns, flags, name)
+    curves.to_csv(OUTPUT_DIR / "fig4_gates.csv", index=False)
+    summary.to_csv(OUTPUT_DIR / "gate_summary.csv", index=False)
+    plot_gates(curves, OUTPUT_DIR / "fig4_gates")
+    series, table = o2_series(cycle_returns, flags, name)
+    series.to_csv(OUTPUT_DIR / "o2_series.csv", index=False)
+    table.to_csv(OUTPUT_DIR / "o2_by_quintile.csv", index=False)
+    LOGGER.info("gates, O2 series and Figure 4 written")
 
 
 def stress_stage(
@@ -511,11 +565,15 @@ def main(argv: list[str] | None = None) -> None:
         "d4_cycle_hedge": cycle_hedge,
         "d5_strip_coverage": strip_coverage(entries),
         "d6_zero_bid_marks": zero_bid,
+        "d6_locked_crossed": locked_crossed(panel),
         "d7_chain_daily": chain_daily,
         "d7_leg_trace": leg_trace,
         "d8_cycle_counts": counts,
         "d9_correlations": implied_correlations(
             entries, pd.read_parquet(ITEM1_MODEL_FREE_PATH), load_atm_surface()
+        ),
+        "d9_k_ratio_by_exdate": k_ratio_by_exdate(
+            entries, pd.read_parquet(ITEM1_MODEL_FREE_PATH)
         ),
         "d10_replication_shortfall": shortfall,
         "d10_rounding_size": rounding,
@@ -538,6 +596,7 @@ def main(argv: list[str] | None = None) -> None:
     tests_stage(cycle_returns)
     replication_stage(cycle_returns)
     stress_stage(cycle_returns, sample, equity, hedges, quotes, legs, prices)
+    signals_stage(cycle_returns)
     LOGGER.info("item 3 run done in %.1f min", (time.time() - started) / 60.0)
 
 

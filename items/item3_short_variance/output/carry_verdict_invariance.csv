@@ -1,0 +1,21 @@
+block,arm,unit,n,mean_per_leg,verdict_per_leg,mean_position,verdict_position,same_verdict
+A,strip,GLD,163,0.18238660338653637,supported,0.1720468091817477,supported,True
+A,strip,SLV,73,0.15981351867439036,not supported,0.16895640241999818,not supported,True
+A,strip,USO,122,0.1941170543101364,supported,0.2053659084763812,supported,True
+A,strip,UNG,36,0.07364096163596462,not supported,0.06122432313523022,not supported,True
+A,strip,POOLED,172,0.1652745423713357,supported,0.15979695022883839,supported,True
+A,straddle,GLD,163,0.03316848629894761,not supported,0.033214671547113446,not supported,True
+A,straddle,SLV,157,0.05351704539547301,supported,0.053674606161279025,supported,True
+A,straddle,USO,175,0.015708551274738365,not supported,0.015879442250997706,not supported,True
+A,straddle,UNG,168,0.03634889748439846,not robust to inference method,0.03645823040781103,not robust to inference method,True
+A,straddle,POOLED,176,0.032067527402889255,supported,0.032144333566553114,supported,True
+B,strip,GLD,163,0.13801248452692552,supported,0.12788653460692492,supported,True
+B,strip,SLV,73,0.12703337058945183,not supported,0.13640194657905563,not supported,True
+B,strip,USO,122,0.15442328067178782,supported,0.16589451474952915,supported,True
+B,strip,UNG,36,0.02963729798718929,not supported,0.017615975122954288,not supported,True
+B,strip,POOLED,172,0.12164777675210224,supported,0.11643874607287225,supported,True
+B,straddle,GLD,163,0.011685626800489308,not supported,0.011737711570560234,not supported,True
+B,straddle,SLV,157,0.03556110832614966,not supported,0.03572165408040361,not supported,True
+B,straddle,USO,175,-0.001200077567607731,not supported,-0.0010229834270354208,not supported,True
+B,straddle,UNG,168,0.015076678288014891,not supported,0.015199032824709392,not supported,True
+B,straddle,POOLED,176,0.012233955981554833,not supported,0.012318542629166096,not supported,True
