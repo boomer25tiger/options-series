@@ -11,15 +11,15 @@ RAW_DIR = DATA_DIR / "raw"
 CYCLE_QUOTES_DIR = RAW_DIR / "cycle_quotes"
 OUTPUT_DIR = ITEM_DIR / "output"
 FIGURES_DIR = ITEM_DIR / "figures"
+# Item 3 keeps its own copy of the zero curve and the 30- and 91-day at-the-money surface
+# nodes, pulled by item 1's functions.
+ZERO_CURVE_PATH = RAW_DIR / "zero_curve.parquet"
+ATM_SURFACE_PATH = RAW_DIR / "atm_surface.parquet"
 
-# Item 3 reads four item 1 files and never writes them, namely the zero curve, the 30- and
-# 91-day at-the-money surface nodes, the strike-ladder quote cache and the model-free
-# series.
+# Item 3 reads two item 1 locations and never writes them. The model-free series feeds
+# D9; the strike-ladder quote cache feeds D11 while it exists.
 ITEM1_DIR = REPO_ROOT / "items" / "item1_commodity_vrp"
-ITEM1_RAW_DIR = ITEM1_DIR / "data" / "raw"
-ITEM1_OPTION_QUOTES_DIR = ITEM1_RAW_DIR / "option_quotes"
-ITEM1_ZERO_CURVE_PATH = ITEM1_RAW_DIR / "zero_curve.parquet"
-ITEM1_ATM_SURFACE_PATH = ITEM1_RAW_DIR / "atm_surface.parquet"
+ITEM1_OPTION_QUOTES_DIR = ITEM1_DIR / "data" / "raw" / "option_quotes"
 ITEM1_MODEL_FREE_PATH = ITEM1_DIR / "data" / "model_free_variance.parquet"
 
 # Spec section 2 fixes the security identifiers, and no query re-resolves them.

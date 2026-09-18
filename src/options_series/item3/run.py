@@ -4,8 +4,9 @@ and no realized variance over a cycle.
 python -m options_series.item3.run              pull from WRDS, then build
 python -m options_series.item3.run --skip-pull  build from data already on disk
 
-Item 3 reads item 1's cache and model-free series, so python -m options_series.item1.run
-runs first.
+Item 3 reads item 1's model-free series, so python -m options_series.item1.run runs
+first. D11 reads item 1's quote cache and keeps its last measurement once that cache is
+gone.
 """
 
 from __future__ import annotations
@@ -17,7 +18,12 @@ import time
 import pandas as pd
 
 from options_series.db import connect
-from options_series.item3.config import FIGURES_DIR, ITEM1_MODEL_FREE_PATH, OUTPUT_DIR
+from options_series.item3.config import (
+    FIGURES_DIR,
+    ITEM1_MODEL_FREE_PATH,
+    ITEM1_OPTION_QUOTES_DIR,
+    OUTPUT_DIR,
+)
 from options_series.item3.construction import (
     ZeroCurve,
     build_entries,
@@ -116,7 +122,7 @@ def main(argv: list[str] | None = None) -> None:
         .merge(cycle_zero_bid, on=["ticker", "cycle"], how="left")
     )
 
-    for name, table in {
+    tables = {
         "cycle_entries": cycle_table,
         "d1_adjustment_changes": changes,
         "d1_ss_flag_runs": ss_flag_runs(load_ss_flag_counts(), changes),
@@ -137,9 +143,15 @@ def main(argv: list[str] | None = None) -> None:
         ),
         "d10_replication_shortfall": shortfall,
         "d10_rounding_size": rounding,
-        "d11_data_reuse": data_reuse(quotes, entries),
         "d11_columns": column_reuse(quotes),
-    }.items():
+    }
+    if any(ITEM1_OPTION_QUOTES_DIR.glob("*.parquet")):
+        tables["d11_data_reuse"] = data_reuse(quotes, entries)
+    else:
+        LOGGER.info(
+            "item 1's quote cache is absent; d11_data_reuse.csv stays as it was"
+        )
+    for name, table in tables.items():
         table.to_csv(OUTPUT_DIR / f"{name}.csv", index=False)
     LOGGER.info(
         "session 1 diagnostics written in %.1f min", (time.time() - started) / 60.0

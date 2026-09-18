@@ -5,8 +5,8 @@ corporate-action record and the hedge. A scan of opprcd finds each fund's first 
 date, which fixes its first cycle, and a daily count of opprcd rows by ss_flag and
 contract size across every expiry completes the corporate-action record. The main pull
 takes every contract on each cycle's expiry from the trading day before entry through
-expiration, with optionid and every Greek. Item 1's cache supplies the zero curve and the
-at-the-money surface nodes.
+expiration, with optionid and every Greek. Item 1's pull functions fetch the zero curve and
+the at-the-money surface nodes into item 3's raw directory.
 """
 
 from __future__ import annotations
@@ -22,16 +22,17 @@ import pyarrow.parquet as pq
 import wrds
 
 from options_series.db import copy_query_to_csv, query
+from options_series.item1.pull_options import pull_atm_surface, pull_zero_curve
 from options_series.item3.config import (
+    ATM_SURFACE_PATH,
     CYCLE_QUOTES_DIR,
     FEED_END,
-    ITEM1_ATM_SURFACE_PATH,
-    ITEM1_ZERO_CURVE_PATH,
     OPTION_START_SCAN_YEARS,
     OPTION_YEARS,
     RAW_DIR,
     SECIDS,
     SECPRD_YEARS,
+    ZERO_CURVE_PATH,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -195,6 +196,8 @@ def pull_calendar_inputs(connection: wrds.Connection) -> None:
     pull_prices(connection).to_parquet(PRICES_PATH, index=False)
     OPTION_STARTS_PATH.write_text(json.dumps(pull_option_starts(connection), indent=2))
     pull_ss_flag_counts(connection).to_parquet(SS_FLAG_COUNTS_PATH, index=False)
+    pull_zero_curve(connection).to_parquet(ZERO_CURVE_PATH, index=False)
+    pull_atm_surface(connection).to_parquet(ATM_SURFACE_PATH, index=False)
 
 
 def pull_all_cycle_quotes(connection: wrds.Connection, cycles: pd.DataFrame) -> None:
@@ -234,12 +237,12 @@ def load_cycle_quotes(ticker: str | None = None) -> pd.DataFrame:
 
 
 def load_zero_curve() -> pd.DataFrame:
-    """Item 1's zero curve, rate in percent per annum by date and days."""
-    return pd.read_parquet(ITEM1_ZERO_CURVE_PATH)
+    """Zero curve, rate in percent per annum by date and days."""
+    return pd.read_parquet(ZERO_CURVE_PATH)
 
 
 def load_atm_surface() -> pd.DataFrame:
-    """Item 1's 30- and 91-day 50-delta call and put volatilities per fund and date."""
-    surface = pd.read_parquet(ITEM1_ATM_SURFACE_PATH)
+    """30- and 91-day 50-delta call and put volatilities per underlying and date."""
+    surface = pd.read_parquet(ATM_SURFACE_PATH)
     surface["node"] = surface["node"].astype(int)
     return surface
