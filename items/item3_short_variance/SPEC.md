@@ -488,10 +488,10 @@ the wild cluster bootstrap.
 1. An ETF with fewer than 80 percent of its estimation cycles passing the section 3 filters drops
    from that arm's family, the drop is recorded, and the test count falls accordingly. Floors apply
    per arm, so an ETF may remain in one arm and drop from the other.
-2. A strip cycle requires at least 6 strikes with two-sided quotes on each side of K_0 and a traded
-   span of at least 1.5 σ_ATM √T on each side of F. A cycle failing either condition is excluded
-   for the strip arm and counted. The floor is a viability bar; the section 8 replication shortfall,
-   not the floor, governs how a passing cycle is interpreted.
+2. Struck by amendment A1. ~~A strip cycle requires at least 6 strikes with two-sided quotes on each
+   side of K_0 and a traded span of at least 1.5 σ_ATM √T on each side of F. A cycle failing either
+   condition is excluded for the strip arm and counted. The floor is a viability bar; the section 8
+   replication shortfall, not the floor, governs how a passing cycle is interpreted.~~
 3. A straddle cycle with no filter-passing strike within 5 percent of F is excluded for that arm
    and counted.
 4. A cycle carrying a missing return under section 4 is excluded for both arms and counted.
@@ -524,9 +524,9 @@ section 7 shows K carries no power to forecast cycle RV, a nonzero slope is repo
 rather than predictive. Power against a modest monotone effect is low at this sample size and the
 writeup says so before reporting the estimate.
 
-**N-E, data does not support the trade.** Entry quotes, strike coverage, straddle strike
-availability or return completeness fail the section 16 floors for one or more ETFs or one arm
-entirely, and the item reports the chain properties that block the measurement.
+**N-E, data does not support the trade.** Entry quotes, straddle strike availability or return
+completeness fail the section 16 floors for one or more ETFs or one arm entirely, and the item
+reports the chain properties that block the measurement.
 
 ## 18. Figures
 
